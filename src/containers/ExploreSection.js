@@ -67,10 +67,9 @@ const ExploreSectionWrapper = tw.div`
     items-center
     mt-3
     xl:mt-6
-    2xl:mt-10
     max-w-sm
     xl:max-w-2xl
-    2xl:max-w-4xl
+    2xl:max-w-3xl
 `;
 
 const Item = styled.div`
@@ -114,9 +113,9 @@ const ExploreSection = () => {
 			</SectionInfo>
 			<ExploreSectionWrapper>
 				<Carousel dynamicHeight={false} infiniteLoop={true} showThumbs={false}>
-					{studioImages.map((image) => {
+					{studioImages.map((image, index) => {
 						return (
-							<Item>
+							<Item key={index}>
 								<img src={image.image} alt={image.description} />
 								<Description>{image.description} </Description>
 							</Item>

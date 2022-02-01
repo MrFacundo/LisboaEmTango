@@ -62,7 +62,9 @@ const Navbar = () => {
 				<Link to="Home">Home</Link>
 			</NavItem>
 			<NavItem>
-				<Link to="Explore">Explore</Link>
+				<Link to="Explore" smooth={"easeInOutQuad"} duration={500}>
+					Explore
+				</Link>
 			</NavItem>
 			<NavItem>
 				<Link to="Contact">Contact</Link>
