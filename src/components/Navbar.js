@@ -22,6 +22,7 @@ width[90%]
 `;
 
 const NavItems = tw.div`
+    font-family["Barlow"]
     max-w-xs
     list-none
     w-full
@@ -62,8 +63,13 @@ const Navbar = () => {
 				<Link to="Home">Home</Link>
 			</NavItem>
 			<NavItem>
-				<Link to="Explore" smooth={"easeInOutQuad"} duration={500}>
-					Explore
+				<Link to="Team" smooth={"easeInOutQuad"} duration={500}>
+					Team
+				</Link>
+			</NavItem>
+			<NavItem>
+				<Link to="Studio" smooth={"easeInOutQuad"} duration={500}>
+					Studio
 				</Link>
 			</NavItem>
 			<NavItem>

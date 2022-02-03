@@ -4,13 +4,11 @@ import { Link } from "react-scroll";
 import Navbar from "../components/Navbar";
 import { BsArrowDownCircle } from "react-icons/bs";
 
-const LandingSection = styled.div`
-	${tw`
+const LandingSection = tw.div`
         w-full
         h-screen
         flex
         flex-col
-    `};
 `;
 
 const InfoSection = tw.div`
@@ -20,7 +18,6 @@ const InfoSection = tw.div`
         left-auto
         sm:right[5rem]
         lg:right[10rem]
-
         lg:left-auto
         2xl:right[10rem]
         2xl:top[200px]
@@ -69,14 +66,16 @@ const OutlinedTextSvg = styled.svg`
 
 const DescriptionText = tw.h2`
         pt-10
-        text-xl
-        lg:text-2xl
+        text-2xl
+        lg:text-3xl
         text-white
         text-opacity-90
         mt-10
         max-w-xs
         lg:max-w-lg
         2xl:max-w-xl
+        font-family["Barlow"]
+
 `;
 
 const ViewMoreButton = tw.button`
@@ -115,7 +114,7 @@ const HeroSection = () => {
 					<DescriptionText>Escuela de tango argentino.</DescriptionText>
 				</InfoSection>
 				<ViewMoreButton>
-					<Link to="Explore" smooth={"easeInOutQuad"} duration={500}>
+					<Link to="Team" smooth={"easeInOutQuad"} duration={500}>
 						<BsArrowDownCircle />
 					</Link>
 				</ViewMoreButton>

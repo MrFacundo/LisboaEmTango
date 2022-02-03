@@ -3,7 +3,7 @@ import portrait2 from "../components/images/portrait2.jpg";
 
 const teamData = [
 	{
-		name: "Team Mebmer One",
+		name: "Team MemberOne",
 		shortname: "One",
 		email: "emailmemberone@gmail.com",
 		phone: "(+351) 234876543",
@@ -25,7 +25,7 @@ const teamData = [
         Studies" at the Freie Universität Berlin.`,
 	},
 	{
-		name: "Team Mebmer Two",
+		name: "Team MebmerTwo",
 		shortname: "Two",
 		email: "emailmembertwo@gmail.com",
 		phone: "(+945) 234876543",
