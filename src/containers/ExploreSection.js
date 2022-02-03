@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import tw from "twin.macro";
+import { Title } from "../styles";
 import { Element } from "react-scroll";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -14,8 +15,7 @@ const studioImages = [
 	{ image: studio3, description: "description 3" },
 ];
 
-const ExploreSectionContainer = styled(Element)`
-	${tw`
+const ExploreSectionContainer = tw(Element)`
         w-full
         h-screen
         flex
@@ -26,21 +26,7 @@ const ExploreSectionContainer = styled(Element)`
         xl:pt-2
         xl:pb-2
         items-center
-    `};
-	background: rgba(107, 40, 169, 0.3);
-`;
-
-const Title = tw.h1`
-    pt-5
-    text-3xl
-    xl:text-3xl
-    2xl:text-5xl
-    lg:mt-0
-    2xl:mt-6
-    2xl:mb-6
-    text-white
-    font-bold
-    text-center
+        bg-[rgba(107, 185, 10, 0.3)]
 `;
 
 const SectionInfo = tw.p`
@@ -103,7 +89,7 @@ const Description = tw.p`
 
 const ExploreSection = () => {
 	return (
-		<ExploreSectionContainer name="Explore">
+		<ExploreSectionContainer name="Studio">
 			<Title>Nuestro Espacio</Title>
 			<SectionInfo>
 				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum, esse

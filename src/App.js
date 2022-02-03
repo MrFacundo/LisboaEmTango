@@ -28,8 +28,8 @@ function App() {
 	return (
 		<AppContainer>
 			<HeroSection />
-			<ExploreSection />
 			<TeamSection />
+			<ExploreSection />
 			<Footer />
 		</AppContainer>
 	);
