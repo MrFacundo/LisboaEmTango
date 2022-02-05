@@ -7,6 +7,7 @@ import HeroSection from "./containers/HeroSection";
 import ExploreSection from "./containers/ExploreSection";
 import TeamSection from "./containers/TeamSection";
 import Footer from "./components/Footer";
+import ContactSection from "./containers/ContactSection";
 
 const AppContainer = styled.div`
 	${tw`
@@ -30,6 +31,7 @@ function App() {
 			<HeroSection />
 			<TeamSection />
 			<ExploreSection />
+			<ContactSection />
 			<Footer />
 		</AppContainer>
 	);
