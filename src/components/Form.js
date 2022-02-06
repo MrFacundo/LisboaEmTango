@@ -5,10 +5,44 @@ import tw from "twin.macro";
 const FORMSPARK_FORM_ID = "fUGCECB4";
 
 const FormContainer = tw.div`
-w-2/3 m-auto shadow-lg
+	w-[90%]
+	lg:w-2/3
+	m-auto
+	shadow-lg
 `;
 
-// const submitForm = () => {};
+const Input = tw.input`
+	rounded-sm
+	p-2
+	bg-[#1A222F]
+	border
+	border-gray-500
+`;
+
+const Label = tw.label`
+	mb-2
+	text-base
+	font-semibold
+`;
+
+const TextArea = tw.textarea`
+	rounded-sm
+	p-2
+	bg-[#1A222F]
+	border
+	border-gray-500
+`;
+
+const Button = tw.button`
+	mt-4
+	my-2
+	bg-blue-700
+	w-full
+	p-2
+	hover:bg-blue-900
+	transition-colors
+	duration-200
+`;
 
 const Form = () => {
 	const [submit, submitting] = useFormspark({
@@ -30,7 +64,6 @@ const Form = () => {
 		await submit({ ...formData });
 		setFormData(initialFormState);
 		setNotification({
-			class: "bg-green-500",
 			text: "Thanks, someone will be in touch shortly.",
 		});
 	};
@@ -38,21 +71,20 @@ const Form = () => {
 	return (
 		<FormContainer>
 			<form onSubmit={onSubmit}>
-				<div className="my-2 flex flex-col">
-					<label htmlFor="name">Name</label>
-					<input
+				<div className="flex flex-col">
+					<Label htmlFor="name">Name</Label>
+					<Input
 						value={formData.name}
 						onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-						className="border-2 p-2"
 						type="text"
 						id="name"
 						required
-						maxlength="30"
+						maxLength="30"
 					/>
 				</div>
 				<div className="my-2 flex flex-col">
-					<label htmlFor="email">Email</label>
-					<input
+					<Label htmlFor="email">Email</Label>
+					<Input
 						value={formData.email}
 						onChange={(e) =>
 							setFormData({ ...formData, email: e.target.value })
@@ -64,32 +96,28 @@ const Form = () => {
 					/>
 				</div>
 				<div className="my-2 flex flex-col">
-					<label htmlFor="message">Message</label>
+					<Label htmlFor="message">Message</Label>
 
-					<textarea
+					<TextArea
 						value={formData.message}
 						onChange={(e) =>
 							setFormData({ ...formData, message: e.target.value })
 						}
-						className="border-2 p-2"
 						type="message"
 						id="message"
 						required
-						maxlength="100"
+						maxLength="100"
+						rows={4}
 					/>
 				</div>
 				{notification && (
-					<div className={`my-4 text-white w-full p-4 ${notification.class}`}>
+					<div className={`my-4 text-white w-full p-4 bg-green-500"`}>
 						{notification.text}
 					</div>
 				)}
-				<button
-					type="submit"
-					disabled={submitting}
-					className="mt-4 my-2 bg-blue-700 text-white w-full p-2 hover:bg-blue-900 transition-colors duration-200"
-				>
+				<Button type="submit" disabled={submitting}>
 					{submitting ? "Submitting..." : "Submit"}
-				</button>
+				</Button>
 			</form>
 		</FormContainer>
 	);

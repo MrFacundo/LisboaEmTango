@@ -13,7 +13,6 @@ const LandingSection = tw.div`
 
 const InfoSection = tw.div`
         absolute
-        top[150px]
         right[3rem]
         left-auto
         sm:right[5rem]
@@ -25,6 +24,7 @@ const InfoSection = tw.div`
 `;
 
 const FloatingText = tw.h1`
+        hidden
         mb-6
         font-black
         text-white
@@ -35,7 +35,7 @@ const FloatingText = tw.h1`
         2xl:font-size[150px]
         2xl:line-height[125px]
         font-family["Archivo Narrow"]
-        flex
+        md:flex
         items-center
 `;
 
@@ -44,7 +44,8 @@ const OutlinedTextSvg = styled.svg`
 	${tw`
                 width[90px]
                 height[100px]
-                flex
+                hidden
+                md:flex
          `};
 	overflow: overlay;
 	text {
@@ -79,12 +80,10 @@ const DescriptionText = tw.h2`
 `;
 
 const ViewMoreButton = tw.button`
-        absolute
-        bottom-4
-        left-1/2
-        -translate-x-1/2
+        pb-10
+        align-self[center]
         text-white
-        text-4xl
+        text-[4rem]
         transition-colors
         duration-200
         hover:text-green-400
@@ -107,18 +106,18 @@ const HeroSection = () => {
 					<FloatingText>LISBOA</FloatingText>
 					<FloatingText style={{ display: "inline-flex" }}>
 						<OutlinedTextSvg viewBox="0 0 100 100">
-							><text>EM</text>
+							<text>EM</text>
 						</OutlinedTextSvg>
 					</FloatingText>
 					<FloatingText>TANGO</FloatingText>
-					<DescriptionText>Escuela de tango argentino.</DescriptionText>
+					<DescriptionText>Tango School Lisbon</DescriptionText>
 				</InfoSection>
-				<ViewMoreButton>
-					<Link to="Team" smooth={"easeInOutQuad"} duration={500}>
-						<BsArrowDownCircle />
-					</Link>
-				</ViewMoreButton>
 			</LandingSection>
+			<ViewMoreButton>
+				<Link to="Team" smooth={"easeInOutQuad"} duration={500}>
+					<BsArrowDownCircle />
+				</Link>
+			</ViewMoreButton>
 		</HeroSectionContainer>
 	);
 };

@@ -6,8 +6,8 @@ import { SiFacebook, SiInstagram, SiTwitter } from "react-icons/si";
 
 const FooterContainer = tw.div`
     w-full
-    h-96
-    background-color[#1A222F]
+    lg:h-96
+    bg-[#1A222F]
     flex
     pt-6
     pl-2
@@ -43,7 +43,7 @@ const InnerContainer = tw.div`
     flex-col
     lg:flex-row
     flex-wrap
-    pt-16
+    pt-8
     lg:pt-9
     justify-between
     lg:justify-start
@@ -60,6 +60,7 @@ const LeftInnerContainer = tw.div`
 `;
 
 const RightInnerContainer = tw.div`
+pt-10
     flex
     flex-col
     lg:flex-row
@@ -147,9 +148,6 @@ const Footer = () => {
 							<MenuItem>
 								<Link to="Explore">Explore</Link>
 							</MenuItem>
-							<MenuItem>
-								<Link to="TravelPlaces">Travel Places</Link>
-							</MenuItem>
 						</Menu>
 						<Menu>
 							<MenuItem>
@@ -158,9 +156,6 @@ const Footer = () => {
 							<MenuItem>
 								<Link to="# ">Contact Us</Link>
 							</MenuItem>
-							<MenuItem>
-								<Link to="#">Our Travel Terms</Link>
-							</MenuItem>
 						</Menu>
 						<Menu>
 							<MenuItem>
@@ -168,9 +163,6 @@ const Footer = () => {
 							</MenuItem>
 							<MenuItem>
 								<Link to="#">Careers</Link>
-							</MenuItem>
-							<MenuItem>
-								<Link to="#">Travel Guide</Link>
 							</MenuItem>
 						</Menu>
 					</LeftInnerContainer>

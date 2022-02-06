@@ -3,6 +3,8 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 import tw from "twin.macro";
 
 const MapContainer = tw.div`
+	m-auto
+	lg:m-0
     w-[80%]
     height[25rem]
     rounded
