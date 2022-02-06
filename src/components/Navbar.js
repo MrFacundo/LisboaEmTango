@@ -6,8 +6,10 @@ import { deviceSize } from "./responsive";
 import { slide as Menu } from "react-burger-menu";
 import styles from "./menuStyles";
 
+import { CgMenuRight } from "react-icons/cg";
+
 const NavContainer = tw.div`
-width[90%]
+    width[90%]
     flex
     h-20
     pl-6
@@ -19,6 +21,7 @@ width[90%]
     items-center
     self-center
     justify-between
+    text-white
 `;
 
 const NavItems = tw.div`
@@ -41,7 +44,6 @@ const NavItem = tw.li`
     items-center
     justify-center
     min-h-full
-    text-white
     cursor-pointer
     font-medium
     text-lg
@@ -52,6 +54,13 @@ const NavItem = tw.li`
     box-content
     mb-2
     lg:mb-0
+`;
+
+const Hamburger = tw.div`
+    block
+    md:hidden
+    text-[2rem]
+    cursor-pointer
 `;
 
 const Navbar = () => {
@@ -82,9 +91,12 @@ const Navbar = () => {
 		<NavContainer>
 			<Logo />
 			{isMobile && (
-				<Menu right styles={styles}>
-					{navItems}
-				</Menu>
+				// <Menu right styles={styles}>
+				// 	{navItems}
+				// </Menu>
+				<Hamburger>
+					<CgMenuRight />
+				</Hamburger>
 			)}
 			{!isMobile && navItems}
 		</NavContainer>

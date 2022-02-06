@@ -1,3 +1,4 @@
+import styled from "styled-components";
 import tw from "twin.macro";
 import { Element } from "react-scroll";
 import teamData from "../data/teamData";
@@ -16,26 +17,31 @@ const TeamSectionContainer = tw(Element)`
         pb-1
         xl:pt-2
         xl:pb-2
-		content-center
+		items-center
         bg-[rgba(107, 40, 169, 0.3)]
 `;
 
-const TeamMemberCardContainer = tw.div`
+const TeamMemberCardContainer = styled.div`
+	@media (min-width: 768px) {
+		flex-direction: ${(props) => (props.first ? "row-reverse" : "row")};
+	}
+	${tw`
+	w-[90%]
 	flex
-	justify-center
 	flex-col
+	justify-center
 	items-center
-	md:flex-row
 	md:items-start
+`};
 `;
 
 const TeamSection = () => {
 	return (
 		<TeamSectionContainer name="Team">
 			<Title>Our Team</Title>
-			<TeamMemberCardContainer>
-				<MemberBio member={teamData[0]} />
+			<TeamMemberCardContainer first>
 				<MemberImage member={teamData[0]} />
+				<MemberBio member={teamData[0]} />
 			</TeamMemberCardContainer>
 			<TeamMemberCardContainer>
 				<MemberImage member={teamData[1]} />

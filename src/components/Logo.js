@@ -8,7 +8,7 @@ const LogoContainer = tw.div`
 `;
 
 const Logo = () => {
-	return <LogoContainer>Lisboa em Tango</LogoContainer>;
+	return <LogoContainer>LISBOA EM TANGO</LogoContainer>;
 };
 
 export default Logo;

@@ -8,11 +8,13 @@ import {
 } from "react-icons/bs";
 
 const BioContainer = tw.div`
-    min-h-[8rem]
-    width[25rem]
+	max-w-[25rem]
     md:min-h-[25rem]
+	md:min-w-[25rem]
     bg-[#865837]
     border-b
+	text-white
+
 `;
 
 const ViewMoreButton = tw.h1`
@@ -20,18 +22,17 @@ const ViewMoreButton = tw.h1`
     active:outline-none
     focus:outline-none
     flex
-    pl-8
-    pt-8
-    mr-8
-    text-white
+    pl-4
+    py-3
     text-4xl
     font-family["Archivo Narrow"]
+	md:px-12
+	md:pt-12
 `;
 
 const BioText = tw.div`
 	text-justify 
-	p-8
-	text-white
+	p-6
 	text-base
 `;
 
@@ -46,6 +47,9 @@ const Social = tw.div`
 const SocialItem = tw.p`
 	pt-1
 	pr-3
+	hover:text-[#abc4ff]
+	transition-colors
+	duration-200
 `;
 
 export const MemberBio = ({ member }) => {
@@ -55,11 +59,13 @@ export const MemberBio = ({ member }) => {
 		<BioContainer>
 			<div {...getToggleProps()}>
 				<ViewMoreButton>
-					{isExpanded ? <BsArrowUpCircle /> : <BsArrowRightCircle />}
+					{isExpanded ? (
+						<BsArrowUpCircle className="mt-2" />
+					) : (
+						<BsArrowRightCircle className="mt-2" />
+					)}
 
-					<p style={{ paddingLeft: "1rem", textTransform: "uppercase" }}>
-						{member.name}
-					</p>
+					<p className="pl-4 uppercase md:leading-normal">{member.name}</p>
 				</ViewMoreButton>
 			</div>
 			<section {...getCollapseProps()}>
@@ -82,7 +88,7 @@ export const MemberBio = ({ member }) => {
 										target={"_blank"}
 										rel="noopener noreferrer"
 									>
-										<BsFacebook color="white" fontSize="2rem" />
+										<BsFacebook fontSize="2rem" />
 									</a>
 								)}
 							</SocialItem>
@@ -93,7 +99,7 @@ export const MemberBio = ({ member }) => {
 										target={"_blank"}
 										rel="noopener noreferrer"
 									>
-										<BsInstagram color="white" fontSize="2rem" />
+										<BsInstagram fontSize="2rem" />
 									</a>
 								)}
 							</SocialItem>

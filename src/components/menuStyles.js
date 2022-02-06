@@ -13,8 +13,8 @@ const styles = {
 		background: "#a90000",
 	},
 	bmCrossButton: {
-		height: "24px",
-		width: "24px",
+		height: "10rem",
+		width: "10rem",
 	},
 	bmCross: {
 		background: "#bdc3c7",
@@ -27,8 +27,8 @@ const styles = {
 	},
 	bmMenu: {
 		background: "#373a47",
-		padding: "10rem 5rem 0rem 0rem",
-		fontSize: "1.15em",
+		padding: "5rem 5rem 0rem 0rem",
+		fontSize: "5rem",
 	},
 	bmMorphShape: {
 		fill: "#373a47",
