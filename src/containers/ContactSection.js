@@ -111,7 +111,7 @@ const ContactSection = () => {
 						Clube Ferroviário de Portugal <br />
 						Rua de Santa Apolónia 59, 1100-468 Lisboa
 					</AddressDesctiption>
-					<Map location={location} zoomLevel={14} />
+					{/* <Map location={location} zoomLevel={14} /> */}
 				</Address>
 				<Registration>
 					<SectionTitle>REGISTRATION</SectionTitle>

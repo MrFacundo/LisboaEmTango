@@ -26,7 +26,7 @@ const TeamMemberCardContainer = styled.div`
 		flex-direction: ${(props) => (props.first ? "row-reverse" : "row")};
 	}
 	${tw`
-	w-[90%]
+	w-[80%]
 	flex
 	flex-col
 	justify-center

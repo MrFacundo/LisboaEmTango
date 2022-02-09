@@ -15,7 +15,7 @@ const studioImages = [
 	{ image: studio3, description: "description 3" },
 ];
 
-const ExploreSectionContainer = tw(Element)`
+const StudioSectionContainer = tw(Element)`
         w-full
         h-screen
         flex
@@ -44,8 +44,8 @@ const SectionInfo = tw.p`
     lg:pr-2
 `;
 
-const ExploreSectionWrapper = tw.div`
-    w-full
+const StudioSectionWrapper = tw.div`
+    w-[90%]
     h-full
     flex
     flex-col
@@ -87,9 +87,9 @@ const Description = tw.p`
     absolute
 `;
 
-const ExploreSection = () => {
+const StudioSection = () => {
 	return (
-		<ExploreSectionContainer name="Studio">
+		<StudioSectionContainer name="Studio">
 			<Title>Nuestro Espacio</Title>
 			<SectionInfo>
 				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum, esse
@@ -97,7 +97,7 @@ const ExploreSection = () => {
 				doloremque suscipit deleniti quasi illo in tenetur? Quidem, totam
 				molestiae.
 			</SectionInfo>
-			<ExploreSectionWrapper>
+			<StudioSectionWrapper>
 				<Carousel dynamicHeight={false} infiniteLoop={true} showThumbs={false}>
 					{studioImages.map((image, index) => {
 						return (
@@ -108,9 +108,9 @@ const ExploreSection = () => {
 						);
 					})}
 				</Carousel>
-			</ExploreSectionWrapper>
-		</ExploreSectionContainer>
+			</StudioSectionWrapper>
+		</StudioSectionContainer>
 	);
 };
 
-export default ExploreSection;
+export default StudioSection;
