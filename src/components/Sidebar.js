@@ -15,7 +15,8 @@ const SidebarContainer = styled.aside`
         left-0
         transition-[0.3 ease-in-out]
     `};
-	top: 0;
+	opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
+	top: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
 `;
 
 const CloseIcon = tw(FaTimes)`
@@ -55,22 +56,39 @@ const SidebarLink = tw(Link)`
     transition-[0.2s ease-in-out]
 `;
 
-const Sidebar = () => {
+const Sidebar = ({ isOpen, toggle }) => {
 	return (
-		<SidebarContainer>
+		<SidebarContainer isOpen={isOpen} onClick={toggle}>
 			<Icon>
 				<CloseIcon></CloseIcon>
 			</Icon>
 			<SidebarWrapper>
 				<SidebarMenu>
-					<SidebarLink to="Home">Home</SidebarLink>
-					<SidebarLink to="Team" smooth={"easeInOutQuad"} duration={500}>
+					<SidebarLink to="Home" onClick={toggle}>
+						Home
+					</SidebarLink>
+					<SidebarLink
+						to="Team"
+						smooth={"easeInOutQuad"}
+						duration={500}
+						onClick={toggle}
+					>
 						Team
 					</SidebarLink>
-					<SidebarLink to="Studio" smooth={"easeInOutQuad"} duration={500}>
+					<SidebarLink
+						to="Studio"
+						smooth={"easeInOutQuad"}
+						duration={500}
+						onClick={toggle}
+					>
 						Studio
 					</SidebarLink>
-					<SidebarLink to="Contact" smooth={"easeInOutQuad"} duration={500}>
+					<SidebarLink
+						to="Contact"
+						smooth={"easeInOutQuad"}
+						duration={500}
+						onClick={toggle}
+					>
 						Contact
 					</SidebarLink>
 				</SidebarMenu>

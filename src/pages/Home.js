@@ -1,9 +1,12 @@
 import styled from "styled-components";
 import tw from "twin.macro";
 import BackgroundImage from "../components/images/pexels-marko-zirdum-2188012.jpg";
+import { useState } from "react";
 
+import Navbar from "../components/Navbar";
 import HeroSection from "../containers/HeroSection";
-import ExploreSection from "../containers/ExploreSection";
+import ScheduleSection from "../containers/ScheduleSection";
+import StudioSection from "../containers/StudioSection";
 import TeamSection from "../containers/TeamSection";
 import Footer from "../components/Footer";
 import ContactSection from "../containers/ContactSection";
@@ -28,11 +31,20 @@ const HomeContainer = styled.div`
 `;
 
 const Home = () => {
+	const [isOpen, setIsOpen] = useState(false);
+
+	const toggleSidebar = () => {
+		setIsOpen(!isOpen);
+	};
+
 	return (
 		<HomeContainer>
+			<Sidebar isOpen={isOpen} toggle={toggleSidebar} />
+			<Navbar toggle={toggleSidebar} />
 			<HeroSection />
+			<ScheduleSection />
 			<TeamSection />
-			<ExploreSection />
+			<StudioSection />
 			<ContactSection />
 			<Footer />
 		</HomeContainer>

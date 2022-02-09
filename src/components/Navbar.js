@@ -63,7 +63,7 @@ const Hamburger = tw.div`
     cursor-pointer
 `;
 
-const Navbar = () => {
+const Navbar = ({ toggle }) => {
 	const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile });
 
 	const navItems = (
@@ -94,7 +94,7 @@ const Navbar = () => {
 				// <Menu right styles={styles}>
 				// 	{navItems}
 				// </Menu>
-				<Hamburger>
+				<Hamburger onClick={toggle}>
 					<CgMenuRight />
 				</Hamburger>
 			)}

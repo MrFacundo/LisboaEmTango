@@ -1,12 +1,10 @@
 import styled from "styled-components";
 import tw from "twin.macro";
 import { Link } from "react-scroll";
-import Navbar from "../components/Navbar";
 import { BsArrowDownCircle } from "react-icons/bs";
 
 const LandingSection = tw.div`
         w-full
-        h-screen
         flex
         flex-col
 `;
@@ -80,8 +78,10 @@ const DescriptionText = tw.h2`
 `;
 
 const ViewMoreButton = tw.button`
-        pb-10
-        align-self[center]
+        absolute
+        bottom-10
+        left[50%]
+        ml-[-1rem]
         text-white
         text-[4rem]
         transition-colors
@@ -93,7 +93,7 @@ const HeroSectionContainer = tw.div`
         w-full
         flex
         flex-col
-        h-screen
+        h-[calc(100vh - 5rem)]
         relative
 `;
 
@@ -101,7 +101,6 @@ const HeroSection = () => {
 	return (
 		<HeroSectionContainer>
 			<LandingSection>
-				<Navbar />
 				<InfoSection>
 					<FloatingText>LISBOA</FloatingText>
 					<FloatingText style={{ display: "inline-flex" }}>
