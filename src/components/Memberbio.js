@@ -8,12 +8,13 @@ import {
 } from "react-icons/bs";
 
 const BioContainer = tw.div`
-	max-w-[25rem]
+	w-[100%]
     md:min-h-[25rem]
-	md:min-w-[25rem]
-    bg-[#865837]
+	md:w-[25rem]
+    bg-[#001F33]
     border-b
 	text-white
+	font-text
 
 `;
 
@@ -24,8 +25,8 @@ const ViewMoreButton = tw.h1`
     flex
     pl-4
     py-3
-    text-4xl
-    font-family["Archivo Narrow"]
+	text-2xl
+    md:text-4xl
 	md:px-12
 	md:pt-12
 `;
@@ -60,9 +61,9 @@ export const MemberBio = ({ member }) => {
 			<div {...getToggleProps()}>
 				<ViewMoreButton>
 					{isExpanded ? (
-						<BsArrowUpCircle className="mt-2" />
+						<BsArrowUpCircle className="mt-1" />
 					) : (
-						<BsArrowRightCircle className="mt-2" />
+						<BsArrowRightCircle className="mt-1" />
 					)}
 
 					<p className="pl-4 uppercase md:leading-normal">{member.name}</p>

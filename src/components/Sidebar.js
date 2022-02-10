@@ -13,7 +13,7 @@ const SidebarContainer = styled.aside`
         grid
         items-center
         left-0
-        transition-[0.3 ease-in-out]
+        ease-in-out duration-500 
     `};
 	opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
 	top: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
@@ -42,6 +42,7 @@ const SidebarMenu = tw.div`
     grid-template-columns[1fr]
     grid-template-rows[repeat(6, 80px)]
     place-items-center
+	font-title
 `;
 
 const SidebarLink = tw(Link)`
@@ -56,7 +57,7 @@ const SidebarLink = tw(Link)`
     transition-[0.2s ease-in-out]
 `;
 
-const Sidebar = ({ isOpen, toggle }) => {
+const Sidebar = ({ sections, isOpen, toggle }) => {
 	return (
 		<SidebarContainer isOpen={isOpen} onClick={toggle}>
 			<Icon>
@@ -64,33 +65,19 @@ const Sidebar = ({ isOpen, toggle }) => {
 			</Icon>
 			<SidebarWrapper>
 				<SidebarMenu>
-					<SidebarLink to="Home" onClick={toggle}>
-						Home
-					</SidebarLink>
-					<SidebarLink
-						to="Team"
-						smooth={"easeInOutQuad"}
-						duration={500}
-						onClick={toggle}
-					>
-						Team
-					</SidebarLink>
-					<SidebarLink
-						to="Studio"
-						smooth={"easeInOutQuad"}
-						duration={500}
-						onClick={toggle}
-					>
-						Studio
-					</SidebarLink>
-					<SidebarLink
-						to="Contact"
-						smooth={"easeInOutQuad"}
-						duration={500}
-						onClick={toggle}
-					>
-						Contact
-					</SidebarLink>
+					{sections.map((section, index) => {
+						return (
+							<SidebarLink
+								key={index}
+								to={section.name}
+								smooth={"easeInOutQuad"}
+								duration={500}
+								onClick={toggle}
+							>
+								{section.title}
+							</SidebarLink>
+						);
+					})}
 				</SidebarMenu>
 			</SidebarWrapper>
 		</SidebarContainer>
