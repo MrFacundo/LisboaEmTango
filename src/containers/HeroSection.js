@@ -77,16 +77,25 @@ const DescriptionText = tw.h2`
 
 `;
 
-const ViewMoreButton = tw.button`
+const ViewMoreButton = tw(Link)`
+        cursor-pointer
+        flex
         absolute
         bottom-10
-        left[50%]
-        ml-[-1rem]
-        text-white
-        text-[4rem]
+        left[15%]
+        md:left[40%]
+        text-2xl
+        md:text-[2rem]
+        text-green-400
         transition-colors
         duration-200
-        hover:text-green-400
+        border-2
+        border-green-400
+        rounded-full
+        p-3
+        md:p-5
+        items-center
+        w-min
 `;
 
 const HeroSectionContainer = tw.div`
@@ -112,10 +121,9 @@ const HeroSection = () => {
 					<DescriptionText>Tango School Lisbon</DescriptionText>
 				</InfoSection>
 			</LandingSection>
-			<ViewMoreButton>
-				<Link to="Team" smooth={"easeInOutQuad"} duration={500}>
-					<BsArrowDownCircle />
-				</Link>
+			<ViewMoreButton to="Services" smooth={"easeInOutQuad"} duration={500}>
+				<p className="max-w-[15rem]">CLASSES AND WORKSHOPS</p>
+				<BsArrowDownCircle className="text-[6rem] md:text-[8rem]" />
 			</ViewMoreButton>
 		</HeroSectionContainer>
 	);

@@ -3,8 +3,6 @@ import { Link } from "react-scroll";
 import Logo from "./Logo";
 import { useMediaQuery } from "react-responsive";
 import { deviceSize } from "./responsive";
-import { slide as Menu } from "react-burger-menu";
-import styles from "./menuStyles";
 
 import { CgMenuRight } from "react-icons/cg";
 
@@ -26,7 +24,6 @@ const NavContainer = tw.div`
 
 const NavItems = tw.div`
     font-family["Barlow"]
-    max-w-xs
     list-none
     w-full
     h-auto
@@ -72,6 +69,11 @@ const Navbar = ({ toggle }) => {
 				<Link to="Home">Home</Link>
 			</NavItem>
 			<NavItem>
+				<Link to="Schedule" smooth={"easeInOutQuad"} duration={500}>
+					Learn
+				</Link>
+			</NavItem>
+			<NavItem>
 				<Link to="Team" smooth={"easeInOutQuad"} duration={500}>
 					Team
 				</Link>
@@ -91,9 +93,6 @@ const Navbar = ({ toggle }) => {
 		<NavContainer>
 			<Logo />
 			{isMobile && (
-				// <Menu right styles={styles}>
-				// 	{navItems}
-				// </Menu>
 				<Hamburger onClick={toggle}>
 					<CgMenuRight />
 				</Hamburger>

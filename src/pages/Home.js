@@ -5,6 +5,7 @@ import { useState } from "react";
 
 import Navbar from "../components/Navbar";
 import HeroSection from "../containers/HeroSection";
+import ServicesSection from "../containers/ServicesSection";
 import ScheduleSection from "../containers/ScheduleSection";
 import StudioSection from "../containers/StudioSection";
 import TeamSection from "../containers/TeamSection";
@@ -31,6 +32,36 @@ const HomeContainer = styled.div`
 `;
 
 const Home = () => {
+	const SectionNames = [
+		{
+			name: "Home",
+			title: "Home",
+		},
+		{
+			name: "Services",
+			title: "Learn",
+		},
+		{
+			name: "Schedule",
+			title: "Schedule / Registration",
+		},
+		{
+			name: "Team",
+			title: "Instructors",
+		},
+		{
+			name: "Studio",
+			title: "Our Studio",
+		},
+		{
+			name: "Orquesta",
+			title: "Orquesta",
+		},
+		{
+			name: "Contact",
+			title: "Address / Contact Us",
+		},
+	];
 	const [isOpen, setIsOpen] = useState(false);
 
 	const toggleSidebar = () => {
@@ -39,9 +70,10 @@ const Home = () => {
 
 	return (
 		<HomeContainer>
-			<Sidebar isOpen={isOpen} toggle={toggleSidebar} />
+			<Sidebar sections={SectionNames} isOpen={isOpen} toggle={toggleSidebar} />
 			<Navbar toggle={toggleSidebar} />
 			<HeroSection />
+			<ServicesSection />
 			<ScheduleSection />
 			<TeamSection />
 			<StudioSection />

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import tw from "twin.macro";
 import { Title } from "../styles";
 import { Element } from "react-scroll";
-import { Carousel } from "react-responsive-carousel";
+import Carousel from "react-responsive-carousel/lib/js/components/Carousel/index";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import studio1 from "../components/images/studio1.jpeg";
@@ -26,7 +26,9 @@ const StudioSectionContainer = tw(Element)`
         xl:pt-2
         xl:pb-2
         items-center
-        bg-[rgba(107, 185, 10, 0.3)]
+        // bg-[rgba(107, 185, 10, 0.3)]
+        bg-[#DEBA93]
+
 `;
 
 const SectionInfo = tw.p`
@@ -90,7 +92,7 @@ const Description = tw.p`
 const StudioSection = () => {
 	return (
 		<StudioSectionContainer name="Studio">
-			<Title>Nuestro Espacio</Title>
+			<Title>OUR STUDIO</Title>
 			<SectionInfo>
 				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum, esse
 				magnam modi, cum laboriosam sunt numquam error placeat harum at,
@@ -98,12 +100,20 @@ const StudioSection = () => {
 				molestiae.
 			</SectionInfo>
 			<StudioSectionWrapper>
-				<Carousel dynamicHeight={false} infiniteLoop={true} showThumbs={false}>
+				<Carousel
+					dynamicHeight={false}
+					autoPlay
+					showStatus={false}
+					swipeable={true}
+					showThumbs={false}
+					// animationHandler={"fade"}
+					infiniteLoop={true}
+				>
 					{studioImages.map((image, index) => {
 						return (
 							<Item key={index}>
 								<img src={image.image} alt={image.description} />
-								<Description>{image.description} </Description>
+								{/* <Description>{image.description} </Description> */}
 							</Item>
 						);
 					})}

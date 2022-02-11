@@ -39,6 +39,7 @@ const SectionTitle = tw(Title)`
 	w-[90%]
 	text-align[left]
 	lg:text-align[center]
+	md:text-5xl
 	mx-auto
 	my-0
 	mt-0
@@ -111,10 +112,10 @@ const ContactSection = () => {
 						Clube Ferroviário de Portugal <br />
 						Rua de Santa Apolónia 59, 1100-468 Lisboa
 					</AddressDesctiption>
-					{/* <Map location={location} zoomLevel={14} /> */}
+					<Map location={location} zoomLevel={14} />
 				</Address>
 				<Registration>
-					<SectionTitle>REGISTRATION</SectionTitle>
+					<SectionTitle>CONTACT US</SectionTitle>
 					<RegistrationDescription>
 						If you want to register to classes and workshops, need information
 						or have any questions, we are here for you...

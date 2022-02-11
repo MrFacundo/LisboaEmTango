@@ -38,7 +38,7 @@ const TeamMemberCardContainer = styled.div`
 const TeamSection = () => {
 	return (
 		<TeamSectionContainer name="Team">
-			<Title>Our Team</Title>
+			<Title>INSTRUCTORS</Title>
 			<TeamMemberCardContainer first>
 				<MemberImage member={teamData[0]} />
 				<MemberBio member={teamData[0]} />
