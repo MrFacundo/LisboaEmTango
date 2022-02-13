@@ -20,7 +20,7 @@ const ScheduleSectionContainer = tw(Element)`
 `;
 
 const GridContainer = tw.div`
-    w-[90%]
+    w-[80%]
 	flex-col
 	font-text
 `;

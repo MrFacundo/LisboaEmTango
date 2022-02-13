@@ -15,7 +15,7 @@ const SidebarContainer = styled.aside`
         left-0
         ease-in-out duration-500 
     `};
-	opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
+	opacity: ${({ isOpen }) => (isOpen ? "90%" : "0")};
 	top: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
 `;
 
@@ -54,6 +54,7 @@ const SidebarLink = tw(Link)`
     text-white
     cursor-pointer
     hover:text-[#01bf71]
+    hover:text-[2.0rem]
     transition-[0.2s ease-in-out]
 `;
 
