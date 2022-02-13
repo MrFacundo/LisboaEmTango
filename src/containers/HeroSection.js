@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import styled from "styled-components";
 import tw from "twin.macro";
 import { Link } from "react-scroll";
@@ -78,22 +79,25 @@ const DescriptionText = tw.h2`
 `;
 
 const ViewMoreButton = tw(Link)`
+        md:h-[7rem]
         cursor-pointer
         flex
         absolute
         bottom-10
         left[15%]
-        md:left[40%]
         text-2xl
+        md:left[40%]
         md:text-[2rem]
-        text-green-400
+        text-[#001F33]
+        bg-[#DEBA93]
+        // bg-[#001F33]
         transition-colors
         duration-200
         border-2
-        border-green-400
-        rounded-full
-        p-3
-        md:p-5
+        // border-green-400
+        rounded-lg
+        px-2
+        md:p-3
         items-center
         w-min
 `;
@@ -102,7 +106,7 @@ const HeroSectionContainer = tw.div`
         w-full
         flex
         flex-col
-        h-[calc(100vh - 5rem)]
+        h-[100vh]
         relative
 `;
 
@@ -110,7 +114,7 @@ const HeroSection = () => {
 	return (
 		<HeroSectionContainer>
 			<LandingSection>
-				<InfoSection>
+				{/* <InfoSection>
 					<FloatingText>LISBOA</FloatingText>
 					<FloatingText style={{ display: "inline-flex" }}>
 						<OutlinedTextSvg viewBox="0 0 100 100">
@@ -119,11 +123,11 @@ const HeroSection = () => {
 					</FloatingText>
 					<FloatingText>TANGO</FloatingText>
 					<DescriptionText>Tango School Lisbon</DescriptionText>
-				</InfoSection>
+				</InfoSection> */}
 			</LandingSection>
 			<ViewMoreButton to="Services" smooth={"easeInOutQuad"} duration={500}>
 				<p className="max-w-[15rem]">CLASSES AND WORKSHOPS</p>
-				<BsArrowDownCircle className="text-[6rem] md:text-[8rem]" />
+				<BsArrowDownCircle className="text-[5rem] md:text-[8rem]" />
 			</ViewMoreButton>
 		</HeroSectionContainer>
 	);

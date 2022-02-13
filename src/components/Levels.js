@@ -133,13 +133,6 @@ const Levels = () => {
 				</LevelOne>
 				<Image src={levels[3].photo} alt="" />
 			</LevelsWrapper>
-			<LevelsWrapper left>
-				<LevelOne>
-					<Title left>{levels[4].title}</Title>
-					<Description>{levels[4].description}</Description>
-				</LevelOne>
-				<Image src={levels[4].photo} alt="" />
-			</LevelsWrapper>
 		</LevelsContainer>
 	);
 };

@@ -27,7 +27,6 @@ const SectionInfo = tw.p`
     text-base
 	font-text
 	md:text-2xl
-	text-white
     text-center
 	max-w-[80%]
 	mt-2
@@ -53,7 +52,6 @@ const ServicesSection = () => {
 		<ServicesSectionContainer name="Services">
 			<ServicesTitle>Learn and practice</ServicesTitle>
 			<SectionInfo>
-				{" "}
 				We offer a programme of learning for every level of experience aimed to
 				inspire creativity, curiosity and experimentation through tango.{" "}
 			</SectionInfo>

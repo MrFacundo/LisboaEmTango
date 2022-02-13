@@ -55,7 +55,7 @@ const NavItem = tw.li`
 
 const Hamburger = tw.div`
     block
-    md:hidden
+    // md:hidden
     text-[2rem]
     cursor-pointer
 `;
@@ -92,14 +92,18 @@ const Navbar = ({ toggle }) => {
 	return (
 		<NavContainer>
 			<Logo />
-			{isMobile && (
-				<Hamburger onClick={toggle}>
-					<CgMenuRight />
-				</Hamburger>
-			)}
-			{!isMobile && navItems}
+			<Hamburger onClick={toggle}>
+				<CgMenuRight />
+			</Hamburger>
 		</NavContainer>
 	);
 };
 
 export default Navbar;
+
+// {isMobile && (
+//     <Hamburger onClick={toggle}>
+//         <CgMenuRight />
+//     </Hamburger>
+// )}
+// {!isMobile && navItems}
