@@ -1,5 +1,6 @@
 import React from "react";
 import tw from "twin.macro";
+import { motion } from "framer-motion";
 import { Element } from "react-scroll";
 import { Title } from "../styles";
 import { BsArrowRightCircle } from "react-icons/bs";
@@ -48,21 +49,32 @@ const ScheduleTitle = tw(Title)`
         text-[#051622]
 `;
 
-const Button = tw.button`
+const Button = tw(motion.button)`
 	items-center
-	active:outline-none
-	focus:outline-none
-	flex
-    text-white
 	font-title
-    bg-[#051622]
-    text-4xl
-	p-5
-	md:text-7xl
-    md:p-8
-    my-8
-	md:my-12
-    cursor-pointer
+	rounded-full
+	bg-[#DEBA93]
+	cursor-pointer
+	text-white
+	flex
+	flex-col
+	text-center
+	justify-center
+	place-items-center
+	self-center
+	text-[1.6rem]
+	md:text-[2rem]
+	border-2
+	pt-4
+	my-[4rem]
+	md:pt-[3rem]
+	h-[13rem]
+	w-[13rem]
+	md:h-[15rem]
+	md:w-[15rem]
+	hover:text-[#001F33]
+	hover:border-[#001F33]
+	duration-300
 `;
 
 const ScheduleSection = () => {
@@ -95,9 +107,37 @@ const ScheduleSection = () => {
 				</Class>
 				<Separator />
 			</GridContainer>
-			<Button>
-				REGISTER
-				<BsArrowRightCircle className="ml-3 md:ml-7" />
+			<Button
+				initial={{ scale: 0 }}
+				whileInView={{ scale: 1 }}
+				// viewport={{ margin: "-200px" }}
+				transition={{
+					ease: "easeInOut",
+					duration: 0.3,
+				}}
+			>
+				<motion.span
+					initial={{ opacity: 0 }}
+					whileInView={{ opacity: 1 }}
+					transition={{
+						ease: "easeInOut",
+						delay: 0.5,
+						duration: 0.3,
+					}}
+				>
+					BOOK A CLASS
+				</motion.span>
+				<motion.span
+					initial={{ opacity: 0 }}
+					whileInView={{ opacity: 1 }}
+					transition={{
+						ease: "easeInOut",
+						delay: 0.5,
+						duration: 0.3,
+					}}
+				>
+					<BsArrowRightCircle className="text-[3rem] mt-4" />
+				</motion.span>
 			</Button>
 		</ScheduleSectionContainer>
 	);

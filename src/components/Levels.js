@@ -1,10 +1,13 @@
 import tw from "twin.macro";
 import styled from "styled-components";
-import milonga1 from "../components/images/milonga1.jpg";
-import milonga2 from "../components/images/milonga2.jpg";
-import milonga3 from "../components/images/milonga3.jpg";
-import milonga4 from "../components/images/milonga4.jpg";
-import milonga5 from "../components/images/milonga5.jpg";
+import { motion } from "framer-motion";
+import { BsChevronRight } from "react-icons/bs";
+
+import milonga1 from "./images/milonga1.jpg";
+import milonga2 from "./images/milonga2.jpg";
+import milonga3 from "./images/milonga3.jpg";
+import milonga4 from "./images/milonga4.jpg";
+import milonga5 from "./images/milonga5.jpg";
 
 const levels = [
 	{
@@ -31,13 +34,9 @@ const levels = [
 			"abordam-se as necessidades do bailarino de Tango na pista de dança, sequências, musicalidade, condução e utilização do espaço.",
 		photo: milonga4,
 	},
-	{
-		title: "AULAS PRIVADAS",
-		description:
-			"abordam-se as necessidades do bailarino de Tango na pista de dança,sequências, musicalidade, condução e utilização do espaço.",
-		photo: milonga5,
-	},
 ];
+
+// styles
 
 const LevelsContainer = tw.div`
     flex
@@ -48,7 +47,7 @@ const LevelsContainer = tw.div`
     pb-4
 `;
 
-const LevelsWrapper = styled.div`
+const LevelsWrapper = styled(motion.div)`
 	${tw`
 		flex
 		md:pb-5
@@ -57,23 +56,24 @@ const LevelsWrapper = styled.div`
 	flex-direction: ${(props) => (props.left ? "row" : "row-reverse")}; ;
 `;
 
-const LevelOne = tw.div`
+const Level = tw(motion.div)`
+	flex
     flex-col
-    min-h-[10rem]
+    min-h-[14rem]
     w-[18rem]
     border-[1px]
     border-color[#001F33]
 	md:min-h-[20rem]
 	md:min-w-[30rem]
-    // bg-[#DEBA93]
+	justify-between
 
 `;
 const Title = styled.div`
 	${tw`
-		text-2xl
+		text-3xl
 		p-3
 		pt-5
-		md:text-4xl
+		md:text-6xl
 		md:p-8
     `};
 	text-align: ${(props) => (props.left ? "start" : "end")};
@@ -93,7 +93,7 @@ const Description = styled.div`
 	text-align: ${(props) => (props.left ? "start" : "end")};
 `;
 
-const Image = tw.img`
+const Image = tw(motion.img)`
 	hidden
 	md:flex
 	max-h-[20rem]
@@ -102,36 +102,80 @@ const Image = tw.img`
 	object-cover
 `;
 
+const Button = tw(motion.div)`
+	flex
+    flex-col
+    min-h-[14rem]
+    w-[18rem]
+    border-[1px]
+    border-color[#001F33]
+	md:min-h-[20rem]
+	md:min-w-[30rem]
+	justify-center
+	hover:text-white
+	hover:bg-[#001F33]
+	duration-300
+	cursor-pointer
+	items-center
+`;
+
+// animations
+
+const levelVariant = {
+	hidden: { opacity: 0, y: 200 },
+	show: {
+		opacity: 1,
+		y: 0,
+		transition: {
+			ease: "easeIn",
+			duration: 1,
+		},
+	},
+};
+
+const imageVariant = {
+	hidden: { opacity: 0 },
+	show: {
+		opacity: 1,
+		transition: {
+			delay: 1,
+			ease: "easeIn",
+			duration: 1,
+		},
+	},
+};
+
 const Levels = () => {
 	return (
 		<LevelsContainer>
-			<LevelsWrapper left>
-				<LevelOne>
-					<Title left>{levels[0].title}</Title>
-					<Description>{levels[0].description}</Description>
-				</LevelOne>
-				<Image src={levels[0].photo} alt="" />
-			</LevelsWrapper>
-			<LevelsWrapper>
-				<LevelOne>
-					<Title>{levels[1].title}</Title>
-					<Description left>{levels[1].description}</Description>
-				</LevelOne>
-				<Image src={levels[1].photo} alt="" />
-			</LevelsWrapper>
-			<LevelsWrapper left>
-				<LevelOne>
-					<Title left>{levels[2].title}</Title>
-					<Description>{levels[2].description}</Description>
-				</LevelOne>
-				<Image src={levels[2].photo} alt="" />
-			</LevelsWrapper>
-			<LevelsWrapper>
-				<LevelOne>
-					<Title>{levels[3].title}</Title>
-					<Description left>{levels[3].description}</Description>
-				</LevelOne>
-				<Image src={levels[3].photo} alt="" />
+			{levels.map((level, index) => {
+				return (
+					<LevelsWrapper
+						key={index}
+						left={+(index % 2 === 0)}
+						initial="hidden"
+						whileInView="show"
+						viewport={{ once: true, amount: 0.8, margin: "100px" }}
+					>
+						<Level variants={levelVariant}>
+							<Title left={+(index % 2 === 0)}>{level.title}</Title>
+							<Description>{level.description}</Description>
+						</Level>
+						<Image variants={imageVariant} src={level.photo} alt="" />
+					</LevelsWrapper>
+				);
+			})}
+			<LevelsWrapper
+				left
+				initial="hidden"
+				whileInView="show"
+				viewport={{ once: true, amount: 0.8, margin: "100px" }}
+			>
+				<Button variants={levelVariant}>
+					<Title left>BOOK A CLASS</Title>
+					<BsChevronRight className="mt-[1rem] text-[3rem] md:text-[5rem]" />
+				</Button>
+				<Image variants={imageVariant} src={milonga5} alt="" />
 			</LevelsWrapper>
 		</LevelsContainer>
 	);

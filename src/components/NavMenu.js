@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-scroll";
 import tw from "twin.macro";
 
@@ -46,14 +46,14 @@ const SidebarLink = tw(Link)`
 	font-title
 `;
 
-const NavMenuContainer = tw.div`
+const NavMenuContainer = tw(motion.div)`
 	w-full
 	flex
 	flex-col
 	pt-[5rem]
 `;
 
-const NavList = tw.ul`
+const NavList = tw(motion.ul)`
 	w-full
 	flex
 	flex-col
@@ -65,54 +65,65 @@ const NavItem = tw(motion.li)`
 	md:py-6
 `;
 
-const variants = {
+const container = {
 	show: {
-		transform: "translateX(0em)",
-		opacity: 1,
+		transition: {
+			staggerChildren: 0.1,
+		},
 	},
-	hide: {
-		transform: "translateX(5em)",
+};
+
+const item = {
+	hidden: { opacity: 0, x: 100 },
+	show: {
+		opacity: 1,
+		x: 0,
+		transition: {
+			ease: [0.6, 0.01, -0.05, 0.95],
+			duration: 0.3,
+		},
+	},
+	exit: {
 		opacity: 0,
+		transition: {
+			ease: "easeInOut",
+			duration: 0.3,
+		},
 	},
 };
 
 const NavMenu = ({ isOpen, toggle }) => {
 	return (
 		<NavMenuContainer>
-			<NavList>
-				{sections.map((section, index) => {
-					return (
-						<NavItem
-							initial={false}
-							animate={isOpen ? "show" : "hide"}
-							variants={{
-								show: {
-									...variants.show,
-									transition: {
-										delay: (index + 2) * 0.1,
-										duration: index * 0.1,
-									},
-								},
-								hide: {
-									...variants.hide,
-									transition: { delay: 0.05, duration: 0.05 },
-								},
-							}}
-							whileHover={{ scale: 1.2, transition: { duration: 0.2 } }}
-						>
-							<SidebarLink
-								key={index}
-								to={section.name}
-								smooth={"easeInOutQuad"}
-								duration={500}
-								onClick={toggle}
-							>
-								{section.title}
-							</SidebarLink>
-						</NavItem>
-					);
-				})}
-			</NavList>
+			<AnimatePresence>
+				{isOpen && (
+					<NavList
+						variants={container}
+						initial="hidden"
+						animate="show"
+						exit="exit"
+					>
+						{sections.map((section, index) => {
+							return (
+								<NavItem
+									variants={item}
+									whileHover={{ scale: 1.2, transition: { duration: 0.2 } }}
+								>
+									<SidebarLink
+										key={index}
+										to={section.name}
+										smooth={"easeInOutQuad"}
+										duration={500}
+										onClick={toggle}
+									>
+										{section.title}
+									</SidebarLink>
+								</NavItem>
+							);
+						})}
+					</NavList>
+				)}
+			</AnimatePresence>
 		</NavMenuContainer>
 	);
 };

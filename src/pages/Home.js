@@ -2,13 +2,14 @@ import styled from "styled-components";
 import tw from "twin.macro";
 import BackgroundImage from "../components/images/pexels-marko-zirdum-2188012.jpg";
 
-import HeroSection from "../containers/HeroSection";
-import ServicesSection from "../containers/ServicesSection";
-import ScheduleSection from "../containers/ScheduleSection";
-import StudioSection from "../containers/StudioSection";
-import TeamSection from "../containers/TeamSection";
+import Logo from "../components/Logo";
+import HeroSection from "../sections/HeroSection";
+import ServicesSection from "../sections/ServicesSection";
+import ScheduleSection from "../sections/ScheduleSection";
+import StudioSection from "../sections/StudioSection";
+import TeamSection from "../sections/TeamSection";
 import Footer from "../components/Footer";
-import ContactSection from "../containers/ContactSection";
+import ContactSection from "../sections/ContactSection";
 import HamburgerMenu from "../components/HamburgerMenu";
 
 const HomeContainer = styled.div`
@@ -32,6 +33,7 @@ const HomeContainer = styled.div`
 const Home = () => {
 	return (
 		<HomeContainer>
+			<Logo />
 			<HamburgerMenu />
 			<HeroSection />
 			<ServicesSection />

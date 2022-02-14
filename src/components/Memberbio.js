@@ -54,7 +54,9 @@ const SocialItem = tw.p`
 `;
 
 export const MemberBio = ({ member }) => {
-	const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
+	const { getCollapseProps, getToggleProps, isExpanded } = useCollapse({
+		duration: 1000,
+	});
 
 	return (
 		<BioContainer>
