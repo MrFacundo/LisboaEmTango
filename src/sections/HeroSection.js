@@ -2,7 +2,8 @@
 import styled from "styled-components";
 import tw from "twin.macro";
 import { Link } from "react-scroll";
-import { BsArrowDownCircle } from "react-icons/bs";
+import { motion } from "framer-motion";
+import { BsChevronDoubleDown } from "react-icons/bs";
 
 const LandingSection = tw.div`
         w-full
@@ -78,28 +79,36 @@ const DescriptionText = tw.h2`
 
 `;
 
-const ViewMoreButton = tw(Link)`
-        md:h-[7rem]
+const ViewMoreButton = tw(motion.div)`
+        rounded-full
+        bg-transparent
+        hover:bg-[#DEBA93]
         cursor-pointer
+        text-white
         flex
+        flex-col
+        text-center
+        justify-center
+        place-items-center
+        self-center
         absolute
         bottom-10
-        left[15%]
-        text-2xl
-        md:left[40%]
+        md:bottom-20
+
+        left[28%]
+        md:left[75%]
+        text-[1.2rem]
         md:text-[2rem]
-        text-[#001F33]
-        bg-[#DEBA93]
-        // bg-[#001F33]
-        transition-colors
-        duration-200
         border-2
-        // border-green-400
-        rounded-lg
-        px-2
-        md:p-3
-        items-center
-        w-min
+        pt-4
+        md:pt-8
+        h-[10rem]
+        w-[10rem]
+        md:h-[15rem]
+        md:w-[15rem]
+        hover:text-[#001F33]
+        hover:border-[#001F33]
+        duration-300
 `;
 
 const HeroSectionContainer = tw.div`
@@ -125,10 +134,42 @@ const HeroSection = () => {
 					<DescriptionText>Tango School Lisbon</DescriptionText>
 				</InfoSection> */}
 			</LandingSection>
-			<ViewMoreButton to="Services" smooth={"easeInOutQuad"} duration={500}>
-				<p className="max-w-[15rem]">CLASSES AND WORKSHOPS</p>
-				<BsArrowDownCircle className="text-[5rem] md:text-[8rem]" />
-			</ViewMoreButton>
+			<Link to="Services" smooth={"easeInOutQuad"} duration={1000}>
+				<ViewMoreButton
+					initial={{ scale: 0 }}
+					animate={{ scale: 1 }}
+					transition={{
+						ease: [0.6, 0.01, -0.05, 0.95],
+						duration: 0.6,
+						delay: 1,
+					}}
+				>
+					<motion.span
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						transition={{
+							ease: "easeInOut",
+							duration: 0.6,
+							delay: 1.8,
+						}}
+						className="max-w-[15rem]"
+					>
+						CLASSES / WORKSHOPS
+					</motion.span>
+					<motion.span
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						transition={{
+							ease: "easeInOut",
+							duration: 0.6,
+							delay: 1.8,
+						}}
+						className="max-w-[15rem]"
+					>
+						<BsChevronDoubleDown className="text-[2rem] md:text-[4rem] md:mt-[0.3rem]" />
+					</motion.span>
+				</ViewMoreButton>
+			</Link>
 		</HeroSectionContainer>
 	);
 };
