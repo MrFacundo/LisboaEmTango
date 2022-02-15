@@ -4,7 +4,7 @@ import tw from "twin.macro";
 
 const sections = [
 	{
-		name: "Home",
+		name: "Hero",
 		title: "Home",
 	},
 	{

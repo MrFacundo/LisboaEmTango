@@ -3,11 +3,11 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import { BsChevronRight } from "react-icons/bs";
 
-import milonga1 from "./images/milonga1.jpg";
-import milonga2 from "./images/milonga2.jpg";
-import milonga3 from "./images/milonga3.jpg";
-import milonga4 from "./images/milonga4.jpg";
-import milonga5 from "./images/milonga5.jpg";
+import milonga1 from "../assets/images/milonga1.jpg";
+import milonga2 from "../assets/images/milonga2.jpg";
+import milonga3 from "../assets/images/milonga3.jpg";
+import milonga4 from "../assets/images/milonga4.jpg";
+import milonga5 from "../assets/images/milonga5.jpg";
 
 const levels = [
 	{

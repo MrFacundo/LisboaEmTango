@@ -2,7 +2,7 @@ import tw from "twin.macro";
 import { Title } from "../styles";
 import { Element } from "react-scroll";
 import Levels from "../components/Levels";
-import ImageDivider from "../components/images/79.jpg";
+import ImageDivider from "../assets/images/79.jpg";
 
 const ServicesSectionContainer = tw(Element)`
         w-full

@@ -121,7 +121,7 @@ const HeroSectionContainer = tw.div`
 
 const HeroSection = () => {
 	return (
-		<HeroSectionContainer>
+		<HeroSectionContainer name="Hero">
 			<LandingSection>
 				{/* <InfoSection>
 					<FloatingText>LISBOA</FloatingText>
