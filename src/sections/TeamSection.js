@@ -40,11 +40,19 @@ const TeamSection = () => {
 		<TeamSectionContainer name="Team">
 			<Title>INSTRUCTORS</Title>
 			<TeamMemberCardContainer first>
-				<MemberImage member={teamData[0]} />
+				<MemberImage
+					src={teamData[0].image}
+					fallback={teamData[0].image.imageFallback}
+					alt={teamData[0].name}
+				/>
 				<MemberBio member={teamData[0]} />
 			</TeamMemberCardContainer>
 			<TeamMemberCardContainer>
-				<MemberImage member={teamData[1]} />
+				<MemberImage
+					src={teamData[1].image}
+					fallback={teamData[1].image.imageFallback}
+					alt={teamData[1].name}
+				/>
 				<MemberBio member={teamData[1]} />
 			</TeamMemberCardContainer>
 		</TeamSectionContainer>
