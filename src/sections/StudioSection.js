@@ -5,9 +5,9 @@ import { Element } from "react-scroll";
 import Carousel from "react-responsive-carousel/lib/js/components/Carousel/index";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-import studio1 from "../components/images/studio1.jpeg";
-import studio2 from "../components/images/studio2.jpeg";
-import studio3 from "../components/images/studio3.jpeg";
+import studio1 from "../assets/images/studio1.jpeg";
+import studio2 from "../assets/images/studio2.jpeg";
+import studio3 from "../assets/images/studio3.jpeg";
 
 const studioImages = [
 	{ image: studio1, description: "description 1" },

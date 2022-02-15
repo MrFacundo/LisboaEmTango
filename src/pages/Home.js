@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import tw from "twin.macro";
-import BackgroundImage from "../components/images/pexels-marko-zirdum-2188012.jpg";
+import BackgroundImage from "../assets/images/pexels-marko-zirdum-2188012.jpg";
 
 import Logo from "../components/Logo";
 import HeroSection from "../sections/HeroSection";

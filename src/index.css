@@ -9,15 +9,3 @@ body,
 #root {
 	min-width: 100%;
 }
-
-.pin {
-	display: flex;
-	align-items: center;
-	width: 180px;
-	color: var(--main-blue);
-}
-
-.pin-text {
-	padding-left: 0.5rem;
-	font-size: 1.3em;
-}

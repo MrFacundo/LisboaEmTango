@@ -3,8 +3,7 @@ module.exports = {
 	theme: {
 		extend: {
 			backgroundImage: {
-				"home-md":
-					"url('/src/components/images/pexels-marko-zirdum-2188012.jpg')",
+				"home-md": "url('/src/assets/images/pexels-marko-zirdum-2188012.jpg')",
 			},
 			fontFamily: {
 				title: ["Barlow", "sans-serif"],

@@ -1,5 +1,5 @@
-import portrait1 from "../components/images/portrait1.jpg";
-import portrait2 from "../components/images/portrait2.jpg";
+import portrait1 from "../assets/images/portrait1.jpg";
+import portrait2 from "../assets/images/portrait2.jpg";
 
 const teamData = [
 	{
