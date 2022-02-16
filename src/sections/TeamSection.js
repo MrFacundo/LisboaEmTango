@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import tw from "twin.macro";
 import { Element } from "react-scroll";
+import { motion } from "framer-motion";
 import teamData from "../data/teamData";
 
 import { Title } from "../styles";
@@ -21,7 +22,7 @@ const TeamSectionContainer = tw(Element)`
         bg-[rgba(107, 40, 169, 0.3)]
 `;
 
-const TeamMemberCardContainer = styled.div`
+const TeamMemberCardContainer = styled(motion.div)`
 	@media (min-width: 768px) {
 		flex-direction: ${(props) => (props.first ? "row-reverse" : "row")};
 	}
@@ -39,7 +40,16 @@ const TeamSection = () => {
 	return (
 		<TeamSectionContainer name="Team">
 			<Title>INSTRUCTORS</Title>
-			<TeamMemberCardContainer first>
+			<TeamMemberCardContainer
+				first
+				initial={{ opacity: 0 }}
+				whileInView={{ opacity: 1 }}
+				viewport={{ once: true }}
+				transition={{
+					ease: "easeInOut",
+					duration: 0.8,
+				}}
+			>
 				<MemberImage
 					src={teamData[0].image}
 					fallback={teamData[0].image.imageFallback}
@@ -47,7 +57,15 @@ const TeamSection = () => {
 				/>
 				<MemberBio member={teamData[0]} />
 			</TeamMemberCardContainer>
-			<TeamMemberCardContainer>
+			<TeamMemberCardContainer
+				initial={{ opacity: 0 }}
+				whileInView={{ opacity: 1 }}
+				viewport={{ once: true }}
+				transition={{
+					ease: "easeInOut",
+					duration: 0.8,
+				}}
+			>
 				<MemberImage
 					src={teamData[1].image}
 					fallback={teamData[1].image.imageFallback}

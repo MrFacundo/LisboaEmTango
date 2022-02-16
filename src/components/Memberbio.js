@@ -63,9 +63,9 @@ export const MemberBio = ({ member }) => {
 				<ViewMoreButton>
 					<p className="pl-4 uppercase md:leading-normal">{member.name}</p>
 					{isExpanded ? (
-						<BsChevronUp className="mt-3" />
+						<BsChevronUp className="mt-0.5 md:mt-3 ml-2" />
 					) : (
-						<BsChevronRight className="mt-3" />
+						<BsChevronRight className="mt-0.5 md:mt-3 ml-2" />
 					)}
 				</ViewMoreButton>
 			</div>

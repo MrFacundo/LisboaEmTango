@@ -7,7 +7,6 @@ import { BsArrowRightCircle } from "react-icons/bs";
 
 const ScheduleSectionContainer = tw(Element)`
         w-full
-        min-h-screen
         flex
         flex-col
         relative

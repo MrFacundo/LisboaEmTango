@@ -3,12 +3,15 @@ import tw from "twin.macro";
 
 const Button = tw(motion.div)`
 	top-[2rem]
-	right-[2rem]
+	right-[1.5rem]
 	md:top-[3rem]
 	md:right-[3rem]
 	fixed
 	z-50
 	cursor-pointer
+	w-[2.5rem]
+	md:w-[4rem]
+
 `;
 
 const Path = (props) => (
@@ -28,7 +31,7 @@ export function MenuToggle({ toggle, isOpen }) {
 			whileHover={{ scale: 1.2, transition: { duration: 0.2 } }}
 			onClick={toggle}
 		>
-			<svg width="50" height="50" viewBox="0 0 25 25">
+			<svg max-width="100%" viewBox="0 0 25 25">
 				<Path
 					animate={isOpen ? "open" : "closed"}
 					stroke="hsl(0, 0%, 100%)"
