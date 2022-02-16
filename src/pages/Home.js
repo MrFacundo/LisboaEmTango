@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import tw from "twin.macro";
-import BackgroundImage from "../assets/images/pexels-marko-zirdum-2188012.jpg";
+import BackgroundImage from "../assets/images/temporaryDesktopBg.jpg";
+import BackgroundImage2 from "../assets/images/couple1.jpg";
 
 import Logo from "../components/Logo";
 import HeroSection from "../sections/HeroSection";
@@ -19,20 +20,38 @@ const HomeContainer = styled.div`
 		w-full
 		h-full
 		overflow-hidden
-        bg-home-md
         bg-no-repeat
         bg-fixed
         bg-blend-overlay
-        bg-cover
-        bg-bottom
+		bg-cover
     `};
 	background-image: url(${BackgroundImage});
-	background-position: bottom 30% center;
+
+	@media only screen and (max-width: 768px) {
+		background-image: url(${BackgroundImage2});
+		background-position: bottom 0% left 50%;
+		background-size: 180%;
+	}
 `;
+
+// const HomeContainerGradient = styled.div`
+// 	${tw`
+// 		w-full
+// 		h-full
+// 		overflow-hidden
+//         bg-fixed
+//     `};
+// 	background-image: linear-gradient(
+// 		100deg,
+// 		rgba(250, 211, 184, 0) 0%,
+// 		rgba(0, 31, 51, 1) 55%
+// 	);
+// `;
 
 const Home = () => {
 	return (
 		<HomeContainer>
+			{/* <HomeContainerGradient> */}
 			<Logo />
 			<HamburgerMenu />
 			<HeroSection />
@@ -42,6 +61,7 @@ const Home = () => {
 			<StudioSection />
 			<ContactSection />
 			<Footer />
+			{/* </HomeContainerGradient> */}
 		</HomeContainer>
 	);
 };

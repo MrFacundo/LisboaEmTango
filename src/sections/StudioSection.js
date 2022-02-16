@@ -17,7 +17,7 @@ const studioImages = [
 
 const StudioSectionContainer = tw(Element)`
         w-full
-        h-screen
+        min-h-screen
         flex
         flex-col
         relative

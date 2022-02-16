@@ -3,14 +3,14 @@ import useCollapse from "react-collapsed";
 import {
 	BsFacebook,
 	BsInstagram,
-	BsArrowRightCircle,
-	BsArrowUpCircle,
+	BsChevronRight,
+	BsChevronUp,
 } from "react-icons/bs";
 
 const BioContainer = tw.div`
 	w-[100%]
-    md:min-h-[25rem]
-	md:w-[25rem]
+    md:min-h-[30rem]
+	md:w-[30rem]
     bg-[#001F33]
     border-b
 	text-white
@@ -26,7 +26,7 @@ const ViewMoreButton = tw.h1`
     pl-4
     py-3
 	text-2xl
-    md:text-4xl
+    md:text-6xl
 	md:px-12
 	md:pt-12
 `;
@@ -34,7 +34,7 @@ const ViewMoreButton = tw.h1`
 const BioText = tw.div`
 	text-justify 
 	p-6
-	text-base
+	text-lg
 `;
 
 const ContactInfo = tw.div`
@@ -48,9 +48,8 @@ const Social = tw.div`
 const SocialItem = tw.p`
 	pt-1
 	pr-3
-	hover:text-[#abc4ff]
-	transition-colors
-	duration-200
+	hover:text-[#DEBA93]
+	duration-300
 `;
 
 export const MemberBio = ({ member }) => {
@@ -62,27 +61,27 @@ export const MemberBio = ({ member }) => {
 		<BioContainer>
 			<div {...getToggleProps()}>
 				<ViewMoreButton>
-					{isExpanded ? (
-						<BsArrowUpCircle className="mt-1" />
-					) : (
-						<BsArrowRightCircle className="mt-1" />
-					)}
-
 					<p className="pl-4 uppercase md:leading-normal">{member.name}</p>
+					{isExpanded ? (
+						<BsChevronUp className="mt-0.5 md:mt-3 ml-2" />
+					) : (
+						<BsChevronRight className="mt-0.5 md:mt-3 ml-2" />
+					)}
 				</ViewMoreButton>
 			</div>
 			<section {...getCollapseProps()}>
 				<BioText>
 					<ContactInfo>
-						<div className="email">
+						<div>
 							<a
 								href={"mailto: " + member.email}
-								style={{ textDecoration: "underline" }}
+								className="underline hover:text-[#DEBA93] duration-300
+								"
 							>
-								Email {member.shortname}
+								Email {member.shortName}
 							</a>
 						</div>
-						<div className="phone">{member.phone}</div>
+						<div>{member.phone}</div>
 						<Social>
 							<SocialItem>
 								{member.social.facebook && (
@@ -108,7 +107,7 @@ export const MemberBio = ({ member }) => {
 							</SocialItem>
 						</Social>
 					</ContactInfo>
-					<div className="bio"> {member.bio}</div>
+					<div> {member.bio}</div>
 				</BioText>
 			</section>
 		</BioContainer>

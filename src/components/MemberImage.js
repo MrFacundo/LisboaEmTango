@@ -1,15 +1,23 @@
 import tw from "twin.macro";
 
 const ImageContainer = tw.div`
-	max-w-[25rem]
-	max-h-[25rem]
+	max-w-[30rem]
+	max-h-[30rem]
 	overflow-hidden
 `;
 
-export const MemberImage = ({ member }) => {
+export const MemberImage = ({
+	src,
+	fallback,
+	type = "image/webp",
+	...delegated
+}) => {
 	return (
 		<ImageContainer>
-			<img src={member.image} style={{ width: "30rem" }} alt="" />
+			<picture>
+				<source srcSet={src} type={type} className="grayscale" />
+				<img src={fallback} {...delegated} alt="" className="grayscale" />
+			</picture>
 		</ImageContainer>
 	);
 };
