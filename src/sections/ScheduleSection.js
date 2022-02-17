@@ -26,8 +26,8 @@ const GridContainer = tw.div`
 `;
 
 const Day = tw.div`
-
 	text-3xl
+	md:text-5xl
 	p-3
 	pt-6
 	font-thin`;

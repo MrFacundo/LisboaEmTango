@@ -94,9 +94,9 @@ const ViewMoreButton = tw(motion.div)`
         absolute
         bottom-10
         md:bottom-20
-
         left[28%]
-        md:left[75%]
+        md:left[58%]
+        lg:left[75%]
         text-[1.2rem]
         md:text-[2rem]
         border-2

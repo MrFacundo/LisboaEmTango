@@ -6,6 +6,7 @@ const FORMSPARK_FORM_ID = "fUGCECB4";
 
 const FormContainer = tw.div`
 	w-[90%]
+	md:w-[70%]
 	lg:w-2/3
 	m-auto
 	shadow-lg
@@ -21,7 +22,8 @@ const Input = tw.input`
 
 const Label = tw.label`
 	mb-2
-	text-base
+	md:text-[1.5rem]
+	lg:text-[1.2rem]
 	font-semibold
 `;
 

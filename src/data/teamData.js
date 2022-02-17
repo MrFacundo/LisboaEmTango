@@ -10,7 +10,7 @@ const teamData = [
 		email: "emailmemberone@gmail.com",
 		phone: "(+351) 234876543",
 		social: {
-			facebook: "https://www.facebook.com/juan.capriotti",
+			facebook: "https://www.facebook.com/juan.capriotti.1",
 			instagram: "https://www.instagram.com/juancapriotti",
 		},
 		image: JuanCaptiottiBio,
@@ -32,8 +32,8 @@ const teamData = [
 		email: "emailmembertwo@gmail.com",
 		phone: "(+351) 916 192 919",
 		social: {
-			facebook: "https://www.facebook.com/Facundo.00",
-			instagram: "instagramlink",
+			facebook: "https://www.facebook.com/graciana.romeo",
+			instagram: "https://www.instagram.com/gracianaromeo",
 		},
 		image: GracianaRomeoBio,
 		imageFallback: GracianaRomeoBioF,
