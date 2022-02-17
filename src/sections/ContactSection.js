@@ -30,7 +30,6 @@ const ContactSectionWrapper = tw.div`
     flex
 	flex-col
 	lg:mt-[3rem]
-
 	lg:flex-row
 	lg:items-stretch
 `;
@@ -38,7 +37,7 @@ const ContactSectionWrapper = tw.div`
 const SectionTitle = tw(Title)`
 	w-[90%]
 	text-align[left]
-	lg:text-align[center]
+	md:text-align[center]
 	md:text-5xl
 	mx-auto
 	my-0
@@ -50,6 +49,9 @@ const Description = tw.div`
 	pt-5
 	min-h-[8rem]
 	m-auto
+	text-[1.5rem]
+	lg:text-[1.2rem]
+
 `;
 
 const Address = tw.div`
@@ -80,6 +82,8 @@ const Contacts = tw.div`
 	w-[80%]
 	pt-5
 	margin[auto]
+	text-[1.5rem]
+	lg:text-[1.2rem]
 `;
 
 const SocialIcons = tw.div`

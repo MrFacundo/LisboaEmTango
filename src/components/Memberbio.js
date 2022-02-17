@@ -8,13 +8,15 @@ import {
 } from "react-icons/bs";
 
 const BioContainer = tw.div`
-	w-[100%]
-    md:min-h-[30rem]
-	md:w-[30rem]
+	md:w-[20rem]
+	md:min-h-[20rem]
+    lg:min-h-[30rem]
+	lg:w-[30rem]
     bg-[#001F33]
     border-b
 	text-white
 	font-text
+	self-stretch
 
 `;
 
@@ -26,8 +28,10 @@ const ViewMoreButton = tw.h1`
     pl-4
     py-3
 	text-2xl
-    md:text-6xl
-	md:px-12
+	md:text-4xl
+    lg:text-6xl
+	md:px-8
+	lg:px-12
 	md:pt-12
 `;
 

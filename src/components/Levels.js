@@ -42,7 +42,7 @@ const LevelsContainer = tw.div`
     flex
     flex-col
     w-[90%]
-	md:w-[80%]
+	lg:w-[70%]
     font-text
     pb-4
 `;
@@ -95,7 +95,7 @@ const Description = styled.div`
 
 const Image = tw(motion.img)`
 	hidden
-	md:flex
+lg:flex
 	max-h-[20rem]
 	w-[40rem]
 	px-16

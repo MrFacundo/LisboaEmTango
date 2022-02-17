@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import tw from "twin.macro";
+import { motion } from "framer-motion";
 import BackgroundImage from "../assets/images/temporaryDesktopBg.jpg";
 import BackgroundImage2 from "../assets/images/couple1.jpg";
 
@@ -23,45 +24,51 @@ const HomeContainer = styled.div`
         bg-no-repeat
         bg-fixed
         bg-blend-overlay
-		bg-cover
+		bg-black
     `};
-	background-image: url(${BackgroundImage});
+`;
+
+const HomeBackground = styled(motion.div)`
+	${tw`
+		w-full
+		h-full
+		overflow-hidden
+		bg-no-repeat
+        bg-fixed
+        bg-blend-overlay
+    `};
+	background-image: url(${BackgroundImage2});
+	background-position: bottom 60% left 0%;
+	background-size: 100%;
 
 	@media only screen and (max-width: 768px) {
 		background-image: url(${BackgroundImage2});
-		background-position: bottom 0% left 50%;
-		background-size: 180%;
+		background-position: bottom 10% left 50%;
+		background-size: 170%;
 	}
 `;
-
-// const HomeContainerGradient = styled.div`
-// 	${tw`
-// 		w-full
-// 		h-full
-// 		overflow-hidden
-//         bg-fixed
-//     `};
-// 	background-image: linear-gradient(
-// 		100deg,
-// 		rgba(250, 211, 184, 0) 0%,
-// 		rgba(0, 31, 51, 1) 55%
-// 	);
-// `;
 
 const Home = () => {
 	return (
 		<HomeContainer>
-			{/* <HomeContainerGradient> */}
-			<Logo />
-			<HamburgerMenu />
-			<HeroSection />
-			<ServicesSection />
-			<ScheduleSection />
-			<TeamSection />
-			<StudioSection />
-			<ContactSection />
-			<Footer />
-			{/* </HomeContainerGradient> */}
+			<HomeBackground
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1 }}
+				transition={{
+					ease: "easeOut",
+					duration: 2,
+				}}
+			>
+				<Logo />
+				<HamburgerMenu />
+				<HeroSection />
+				<ServicesSection />
+				<ScheduleSection />
+				<TeamSection />
+				<StudioSection />
+				<ContactSection />
+				<Footer />
+			</HomeBackground>
 		</HomeContainer>
 	);
 };
