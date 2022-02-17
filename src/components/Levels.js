@@ -3,36 +3,36 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import { BsChevronRight } from "react-icons/bs";
 
-import milonga1 from "../assets/images/milonga1.jpg";
-import milonga2 from "../assets/images/milonga2.jpg";
-import milonga3 from "../assets/images/milonga3.jpg";
-import milonga4 from "../assets/images/milonga4.jpg";
-import milonga5 from "../assets/images/milonga5.jpg";
+import ws1 from "../assets/images/ws5.jpg";
+import ws2 from "../assets/images/ws7.jpg";
+import social1 from "../assets/images/social1.jpg";
+import social2 from "../assets/images/social5.jpg";
+import couple1 from "../assets/images/couple3.jpg";
 
 const levels = [
 	{
 		title: "GROUP LESSONS",
 		description:
 			"Curso anual de conhecimento, estudo e aperfeiçoamento do Tango Argentino como Dança Social",
-		photo: milonga1,
+		photo: ws1,
 	},
 	{
 		title: "WORKSHOPS",
 		description:
 			"Curso anual para alunos que já têm algum conhecimento de Tango Argentino. Estudo da linguagem tangueira e das suas possibilidades napista de dança.",
-		photo: milonga2,
+		photo: ws2,
 	},
 	{
 		title: "PRÁCTICA",
 		description:
 			"Curso anual onde abordam-se as necessidades do bailarino de Tango napista de dança, sequências, musicalidade, condução e utilização do espaço",
-		photo: milonga3,
+		photo: social1,
 	},
 	{
 		title: "PRIVATE LESSONS",
 		description:
 			"abordam-se as necessidades do bailarino de Tango na pista de dança, sequências, musicalidade, condução e utilização do espaço.",
-		photo: milonga4,
+		photo: social2,
 	},
 ];
 
@@ -95,11 +95,12 @@ const Description = styled.div`
 
 const Image = tw(motion.img)`
 	hidden
-lg:flex
+	lg:flex
 	max-h-[20rem]
 	w-[40rem]
 	px-16
 	object-cover
+	object-top
 `;
 
 const Button = tw(motion.div)`
@@ -127,8 +128,8 @@ const levelVariant = {
 		opacity: 1,
 		y: 0,
 		transition: {
-			ease: "easeIn",
-			duration: 1,
+			ease: "easeInOut",
+			duration: 0.7,
 		},
 	},
 };
@@ -139,7 +140,7 @@ const imageVariant = {
 		opacity: 1,
 		transition: {
 			delay: 1,
-			ease: "easeIn",
+			ease: "easeInOut",
 			duration: 1,
 		},
 	},
@@ -175,7 +176,7 @@ const Levels = () => {
 					<Title left>BOOK A CLASS</Title>
 					<BsChevronRight className="mt-[1rem] text-[3rem] md:text-[5rem]" />
 				</Button>
-				<Image variants={imageVariant} src={milonga5} alt="" />
+				<Image variants={imageVariant} src={couple1} alt="" />
 			</LevelsWrapper>
 		</LevelsContainer>
 	);

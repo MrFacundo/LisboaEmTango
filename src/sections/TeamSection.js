@@ -4,9 +4,6 @@ import { Element } from "react-scroll";
 import { motion } from "framer-motion";
 import teamData from "../data/teamData";
 
-import { useMediaQuery } from "react-responsive";
-import { deviceSize } from "../components/responsive";
-
 import { Title } from "../styles";
 
 import { MemberBio } from "../components/Memberbio";
@@ -18,8 +15,8 @@ const TeamSectionContainer = styled(motion.div)`
 	${tw`
         bg-no-repeat
 		w-full
-		min-h-[200vh]
-		md:min-h-[300vh]
+		// min-h-[200vh]
+		min-h-[300vh]
         flex
         flex-col
         pt-1
@@ -49,20 +46,21 @@ const Background = tw.div`
 const BackgroundShadow = tw(motion.div)`
 	absolute
 	bottom-0
-	h-[100%]
+	h-[55%]
+	md:h-[50%]
 	w-full
 	bg-[rgba(0, 0, 0, 0.5)]
 	z-0
 `;
 
-const Team = tw.div`
+const Team = tw(motion.div)`
 	py-[5rem]
 	w-[80%]
 	flex
 	flex-col
 `;
 
-const TeamMemberCardContainer = styled(motion.div)`
+const TeamMemberCardContainer = styled.div`
 	@media (min-width: 768px) {
 		flex-direction: ${(props) => (props.first ? "row-reverse" : "row")};
 	}
@@ -78,15 +76,6 @@ const TeamMemberCardContainer = styled(motion.div)`
 `;
 
 const TeamSection = () => {
-	const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile });
-	const mobileParams = (isMobile) => {
-		if (!isMobile) {
-			return { margin: "0px 0px -1000px 0px" };
-		} else {
-			return { margin: "0px 0px -800px 0px" };
-		}
-	};
-
 	return (
 		<Background>
 			<TeamSectionContainer
@@ -99,22 +88,21 @@ const TeamSection = () => {
 				viewport={{ once: true, margin: "0px 0px -500px 0px" }}
 				transition={{
 					ease: "easeOut",
-					duration: 2,
+					duration: 1.5,
 				}}
 			>
 				<Title name="Team">INSTRUCTORS</Title>
-				<Team>
-					<TeamMemberCardContainer
-						first
-						initial={{ opacity: 0 }}
-						whileInView={{ opacity: 1 }}
-						viewport={{ once: true, margin: "0px 0px -300px 0px" }}
-						transition={{
-							ease: "easeInOut",
-							duration: 0.5,
-							// delay: 1,
-						}}
-					>
+				<Team
+					initial={{ opacity: 0 }}
+					whileInView={{ opacity: 1 }}
+					viewport={{ once: true, margin: "0px 0px -300px 0px" }}
+					transition={{
+						ease: "easeInOut",
+						duration: 0.5,
+						// delay: 1,
+					}}
+				>
+					<TeamMemberCardContainer first>
 						<MemberImage
 							src={teamData[0].image}
 							fallback={teamData[0].image.imageFallback}
@@ -122,16 +110,7 @@ const TeamSection = () => {
 						/>
 						<MemberBio member={teamData[0]} />
 					</TeamMemberCardContainer>
-					<TeamMemberCardContainer
-						initial={{ opacity: 0 }}
-						whileInView={{ opacity: 1 }}
-						viewport={{ once: true, margin: "0px 0px -300px 0px" }}
-						transition={{
-							ease: "easeInOut",
-							duration: 0.5,
-							// delay: 1,
-						}}
-					>
+					<TeamMemberCardContainer>
 						<MemberImage
 							src={teamData[1].image}
 							fallback={teamData[1].image.imageFallback}
@@ -148,7 +127,7 @@ const TeamSection = () => {
 				whileInView={{
 					opacity: 1,
 				}}
-				viewport={mobileParams(isMobile)}
+				viewport={{ margin: "0px 0px -500px 0px" }}
 				transition={{
 					ease: "easeOut",
 					delay: 0.5,
