@@ -54,10 +54,9 @@ const StudioSectionWrapper = tw.div`
     justify-center
     items-center
     mt-3
-    xl:mt-6
+    md:mt-10
     max-w-sm
-    xl:max-w-2xl
-    2xl:max-w-3xl
+    md:max-w-7xl
 `;
 
 const Item = styled.div`
@@ -73,22 +72,6 @@ const Item = styled.div`
 	}
 `;
 
-const Description = tw.p`
-    text-gray-300
-    text-center
-    bg-black
-    bottom-10
-    left-1/2
-    pl-4
-    pr-4
-    pt-2
-    pb-2
-    rounded-2xl
-    opacity-80
-    transform[translateX(-50%)]
-    absolute
-`;
-
 const StudioSection = () => {
 	return (
 		<StudioSectionContainer name="Studio">
@@ -99,21 +82,20 @@ const StudioSection = () => {
 				doloremque suscipit deleniti quasi illo in tenetur? Quidem, totam
 				molestiae.
 			</SectionInfo>
-			<StudioSectionWrapper>
+			<StudioSectionWrapper className="wrap">
 				<Carousel
 					dynamicHeight={false}
 					autoPlay
 					showStatus={false}
 					swipeable={true}
 					showThumbs={false}
-					// animationHandler={"fade"}
+					transitionTime={1000}
 					infiniteLoop={true}
 				>
 					{studioImages.map((image, index) => {
 						return (
 							<Item key={index}>
 								<img src={image.image} alt={image.description} />
-								{/* <Description>{image.description} </Description> */}
 							</Item>
 						);
 					})}

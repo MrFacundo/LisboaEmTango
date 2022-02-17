@@ -2,7 +2,12 @@ import tw from "twin.macro";
 import { Title } from "../styles";
 import { Element } from "react-scroll";
 import Levels from "../components/Levels";
-import ImageDivider from "../assets/images/79.jpg";
+import ImagesDivider from "../components/ImagesDivider";
+import social2 from "../assets/images/social2.jpg";
+import social1 from "../assets/images/social5.jpg";
+
+import { useMediaQuery } from "react-responsive";
+import { deviceSize } from "../components/responsive";
 
 const ServicesSectionContainer = tw(Element)`
         w-full
@@ -42,12 +47,16 @@ const SectionInfo = tw.p`
 `;
 
 const Image = tw.img`
-	h-[50rem]
+    h-[40rem]	
+    md:h-[50rem]
 	w-full
-	object-cover
+    object-contain
+	// md:object-cover
 `;
 
 const ServicesSection = () => {
+	const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile });
+
 	return (
 		<ServicesSectionContainer name="Services">
 			<ServicesTitle>Learn and practice</ServicesTitle>
@@ -56,7 +65,8 @@ const ServicesSection = () => {
 				inspire creativity, curiosity and experimentation through tango.{" "}
 			</SectionInfo>
 			<Levels />
-			<Image src={ImageDivider} alt="" />
+			<ImagesDivider />
+			{/* <Image src={isMobile ? social1 : social2} alt="" /> */}
 		</ServicesSectionContainer>
 	);
 };

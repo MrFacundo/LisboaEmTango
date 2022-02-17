@@ -49,7 +49,7 @@ const Description = tw.div`
 	pt-5
 	min-h-[8rem]
 	m-auto
-	text-[1.5rem]
+	text-[1.2rem]
 	lg:text-[1.2rem]
 
 `;
@@ -62,7 +62,7 @@ const Address = tw.div`
 	h-auto
 `;
 
-const AddressDesctiption = tw(Description)`
+const AddressDescription = tw(Description)`
 `;
 
 const Registration = tw.div`
@@ -79,10 +79,11 @@ const RegistrationDescription = tw(Description)`
 `;
 
 const Contacts = tw.div`
-	w-[80%]
+	w-[90%]
+	md:w-[80%]
 	pt-5
 	margin[auto]
-	text-[1.5rem]
+	text-[1.2rem]
 	lg:text-[1.2rem]
 `;
 
@@ -112,10 +113,10 @@ const ContactSection = () => {
 			<ContactSectionWrapper>
 				<Address>
 					<SectionTitle>ADDRESS</SectionTitle>
-					<AddressDesctiption>
+					<AddressDescription>
 						Clube Ferroviário de Portugal <br />
 						Rua de Santa Apolónia 59, 1100-468 Lisboa
-					</AddressDesctiption>
+					</AddressDescription>
 					<Map location={location} zoomLevel={14} />
 				</Address>
 				<Registration>
