@@ -5,9 +5,9 @@ import { Element } from "react-scroll";
 import Carousel from "react-responsive-carousel/lib/js/components/Carousel/index";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-import studio1 from "../assets/images/studio1.jpeg";
-import studio2 from "../assets/images/studio2.jpeg";
-import studio3 from "../assets/images/studio3.jpeg";
+import studio1 from "../assets/images/studio1.jpg";
+import studio2 from "../assets/images/studio2.jpg";
+import studio3 from "../assets/images/studio3.jpg";
 
 const studioImages = [
 	{ image: studio1, description: "description 1" },
@@ -26,7 +26,6 @@ const StudioSectionContainer = tw(Element)`
         xl:pt-2
         xl:pb-2
         items-center
-        // bg-[rgba(107, 185, 10, 0.3)]
         bg-[#DEBA93]
 
 `;

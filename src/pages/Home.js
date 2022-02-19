@@ -1,17 +1,17 @@
 import styled from "styled-components";
 import tw from "twin.macro";
 import { motion } from "framer-motion";
-import BackgroundImage from "../assets/images/temporaryDesktopBg.jpg";
 import BackgroundImage2 from "../assets/images/couple1.jpg";
 
 import Logo from "../components/Logo";
 import HeroSection from "../sections/HeroSection";
 import ServicesSection from "../sections/ServicesSection";
 import ScheduleSection from "../sections/ScheduleSection";
-import StudioSection from "../sections/StudioSection";
 import TeamSection from "../sections/TeamSection";
-import Footer from "../components/Footer";
+import StudioSection from "../sections/StudioSection";
 import ContactSection from "../sections/ContactSection";
+import ShowSection from "../sections/ShowSection";
+import Footer from "../components/Footer";
 import HamburgerMenu from "../components/HamburgerMenu";
 
 const HomeContainer = styled.div`
@@ -66,6 +66,7 @@ const Home = () => {
 				<ScheduleSection />
 				<TeamSection />
 				<StudioSection />
+				<ShowSection />
 				<ContactSection />
 				<Footer />
 			</HomeBackground>

@@ -3,7 +3,12 @@ import { Element } from "react-scroll";
 import { Title } from "../styles";
 import Map from "../components/Map";
 import Form from "../components/Form";
-import { BsFacebook, BsInstagram, BsTelephone } from "react-icons/bs";
+import {
+	BsFacebook,
+	BsInstagram,
+	BsTelephone,
+	BsYoutube,
+} from "react-icons/bs";
 
 const location = {
 	address: "Clube Ferroviário de Portugal",
@@ -36,6 +41,7 @@ const ContactSectionWrapper = tw.div`
 
 const SectionTitle = tw(Title)`
 	w-[90%]
+	font-normal
 	text-align[left]
 	md:text-align[center]
 	md:text-5xl
@@ -89,7 +95,7 @@ const Contacts = tw.div`
 
 const SocialIcons = tw.div`
 	pt-10
-	max-w-[20rem]
+	max-w-[25rem]
 	flex
 	margin[auto]
 	justify-around
@@ -132,7 +138,7 @@ const ContactSection = () => {
 							<BsTelephone className="mr-3 text-3xl" />
 							0178 2903100
 						</p>
-						<p>info@tangotanzenmachtschoen.de</p>
+						<p>lisboaemtango@gmail.com</p>
 						<SocialIcons>
 							<Button
 								href={"member.social.facebook"}
@@ -147,6 +153,13 @@ const ContactSection = () => {
 								rel="noopener noreferrer"
 							>
 								<BsFacebook />
+							</Button>
+							<Button
+								href={"member.social.facebook"}
+								target={"_blank"}
+								rel="noopener noreferrer"
+							>
+								<BsYoutube />
 							</Button>
 						</SocialIcons>
 					</Contacts>

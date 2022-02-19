@@ -8,11 +8,11 @@ import {
 } from "react-icons/bs";
 
 const BioContainer = tw.div`
-	md:w-[20rem]
+	// md:w-[20rem]
 	md:min-h-[20rem]
     lg:min-h-[30rem]
 	lg:w-[30rem]
-    bg-[#001F33]
+    bg-[#DEBA93]
     border-b
 	text-white
 	font-text

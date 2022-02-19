@@ -23,13 +23,19 @@ const levels = [
 		photo: ws2,
 	},
 	{
+		title: "PRIVATE LESSONS",
+		description:
+			"abordam-se as necessidades do bailarino de Tango na pista de dança, sequências, musicalidade, condução e utilização do espaço.",
+		photo: social2,
+	},
+	{
 		title: "PRÁCTICA",
 		description:
 			"Curso anual onde abordam-se as necessidades do bailarino de Tango napista de dança, sequências, musicalidade, condução e utilização do espaço",
 		photo: social1,
 	},
 	{
-		title: "PRIVATE LESSONS",
+		title: "RAVE TANGUERA",
 		description:
 			"abordam-se as necessidades do bailarino de Tango na pista de dança, sequências, musicalidade, condução e utilização do espaço.",
 		photo: social2,
@@ -59,24 +65,31 @@ const LevelsWrapper = styled(motion.div)`
 const Level = tw(motion.div)`
 	flex
     flex-col
-    min-h-[14rem]
+    min-h-[10rem]
     w-[18rem]
     border-[1px]
-    border-color[#001F33]
 	md:min-h-[20rem]
 	md:min-w-[30rem]
-	justify-between
+	justify-center
+	md:justify-between
 
 `;
 const Title = styled.div`
 	${tw`
-		text-3xl
+		text-5xl
 		p-3
 		pt-5
-		md:text-6xl
+		md:text-7xl
 		md:p-8
     `};
 	text-align: ${(props) => (props.left ? "start" : "end")};
+`;
+
+const TitleButton = tw(Title)`
+	text-center
+	p-0
+	text-5xl
+	md:text-[4rem]
 `;
 
 const Description = styled.div`
@@ -108,8 +121,7 @@ const Button = tw(motion.div)`
     flex-col
     min-h-[14rem]
     w-[18rem]
-    border-[1px]
-    border-color[#001F33]
+    border
 	md:min-h-[20rem]
 	md:min-w-[30rem]
 	justify-center
@@ -160,20 +172,19 @@ const Levels = () => {
 					>
 						<Level variants={levelVariant}>
 							<Title left={+(index % 2 === 0)}>{level.title}</Title>
-							<Description>{level.description}</Description>
+							{/* <Description>{level.description}</Description> */}
 						</Level>
 						<Image variants={imageVariant} src={level.photo} alt="" />
 					</LevelsWrapper>
 				);
 			})}
 			<LevelsWrapper
-				left
 				initial="hidden"
 				whileInView="show"
 				viewport={{ once: true, amount: 0.8, margin: "100px" }}
 			>
 				<Button variants={levelVariant}>
-					<Title left>BOOK A CLASS</Title>
+					<TitleButton>BOOK A CLASS</TitleButton>
 					<BsChevronRight className="mt-[1rem] text-[3rem] md:text-[5rem]" />
 				</Button>
 				<Image variants={imageVariant} src={couple1} alt="" />

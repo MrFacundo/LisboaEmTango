@@ -10,7 +10,7 @@ export const Title = tw.h1`
     md:text-6xl
     lg:text-8xl
     text-white
-    font-bold
+    font-light
     text-center
     z-20
 `;

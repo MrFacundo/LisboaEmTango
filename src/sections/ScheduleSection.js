@@ -16,10 +16,10 @@ const ScheduleSectionContainer = tw(Element)`
         xl:pb-2
         items-center
         bg-[#DEBA93]
-        text-[#051622]
 `;
 
 const GridContainer = tw.div`
+	text-white
     w-[80%]
 	flex-col
 	font-text
@@ -41,11 +41,7 @@ const Class = tw.div`
 const Separator = tw.div`
 	h-5
 	border-b-[1px]
-	border-black
-`;
-
-const ScheduleTitle = tw(Title)`
-        text-[#051622]
+	border-white
 `;
 
 const Button = tw(motion.button)`
@@ -79,7 +75,7 @@ const Button = tw(motion.button)`
 const ScheduleSection = () => {
 	return (
 		<ScheduleSectionContainer name="Schedule">
-			<ScheduleTitle>SCHEDULE</ScheduleTitle>
+			<Title>SCHEDULE</Title>
 			<GridContainer>
 				<Day>SEGUNDA</Day>
 				<Class>

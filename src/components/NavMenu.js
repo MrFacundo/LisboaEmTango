@@ -24,8 +24,8 @@ const sections = [
 		title: "Our Studio",
 	},
 	{
-		name: "Orquesta",
-		title: "Orquesta",
+		name: "Shows",
+		title: "Shows",
 	},
 	{
 		name: "Contact",

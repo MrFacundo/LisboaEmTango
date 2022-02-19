@@ -15,7 +15,6 @@ const TeamSectionContainer = styled(motion.div)`
 	${tw`
         bg-no-repeat
 		w-full
-		// min-h-[200vh]
 		min-h-[300vh]
         flex
         flex-col
@@ -29,8 +28,8 @@ const TeamSectionContainer = styled(motion.div)`
 		items-center
     `};
 	background-image: url(${BackgroundImage});
-	background-size: 100%;
-	background-position: bottom 60% left 40%;
+	background-size: 70%;
+	background-position: bottom 50% left 50%;
 
 	@media only screen and (max-width: 768px) {
 		background-position: bottom 20% left 40%;
@@ -38,19 +37,40 @@ const TeamSectionContainer = styled(motion.div)`
 	}
 `;
 
-const Background = tw.div`
+// const Background = tw.div`
+// 	relative
+// 	bg-[#001F33]
+// `;
+
+const Background = styled.div`
+	${tw`
 	relative
-	bg-[#001F33]
+    `};
+	background: linear-gradient(
+		90deg,
+		rgba(0, 31, 51, 1) 0%,
+		rgba(0, 0, 0, 1) 30%,
+		rgba(0, 0, 0, 1) 70%,
+		rgba(0, 31, 51, 1) 100%
+	);
 `;
 
-const BackgroundShadow = tw(motion.div)`
+const BackgroundShadow = styled(motion.div)`
+	${tw`
 	absolute
 	bottom-0
 	h-[55%]
 	md:h-[50%]
 	w-full
-	bg-[rgba(0, 0, 0, 0.5)]
 	z-0
+	
+	
+	`}
+	background: linear-gradient(
+		180deg,
+		rgba(0, 0, 0, 0) 0%,
+		rgba(0, 0, 0, 0.3) 10%
+	);
 `;
 
 const Team = tw(motion.div)`
@@ -88,7 +108,7 @@ const TeamSection = () => {
 				viewport={{ once: true, margin: "0px 0px -500px 0px" }}
 				transition={{
 					ease: "easeOut",
-					duration: 1.5,
+					duration: 1,
 				}}
 			>
 				<Title name="Team">INSTRUCTORS</Title>
@@ -99,7 +119,6 @@ const TeamSection = () => {
 					transition={{
 						ease: "easeInOut",
 						duration: 0.5,
-						// delay: 1,
 					}}
 				>
 					<TeamMemberCardContainer first>
