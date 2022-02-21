@@ -86,7 +86,7 @@ const RegistrationDescription = tw(Description)`
 
 const Contacts = tw.div`
 	w-[90%]
-	md:w-[80%]
+	md:w-[70%]
 	pt-5
 	margin[auto]
 	text-[1.2rem]
@@ -102,8 +102,9 @@ const SocialIcons = tw.div`
 `;
 
 const Button = tw.a`
-	text-5xl
-	hover:text-gray-400
+	text-4xl
+	md:text-5xl
+	hover:text-[#deb992]
 	transition-colors
 	duration-200
 `;
@@ -141,21 +142,21 @@ const ContactSection = () => {
 						<p>lisboaemtango@gmail.com</p>
 						<SocialIcons>
 							<Button
-								href={"member.social.facebook"}
+								href="https://www.instagram.com/lisboaemtango/"
 								target={"_blank"}
 								rel="noopener noreferrer"
 							>
 								<BsInstagram />
 							</Button>
 							<Button
-								href={"member.social.facebook"}
+								href="https://www.facebook.com/lisboaemtango"
 								target={"_blank"}
 								rel="noopener noreferrer"
 							>
 								<BsFacebook />
 							</Button>
 							<Button
-								href={"member.social.facebook"}
+								href="https://www.youtube.com/channel/UCqxHTF_eaM3oP4-Gmlji-kw"
 								target={"_blank"}
 								rel="noopener noreferrer"
 							>

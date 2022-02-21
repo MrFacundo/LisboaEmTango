@@ -39,9 +39,9 @@ const SidebarLink = tw(Link)`
 	text-[1.5rem]
     md:text-[2rem]
     text-decoration[none]
-    text-[#DEBA93]
+    text-white
     cursor-pointer
-    hover:text-white
+    hover:text-[#DEBA93]
     transition-[0.2s ease-in-out]
 	font-title
 `;

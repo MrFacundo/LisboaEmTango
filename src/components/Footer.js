@@ -1,21 +1,20 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import { Link } from "react-scroll";
 import tw from "twin.macro";
 import Logo from "./Logo";
 
 const FooterContainer = tw.div`
     w-full
-    lg:h-20
+    lg:h-16
     bg-[#1A222F]
     flex
     pl-2
     pr-2
-    lg:pt-6
     lg:pr-16
     lg:pl-16
     text-white
     items-center
     flex-col
+    justify-center
 `;
 
 const BottomSection = tw.div`
@@ -41,6 +40,21 @@ const Copyright = tw.span`
 const SmallText = tw.span`
     text-base
     text-gray-300
+    md:max-w-[12rem]
+`;
+
+const SmallTextContainer = tw.div`
+    flex
+    flex-row
+    text-base
+    text-gray-300
+    md:max-w-[12rem]
+    items-center
+    
+`;
+
+const Link = tw.a`
+    hover:text-[#deb992]
 `;
 
 const Footer = () => {
@@ -50,14 +64,18 @@ const Footer = () => {
 				<Copyright>
 					© {new Date().getFullYear()} LISBOA EM TANGO. All rights reserved.
 				</Copyright>
+				<SmallTextContainer>
+					<SmallText>Ph:</SmallText>
+					<div className="text-right pl-3 text-sm">
+						<p>
+							<Link href="#">Photographer 1</Link>
+						</p>
+						<Link href="#">Photographer 2</Link>
+					</div>
+				</SmallTextContainer>
+
 				<SmallText>
-					<a href="#">Privacy Policy</a>
-				</SmallText>
-				<SmallText>
-					<a href="#">Ph:</a>
-				</SmallText>
-				<SmallText>
-					<a href="#">Design</a>
+					<Link href="#">Design by</Link>
 				</SmallText>
 			</BottomSection>
 		</FooterContainer>

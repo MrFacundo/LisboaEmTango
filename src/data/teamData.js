@@ -29,7 +29,7 @@ const teamData = [
 	{
 		name: "Graciana Romeo",
 		shortName: "Graciana",
-		email: "emailmembertwo@gmail.com",
+		email: "gracianaromeo@hotmail.com",
 		phone: "(+351) 916 192 919",
 		social: {
 			facebook: "https://www.facebook.com/graciana.romeo",
