@@ -184,8 +184,15 @@ const Levels = () => {
 				viewport={{ once: true, amount: 0.8, margin: "100px" }}
 			>
 				<Button variants={levelVariant}>
-					<TitleButton>BOOK A CLASS</TitleButton>
-					<BsChevronRight className="mt-[1rem] text-[3rem] md:text-[5rem]" />
+					<a
+						className="flex flex-col items-center"
+						target={"_blank"}
+						rel="noopener noreferrer"
+						href="https://forms.gle/CA64NQdcKqfajRfn8"
+					>
+						<TitleButton>BOOK A CLASS</TitleButton>
+						<BsChevronRight className="mt-[1rem] text-[3rem] md:text-[5rem] text-center" />
+					</a>
 				</Button>
 				<Image variants={imageVariant} src={couple1} alt="" />
 			</LevelsWrapper>
