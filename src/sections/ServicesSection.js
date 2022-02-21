@@ -42,8 +42,9 @@ const ServicesSection = () => {
 		<ServicesSectionContainer name="Services">
 			<Title>LEARN AND PRACTICE</Title>
 			<SectionInfo>
-				We offer a programme of learning for every level of experience aimed to
-				inspire creativity, curiosity and experimentation through tango.{" "}
+				Texto sobre aprender en la escuela: Sed vitae neque metus. Nulla
+				consequat, purus sed elementum laoreet, tellus augue elementum tellus,
+				aliquet sodales ligula dui sed augue.
 			</SectionInfo>
 			<Levels />
 			<ImagesDivider />
