@@ -55,8 +55,6 @@ const Button = tw(motion.button)`
 	flex-col
 	text-center
 	justify-center
-	place-items-center
-	self-center
 	text-[1.6rem]
 	md:text-[2rem]
 	border-2
@@ -111,28 +109,35 @@ const ScheduleSection = () => {
 					duration: 0.3,
 				}}
 			>
-				<motion.span
-					initial={{ opacity: 0 }}
-					whileInView={{ opacity: 1 }}
-					transition={{
-						ease: "easeInOut",
-						delay: 0.5,
-						duration: 0.3,
-					}}
+				<a
+					className="flex flex-col items-center"
+					target={"_blank"}
+					rel="noopener noreferrer"
+					href="https://forms.gle/CA64NQdcKqfajRfn8"
 				>
-					BOOK A CLASS
-				</motion.span>
-				<motion.span
-					initial={{ opacity: 0 }}
-					whileInView={{ opacity: 1 }}
-					transition={{
-						ease: "easeInOut",
-						delay: 0.5,
-						duration: 0.3,
-					}}
-				>
-					<BsArrowRightCircle className="text-[3rem] mt-4" />
-				</motion.span>
+					<motion.span
+						initial={{ opacity: 0 }}
+						whileInView={{ opacity: 1 }}
+						transition={{
+							ease: "easeInOut",
+							delay: 0.5,
+							duration: 0.3,
+						}}
+					>
+						REGISTRATION
+					</motion.span>
+					<motion.span
+						initial={{ opacity: 0 }}
+						whileInView={{ opacity: 1 }}
+						transition={{
+							ease: "easeInOut",
+							delay: 0.5,
+							duration: 0.3,
+						}}
+					>
+						<BsArrowRightCircle className="text-[3rem] mt-4" />
+					</motion.span>
+				</a>
 			</Button>
 		</ScheduleSectionContainer>
 	);

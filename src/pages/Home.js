@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import tw from "twin.macro";
 import { motion } from "framer-motion";
-import BackgroundImage2 from "../assets/images/couple1.jpg";
+import BackgroundImage2 from "../assets/images/couple5.jpg";
 
 import Logo from "../components/Logo";
 import HeroSection from "../sections/HeroSection";
