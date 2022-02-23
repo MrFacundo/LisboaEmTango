@@ -6,6 +6,10 @@ import { motion } from "framer-motion";
 import { BsChevronDoubleDown } from "react-icons/bs";
 import Banner from "../components/Banner";
 
+import bg1 from "../assets/images/c1.jpg";
+import bg2 from "../assets/images/c2.jpg";
+import bg3 from "../assets/images/c3.jpg";
+
 // animations
 
 const banner = {
@@ -33,27 +37,41 @@ const letterAni = {
 const HeroSectionContainer = tw.div`
         w-full
         flex
-        flex-col
         h-[100vh]
         relative
 `;
 
+const ImagesContainer = tw.div`
+	flex
+	flex-row
+	w-[90%]
+`;
+
+const Image1 = tw.img`
+		h-[55rem]
+		mt-[4rem]
+		object-cover
+`;
+
+const Image2 = tw(Image1)`
+		mt-[5em]
+		ml-[-2rem]
+
+`;
+
+const Image3 = tw(Image1)`
+	mt-[6rem]
+	ml-[-2rem]
+
+`;
 const LandingSection = tw(motion.div)`
+		mr-[1rem]
+		md:mr-[7rem]
         w-full
         flex
         flex-col
-`;
-
-const InfoSection = tw.div`
-        absolute
-        right[20%]
-        top[55%]
-        left-auto
-        sm:right[5rem]
-        lg:right[10rem]
-        lg:left-auto
-        2xl:left-[5rem]
-        2xl:bottom[15rem]
+		self-center
+		text-right
 `;
 
 const FloatingText = tw.h1`
@@ -127,20 +145,44 @@ const ViewMoreButton = tw(motion.div)`
         duration-300
 `;
 
+const BgGradient = styled.div`
+	${tw`
+	absolute
+	w-full
+	h-full
+         `};
+	background: linear-gradient(
+		178deg,
+		rgba(222, 186, 147, 0.2) 0%,
+		rgba(26, 37, 75, 0.4) 100%
+	);
+	/* position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	display: inline-block; */
+`;
+
 const HeroSection = () => {
 	return (
 		<HeroSectionContainer name="Hero">
+			<BgGradient />
+			{/* <ImagesContainer>
+				<Image1 src={bg1} alt="" />
+				<Image2 src={bg2} alt="" />
+				<Image3 src={bg3} alt="" />
+			</ImagesContainer> */}
+
 			<LandingSection>
-				<InfoSection>
-					<Banner />
-					{/* <FloatingText>TEXTO SOBRE</FloatingText>
+				<Banner />
+				{/* <FloatingText>TEXTO SOBRE</FloatingText>
 					<FloatingText style={{ display: "inline-flex" }}>
 						<OutlinedTextSvg viewBox="0 0 100 100">
 							<text>LA</text>
 						</OutlinedTextSvg>
 					</FloatingText>
 					<FloatingText>ESCUELA</FloatingText> */}
-				</InfoSection>
 			</LandingSection>
 			<Link to="Services" smooth={"easeInOutQuad"} duration={1000}>
 				<ViewMoreButton
