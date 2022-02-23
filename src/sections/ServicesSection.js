@@ -42,9 +42,9 @@ const ServicesSection = () => {
 		<ServicesSectionContainer name="Services">
 			<Title>LEARN AND PRACTICE</Title>
 			<SectionInfo>
-				Texto sobre aprender en la escuela: Sed vitae neque metus. Nulla
-				consequat, purus sed elementum laoreet, tellus augue elementum tellus,
-				aliquet sodales ligula dui sed augue.
+				L.E. Tango es un espacio para aprender herramientas, pasos y técnicas
+				necesarias para poder disfrutar del tango como baile social,
+				independientemente del nivel o de la experiencia de baile que tengas.
 			</SectionInfo>
 			<Levels />
 			<ImagesDivider />

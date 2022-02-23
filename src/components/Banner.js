@@ -30,8 +30,7 @@ const letterAni = {
 
 const BannerRowContainer = tw(motion.div)`
     items-center
-    md:w-[50%]
-    content-center
+	content-center
     font-family["Archivo Narrow"]
     text-white
     md:font-black
@@ -69,8 +68,10 @@ const Banner = () => {
 
 const AnimatedLetters = ({ title }) => (
 	<motion.span variants={banner} initial="initial" animate="animate">
-		{[...title].map((letter) => (
-			<LetterContainer variants={letterAni}>{letter}</LetterContainer>
+		{[...title].map((letter, index) => (
+			<LetterContainer key={index} variants={letterAni}>
+				{letter}
+			</LetterContainer>
 		))}
 	</motion.span>
 );

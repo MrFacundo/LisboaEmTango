@@ -11,6 +11,7 @@ const LogoContainer = tw(Link)`
     md:text-5xl
     text-white
     cursor-pointer
+    z-50
 `;
 
 const Logo = () => {
