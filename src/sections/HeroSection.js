@@ -117,16 +117,16 @@ const OutlinedTextSvg = styled.svg`
 const ViewMoreButton = tw(motion.div)`
         rounded-full
         bg-transparent
-        hover:bg-[#DEBA93]
+        hover:bg-primary
         cursor-pointer
-        text-white
+        text-[#F5F6F4]
         flex
         flex-col
         text-center
         justify-center
         place-items-center
         absolute
-        bottom-10
+        bottom-20
         md:bottom-20
         left[33%]
         md:left[58%]

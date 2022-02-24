@@ -12,7 +12,7 @@ const BioContainer = tw.div`
 	md:min-h-[20rem]
     lg:min-h-[30rem]
 	lg:w-[30rem]
-    bg-[#DEBA93]
+    bg-primary
     border-b
 	text-white
 	font-text

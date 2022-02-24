@@ -27,7 +27,7 @@ const transition = { duration: 0.3 };
 export function MenuToggle({ toggle, isOpen }) {
 	return (
 		<Button
-			whileHover={{ scale: 1.2, fill: "red", transition: { duration: 0.2 } }}
+			whileHover={{ scale: 1.2, transition: { duration: 0.2 } }}
 			onClick={toggle}
 		>
 			<svg max-width="100%" viewBox="0 0 25 25">

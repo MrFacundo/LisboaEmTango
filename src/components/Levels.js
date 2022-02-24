@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import { BsChevronRight } from "react-icons/bs";
+import { BsChevronRight, BsArrowRightCircle } from "react-icons/bs";
 
 import { useMediaQuery } from "react-responsive";
 import { deviceSize } from "../components/responsive";
@@ -30,19 +30,19 @@ const levels = [
 	{
 		title: "PRIVATE LESSONS",
 		description:
-			"Un encuentro intimo entre el alumno y o pareja de baile y el profesor, donde los temas, contenidos y tiempos de aprendizaje son adecuados y ajustados a las necesidades del alumno.",
+			"Un encuentro intimo entre el alumno o pareja de baile y el profesor, donde los temas, contenidos y tiempos de aprendizaje son adecuados a las necesidades del alumno.",
 		photo: social2,
 	},
 	{
 		title: "La PráKtica",
 		description:
-			"Un espacio de practica libre, fundamental para el proceso de aprendizaje de los bailarines de tango social. Momento relajado y casual donde el error y la repetición forman parte del proceso.",
+			"Un espacio de practica libre, fundamental para el proceso de aprendizaje del tango social. Momento relajado y casual donde el error y la repetición forman parte del proceso.",
 		photo: social1,
 	},
 	{
 		title: "RAVE TANGUERA",
 		description:
-			"“La Rave Tanguera” es una Fiesta del Tango. Todos los primeros sábados de cada mes nuestro spacio queda decorado y transformado para recrear los ambientes nocturnos e bohemios de las noches porteñas y así vivir una verdadera Experiencia Tanguera.",
+			"“La Rave Tanguera” es una Fiesta del Tango. Todos los primeros sábados de cada mes nuestro spacio queda decorado y transformado para recrear el ambiente nocturno e bohemio de la noche porteña. Una verdadera Experiencia Tanguera.",
 		photo: social2,
 	},
 ];
@@ -77,7 +77,7 @@ const Level = tw(motion.div)`
     border-[1px]
 	md:min-w-[30rem]
 	md:h-[25rem]
-
+	select-none
 	justify-center
 	md:justify-between
 	overflow-hidden
@@ -85,12 +85,14 @@ const Level = tw(motion.div)`
 
 const Title = styled.div`
 	${tw`
+	flex
 		text-4xl
 		p-3
 		pt-5
 		md:text-7xl
 		md:p-8
 		uppercase
+		items-center
     `};
 	text-align: ${(props) => (props.left ? "start" : "end")};
 `;
@@ -120,7 +122,7 @@ const DescriptionSm = tw(motion.div)`
 		w-[18rem]
 		border-[1px]
 		justify-center
-		bg-[rgba(222, 186, 147, 0.9)]
+		bg-primary
 		align-middle
 `;
 
@@ -144,7 +146,6 @@ const Button = tw(motion.div)`
 	justify-center
 	hover:text-[#001F33]
 	hover:border-[#001F33]
-
 	duration-300
 	cursor-pointer
 	items-center
@@ -179,16 +180,16 @@ const imageVariant = {
 const descriptionVariants = {
 	open: {
 		transform: "translateX(0%)",
+		opacity: 1,
 	},
 	closed: {
 		transform: "translateX(100%)",
+		opacity: 0,
 	},
 };
 
 const descriptionTransition = {
-	duration: 0.5,
-	stiffness: 70,
-	delay: 0.1,
+	duration: 0.8,
 };
 
 const Levels = () => {
@@ -222,11 +223,6 @@ const Levels = () => {
 						<Level
 							onClick={() => toggleDescription(index)}
 							variants={levelVariant}
-							// style={{
-							// 	backgroundImage: `url(${level.photo})`,
-							// 	backgroundSize: "100%",
-							// 	backgroundRepeat: "no-repeat",
-							// }}
 						>
 							{isMobile && (
 								<DescriptionSm
@@ -237,7 +233,10 @@ const Levels = () => {
 									{level.description}
 								</DescriptionSm>
 							)}
-							<Title left={+(index % 2 === 0)}>{level.title}</Title>
+							<Title left={+(index % 2 === 0)}>
+								{level.title}
+								{isMobile && <BsChevronRight className="text-[3rem]" />}
+							</Title>
 							{!isMobile && (
 								<Description left={+(index % 2 === 0)}>
 									{level.description}
@@ -261,7 +260,7 @@ const Levels = () => {
 						href="https://forms.gle/CA64NQdcKqfajRfn8"
 					>
 						<TitleButton>BOOK A CLASS</TitleButton>
-						<BsChevronRight className="mt-[1rem] text-[3rem] md:text-[5rem] text-center" />
+						<BsArrowRightCircle className="mt-[1rem] text-[3rem] md:text-[5rem] text-center" />
 					</a>
 				</Button>
 				<Image variants={imageVariant} src={couple1} alt="" />

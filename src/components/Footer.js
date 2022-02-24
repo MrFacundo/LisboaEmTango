@@ -1,6 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import tw from "twin.macro";
-import Logo from "./Logo";
 
 const FooterContainer = tw.div`
     w-full

@@ -26,7 +26,7 @@ const StudioSectionContainer = tw(Element)`
         xl:pt-2
         xl:pb-2
         items-center
-        bg-[#DEBA93]
+        bg-primary
 
 `;
 

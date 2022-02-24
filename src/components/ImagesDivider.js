@@ -41,14 +41,14 @@ const Image2 = tw.img`
     top-[90rem]
     w-[35rem]
 	border
-	border-[#DEBA93]
+	border-primary
 	p-3
 
 `;
 
 const Image3 = tw.img`
 	border
-	border-[#DEBA93]
+	border-primary
 	p-5
     absolute
     right-[10rem]
@@ -62,7 +62,7 @@ const Image4 = tw.img`
     top-[280rem]
     w-[30rem]
 	border
-	border-[#DEBA93]
+	border-primary
 	p-3
 `;
 
@@ -75,7 +75,7 @@ const Text = tw.p`
     top-[5rem]
     w-[35rem]
 	// border
-	// border-[#DEBA93]
+	// border-primary
 	p-3
 `;
 
