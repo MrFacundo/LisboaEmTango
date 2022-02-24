@@ -15,7 +15,10 @@ const ScheduleSectionContainer = tw(Element)`
         xl:pt-2
         xl:pb-2
         items-center
-        bg-[#DEBA93]
+        // bg-primary
+		// bg-[#001829]
+        bg-[#D4A573]
+
 `;
 
 const GridContainer = tw.div`
@@ -48,7 +51,6 @@ const Button = tw(motion.button)`
 	items-center
 	font-title
 	rounded-full
-	bg-[#DEBA93]
 	cursor-pointer
 	text-white
 	flex

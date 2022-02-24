@@ -6,6 +6,9 @@ module.exports = {
 				title: ["Barlow", "sans-serif"],
 				text: ["Hind Siliguri", "sans-serif"],
 			},
+			colors: {
+				primary: "#D4A573",
+			},
 		},
 	},
 	plugins: [],

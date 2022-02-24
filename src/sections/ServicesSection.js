@@ -16,7 +16,11 @@ const ServicesSectionContainer = tw(Element)`
     xl:pt-2
     xl:pb-2
     items-center
-    bg-[#DEBA93]
+    // bg-primary
+    // bg-[#001829]
+    bg-primary
+
+
 `;
 
 const SectionInfo = tw.p`
@@ -42,9 +46,9 @@ const ServicesSection = () => {
 		<ServicesSectionContainer name="Services">
 			<Title>LEARN AND PRACTICE</Title>
 			<SectionInfo>
-				L.E. Tango es un espacio para aprender herramientas, pasos y técnicas
-				necesarias para poder disfrutar del tango como baile social,
-				independientemente del nivel o de la experiencia de baile que tengas.
+				Nuestro objetivo es generar un espacio de aprendizaje de herramientas,
+				pasos y técnicas para disfrutar del tango como baile social,
+				independientemente del nivel y la experiencia.
 			</SectionInfo>
 			<Levels />
 			<ImagesDivider />

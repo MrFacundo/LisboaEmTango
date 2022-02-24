@@ -1,7 +1,7 @@
 import tw from "twin.macro";
 import { Link } from "react-scroll";
 
-const LogoContainer = tw(Link)`
+export const LogoContainer = tw(Link)`
     top-[2rem]
     left-[2rem]
     absolute
@@ -11,13 +11,14 @@ const LogoContainer = tw(Link)`
     md:text-5xl
     text-white
     cursor-pointer
-    z-50
+    z-30
+    uppercase
 `;
 
 const Logo = () => {
 	return (
 		<LogoContainer to="Hero" smooth={"easeInOutQuad"} duration={500}>
-			LISBOA EM TANGO
+			lisboa em tango
 		</LogoContainer>
 	);
 };

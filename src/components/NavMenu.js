@@ -1,12 +1,13 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-scroll";
 import tw from "twin.macro";
+import { LogoContainer } from "./Logo";
 
 const sections = [
-	{
-		name: "Hero",
-		title: "Home",
-	},
+	// {
+	// 	name: "Hero",
+	// 	title: "Home",
+	// },
 	{
 		name: "Services",
 		title: "Learn",
@@ -36,12 +37,12 @@ const sections = [
 const SidebarLink = tw(Link)`
     items-center 
     content-center
-	text-[1.5rem]
+	text-[1.3rem]
     md:text-[2rem]
     text-decoration[none]
     text-white
     cursor-pointer
-    hover:text-[#DEBA93]
+    hover:text-primary
     transition-[0.2s ease-in-out]
 	font-title
 `;
@@ -50,7 +51,8 @@ const NavMenuContainer = tw(motion.div)`
 	w-full
 	flex
 	flex-col
-	pt-[5rem]
+	pt-[7rem]
+	md:pt-[10rem]
 `;
 
 const NavList = tw(motion.ul)`
@@ -63,6 +65,10 @@ const NavList = tw(motion.ul)`
 const NavItem = tw(motion.li)`
 	py-3
 	md:py-6
+`;
+
+const NavLogo = tw(LogoContainer)`
+	md:text-[2rem]
 `;
 
 const container = {
@@ -97,31 +103,35 @@ const NavMenu = ({ isOpen, toggle }) => {
 		<NavMenuContainer>
 			<AnimatePresence>
 				{isOpen && (
-					<NavList
-						variants={container}
-						initial="hidden"
-						animate="show"
-						exit="exit"
-					>
-						{sections.map((section, index) => {
-							return (
-								<NavItem
-									variants={item}
-									whileHover={{ scale: 1.2, transition: { duration: 0.2 } }}
-								>
-									<SidebarLink
+					<>
+						<NavLogo onClick={toggle}>lisboa em tango</NavLogo>
+
+						<NavList
+							variants={container}
+							initial="hidden"
+							animate="show"
+							exit="exit"
+						>
+							{sections.map((section, index) => {
+								return (
+									<NavItem
 										key={index}
-										to={section.name}
-										smooth={"easeInOutQuad"}
-										duration={500}
-										onClick={toggle}
+										variants={item}
+										whileHover={{ scale: 1.2, transition: { duration: 0.2 } }}
 									>
-										{section.title}
-									</SidebarLink>
-								</NavItem>
-							);
-						})}
-					</NavList>
+										<SidebarLink
+											to={section.name}
+											smooth={"easeInOut"}
+											duration={800}
+											onClick={toggle}
+										>
+											{section.title}
+										</SidebarLink>
+									</NavItem>
+								);
+							})}
+						</NavList>
+					</>
 				)}
 			</AnimatePresence>
 		</NavMenuContainer>

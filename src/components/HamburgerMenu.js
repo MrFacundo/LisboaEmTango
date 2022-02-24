@@ -60,6 +60,10 @@ const HamburgerMenu = () => {
 
 	const toggleMenu = () => {
 		setOpen(!isOpen);
+
+		isOpen
+			? (document.body.style.overflow = "visible")
+			: (document.body.style.overflow = "hidden");
 	};
 
 	return (

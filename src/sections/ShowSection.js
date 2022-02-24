@@ -61,7 +61,7 @@ const YoutubeIframe = tw.div`
 		mt-[3rem]
 		md:ml-[8rem]
 		border
-		border-[#DEBA93]
+		border-primary
 		z-10	
 `;
 
