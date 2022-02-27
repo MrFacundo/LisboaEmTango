@@ -104,7 +104,14 @@ const NavMenu = ({ isOpen, toggle }) => {
 			<AnimatePresence>
 				{isOpen && (
 					<>
-						<NavLogo onClick={toggle}>lisboa em tango</NavLogo>
+						<NavLogo
+							to={"Hero"}
+							smooth={"easeInOut"}
+							duration={800}
+							onClick={toggle}
+						>
+							lisboa em tango
+						</NavLogo>
 
 						<NavList
 							variants={container}

@@ -4,7 +4,7 @@ import tw from "twin.macro";
 const FooterContainer = tw.div`
     w-full
     lg:h-16
-    bg-[#1A222F]
+    bg-[#001f34]
     flex
     pl-2
     pr-2
@@ -26,14 +26,21 @@ const BottomSection = tw.div`
     pr-4
     border-t-gray-300
     border-opacity-50
+    py-3
+    font-text
+
 `;
 
 const Copyright = tw.span`
-    text-sm
+    text-xs
+    md:text-sm
     text-gray-300
     w-full
     lg:w-auto
     text-center
+    pt-3
+    md:pt-0
+
 `;
 
 const SmallText = tw.span`
@@ -60,9 +67,6 @@ const Footer = () => {
 	return (
 		<FooterContainer>
 			<BottomSection>
-				<Copyright>
-					© {new Date().getFullYear()} LISBOA EM TANGO. All rights reserved.
-				</Copyright>
 				<SmallTextContainer>
 					<SmallText>Ph:</SmallText>
 					<div className="text-right pl-3 text-sm">
@@ -72,10 +76,12 @@ const Footer = () => {
 						<Link href="#">Photographer 2</Link>
 					</div>
 				</SmallTextContainer>
-
 				<SmallText>
 					<Link href="#">Design by</Link>
 				</SmallText>
+				<Copyright>
+					© {new Date().getFullYear()} LISBOA EM TANGO. All rights reserved.
+				</Copyright>
 			</BottomSection>
 		</FooterContainer>
 	);

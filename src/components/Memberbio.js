@@ -12,7 +12,7 @@ const BioContainer = tw.div`
 	md:min-h-[20rem]
     lg:min-h-[30rem]
 	lg:w-[30rem]
-    bg-primary
+    bg-secondary
     border-b
 	text-white
 	font-text
@@ -38,7 +38,7 @@ const ViewMoreButton = tw.h1`
 const BioText = tw.div`
 	text-justify 
 	p-6
-	text-lg
+	text-base
 `;
 
 const ContactInfo = tw.div`

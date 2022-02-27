@@ -20,7 +20,7 @@ const MenuContainer = tw(motion.div)`
 	top-0
 	right-0
 	p-[1em 2.5em]
-	bg-[#051622]
+	bg-secondary
 	user-select[none]
 	z-40
 	transition[translateX(4em)]

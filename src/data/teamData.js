@@ -15,11 +15,9 @@ const teamData = [
 		},
 		image: JuanCaptiottiBio,
 		imageFallback: JuanCaptiottiBioF,
-		bio: `Director de Lisboa[em]Tango. Nació en 1970 en San Nicolás, Provincia de Buenos Aires, Argentina. Estudió abogacía en la Universidad Nacional de Rosario.
-		 En su juventud descubre su pasión por la música a través del estudio de la guitarra y a los 28 años descubre su pasión por la danza a través del contact improvisation
+		bio: `Director de Lisboa[em]Tango. Nació en 1970 en San Nicolás, Buenos Aires, Argentina. En su juventud descubre su pasión por la música a través del estudio de la guitarra y a los 28 años descubre su pasión por la danza a través del contact improvisation
 		  y la sensopercepción. Paralelamente se inicia en la danza tanguera, dejando todo para convertirse en bailarin, maestro y coreógrafo de tango argentino.
-		   Desde el año 2000 el tango se convierte en su única pasión y fuente de inspiración, dedicándose completamente al estudio, profundización y práctica de este mágico
-		    género popular. En el año 2002 es convocado para realizar una extensa gira por Tailandia. Hasta el año 2005 desarrolla una intensa actividad con su compañera
+		   Desde el año 2000 el tango se convierte en su única pasión y fuente de inspiración. En el año 2002 es convocado para realizar una extensa gira por Tailandia. Hasta el año 2005 desarrolla una intensa actividad con su compañera
 			 Graciana Romeo en Rosario, Argentina, y siendo una de las parejas de referencia de la ciudad participan del 1er. Mundial de Tango en Buenos Aires (2003) siendo galardonados 
 			 como finalistas de Tango Escenario.  A partir de este momento inician varias giras por Europa y en la ciudad de Lisboa fundan la Escuela de Tango Argentino L.E.TANGO.
 		A partir del año 2010 se desarrolla en forma autodidacta en el estudio del bandoneón y el canto, formando diferentes proyectos musicales. En el año 2012 crea

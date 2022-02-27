@@ -4,23 +4,26 @@ import tw from "twin.macro";
 
 const FORMSPARK_FORM_ID = "fUGCECB4";
 
-const FormContainer = tw.div`
+export const FormContainer = tw.div`
 	w-[90%]
 	md:w-[70%]
 	lg:w-2/3
 	m-auto
-	shadow-lg
+	flex
+	flex-col
 `;
 
-const Input = tw.input`
+export const Input = tw.input`
 	rounded-sm
 	p-2
-	bg-[#1A222F]
+	bg-secondary
 	border
 	border-gray-500
+	w-full
+
 `;
 
-const Label = tw.label`
+export const Label = tw.label`
 	mb-2
 	md:text-[1.5rem]
 	lg:text-[1.2rem]
@@ -30,18 +33,18 @@ const Label = tw.label`
 const TextArea = tw.textarea`
 	rounded-sm
 	p-2
-	bg-[#1A222F]
+	bg-secondary
 	border
 	border-gray-500
 `;
 
-const Button = tw.button`
+export const Button = tw.button`
 	mt-4
 	my-2
 	bg-blue-700
 	w-full
 	p-2
-	hover:bg-blue-900
+	hover:bg-primary
 	transition-colors
 	duration-200
 `;
@@ -72,7 +75,7 @@ const Form = () => {
 
 	return (
 		<FormContainer>
-			<form onSubmit={onSubmit}>
+			<form className="shadow-none" onSubmit={onSubmit}>
 				<div className="flex flex-col">
 					<Label htmlFor="name">Name</Label>
 					<Input
@@ -91,10 +94,10 @@ const Form = () => {
 						onChange={(e) =>
 							setFormData({ ...formData, email: e.target.value })
 						}
-						className="border-2 p-2"
 						id="email"
+						type="email"
 						required
-						pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
+						pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
 					/>
 				</div>
 				<div className="my-2 flex flex-col">
