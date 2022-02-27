@@ -3,6 +3,8 @@ import { Element } from "react-scroll";
 import { Title } from "../styles";
 import Map from "../components/Map";
 import Form from "../components/Form";
+import NewsletterForm from "../components/NewsletterForm";
+
 import {
 	BsFacebook,
 	BsInstagram,
@@ -19,7 +21,6 @@ const location = {
 const ContactContainer = tw(Element)`
 	text-white
     w-full
-    min-h-screen
     flex
     pt-1
     pb-1
@@ -27,6 +28,7 @@ const ContactContainer = tw(Element)`
     xl:pb-2
     justify-center
     bg-[rgba(107, 40, 169, 0.3)]
+	font-text
 `;
 
 const ContactSectionWrapper = tw.div`
@@ -34,7 +36,7 @@ const ContactSectionWrapper = tw.div`
     height[90%]
     flex
 	flex-col
-	lg:mt-[3rem]
+	lg:my-[3rem]
 	lg:flex-row
 	lg:items-stretch
 `;
@@ -140,6 +142,14 @@ const ContactSection = () => {
 							0178 2903100
 						</p>
 						<p>lisboaemtango@gmail.com</p>
+					</Contacts>
+				</Registration>
+				<Newsletter>
+					<SectionTitle>NEWSLETTER</SectionTitle>
+					<NewsletterForm />
+					<div className="py-[3rem]">
+						<SectionTitle>CONNECT WITH US</SectionTitle>
+
 						<SocialIcons>
 							<Button
 								href="https://www.instagram.com/lisboaemtango/"
@@ -163,10 +173,7 @@ const ContactSection = () => {
 								<BsYoutube />
 							</Button>
 						</SocialIcons>
-					</Contacts>
-				</Registration>
-				<Newsletter>
-					<SectionTitle>NEWSLETTER</SectionTitle>
+					</div>
 				</Newsletter>
 			</ContactSectionWrapper>
 		</ContactContainer>

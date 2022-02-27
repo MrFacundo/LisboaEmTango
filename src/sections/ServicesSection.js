@@ -46,9 +46,9 @@ const ServicesSection = () => {
 		<ServicesSectionContainer name="Services">
 			<Title>LEARN AND PRACTICE</Title>
 			<SectionInfo>
-				Nuestro objetivo es generar un espacio de aprendizaje de herramientas,
-				pasos y técnicas para disfrutar del tango como baile social,
-				independientemente del nivel y la experiencia.
+				Nuestro objetivo es generar un espacio donde puedas aprender
+				herramientas, pasos y técnicas para disfrutar del tango como baile
+				social, independientemente de tu nivel y experiencia.
 			</SectionInfo>
 			<Levels />
 			<ImagesDivider />

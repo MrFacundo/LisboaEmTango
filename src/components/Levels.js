@@ -24,7 +24,7 @@ const levels = [
 	{
 		title: "WORKSHOPS",
 		description:
-			"Son especialmente diseñados para desarrollar temáticas especificas. Generalmente con grupos más reduzidos y con una carga de trabajo mas intensa.",
+			"Nuestros Workshops son especialmente diseñados para desarrollar temáticas especificas. Generalmente con grupos más reduzidos y con una carga de trabajo mas intensa.",
 		photo: ws2,
 	},
 	{
@@ -36,7 +36,7 @@ const levels = [
 	{
 		title: "La PráKtica",
 		description:
-			"Un espacio de practica libre, fundamental para el proceso de aprendizaje del tango social. Momento relajado y casual donde el error y la repetición forman parte del proceso.",
+			"La Práktica es un espacio de practica libre, fundamental para el proceso de aprendizaje del tango social. Momento relajado y casual donde el error y la repetición forman parte del proceso.",
 		photo: social1,
 	},
 	{
