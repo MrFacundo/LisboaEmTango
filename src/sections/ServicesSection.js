@@ -1,5 +1,5 @@
 import tw from "twin.macro";
-import { Title } from "../styles";
+import { Title } from "../globalStyles";
 import { Element } from "react-scroll";
 import Levels from "../components/Levels";
 import ImagesDivider from "../components/ImagesDivider";
@@ -16,11 +16,7 @@ const ServicesSectionContainer = tw(Element)`
     xl:pt-2
     xl:pb-2
     items-center
-    // bg-primary
-    // bg-[#001829]
     bg-primary
-
-
 `;
 
 const SectionInfo = tw.p`

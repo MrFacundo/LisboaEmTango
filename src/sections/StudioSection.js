@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import tw from "twin.macro";
-import { Title } from "../styles";
+import { Title } from "../globalStyles";
 import { Element } from "react-scroll";
 import Carousel from "react-responsive-carousel/lib/js/components/Carousel/index";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -10,9 +10,9 @@ import studio2 from "../assets/images/studio2.jpg";
 import studio3 from "../assets/images/studio3.jpg";
 
 const studioImages = [
-	{ image: studio1, description: "description 1" },
-	{ image: studio2, description: "description 2" },
-	{ image: studio3, description: "description 3" },
+	{ image: studio1 },
+	{ image: studio2 },
+	{ image: studio3 },
 ];
 
 const StudioSectionContainer = tw(Element)`
@@ -46,6 +46,8 @@ const SectionInfo = tw.p`
 
 const StudioSectionWrapper = tw.div`
     w-[90%]
+    md:w-[80%]
+
     h-full
     flex
     flex-col
@@ -93,7 +95,7 @@ const StudioSection = () => {
 					{studioImages.map((image, index) => {
 						return (
 							<Item key={index}>
-								<img src={image.image} alt={image.description} />
+								<img src={image.image} alt="" />
 							</Item>
 						);
 					})}

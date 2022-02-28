@@ -1,8 +1,10 @@
 import tw from "twin.macro";
 
+// styles
+
 const ImageContainer = tw.div`
 	md:min-h-[20rem]
-	md:w-[20rem]
+	md:min-w-[20rem]
 	lg:min-h-[30rem]
 	lg:w-[30rem]
 	overflow-hidden

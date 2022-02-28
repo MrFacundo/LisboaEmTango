@@ -1,15 +1,15 @@
 import styled from "styled-components";
 import tw from "twin.macro";
-import { Element } from "react-scroll";
 import { motion } from "framer-motion";
 import teamData from "../data/teamData";
 
-import { Title } from "../styles";
+import { Title } from "../globalStyles";
 
 import { MemberBio } from "../components/Memberbio";
 import { MemberImage } from "../components/MemberImage";
 
 import BackgroundImage from "../assets/images/couple2.jpg";
+import { useState } from "react";
 
 const TeamSectionContainer = styled(motion.div)`
 	${tw`
@@ -31,16 +31,11 @@ const TeamSectionContainer = styled(motion.div)`
 	background-size: 70%;
 	background-position: bottom 50% left 50%;
 
-	@media only screen and (max-width: 768px) {
+	@media only screen and (max-width: 1024px) {
 		background-position: bottom 20% left 40%;
 		background-size: 170%;
 	}
 `;
-
-// const Background = tw.div`
-// 	relative
-// 	bg-[#001F33]
-// `;
 
 const Background = styled.div`
 	${tw`
@@ -76,12 +71,13 @@ const BackgroundShadow = styled(motion.div)`
 const Team = tw(motion.div)`
 	py-[5rem]
 	w-[80%]
+	md:w-[70%]
 	flex
 	flex-col
 `;
 
 const TeamMemberCardContainer = styled.div`
-	@media (min-width: 768px) {
+	@media (min-width: 1024px) {
 		flex-direction: ${(props) => (props.first ? "row-reverse" : "row")};
 	}
 	${tw`

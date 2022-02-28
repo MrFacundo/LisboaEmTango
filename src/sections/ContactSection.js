@@ -1,6 +1,6 @@
 import tw from "twin.macro";
 import { Element } from "react-scroll";
-import { Title } from "../styles";
+import { Title } from "../globalStyles";
 import Map from "../components/Map";
 import Form from "../components/Form";
 import NewsletterForm from "../components/NewsletterForm";
@@ -17,6 +17,8 @@ const location = {
 	lat: 38.71915288600478,
 	lng: -9.118489015809267,
 };
+
+// styles
 
 const ContactContainer = tw(Element)`
 	text-white
@@ -48,18 +50,17 @@ const SectionTitle = tw(Title)`
 	md:text-align[center]
 	md:text-5xl
 	mx-auto
-	my-0
-	mt-0
+	mt-5
 `;
 
 const Description = tw.div`
-	w-[90%]
+	w-[80%]
 	pt-5
 	min-h-[8rem]
-	m-auto
-	text-[1.2rem]
+	text-[1rem]
+	md:text-[1.5rem]
 	lg:text-[1.2rem]
-
+	m-auto
 `;
 
 const Address = tw.div`
@@ -82,8 +83,7 @@ const Registration = tw.div`
 	lg:pb-0
 `;
 
-const RegistrationDescription = tw(Description)`
-	lg:pl-[3rem]
+const ContactDescription = tw(Description)`
 `;
 
 const Contacts = tw.div`
@@ -92,11 +92,13 @@ const Contacts = tw.div`
 	pt-5
 	margin[auto]
 	text-[1.2rem]
+	md:text-[1.5rem]
 	lg:text-[1.2rem]
+	font-semibold
 `;
 
 const SocialIcons = tw.div`
-	pt-10
+	pt-5
 	max-w-[25rem]
 	flex
 	margin[auto]
@@ -130,14 +132,13 @@ const ContactSection = () => {
 				</Address>
 				<Registration>
 					<SectionTitle>CONTACT US</SectionTitle>
-					<RegistrationDescription>
+					<ContactDescription>
 						If you want to register to classes and workshops, need information
 						or have any questions, we are here for you...
-					</RegistrationDescription>
+					</ContactDescription>
 					<Form />
 					<Contacts>
 						<p className="flex flex-row pb-3">
-							{" "}
 							<BsTelephone className="mr-3 text-3xl" />
 							0178 2903100
 						</p>
@@ -146,6 +147,9 @@ const ContactSection = () => {
 				</Registration>
 				<Newsletter>
 					<SectionTitle>NEWSLETTER</SectionTitle>
+					<Description>
+						Receive information about classes, workshops and events
+					</Description>
 					<NewsletterForm />
 					<div className="py-[3rem]">
 						<SectionTitle>CONNECT WITH US</SectionTitle>

@@ -1,11 +1,8 @@
 import MailchimpSubscribe from "react-mailchimp-subscribe";
-import tw from "twin.macro";
-import { FormContainer, Input, Label, Button } from "./Form";
+import { FormContainer, Input, Label, SubmitButton } from "../globalStyles";
 import React, { useState } from "react";
 
-const url =
-	"https://gmail.us14.list-manage.com/subscribe/post?u=79f86b4b6948f2f4d082c9ddb&id=7c8bdfc881";
-
+const url = process.env.REACT_APP_MAILCHIMP_URL;
 // styles
 
 const CustomForm = ({ status, message, onValidated }) => {
@@ -43,9 +40,9 @@ const CustomForm = ({ status, message, onValidated }) => {
 					id="email"
 					required
 				/>
-				<Button type="submit">
+				<SubmitButton type="submit">
 					{status === "sending" ? "Subscribing..." : "Subscribe"}
-				</Button>
+				</SubmitButton>
 				{status === "error" && (
 					<div dangerouslySetInnerHTML={{ __html: message }} />
 				)}

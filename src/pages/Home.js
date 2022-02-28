@@ -1,5 +1,4 @@
-import styled from "styled-components";
-import tw from "twin.macro";
+import tw, { styled } from "twin.macro";
 import { motion } from "framer-motion";
 import BackgroundImageSm from "../assets/images/couple1.jpg";
 import BackgroundImageMd from "../assets/images/couple1.jpg";
@@ -15,18 +14,13 @@ import ShowSection from "../sections/ShowSection";
 import Footer from "../components/Footer";
 import HamburgerMenu from "../components/HamburgerMenu";
 
-const HomeContainer = styled.div`
-	${tw`
+const HomeContainer = tw.div`
 		flex
 		flex-col
 		w-full
 		h-full
 		overflow-hidden
-        bg-no-repeat
-        bg-fixed
-        bg-blend-overlay
-		bg-[#001f33]
-    `};
+		bg-secondary
 `;
 
 const HomeBackground = styled(motion.div)`

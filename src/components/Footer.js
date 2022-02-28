@@ -1,6 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import tw from "twin.macro";
 
+// styles
+
 const FooterContainer = tw.div`
     w-full
     lg:h-16
