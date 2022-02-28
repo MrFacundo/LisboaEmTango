@@ -1,5 +1,4 @@
-import { useState, useEffect } from "react";
-
+import { useState } from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { motion } from "framer-motion";
@@ -110,7 +109,7 @@ const Description = styled.div`
 		px-4
 		pb-5
 		md:px-8
-		md:text-lg
+		md:text-xl
     `};
 	text-align: ${(props) => (props.left ? "start" : "end")};
 `;

@@ -1,16 +1,15 @@
-import React, { useState, useEffect } from "react";
-
-import tw from "twin.macro";
+import { useState, useEffect } from "react";
+import { useMediaQuery } from "react-responsive";
+import { deviceSize } from "../components/responsive";
+import { motion } from "framer-motion";
+import tw, { styled } from "twin.macro";
 
 import social1 from "../assets/images/social5.jpg";
 import social2 from "../assets/images/social2.jpg";
 import social3 from "../assets/images/social3.jpg";
 import social4 from "../assets/images/social4.jpg";
 
-import { useMediaQuery } from "react-responsive";
-import { deviceSize } from "../components/responsive";
-import { motion } from "framer-motion";
-import styled from "styled-components";
+// styles
 
 const DividerContainer = styled(motion.div)`
 	${tw`

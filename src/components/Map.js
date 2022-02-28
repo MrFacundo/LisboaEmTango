@@ -2,6 +2,8 @@ import GoogleMapReact from "google-map-react";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import tw from "twin.macro";
 
+// styles
+
 const MapContainer = tw.div`
 	m-auto
 	lg:m-0
@@ -12,9 +14,9 @@ const MapContainer = tw.div`
     `;
 
 const LocationPin = ({ text }) => (
-	<div className="pin">
+	<div className="text-primary">
 		<FaMapMarkerAlt fontSize="2rem" />
-		<p className="pin-text">{text}</p>
+		<p className="text-black">{text}</p>
 	</div>
 );
 

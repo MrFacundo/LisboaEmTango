@@ -1,13 +1,14 @@
 import { useState, useEffect } from "react";
-import { Title } from "../styles";
-import tw from "twin.macro";
+import { Title } from "../globalStyles";
+import tw, { styled } from "twin.macro";
 import { useMediaQuery } from "react-responsive";
 import { deviceSize } from "../components/responsive";
 import { motion } from "framer-motion";
-import styled from "styled-components";
 
 import show1 from "../assets/images/show5.jpg";
 import show2 from "../assets/images/show12.jpg";
+
+// styles
 
 const ShowSectionContainer = styled(motion.div)`
 	${tw`

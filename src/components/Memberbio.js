@@ -7,17 +7,18 @@ import {
 	BsChevronUp,
 } from "react-icons/bs";
 
+// styles
+
 const BioContainer = tw.div`
-	// md:w-[20rem]
-	md:min-h-[20rem]
+	md:min-h-[10rem]
     lg:min-h-[30rem]
+	md:min-w-[20rem]
 	lg:w-[30rem]
     bg-secondary
     border-b
 	text-white
 	font-text
 	self-stretch
-
 `;
 
 const ViewMoreButton = tw.h1`
@@ -63,16 +64,14 @@ export const MemberBio = ({ member }) => {
 
 	return (
 		<BioContainer>
-			<div {...getToggleProps()}>
-				<ViewMoreButton>
-					<p className="pl-4 uppercase md:leading-normal">{member.name}</p>
-					{isExpanded ? (
-						<BsChevronUp className="mt-0.5 md:mt-3 ml-2" />
-					) : (
-						<BsChevronRight className="mt-0.5 md:mt-3 ml-2" />
-					)}
-				</ViewMoreButton>
-			</div>
+			<ViewMoreButton {...getToggleProps()}>
+				<p className="pl-4 uppercase md:leading-normal">{member.name}</p>
+				{isExpanded ? (
+					<BsChevronUp className="mt-0.5 md:mt-3 ml-2 md:ml-6" />
+				) : (
+					<BsChevronRight className="mt-0.5 md:mt-3 ml-2  md:ml-6" />
+				)}
+			</ViewMoreButton>
 			<section {...getCollapseProps()}>
 				<BioText>
 					<ContactInfo>

@@ -2,7 +2,7 @@ import React from "react";
 import tw from "twin.macro";
 import { motion } from "framer-motion";
 import { Element } from "react-scroll";
-import { Title } from "../styles";
+import { Title } from "../globalStyles";
 import { BsArrowRightCircle } from "react-icons/bs";
 
 const ScheduleSectionContainer = tw(Element)`
@@ -37,6 +37,7 @@ const Day = tw.div`
 
 const Class = tw.div`
 	text-base
+	md:text-lg
 	px-4
 	pb-1
 `;
