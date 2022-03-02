@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import tw from "twin.macro";
 import { Element } from "react-scroll";
 import { Title } from "../globalStyles";
@@ -72,6 +73,7 @@ const Address = tw.div`
 `;
 
 const AddressDescription = tw(Description)`
+	md:ml-0
 `;
 
 const Registration = tw.div`
@@ -119,22 +121,22 @@ const Newsletter = tw.div`
 	lg:border-t-0
 `;
 const ContactSection = () => {
+	const { t } = useTranslation();
+
 	return (
 		<ContactContainer name="Contact">
 			<ContactSectionWrapper>
 				<Address>
-					<SectionTitle>ADDRESS</SectionTitle>
+					<SectionTitle>{t("contact_section.title_1")}</SectionTitle>
 					<AddressDescription>
-						Clube Ferroviário de Portugal <br />
-						Rua de Santa Apolónia 59, 1100-468 Lisboa
+						{t("contact_section.description_1")}
 					</AddressDescription>
 					<Map location={location} zoomLevel={14} />
 				</Address>
 				<Registration>
-					<SectionTitle>CONTACT US</SectionTitle>
+					<SectionTitle>{t("contact_section.title_2")}</SectionTitle>
 					<ContactDescription>
-						If you want to register to classes and workshops, need information
-						or have any questions, we are here for you...
+						{t("contact_section.description_2")}
 					</ContactDescription>
 					<Form />
 					<Contacts>
@@ -146,14 +148,11 @@ const ContactSection = () => {
 					</Contacts>
 				</Registration>
 				<Newsletter>
-					<SectionTitle>NEWSLETTER</SectionTitle>
-					<Description>
-						Receive information about classes, workshops and events
-					</Description>
+					<SectionTitle>{t("contact_section.title_3")}</SectionTitle>
+					<Description>{t("contact_section.description_3")} </Description>
 					<NewsletterForm />
 					<div className="py-[3rem]">
-						<SectionTitle>CONNECT WITH US</SectionTitle>
-
+						<SectionTitle>{t("contact_section.title_4")}</SectionTitle>
 						<SocialIcons>
 							<Button
 								href="https://www.instagram.com/lisboaemtango/"

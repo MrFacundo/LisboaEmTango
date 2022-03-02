@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import tw from "twin.macro";
+import { useTranslation } from "react-i18next";
 
 // styles
 
@@ -66,6 +67,8 @@ const Link = tw.a`
 `;
 
 const Footer = () => {
+	const { t } = useTranslation();
+
 	return (
 		<FooterContainer>
 			<BottomSection>

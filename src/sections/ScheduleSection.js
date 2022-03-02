@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import React from "react";
 import tw from "twin.macro";
 import { motion } from "framer-motion";
@@ -33,7 +34,8 @@ const Day = tw.div`
 	md:text-5xl
 	p-3
 	pt-6
-	font-thin`;
+	font-thin
+	uppercase`;
 
 const Class = tw.div`
 	text-base
@@ -74,32 +76,34 @@ const Button = tw(motion.button)`
 `;
 
 const ScheduleSection = () => {
+	const { t } = useTranslation();
+
 	return (
 		<ScheduleSectionContainer name="Schedule">
-			<Title>SCHEDULE</Title>
+			<Title>{t("schedule_section.title")}</Title>
 			<GridContainer>
-				<Day>SEGUNDA</Day>
+				<Day>{t("schedule_section.day1.name")}</Day>
 				<Class>
-					<strong>20:00</strong> - Aula de técnica de tango (todos os níveis)
+					<strong>20:00</strong> - {t("schedule_section.day1.class1")}
 				</Class>
 				<Class>
-					<strong>21:00</strong> - Aula de iniciação
-				</Class>
-				<Separator />
-				<Day>QUARTA</Day>
-				<Class>
-					<strong>20:00</strong> - Aula de nivel avanzado
-				</Class>
-				<Class>
-					<strong>21:00</strong> - Aula de nivel intermedio
+					<strong>21:00</strong> - {t("schedule_section.day1.class2")}
 				</Class>
 				<Separator />
-				<Day>DOMINGO</Day>
+				<Day>{t("schedule_section.day2.name")}</Day>
 				<Class>
-					<strong>17:00</strong> - Workshop temático
+					<strong>20:00</strong> - {t("schedule_section.day2.class1")}
 				</Class>
 				<Class>
-					<strong>18:30</strong> - Práctica
+					<strong>21:00</strong> - {t("schedule_section.day2.class2")}
+				</Class>
+				<Separator />
+				<Day>{t("schedule_section.day3.name")}</Day>
+				<Class>
+					<strong>17:00</strong> - {t("schedule_section.day3.class1")}
+				</Class>
+				<Class>
+					<strong>18:30</strong> - {t("schedule_section.day3.class2")}
 				</Class>
 				<Separator />
 			</GridContainer>
@@ -127,7 +131,7 @@ const ScheduleSection = () => {
 							duration: 0.3,
 						}}
 					>
-						REGISTRATION
+						{t("schedule_section.registration_button")}
 					</motion.span>
 					<motion.span
 						initial={{ opacity: 0 }}

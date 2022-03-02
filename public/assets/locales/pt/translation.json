@@ -1,0 +1,81 @@
+{
+	"nav_menu": {
+		"learn": "Learn and practice",
+		"schedule": "Schedule / Registration",
+		"instructors": "Instructors",
+		"studio": "Our Studio",
+		"shows": "Shows",
+		"contact": "Address / Contact Us"
+	},
+	"hero_section": {
+		"CTA": "AULAS / WORKSHOPS"
+	},
+	"learn_section": {
+		"title": "Learn and Practice",
+		"description": "Our goal is to create environment where you can develop tools, steps and technique that allow you to enjoy tango as a social dance, independently of your level of experience."
+	},
+	"levels": {
+		"group": {
+			"title": "Group lessons",
+			"description": "In our regular lessons we teach social tango, the one we dance at the milongas. The classes are divided into different levels and follow a program that helps students to advance at constant pace."
+		},
+		"workshop": {
+			"title": "Workshops",
+			"description": "Our workshops are mant to train and develop particular subjects. They generally consist of reduced groups and have an intensive rythm."
+		},
+		"private": {
+			"title": "Private Lessons",
+			"description": "An intimate encounter between the student or dance couple and the teacher, where the contents and learning pace are adapted to the needs of the student."
+		},
+		"praktica": {
+			"title": "La Práktica",
+			"description": "La Práktica is a free practice space, key to learning social tango. It's a relaxed and casual moment where mistakes and repetition form part of the experience."
+		},
+		"rave": {
+			"title": "Rave Tanguera",
+			"description": "The Rave Tanguera is a tango party. Every first Saturday of the month, our studio is transformed, bringing to Lisbon the bohemian vibe of the tango nights in Buenos Aires. A true tango experience."
+		},
+		"button": "Book a class"
+	},
+	"schedule_section": {
+		"title": "Horário",
+		"registration_button": "INSCRIÇÃO",
+		"day1": {
+			"name": "Segunda",
+			"class1": "Aula de técnica de tango (todos os níveis)",
+			"class2": "Aula de iniciação"
+		},
+		"day2": {
+			"name": "Quarta",
+			"class1": "Aula de nivel avanzado",
+			"class2": "Aula de nivel intermedio"
+		},
+		"day3": {
+			"name": "Domingo",
+			"class1": "Workshop temático",
+			"class2": "La Práktica"
+		}
+	},
+	"team_section": {
+		"title": "Professores",
+		"bio_1": "Director of Lisboa[em]Tango. Born in 1970 in San Nicolás, Buenos Aires, Argentina. In his youth, he discovered his passion for music and at age 28 he started studying argentine tango. In 2002 he joined an extensive tour in Thailand. He paired with Graciana Romeo in Rosario and after becoming scene leaders of their city, they participated in the 1st World Tango Dance Tournament (2003) and were awarded as finalists of Tango Escenario. After touring Europe several times, they opened the School of Argentine Tango L.E.Tango in Lisbon. Since 2010 he also developed as a bandoneon player and singer and formed several musical projects. In 2012 he formed and directed Orquesta TangoManso & Otras Yerbas. Along with Graciana Romero he created the music, dance and theatre show “Volver”. In 2015 he ventured into drawing and painting. At the present he devotes himself to the teaching of “the dance of the embrace” in Rosario and Lisboa",
+		"bio_2": "Director of Lisboa[em]Tango. Born in 1975 in Rosario, Argentina. At a very young age, she started dancing ballet, contemporary dance and contact improvisation. In 2000 she discovered argentine tango and since then she devoted herself to the study and development of the genre. Tango became her only passion and source of inspiration. In 2005 she opened with her partner Juan Capriotti the School of Argentine Tango L.E.Tango in Lisbon. She continued her training on tango alongside other techniques of movement such as pilates and yoga. At the present she uses her various skills and experience to explore, dance and teach argentine tango, with the goal of making it comfortable and available to everyone, without losing focus on its social and cultural roots."
+	},
+	"studio_section": {
+		"title": "Our Studio",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, dolore cum vitae excepturi provident odit expedita explicabo odio, incidunt nisi consequatur. Rem quas incidunt dolore debitis ipsa nesciunt vero utllo nesciunt sit fuga ex laboriosam ullam, ipsam, repudiandae, beatae nulla modi labore tempore. Rerum similique explicabo, voluptas consectetur veritatis quos officia tempore repudiandae ducimus eius quam maiores voluptate possimus.oluptatibus quam maiores, debitis accu"
+	},
+	"shows_section": {
+		"title": "Shows",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, dolore cum vitae excepturi provident odit expedita explicabo odio, incidunt nisi consequatur. Rem quas incidunt dolore debitis ipsa nesciunt vero utllo nesciunt sit fuga ex laboriosam ullam, ipsam, repudiandae, beatae nulla modi labore tempore. Rerum similique explicabo, voluptas consectetur veritatis quos officia tempore repudiandae ducimus eius quam maiores voluptate possimus.oluptatibus quam maiores, debitis accu"
+	},
+	"contact_section": {
+		"title_1": "Onde estamos",
+		"description_1": "Clube Ferroviário de Portugal Rua de Santa Apolónia 59, 1100-468 Lisboa",
+		"title_2": "Contact us",
+		"description_2": "If you want to register for classes and workshops, need information or have any questions, we are here for you...",
+		"title_3": "Newsletter",
+		"description_3": "Receive information about classes, workshops and events",
+		"title_4": "Ligue-se a Nós"
+	}
+}

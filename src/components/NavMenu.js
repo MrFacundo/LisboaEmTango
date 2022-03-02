@@ -1,16 +1,13 @@
+import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-scroll";
 import tw from "twin.macro";
 import { LogoContainer } from "./Logo";
 
 const sections = [
-	// {
-	// 	name: "Hero",
-	// 	title: "Home",
-	// },
 	{
-		name: "Services",
-		title: "Learn",
+		name: "Learn",
+		title: "nav_menu.learn",
 	},
 	{
 		name: "Schedule",
@@ -99,6 +96,8 @@ const item = {
 };
 
 const NavMenu = ({ isOpen, toggle }) => {
+	const { t } = useTranslation();
+
 	return (
 		<NavMenuContainer>
 			<AnimatePresence>
@@ -110,7 +109,7 @@ const NavMenu = ({ isOpen, toggle }) => {
 							duration={800}
 							onClick={toggle}
 						>
-							lisboa em tango
+							l.e.tango
 						</NavLogo>
 
 						<NavList
@@ -132,7 +131,7 @@ const NavMenu = ({ isOpen, toggle }) => {
 											duration={800}
 											onClick={toggle}
 										>
-											{section.title}
+											{t(section.title)}
 										</SidebarLink>
 									</NavItem>
 								);

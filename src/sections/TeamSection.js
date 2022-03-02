@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 import tw from "twin.macro";
 import { motion } from "framer-motion";
@@ -9,7 +10,6 @@ import { MemberBio } from "../components/Memberbio";
 import { MemberImage } from "../components/MemberImage";
 
 import BackgroundImage from "../assets/images/couple2.jpg";
-import { useState } from "react";
 
 const TeamSectionContainer = styled(motion.div)`
 	${tw`
@@ -76,22 +76,19 @@ const Team = tw(motion.div)`
 	flex-col
 `;
 
-const TeamMemberCardContainer = styled.div`
-	@media (min-width: 1024px) {
-		flex-direction: ${(props) => (props.first ? "row-reverse" : "row")};
-	}
-	${tw`
+const TeamMemberCardContainer = tw.div`
+	lg:first:flex-row-reverse
+	lg:last:flex-row
 	flex
 	flex-col
 	justify-center
 	items-center
 	md:items-start
 	z-20
-
-`};
 `;
 
 const TeamSection = () => {
+	const { t } = useTranslation();
 	return (
 		<Background>
 			<TeamSectionContainer
@@ -107,7 +104,7 @@ const TeamSection = () => {
 					duration: 1,
 				}}
 			>
-				<Title name="Team">INSTRUCTORS</Title>
+				<Title name="Team">{t("team_section.title")}</Title>
 				<Team
 					initial={{ opacity: 0 }}
 					whileInView={{ opacity: 1 }}
@@ -117,7 +114,7 @@ const TeamSection = () => {
 						duration: 0.5,
 					}}
 				>
-					<TeamMemberCardContainer first>
+					<TeamMemberCardContainer>
 						<MemberImage
 							src={teamData[0].image}
 							fallback={teamData[0].image.imageFallback}

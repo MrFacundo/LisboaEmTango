@@ -18,7 +18,7 @@ export const LogoContainer = tw(Link)`
 const Logo = () => {
 	return (
 		<LogoContainer to="Hero" smooth={"easeInOutQuad"} duration={500}>
-			lisboa em tango
+			l.e.tango
 		</LogoContainer>
 	);
 };

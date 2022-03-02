@@ -1,14 +1,12 @@
 /* eslint-disable no-unused-vars */
+import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 import tw from "twin.macro";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 import { BsChevronDoubleDown } from "react-icons/bs";
 import Banner from "../components/Banner";
-
-import bg1 from "../assets/images/c1.jpg";
-import bg2 from "../assets/images/c2.jpg";
-import bg3 from "../assets/images/c3.jpg";
+import LanguageDropdown from "../components/LanguageDropdown";
 
 // animations
 
@@ -114,7 +112,7 @@ const OutlinedTextSvg = styled.svg`
 	}
 `;
 
-const ViewMoreButton = tw(motion.div)`
+const CTAButton = tw(motion.div)`
         rounded-full
         bg-transparent
         hover:bg-primary
@@ -156,23 +154,15 @@ const BgGradient = styled.div`
 		rgba(222, 186, 147, 0.2) 0%,
 		rgba(26, 37, 75, 0.4) 100%
 	);
-	/* position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	display: inline-block; */
 `;
 
 const HeroSection = () => {
+	const { t } = useTranslation();
+
 	return (
 		<HeroSectionContainer name="Hero">
 			<BgGradient />
-			{/* <ImagesContainer>
-				<Image1 src={bg1} alt="" />
-				<Image2 src={bg2} alt="" />
-				<Image3 src={bg3} alt="" />
-			</ImagesContainer> */}
+			<LanguageDropdown />
 
 			<LandingSection>
 				<Banner />
@@ -185,7 +175,7 @@ const HeroSection = () => {
 					<FloatingText>ESCUELA</FloatingText> */}
 			</LandingSection>
 			<Link to="Services" smooth={"easeInOutQuad"} duration={1000}>
-				<ViewMoreButton
+				<CTAButton
 					initial={{ scale: 0 }}
 					animate={{ scale: 1 }}
 					transition={{
@@ -203,7 +193,7 @@ const HeroSection = () => {
 							delay: 1.8,
 						}}
 					>
-						CLASSES / WORKSHOPS
+						{t("hero_section.CTA")}
 					</motion.span>
 					<motion.span
 						initial={{ opacity: 0 }}
@@ -216,7 +206,7 @@ const HeroSection = () => {
 					>
 						<BsChevronDoubleDown className="text-[2rem] md:text-[4rem] md:mt-[0.3rem]" />
 					</motion.span>
-				</ViewMoreButton>
+				</CTAButton>
 			</Link>
 		</HeroSectionContainer>
 	);

@@ -5,7 +5,7 @@ import BackgroundImageMd from "../assets/images/couple1.jpg";
 
 import Logo from "../components/Logo";
 import HeroSection from "../sections/HeroSection";
-import ServicesSection from "../sections/ServicesSection";
+import LearnSection from "../sections/LearnSection";
 import ScheduleSection from "../sections/ScheduleSection";
 import TeamSection from "../sections/TeamSection";
 import StudioSection from "../sections/StudioSection";
@@ -57,7 +57,7 @@ const Home = () => {
 				<Logo />
 				<HamburgerMenu />
 				<HeroSection />
-				<ServicesSection />
+				<LearnSection />
 				<ScheduleSection />
 				<TeamSection />
 				<StudioSection />

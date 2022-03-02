@@ -13,6 +13,7 @@ export const Title = tw.h1`
     font-light
     text-center
     z-20
+	uppercase
 `;
 
 export const FormContainer = tw.div`

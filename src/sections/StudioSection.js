@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 import tw from "twin.macro";
 import { Title } from "../globalStyles";
@@ -73,15 +74,12 @@ const Item = styled.div`
 `;
 
 const StudioSection = () => {
+	const { t } = useTranslation();
+
 	return (
 		<StudioSectionContainer name="Studio">
-			<Title>OUR STUDIO</Title>
-			<SectionInfo>
-				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum, esse
-				magnam modi, cum laboriosam sunt numquam error placeat harum at,
-				doloremque suscipit deleniti quasi illo in tenetur? Quidem, totam
-				molestiae.
-			</SectionInfo>
+			<Title>{t("studio_section.title")}</Title>
+			<SectionInfo>{t("studio_section.description")}</SectionInfo>
 			<StudioSectionWrapper className="wrap">
 				<Carousel
 					dynamicHeight={false}
