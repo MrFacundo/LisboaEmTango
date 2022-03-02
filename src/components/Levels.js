@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
@@ -9,40 +10,36 @@ import { deviceSize } from "../components/responsive";
 
 import ws1 from "../assets/images/ws5.jpg";
 import ws2 from "../assets/images/ws7.jpg";
+import ws4 from "../assets/images/ws4.jpg";
 import social1 from "../assets/images/social1.jpg";
-import social2 from "../assets/images/social5.jpg";
+import social3 from "../assets/images/social3.jpg";
 import couple1 from "../assets/images/couple3.jpg";
 
 const levels = [
 	{
-		title: "GROUP LESSONS",
-		description:
-			"En las clases regulares se enseña tango social, la danza que se baila en las milongas. Están dividas en grupos de diferentes niveles con un programa progresivo y temático que ajuda a los alumnos a progresar a un ritmo homogéneo.",
+		title: "levels.group.title",
+		description: "levels.group.description",
 		photo: ws1,
 	},
 	{
-		title: "WORKSHOPS",
-		description:
-			"Nuestros Workshops son especialmente diseñados para desarrollar temáticas especificas. Generalmente con grupos más reduzidos y con una carga de trabajo mas intensa.",
+		title: "levels.workshop.title",
+		description: "levels.workshop.description",
 		photo: ws2,
 	},
 	{
-		title: "PRIVATE LESSONS",
-		description:
-			"Un encuentro intimo entre el alumno o pareja de baile y el profesor, donde los temas, contenidos y tiempos de aprendizaje son adecuados a las necesidades del alumno.",
-		photo: social2,
-	},
-	{
-		title: "La PráKtica",
-		description:
-			"La Práktica es un espacio de practica libre, fundamental para el proceso de aprendizaje del tango social. Momento relajado y casual donde el error y la repetición forman parte del proceso.",
+		title: "levels.private.title",
+		description: "levels.private.description",
 		photo: social1,
 	},
 	{
-		title: "RAVE TANGUERA",
-		description:
-			"“La Rave Tanguera” es una Fiesta del Tango. Todos los primeros sábados de cada mes nuestro spacio queda decorado y transformado para recrear el ambiente nocturno e bohemio de la noche porteña. Una verdadera Experiencia Tanguera.",
-		photo: social2,
+		title: "levels.praktica.title",
+		description: "levels.praktica.description",
+		photo: social3,
+	},
+	{
+		title: "levels.rave.title",
+		description: "levels.rave.description",
+		photo: social1,
 	},
 ];
 
@@ -192,6 +189,8 @@ const descriptionTransition = {
 };
 
 const Levels = () => {
+	const { t } = useTranslation();
+
 	const cardsInitialState = Array(5).fill(false);
 
 	const [isOpen, setOpen] = useState(cardsInitialState);
@@ -229,16 +228,16 @@ const Levels = () => {
 									variants={descriptionVariants}
 									transition={descriptionTransition}
 								>
-									{level.description}
+									{t(level.description)}
 								</DescriptionSm>
 							)}
 							<Title left={+(index % 2 === 0)}>
-								{level.title}
+								{t(level.title)}
 								{isMobile && <BsChevronRight className="text-[3rem]" />}
 							</Title>
 							{!isMobile && (
 								<Description left={+(index % 2 === 0)}>
-									{level.description}
+									{t(level.description)}
 								</Description>
 							)}
 						</Level>
@@ -258,11 +257,11 @@ const Levels = () => {
 						rel="noopener noreferrer"
 						href="https://forms.gle/CA64NQdcKqfajRfn8"
 					>
-						<TitleButton>BOOK A CLASS</TitleButton>
+						<TitleButton>{t("levels.button")}</TitleButton>
 						<BsArrowRightCircle className="mt-[1rem] text-[3rem] md:text-[5rem] text-center" />
 					</a>
 				</Button>
-				<Image variants={imageVariant} src={couple1} alt="" />
+				<Image variants={imageVariant} src={ws4} alt="" />
 			</LevelsWrapper>
 		</LevelsContainer>
 	);

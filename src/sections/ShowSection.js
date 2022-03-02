@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { useState, useEffect } from "react";
 import { Title } from "../globalStyles";
 import tw, { styled } from "twin.macro";
@@ -67,6 +68,8 @@ const YoutubeIframe = tw.div`
 `;
 
 const ShowSection = () => {
+	const { t } = useTranslation();
+
 	const [offsetY, setOffsetY] = useState(0);
 	const handleScroll = () => setOffsetY(window.pageYOffset);
 
@@ -80,7 +83,7 @@ const ShowSection = () => {
 
 	return (
 		<ShowSectionContainer name="Shows">
-			<SectionTitle>SHOWS</SectionTitle>
+			<SectionTitle>{t("shows_section.title")}</SectionTitle>
 			{!isMobile && (
 				<Button style={{ transform: `translateY(-${offsetY * 0.4}px)` }}>
 					Integer maximus nulla nulla, ac efficitur nunc luctus at. Donec rutrum

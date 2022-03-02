@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import tw from "twin.macro";
 import useCollapse from "react-collapsed";
 import {
@@ -58,6 +59,8 @@ const SocialItem = tw.p`
 `;
 
 export const MemberBio = ({ member }) => {
+	const { t } = useTranslation();
+
 	const { getCollapseProps, getToggleProps, isExpanded } = useCollapse({
 		duration: 1000,
 	});
@@ -110,7 +113,7 @@ export const MemberBio = ({ member }) => {
 							</SocialItem>
 						</Social>
 					</ContactInfo>
-					<div> {member.bio}</div>
+					<div> {t(member.bio)}</div>
 				</BioText>
 			</section>
 		</BioContainer>

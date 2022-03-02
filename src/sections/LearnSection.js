@@ -1,10 +1,11 @@
+import { useTranslation } from "react-i18next";
 import tw from "twin.macro";
 import { Title } from "../globalStyles";
 import { Element } from "react-scroll";
 import Levels from "../components/Levels";
 import ImagesDivider from "../components/ImagesDivider";
 
-const ServicesSectionContainer = tw(Element)`
+const LearnSectionContainer = tw(Element)`
     text-white
     w-full
     min-h-screen
@@ -37,19 +38,17 @@ const SectionInfo = tw.p`
     lg:pr-2
 `;
 
-const ServicesSection = () => {
+const LearnSection = () => {
+	const { t } = useTranslation();
+
 	return (
-		<ServicesSectionContainer name="Services">
-			<Title>LEARN AND PRACTICE</Title>
-			<SectionInfo>
-				Nuestro objetivo es generar un espacio donde puedas aprender
-				herramientas, pasos y técnicas para disfrutar del tango como baile
-				social, independientemente de tu nivel y experiencia.
-			</SectionInfo>
+		<LearnSectionContainer name="Learn">
+			<Title>{t("learn_section.title")}</Title>
+			<SectionInfo>{t("learn_section.description")}</SectionInfo>
 			<Levels />
 			<ImagesDivider />
-		</ServicesSectionContainer>
+		</LearnSectionContainer>
 	);
 };
 
-export default ServicesSection;
+export default LearnSection;
