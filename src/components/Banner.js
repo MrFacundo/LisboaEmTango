@@ -52,9 +52,9 @@ const Banner = () => {
 		<motion.div variants={banner}>
 			{!isMobile && (
 				<>
-					<BannerRow title={"Texto sobre"} />
-					<BannerRow title={"la"} />
-					<BannerRow title={"escuela"} />
+					<BannerRow title={"Website"} />
+					<BannerRow title={"in"} />
+					<BannerRow title={"progress 👨‍🔧️"} />
 				</>
 			)}
 			{isMobile && (

@@ -174,7 +174,7 @@ const HeroSection = () => {
 					</FloatingText>
 					<FloatingText>ESCUELA</FloatingText> */}
 			</LandingSection>
-			<Link to="Services" smooth={"easeInOutQuad"} duration={1000}>
+			<Link to="Learn" smooth={"easeInOutQuad"} duration={1000}>
 				<CTAButton
 					initial={{ scale: 0 }}
 					animate={{ scale: 1 }}
