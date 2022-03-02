@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import { useFormspark } from "@formspark/use-formspark";
 import tw from "twin.macro";
@@ -15,7 +16,9 @@ const TextArea = tw.textarea`
 	border-gray-500
 `;
 
-const Form = () => {
+const ContactForm = () => {
+	const { t } = useTranslation();
+
 	const [submit, submitting] = useFormspark({
 		formId: FORMSPARK_FORM_ID,
 	});
@@ -43,7 +46,7 @@ const Form = () => {
 		<FormContainer>
 			<form className="shadow-none" onSubmit={onSubmit}>
 				<div className="flex flex-col">
-					<Label htmlFor="name">Name</Label>
+					<Label htmlFor="name">{t("form.name")}</Label>
 					<Input
 						value={formData.name}
 						onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -54,7 +57,7 @@ const Form = () => {
 					/>
 				</div>
 				<div className="flex flex-col">
-					<Label htmlFor="email">Email</Label>
+					<Label htmlFor="email">{t("form.email")}</Label>
 					<Input
 						value={formData.email}
 						onChange={(e) =>
@@ -67,7 +70,7 @@ const Form = () => {
 					/>
 				</div>
 				<div className="flex flex-col">
-					<Label htmlFor="message">Message</Label>
+					<Label htmlFor="message">{t("form.message")}</Label>
 
 					<TextArea
 						value={formData.message}
@@ -82,7 +85,7 @@ const Form = () => {
 					/>
 				</div>
 				<SubmitButton type="submit" disabled={submitting}>
-					{submitting ? "Submitting..." : "Submit"}
+					{submitting ? t("form.submitting") : t("form.submit")}
 				</SubmitButton>
 				{notification && (
 					<div className={`my-2 w-full p-4 bg-green-500"`}>
@@ -94,4 +97,4 @@ const Form = () => {
 	);
 };
 
-export default Form;
+export default ContactForm;

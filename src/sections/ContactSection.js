@@ -3,7 +3,7 @@ import tw from "twin.macro";
 import { Element } from "react-scroll";
 import { Title } from "../globalStyles";
 import Map from "../components/Map";
-import Form from "../components/Form";
+import ContactForm from "../components/ContactForm";
 import NewsletterForm from "../components/NewsletterForm";
 
 import {
@@ -138,11 +138,11 @@ const ContactSection = () => {
 					<ContactDescription>
 						{t("contact_section.description_2")}
 					</ContactDescription>
-					<Form />
+					<ContactForm />
 					<Contacts>
 						<p className="flex flex-row pb-3">
 							<BsTelephone className="mr-3 text-3xl" />
-							0178 2903100
+							(+351) 916 192 919 || 935 478 559
 						</p>
 						<p>lisboaemtango@gmail.com</p>
 					</Contacts>
