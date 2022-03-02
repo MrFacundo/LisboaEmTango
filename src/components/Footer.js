@@ -1,6 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import tw from "twin.macro";
-import { useTranslation } from "react-i18next";
 
 // styles
 
@@ -67,8 +66,6 @@ const Link = tw.a`
 `;
 
 const Footer = () => {
-	const { t } = useTranslation();
-
 	return (
 		<FooterContainer>
 			<BottomSection>
@@ -84,9 +81,7 @@ const Footer = () => {
 				<SmallText>
 					<Link href="#">Design by</Link>
 				</SmallText>
-				<Copyright>
-					© {new Date().getFullYear()} LISBOA EM TANGO. All rights reserved.
-				</Copyright>
+				<Copyright>© {new Date().getFullYear()} LISBOA[EM]TANGO.</Copyright>
 			</BottomSection>
 		</FooterContainer>
 	);

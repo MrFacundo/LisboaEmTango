@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
 import { FormContainer, Input, Label, SubmitButton } from "../globalStyles";
 import React, { useState } from "react";
@@ -6,6 +7,8 @@ const url = process.env.REACT_APP_MAILCHIMP_URL;
 // styles
 
 const CustomForm = ({ status, message, onValidated }) => {
+	const { t } = useTranslation();
+
 	const [email, setEmail] = useState("");
 	const [name, setName] = useState("");
 
@@ -23,7 +26,7 @@ const CustomForm = ({ status, message, onValidated }) => {
 	return (
 		<FormContainer>
 			<form onSubmit={(e) => handleSubmit(e)} className="flex flex-col">
-				<Label htmlFor="name">First name or full name</Label>
+				<Label htmlFor="name">{t("form.name_fullname")}</Label>
 				<Input
 					onChange={(e) => setName(e.target.value)}
 					type="text"
@@ -31,7 +34,7 @@ const CustomForm = ({ status, message, onValidated }) => {
 					id="name"
 					required
 				/>
-				<Label htmlFor="email">Email</Label>
+				<Label htmlFor="email">{t("form.email")}</Label>
 
 				<Input
 					onChange={(e) => setEmail(e.target.value)}
@@ -41,7 +44,7 @@ const CustomForm = ({ status, message, onValidated }) => {
 					required
 				/>
 				<SubmitButton type="submit">
-					{status === "sending" ? "Subscribing..." : "Subscribe"}
+					{status === "sending" ? t("form.subscribing") : t("form.subscribe")}
 				</SubmitButton>
 				{status === "error" && (
 					<div dangerouslySetInnerHTML={{ __html: message }} />

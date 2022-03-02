@@ -1,17 +1,17 @@
 {
 	"nav_menu": {
-		"learn": "Learn and practice",
-		"schedule": "Schedule / Registration",
-		"instructors": "Instructors",
+		"learn": "Aprender e praticar",
+		"schedule": "Horário / Inscrição",
+		"instructors": "Professores",
 		"studio": "Our Studio",
 		"shows": "Shows",
-		"contact": "Address / Contact Us"
+		"contact": "Contactos"
 	},
 	"hero_section": {
 		"CTA": "AULAS / WORKSHOPS"
 	},
 	"learn_section": {
-		"title": "Learn and Practice",
+		"title": "Aprender e praticar",
 		"description": "Our goal is to create environment where you can develop tools, steps and technique that allow you to enjoy tango as a social dance, independently of your level of experience."
 	},
 	"levels": {
@@ -75,7 +75,17 @@
 		"title_2": "Contact us",
 		"description_2": "If you want to register for classes and workshops, need information or have any questions, we are here for you...",
 		"title_3": "Newsletter",
-		"description_3": "Receive information about classes, workshops and events",
+		"description_3": "Inscreva-se para receber todas as informações de aulas, workshops e outros eventos!",
 		"title_4": "Ligue-se a Nós"
+	},
+	"form": {
+		"name": "Nome",
+		"name_fullname": "Nome ou nome completo",
+		"email": "Email",
+		"message": "Sua mensagem",
+		"submit": "Enviar",
+		"submitting": "Enviando...",
+		"subscribe": "Se inscrever",
+		"subscribing": "Enviando..."
 	}
 }

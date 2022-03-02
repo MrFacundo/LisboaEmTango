@@ -11,23 +11,23 @@ const sections = [
 	},
 	{
 		name: "Schedule",
-		title: "Schedule / Registration",
+		title: "nav_menu.schedule",
 	},
 	{
 		name: "Team",
-		title: "Instructors",
+		title: "nav_menu.instructors",
 	},
 	{
 		name: "Studio",
-		title: "Our Studio",
+		title: "nav_menu.studio",
 	},
 	{
 		name: "Shows",
-		title: "Shows",
+		title: "nav_menu.shows",
 	},
 	{
 		name: "Contact",
-		title: "Address / Contact Us",
+		title: "nav_menu.contact",
 	},
 ];
 

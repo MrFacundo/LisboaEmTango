@@ -21,9 +21,11 @@ const Dropdown = tw.div`
     absolute
     top-[2rem]
     right-[4rem]
+	md:top-[2rem]
+    md:right-[8rem]
 	lg:top-[3rem]
     lg:right-[12rem]
-    inline-block 
+    inline-block
 `;
 
 const DropdownButton = tw.button`
@@ -54,6 +56,9 @@ const Button = tw.button`
 const LangName = tw.span`
 	hidden
 	md:block
+	md:text-2xl
+	lg:text-xl
+	font-title
 `;
 
 const LanguageDropdown = () => {
@@ -62,16 +67,16 @@ const LanguageDropdown = () => {
 	const { i18n } = useTranslation();
 
 	return (
-		<Dropdown className="absolute right-[10rem] dropdown inline-block ">
+		<Dropdown className="dropdown">
 			<DropdownButton className="">
 				<span
-					className={`flag-icon flag-icon-${currentLanguage.country_code} mx-2`}
+					className={`flag-icon flag-icon-${currentLanguage.country_code} mx-2 text-xl md:text-2xl`}
 				></span>
 				<LangName> {currentLanguage.name}</LangName>
 				<svg
-					className="fill-current h-4 w-4"
+					className="fill-black h-4 w-4"
 					xmlns="http://www.w3.org/2000/svg"
-					viewBox="0 0 20 20"
+					viewBox="0 0 10 20"
 				>
 					<path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
 				</svg>

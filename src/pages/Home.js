@@ -1,7 +1,6 @@
 import tw, { styled } from "twin.macro";
 import { motion } from "framer-motion";
-import BackgroundImageSm from "../assets/images/couple1.jpg";
-import BackgroundImageMd from "../assets/images/couple1.jpg";
+import BackgroundImage from "../assets/images/couple1.jpg";
 
 import Logo from "../components/Logo";
 import HeroSection from "../sections/HeroSection";
@@ -32,13 +31,19 @@ const HomeBackground = styled(motion.div)`
         bg-fixed
         bg-blend-overlay
     `};
-	background-image: url(${BackgroundImageMd});
-	background-position: bottom 60% left 80%;
-	background-size: 150%;
+	background-image: url(${BackgroundImage});
+	background-position: bottom 10% left 60%;
+	background-size: 170%;
 
-	@media only screen and (max-width: 768px) {
-		background-image: url(${BackgroundImageSm});
-		background-position: bottom 10% left 50%;
+	@media only screen and (min-width: 540px) {
+		background-image: url(${BackgroundImage});
+		background-position: bottom 25% left 80%;
+		background-size: 150%;
+	}
+
+	@media only screen and (min-width: 1024px) {
+		background-image: url(${BackgroundImage});
+		background-position: bottom 60% left 80%;
 		background-size: 170%;
 	}
 `;
