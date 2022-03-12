@@ -30,7 +30,6 @@ const Dropdown = tw.div`
 
 const DropdownButton = tw.button`
     text-gray-700
-    font-semibold
     py-2
     px-4
     rounded
@@ -58,7 +57,9 @@ const LangName = tw.span`
 	md:block
 	md:text-2xl
 	lg:text-xl
-	font-title
+	font-text
+	uppercase
+	font-bold
 `;
 
 const LanguageDropdown = () => {
@@ -72,7 +73,7 @@ const LanguageDropdown = () => {
 				<span
 					className={`flag-icon flag-icon-${currentLanguage.country_code} mx-2 text-xl md:text-2xl`}
 				></span>
-				<LangName> {currentLanguage.name}</LangName>
+				<LangName> {currentLanguage.code}</LangName>
 				<svg
 					className="fill-black h-4 w-4"
 					xmlns="http://www.w3.org/2000/svg"
@@ -95,7 +96,7 @@ const LanguageDropdown = () => {
 								<span
 									className={`flag-icon flag-icon-${country_code} mx-2`}
 								></span>
-								<LangName>{name}</LangName>
+								<LangName>{code}</LangName>
 							</Button>
 						</li>
 					))}

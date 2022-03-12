@@ -17,7 +17,7 @@ const MenuContainer = tw(motion.div)`
 	min-w-[300px]
 	w-full
 	md:max-w-[60%]
-	lg:max-w-[35%]
+	lg:max-w-[40%]
 	h-full
 	fixed
 	top-0

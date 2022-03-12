@@ -1,14 +1,14 @@
 import tw from "twin.macro";
 
 export const Title = tw.h1`
-    font-family["Barlow"]
+    font-title
     px-3
-    py-4
-    md:py-8
-    lg:py-12
+    py-10
+    md:py-16
+    lg:py-20
     text-3xl
     md:text-6xl
-    lg:text-8xl
+    lg:text-7xl
     text-white
     font-light
     text-center

@@ -1,6 +1,9 @@
 import tw, { styled } from "twin.macro";
 import { motion } from "framer-motion";
 import BackgroundImage from "../assets/images/couple1.jpg";
+import logo from "../assets/images/logo1.png";
+
+import { ScrollToTop } from "../components/ScrollButton";
 
 import Logo from "../components/Logo";
 import HeroSection from "../sections/HeroSection";
@@ -69,6 +72,7 @@ const Home = () => {
 				<ShowSection />
 				<ContactSection />
 				<Footer />
+				<ScrollToTop />
 			</HomeBackground>
 		</HomeContainer>
 	);
