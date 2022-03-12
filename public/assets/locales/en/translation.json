@@ -8,24 +8,28 @@
 		"contact": "Address / Contact Us"
 	},
 	"hero_section": {
-		"CTA": "CLASSES / WORKSHOPS"
+		"CTA": "AULAS / WORKSHOPS",
+		"banner_row_1": "Argentine tango",
+		"banner_row_2": "in the heart",
+		"banner_row_3": "of Lisbon",
+		"banner_mobile": "Argentine Tango in the heart of of Lisbon"
 	},
 	"learn_section": {
 		"title": "Learn and Practice",
-		"description": "Our goal is to create environment where you can develop tools, steps and technique that allow you to enjoy tango as a social dance, independently of your level of experience."
+		"description": "Our goal is to create environment where you can develop skills, steps and technique that allow you to enjoy tango as a social dance, independently of your level of experience."
 	},
 	"levels": {
 		"group": {
 			"title": "Group lessons",
-			"description": "In our regular lessons we teach social tango, the one we dance at the milongas. The classes are divided into different levels and follow a program that helps students to advance at constant pace."
+			"description": "In our regular lessons we teach social tango, the one we dance at the milongas. The classes are divided into different levels and follow a program that helps students to advance at a constant pace."
 		},
 		"workshop": {
 			"title": "Workshops",
-			"description": "Our workshops are mant to train and develop particular subjects. They generally consist of reduced groups and have an intensive rythm."
+			"description": "Our workshops are mant to train and develop particular skills. Generally they consist of reduced groups and have an intensive rythm."
 		},
 		"private": {
 			"title": "Private Lessons",
-			"description": "An intimate encounter between the student or dance couple and the teacher, where the contents and learning pace are adapted to the needs of the student."
+			"description": "An intimate encounter between the student or dance couple and the teacher, where the contents and pace are adapted to the needs of the student."
 		},
 		"praktica": {
 			"title": "La Práktica",
@@ -33,7 +37,7 @@
 		},
 		"rave": {
 			"title": "Rave Tanguera",
-			"description": "The Rave Tanguera is a tango party. Every first Saturday of the month, our studio is transformed, bringing to Lisbon the bohemian vibe of the tango nights in Buenos Aires. A true tango experience."
+			"description": "The Rave Tanguera is a tango party. Every first Saturday of the month our studio is transformed, bringing to Lisbon the bohemian vibe of the tango nights in Buenos Aires. A true tango experience."
 		},
 		"button": "Book a class"
 	},
@@ -63,17 +67,18 @@
 	},
 	"studio_section": {
 		"title": "Our Studio",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, dolore cum vitae excepturi provident odit expedita explicabo odio, incidunt nisi consequatur. Rem quas incidunt dolore debitis ipsa nesciunt vero utllo nesciunt sit fuga ex laboriosam ullam, ipsam, repudiandae, beatae nulla modi labore tempore. Rerum similique explicabo, voluptas consectetur veritatis quos officia tempore repudiandae ducimus eius quam maiores voluptate possimus.oluptatibus quam maiores, debitis accu"
+		"description": "Our studio is located inside the Club Ferroviário de Portugal. A mithical, bohemian space that has been the home of tango in Lisbon for more than 20 years"
 	},
 	"shows_section": {
 		"title": "Shows",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, dolore cum vitae excepturi provident odit expedita explicabo odio, incidunt nisi consequatur. Rem quas incidunt dolore debitis ipsa nesciunt vero utllo nesciunt sit fuga ex laboriosam ullam, ipsam, repudiandae, beatae nulla modi labore tempore. Rerum similique explicabo, voluptas consectetur veritatis quos officia tempore repudiandae ducimus eius quam maiores voluptate possimus.oluptatibus quam maiores, debitis accu"
+		"description": "Volver is multidisciplinary show that embodies the roots of argentine tango. A unique show that blends music and movement and proposes a trip from the origins of tango to modern times. Old classics and original compositions cross ways with argentinian folk and portuguese fado.",
+		"CTA": "Contact us"
 	},
 	"contact_section": {
 		"title_1": "Address",
 		"description_1": "Clube Ferroviário de Portugal Rua de Santa Apolónia 59, 1100-468 Lisboa",
 		"title_2": "Contact us",
-		"description_2": "If you want to register for classes and workshops, need information or have any questions, we are here for you...",
+		"description_2": "If you want to register for classes, need information about shows or have any questions, we are here for you...",
 		"title_3": "Newsletter",
 		"description_3": "Receive information about classes, workshops and events",
 		"title_4": "Connect with us"

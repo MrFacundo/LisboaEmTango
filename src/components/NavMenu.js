@@ -4,6 +4,8 @@ import { Link } from "react-scroll";
 import tw from "twin.macro";
 import { LogoContainer } from "./Logo";
 
+import logo from "../assets/images/logo1.png";
+
 const sections = [
 	{
 		name: "Learn",
@@ -35,7 +37,7 @@ const SidebarLink = tw(Link)`
     items-center 
     content-center
 	text-[1.3rem]
-    md:text-[2rem]
+    md:text-[1.8rem]
     text-decoration[none]
     text-white
     cursor-pointer
@@ -57,15 +59,17 @@ const NavList = tw(motion.ul)`
 	flex
 	flex-col
 	items-center
+	text-center
 `;
 
 const NavItem = tw(motion.li)`
-	py-3
+	py-5
 	md:py-6
 `;
 
 const NavLogo = tw(LogoContainer)`
-	md:text-[2rem]
+	ml-[-1rem]
+	mt-[-1rem]
 `;
 
 const container = {
@@ -109,7 +113,7 @@ const NavMenu = ({ isOpen, toggle }) => {
 							duration={800}
 							onClick={toggle}
 						>
-							l.e.tango
+							<img className="max-w-[7rem]" src={logo} alt="" />
 						</NavLogo>
 
 						<NavList

@@ -3,8 +3,9 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				title: ["Barlow", "sans-serif"],
+				title: ["Rubik Mono One", "sans-serif"],
 				text: ["Hind Siliguri", "sans-serif"],
+				logo: ["East Sea Dokdo", "cursive"],
 			},
 			colors: {
 				primary: "#D4A573",

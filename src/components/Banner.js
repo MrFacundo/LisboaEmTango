@@ -1,18 +1,32 @@
+import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import tw from "twin.macro";
-
-import { useMediaQuery } from "react-responsive";
-import { deviceSize } from "../components/responsive";
 
 // animations
 
 const banner = {
 	animate: {
 		transition: {
-			delayChildren: 0.2,
+			delayChildren: 1,
 			staggerChildren: 0.1,
 		},
 	},
+};
+
+const container = {
+	hidden: { opacity: 0 },
+	show: {
+		opacity: 1,
+		transition: {
+			delayChildren: 0.5,
+			staggerChildren: 0.5,
+		},
+	},
+};
+
+const row = {
+	hidden: { opacity: 0 },
+	show: { opacity: 1 },
 };
 
 const letterAni = {
@@ -31,37 +45,37 @@ const letterAni = {
 const BannerRowContainer = tw(motion.div)`
     items-center
 	content-center
-    font-family["Archivo Narrow"]
+	font-title
+	uppercase
     text-white
-    md:font-black
-    text-[1.5rem]
-    md:text-[5rem]
+    text-[1.3rem]
+	md:text-[2.5rem]
+    lg:text-[3.5rem]
     overflow-hidden
     tracking-wide
     whitespace-pre-wrap
+	lg:line-height[5rem]
 `;
 
 const LetterContainer = tw(motion.span)`
     relative
     inline-block    
 `;
+
 const Banner = () => {
-	const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile });
+	const { t } = useTranslation();
 
 	return (
-		<motion.div variants={banner}>
-			{!isMobile && (
-				<>
-					<BannerRow title={"Website"} />
-					<BannerRow title={"in"} />
-					<BannerRow title={"progress 👨‍🔧️"} />
-				</>
-			)}
-			{isMobile && (
-				<>
-					<BannerRow title={"Texto sobre la escuela"} />
-				</>
-			)}
+		<motion.div variants={container} initial="hidden" animate="show">
+			<BannerRowContainer variants={row}>
+				<AnimatedLetters title={t("hero_section.banner_row_1")} />
+			</BannerRowContainer>
+			<BannerRowContainer variants={row}>
+				<AnimatedLetters title={t("hero_section.banner_row_2")} />
+			</BannerRowContainer>
+			<BannerRowContainer variants={row}>
+				<AnimatedLetters title={t("hero_section.banner_row_3")} />
+			</BannerRowContainer>
 		</motion.div>
 	);
 };
@@ -75,13 +89,5 @@ const AnimatedLetters = ({ title }) => (
 		))}
 	</motion.span>
 );
-
-const BannerRow = ({ title }) => {
-	return (
-		<BannerRowContainer>
-			<AnimatedLetters title={title} />
-		</BannerRowContainer>
-	);
-};
 
 export default Banner;

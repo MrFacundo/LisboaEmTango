@@ -57,15 +57,12 @@ const BackgroundShadow = styled(motion.div)`
 	h-[55%]
 	md:h-[50%]
 	w-full
-	z-0
-	
-	
-	`}
+`}
 	background: linear-gradient(
-		180deg,
-		rgba(0, 0, 0, 0) 0%,
-		rgba(0, 0, 0, 0.3) 10%
-	);
+	180deg,
+	rgba(0, 0, 0, 0) 0%,
+	rgba(0, 0, 0, 0.3) 10%
+);
 `;
 
 const Team = tw(motion.div)`
@@ -84,7 +81,7 @@ const TeamMemberCardContainer = tw.div`
 	justify-center
 	items-center
 	md:items-start
-	z-20
+	z-10
 `;
 
 const TeamSection = () => {

@@ -9,11 +9,11 @@ import { useMediaQuery } from "react-responsive";
 import { deviceSize } from "../components/responsive";
 
 import ws1 from "../assets/images/ws5.jpg";
-import ws2 from "../assets/images/ws7.jpg";
+import ws2 from "../assets/images/ws8.jpg";
 import ws4 from "../assets/images/ws4.jpg";
-import social1 from "../assets/images/social1.jpg";
-import social3 from "../assets/images/social3.jpg";
-import couple1 from "../assets/images/couple3.jpg";
+import social6 from "../assets/images/social7.jpg";
+import social3 from "../assets/images/social1.jpg";
+import social5 from "../assets/images/social5.jpg";
 
 const levels = [
 	{
@@ -29,7 +29,7 @@ const levels = [
 	{
 		title: "levels.private.title",
 		description: "levels.private.description",
-		photo: social1,
+		photo: social5,
 	},
 	{
 		title: "levels.praktica.title",
@@ -39,7 +39,7 @@ const levels = [
 	{
 		title: "levels.rave.title",
 		description: "levels.rave.description",
-		photo: social1,
+		photo: social6,
 	},
 ];
 

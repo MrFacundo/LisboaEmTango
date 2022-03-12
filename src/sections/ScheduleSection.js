@@ -52,7 +52,7 @@ const Separator = tw.div`
 
 const Button = tw(motion.button)`
 	items-center
-	font-title
+	font-text
 	rounded-full
 	cursor-pointer
 	text-white
@@ -100,10 +100,10 @@ const ScheduleSection = () => {
 				<Separator />
 				<Day>{t("schedule_section.day3.name")}</Day>
 				<Class>
-					<strong>17:00</strong> - {t("schedule_section.day3.class1")}
+					<strong>18:00</strong> - {t("schedule_section.day3.class1")}
 				</Class>
 				<Class>
-					<strong>18:30</strong> - {t("schedule_section.day3.class2")}
+					<strong>19:00</strong> - {t("schedule_section.day3.class2")}
 				</Class>
 				<Separator />
 			</GridContainer>

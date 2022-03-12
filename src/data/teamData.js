@@ -7,8 +7,8 @@ const teamData = [
 	{
 		name: "Juan Capriotti",
 		shortName: "Juan",
-		email: "emailmemberone@gmail.com",
-		phone: "(+351) 234876543",
+		email: "capriottijuan@gmail.com",
+		phone: "(+351) 935 478 559",
 		social: {
 			facebook: "https://www.facebook.com/juan.capriotti.1",
 			instagram: "https://www.instagram.com/juancapriotti",

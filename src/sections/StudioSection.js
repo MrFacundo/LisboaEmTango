@@ -1,5 +1,4 @@
 import { useTranslation } from "react-i18next";
-import styled from "styled-components";
 import tw from "twin.macro";
 import { Title } from "../globalStyles";
 import { Element } from "react-scroll";
@@ -9,11 +8,17 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import studio1 from "../assets/images/studio1.jpg";
 import studio2 from "../assets/images/studio2.jpg";
 import studio3 from "../assets/images/studio3.jpg";
+import studio4 from "../assets/images/studio4.jpg";
+import studio5 from "../assets/images/studio5.jpg";
+import studio6 from "../assets/images/studio6.jpg";
 
 const studioImages = [
 	{ image: studio1 },
 	{ image: studio2 },
 	{ image: studio3 },
+	{ image: studio4 },
+	{ image: studio5 },
+	{ image: studio6 },
 ];
 
 const StudioSectionContainer = tw(Element)`
@@ -27,11 +32,11 @@ const StudioSectionContainer = tw(Element)`
         xl:pb-2
         items-center
         bg-primary
-
 `;
 
 const SectionInfo = tw.p`
     text-base
+    font-text
     2xl:text-lg
     text-white
     text-center
@@ -48,7 +53,6 @@ const SectionInfo = tw.p`
 const StudioSectionWrapper = tw.div`
     w-[90%]
     md:w-[80%]
-
     h-full
     flex
     flex-col
@@ -58,19 +62,7 @@ const StudioSectionWrapper = tw.div`
     md:mt-10
     max-w-sm
     md:max-w-7xl
-`;
-
-const Item = styled.div`
-	${tw`
-        flex
-        flex-col
-    `}
-	img {
-		${tw`
-            max-w-full
-            max-h-full
-        `}
-	}
+    pb-[3rem]
 `;
 
 const StudioSection = () => {
@@ -80,7 +72,7 @@ const StudioSection = () => {
 		<StudioSectionContainer name="Studio">
 			<Title>{t("studio_section.title")}</Title>
 			<SectionInfo>{t("studio_section.description")}</SectionInfo>
-			<StudioSectionWrapper className="wrap">
+			<StudioSectionWrapper>
 				<Carousel
 					dynamicHeight={false}
 					autoPlay
@@ -92,9 +84,9 @@ const StudioSection = () => {
 				>
 					{studioImages.map((image, index) => {
 						return (
-							<Item key={index}>
+							<div key={index}>
 								<img src={image.image} alt="" />
-							</Item>
+							</div>
 						);
 					})}
 				</Carousel>

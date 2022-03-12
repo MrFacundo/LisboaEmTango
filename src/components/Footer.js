@@ -81,7 +81,7 @@ const Footer = () => {
 				<SmallText>
 					<Link href="#">Design by</Link>
 				</SmallText>
-				<Copyright>© {new Date().getFullYear()} LISBOA[EM]TANGO.</Copyright>
+				<Copyright>© {new Date().getFullYear()} LISBOA[EM]TANGO</Copyright>
 			</BottomSection>
 		</FooterContainer>
 	);
