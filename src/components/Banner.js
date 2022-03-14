@@ -52,7 +52,6 @@ const BannerRowContainer = tw(motion.div)`
 	md:text-[2.5rem]
     lg:text-[3.5rem]
     overflow-hidden
-    tracking-wide
     whitespace-pre-wrap
 	lg:line-height[5rem]
 `;

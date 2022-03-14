@@ -24,7 +24,7 @@ const MenuContainer = tw(motion.div)`
 	right-0
 	p-[1em 2.5em]
 	bg-secondary
-	user-select[none]
+	select-none
 	z-40
 	transition[translateX(4em)]
 `;
@@ -40,7 +40,6 @@ const MenuShadowSection = tw(motion.div)`
 	z-40
 	transition[translateX(4em)]
 	box-shadow[inset 2px 0 2px rgba(15, 15, 15, 0.3)]
-
 `;
 
 const menuVariants = {

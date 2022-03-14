@@ -1,5 +1,8 @@
 import tw from "twin.macro";
 import { Link } from "react-scroll";
+import { useMediaQuery } from "react-responsive";
+import { deviceSize } from "../components/responsive";
+import logo from "../assets/images/logo6.png";
 
 export const LogoContainer = tw(Link)`
     top-[1rem]
@@ -17,9 +20,16 @@ export const LogoContainer = tw(Link)`
 `;
 
 const Logo = () => {
+	const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile });
+
 	return (
 		<LogoContainer to="Hero" smooth={"easeInOutQuad"} duration={500}>
-			lisboa<span className="text-3xl">[em]</span>tango
+			{isMobile && <img className="max-w-[4rem]" src={logo} alt="" />}
+			{!isMobile && (
+				<span>
+					lisboa<span className="text-3xl"> em </span>tango
+				</span>
+			)}
 		</LogoContainer>
 	);
 };

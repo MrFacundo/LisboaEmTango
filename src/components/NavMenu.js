@@ -4,7 +4,7 @@ import { Link } from "react-scroll";
 import tw from "twin.macro";
 import { LogoContainer } from "./Logo";
 
-import logo from "../assets/images/logo1.png";
+import logo from "../assets/images/logo5.png";
 
 const sections = [
 	{
