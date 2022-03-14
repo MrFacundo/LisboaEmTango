@@ -30,7 +30,6 @@ const BottomSection = tw.div`
     border-opacity-50
     py-3
     font-text
-
 `;
 
 const Copyright = tw.span`
@@ -42,7 +41,6 @@ const Copyright = tw.span`
     text-center
     pt-3
     md:pt-0
-
 `;
 
 const SmallText = tw.span`
@@ -58,7 +56,6 @@ const SmallTextContainer = tw.div`
     text-gray-300
     md:max-w-[12rem]
     items-center
-    
 `;
 
 const Link = tw.a`

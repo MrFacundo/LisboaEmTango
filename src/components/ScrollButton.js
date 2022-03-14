@@ -1,13 +1,8 @@
 import { useEffect, useState } from "react";
-import logo from "../assets/images/logo2.png";
+import logo from "../assets/images/logo6.png";
 import tw from "twin.macro";
 
 const Button = tw.button`
-    inline-flex
-    items-center
-    p-3
-    rounded-full
-    shadow-sm
     transition-opacity
     duration-500
     hover:opacity-100
@@ -45,13 +40,13 @@ export const ScrollToTop = () => {
 	}, []);
 
 	return (
-		<div className="fixed top-2 left-2">
+		<div className="fixed top-4 left-4">
 			<Button
 				type="button"
 				onClick={scrollToTop}
 				className={classNames(isVisible ? "opacity-80" : "opacity-0")}
 			>
-				<img className="w-[3rem] md:w-[4rem]" src={logo} alt="" />
+				<img className="w-[3rem] md:w-[5rem]" src={logo} alt="" />
 			</Button>
 		</div>
 	);
