@@ -3,7 +3,8 @@ import MailchimpSubscribe from "react-mailchimp-subscribe";
 import { FormContainer, Input, Label, SubmitButton } from "../globalStyles";
 import React, { useState } from "react";
 
-const url = process.env.REACT_APP_MAILCHIMP_URL;
+const url = `${process.env.REACT_APP_MAILCHIMP_URL}u=${process.env.REACT_APP_MAILCHIMP_U}&id=${process.env.REACT_APP_MAILCHIMP_ID}`;
+
 // styles
 
 const CustomForm = ({ status, message, onValidated }) => {

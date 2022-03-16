@@ -9,13 +9,12 @@ import { Title } from "../globalStyles";
 import { MemberBio } from "../components/Memberbio";
 import { MemberImage } from "../components/MemberImage";
 
-import BackgroundImage from "../assets/images/couple2.jpg";
+import BackgroundImage from "../assets/images/c1.jpg";
 
-const TeamSectionContainer = styled(motion.div)`
-	${tw`
-        bg-no-repeat
+const TeamSectionContainer = tw(motion.div)`
 		w-full
-		min-h-[300vh]
+		min-h-[180vh]
+		lg:min-h-[300vh]
         flex
         flex-col
         pt-1
@@ -23,21 +22,11 @@ const TeamSectionContainer = styled(motion.div)`
         xl:pt-2
         xl:pb-2
 		justify-end
-		bg-fixed
 		z-10
 		items-center
-    `};
-	background-image: url(${BackgroundImage});
-	background-size: 70%;
-	background-position: bottom 50% left 50%;
-
-	@media only screen and (max-width: 1024px) {
-		background-position: bottom 20% left 40%;
-		background-size: 170%;
-	}
 `;
 
-const Background = styled.div`
+const BackgroundGradient = styled.div`
 	${tw`
 	relative
     `};
@@ -50,18 +39,36 @@ const Background = styled.div`
 	);
 `;
 
+const BackgroundImageDiv = styled(motion.div)`
+	${tw`
+	absolute
+	bg-center
+	bg-no-repeat
+	h-[300vh]
+    `};
+
+	@media only screen and (max-width: 1024px) {
+		background-size: contain;
+	}
+
+	background: url(${BackgroundImage});
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+`;
+
 const BackgroundShadow = styled(motion.div)`
 	${tw`
 	absolute
 	bottom-0
-	h-[55%]
+	h-[70%]
 	md:h-[50%]
 	w-full
 `}
 	background: linear-gradient(
 	180deg,
 	rgba(0, 0, 0, 0) 0%,
-	rgba(0, 0, 0, 0.3) 10%
+	rgba(0, 0, 0, 0.7) 10%
 );
 `;
 
@@ -87,20 +94,21 @@ const TeamMemberCardContainer = tw.div`
 const TeamSection = () => {
 	const { t } = useTranslation();
 	return (
-		<Background>
-			<TeamSectionContainer
+		<BackgroundGradient>
+			<BackgroundImageDiv
 				initial={{
 					opacity: 0,
 				}}
 				whileInView={{
 					opacity: 1,
 				}}
-				viewport={{ once: true, margin: "0px 0px -500px 0px" }}
+				viewport={{ once: false, margin: "0px 0px -500px 0px" }}
 				transition={{
 					ease: "easeOut",
 					duration: 1,
 				}}
-			>
+			/>
+			<TeamSectionContainer>
 				<Title name="Team">{t("team_section.title")}</Title>
 				<Team
 					initial={{ opacity: 0 }}
@@ -143,7 +151,7 @@ const TeamSection = () => {
 					duration: 1,
 				}}
 			/>
-		</Background>
+		</BackgroundGradient>
 	);
 };
 
