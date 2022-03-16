@@ -7,14 +7,28 @@ import { motion } from "framer-motion";
 import { BsChevronDoubleDown } from "react-icons/bs";
 import Banner from "../components/Banner";
 import LanguageDropdown from "../components/LanguageDropdown";
+import bg from "../assets/images/coupleBanner.jpg";
+import bgMobile from "../assets/images/c2.jpg";
 
 // styles
 
-const HeroSectionContainer = tw.div`
+const HeroSectionContainer = styled.div`
+	${tw`
         w-full
         flex
         h-[100vh]
         relative
+		`};
+
+	@media only screen and (max-width: 768px) {
+		background-image: url(${bgMobile});
+		background-position: bottom 25% left 50%;
+		background-size: 140%;
+	}
+
+	background: url(${bg});
+	background-size: 120%;
+	background-position: 100% 0%;
 `;
 
 const LandingSection = tw(motion.div)`

@@ -24,55 +24,20 @@ const HomeContainer = tw.div`
 		bg-secondary
 `;
 
-const HomeBackground = styled(motion.div)`
-	${tw`
-		w-full
-		h-full
-		overflow-hidden
-		bg-no-repeat
-        bg-fixed
-        bg-blend-overlay
-    `};
-	background-image: url(${BackgroundImage});
-	background-position: bottom 10% left 60%;
-	background-size: 170%;
-
-	@media only screen and (min-width: 540px) {
-		background-image: url(${BackgroundImage});
-		background-position: bottom 25% left 80%;
-		background-size: 150%;
-	}
-
-	@media only screen and (min-width: 1024px) {
-		background-image: url(${BackgroundImage});
-		background-position: bottom 60% left 80%;
-		background-size: 170%;
-	}
-`;
-
 const Home = () => {
 	return (
 		<HomeContainer>
-			<HomeBackground
-				initial={{ opacity: 0 }}
-				animate={{ opacity: 1 }}
-				transition={{
-					ease: "easeOut",
-					duration: 2,
-				}}
-			>
-				<Logo />
-				<HamburgerMenu />
-				<HeroSection />
-				<LearnSection />
-				<ScheduleSection />
-				<TeamSection />
-				<StudioSection />
-				<ShowSection />
-				<ContactSection />
-				<Footer />
-				<ScrollToTop />
-			</HomeBackground>
+			<Logo />
+			<HamburgerMenu />
+			<HeroSection />
+			<LearnSection />
+			<ScheduleSection />
+			<TeamSection />
+			<StudioSection />
+			<ShowSection />
+			<ContactSection />
+			<Footer />
+			<ScrollToTop />
 		</HomeContainer>
 	);
 };

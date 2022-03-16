@@ -29,7 +29,10 @@ const TeamSectionContainer = tw(motion.div)`
 const BackgroundGradient = styled.div`
 	${tw`
 	relative
-    `};
+	flex
+	justify-center
+	
+	`};
 	background: linear-gradient(
 		90deg,
 		rgba(0, 31, 51, 1) 0%,
@@ -53,8 +56,8 @@ const BackgroundImageDiv = styled(motion.div)`
 
 	background: url(${BackgroundImage});
 	background-repeat: no-repeat;
-	background-size: cover;
-	width: 100%;
+	background-size: contain;
+	width: 80%;
 `;
 
 const BackgroundShadow = styled(motion.div)`
