@@ -125,7 +125,7 @@ const TeamSection = () => {
 					<TeamMemberCardContainer>
 						<MemberImage
 							src={teamData[0].image}
-							fallback={teamData[0].image.imageFallback}
+							fallback={teamData[0].imageFallback}
 							alt={teamData[0].name}
 						/>
 						<MemberBio member={teamData[0]} />
@@ -133,7 +133,7 @@ const TeamSection = () => {
 					<TeamMemberCardContainer>
 						<MemberImage
 							src={teamData[1].image}
-							fallback={teamData[1].image.imageFallback}
+							fallback={teamData[1].imageFallback}
 							alt={teamData[1].name}
 						/>
 						<MemberBio member={teamData[1]} />
