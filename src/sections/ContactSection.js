@@ -67,6 +67,11 @@ const BgGradient = styled.div`
 	h-full
 	bg-[rgba(107, 40, 169, 0.3)]
          `};
+	@media only screen and (max-width: 768px) {
+		@supports (-webkit-overflow-scrolling: touch) {
+			display: none;
+		}
+	}
 `;
 
 const ContactSectionWrapper = tw.div`
