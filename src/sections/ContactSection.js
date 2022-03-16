@@ -1,10 +1,13 @@
 import { useTranslation } from "react-i18next";
 import tw from "twin.macro";
+import styled from "styled-components";
 import { Element } from "react-scroll";
 import { Title } from "../globalStyles";
 import Map from "../components/Map";
 import ContactForm from "../components/ContactForm";
 import NewsletterForm from "../components/NewsletterForm";
+import bg from "../assets/images/bgContact.jpg";
+import bgMobile from "../assets/images/c3.jpg";
 
 import {
 	BsFacebook,
@@ -21,17 +24,49 @@ const location = {
 
 // styles
 
-const ContactContainer = tw(Element)`
+const ContactContainer = styled(Element)`
+	${tw`
 	text-white
     w-full
     flex
-    pt-1
-    pb-1
-    xl:pt-2
-    xl:pb-2
     justify-center
-    bg-[rgba(107, 40, 169, 0.3)]
 	font-text
+	relative
+	`};
+
+	@media only screen and (max-width: 768px) {
+		@supports not (-webkit-overflow-scrolling: touch) {
+			background-size: 100%;
+			background-repeat: no-repeat;
+			background: url(${bgMobile}) fixed;
+		}
+
+		@supports (-webkit-overflow-scrolling: touch) {
+			background-color: #d4a573;
+		}
+	}
+
+	@media only screen and (min-width: 769px) {
+		@supports not (-webkit-overflow-scrolling: touch) {
+			background: url(${bgMobile}) fixed;
+			background-size: 100%;
+			background-position: 100% 25%;
+		}
+
+		@supports (-webkit-overflow-scrolling: touch) {
+			background: url(${bgMobile});
+			background-position: 100% 25%;
+		}
+	}
+`;
+
+const BgGradient = styled.div`
+	${tw`
+	absolute
+	w-[100%]
+	h-full
+	bg-[rgba(107, 40, 169, 0.3)]
+         `};
 `;
 
 const ContactSectionWrapper = tw.div`
@@ -42,6 +77,7 @@ const ContactSectionWrapper = tw.div`
 	lg:my-[3rem]
 	lg:flex-row
 	lg:items-stretch
+	z-20
 `;
 
 const SectionTitle = tw(Title)`
@@ -125,6 +161,7 @@ const ContactSection = () => {
 
 	return (
 		<ContactContainer name="Contact">
+			<BgGradient></BgGradient>
 			<ContactSectionWrapper>
 				<Address>
 					<SectionTitle>{t("contact_section.title_1")}</SectionTitle>
