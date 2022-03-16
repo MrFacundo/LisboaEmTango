@@ -22,7 +22,7 @@ const BioContainer = tw.div`
 	self-stretch
 `;
 
-const ViewMoreButton = tw.h1`
+const ViewMoreButton = tw.div`
     items-start
     active:outline-none
     focus:outline-none
@@ -35,6 +35,7 @@ const ViewMoreButton = tw.h1`
 	md:px-8
 	lg:px-12
 	md:pt-12
+	-webkit-appearance[none]
 `;
 
 const BioText = tw.div`
