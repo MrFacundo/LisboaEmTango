@@ -22,7 +22,6 @@ const TeamSectionContainer = tw(motion.div)`
         xl:pt-2
         xl:pb-2
 		justify-end
-		z-10
 		items-center
 `;
 
@@ -64,8 +63,8 @@ const BackgroundShadow = styled(motion.div)`
 	${tw`
 	absolute
 	bottom-0
-	h-[70%]
-	md:h-[50%]
+	h-[80%]
+	md:h-[80%]
 	w-full
 `}
 	background: linear-gradient(
@@ -111,8 +110,8 @@ const TeamSection = () => {
 					duration: 1,
 				}}
 			/>
-			<TeamSectionContainer>
-				<Title name="Team">{t("team_section.title")}</Title>
+			<TeamSectionContainer name="Team">
+				<Title>{t("team_section.title")}</Title>
 				<Team
 					initial={{ opacity: 0 }}
 					whileInView={{ opacity: 1 }}

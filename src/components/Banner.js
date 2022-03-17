@@ -48,9 +48,9 @@ const BannerRowContainer = tw(motion.div)`
 	font-title
 	uppercase
     text-white
-    text-[1.3rem]
+    text-[1.5rem]
 	md:text-[2.5rem]
-    lg:text-[3.5rem]
+    lg:text-[3rem]
     overflow-hidden
     whitespace-pre-wrap
 	lg:line-height[5rem]
@@ -65,7 +65,12 @@ const Banner = () => {
 	const { t } = useTranslation();
 
 	return (
-		<motion.div variants={container} initial="hidden" animate="show">
+		<motion.div
+			variants={container}
+			initial="hidden"
+			animate="show"
+			className="	ml-auto"
+		>
 			<BannerRowContainer variants={row}>
 				<AnimatedLetters title={t("hero_section.banner_row_1")} />
 			</BannerRowContainer>

@@ -6,7 +6,6 @@ import { Title } from "../globalStyles";
 import Map from "../components/Map";
 import ContactForm from "../components/ContactForm";
 import NewsletterForm from "../components/NewsletterForm";
-import bg from "../assets/images/bgContact.jpg";
 import bgMobile from "../assets/images/c3.jpg";
 
 import {
@@ -32,6 +31,7 @@ const ContactContainer = styled(Element)`
     justify-center
 	font-text
 	relative
+	
 	`};
 
 	@media only screen and (max-width: 768px) {
@@ -86,18 +86,19 @@ const ContactSectionWrapper = tw.div`
 `;
 
 const SectionTitle = tw(Title)`
+	max-h-[12rem]
 	w-[90%]
 	font-normal
 	text-align[left]
 	md:text-align[center]
 	md:text-5xl
 	mx-auto
-	mt-5
+	border-t-2 
+	lg:border-t-0
 `;
 
 const Description = tw.div`
 	w-[80%]
-	pt-5
 	min-h-[8rem]
 	text-[1rem]
 	md:text-[1.5rem]
@@ -109,17 +110,14 @@ const Address = tw.div`
     lg:border-r-2
     flex-1
 	pb-10
-	lg:pb-0
 	h-auto
 `;
 
 const AddressDescription = tw(Description)`
-	md:ml-0
+	lg:ml-0
 `;
 
 const Registration = tw.div`
-	border-t-2
-	lg:border-t-0
 	lg:border-r-2
 	flex-1
 	pb-10
@@ -158,18 +156,18 @@ const Button = tw.a`
 
 const Newsletter = tw.div`
 	flex-1
-	border-t-2
-	lg:border-t-0
 `;
 const ContactSection = () => {
 	const { t } = useTranslation();
 
 	return (
-		<ContactContainer name="Contact">
+		<ContactContainer className="border-t-2 lg:border-t-0" name="Contact">
 			<BgGradient></BgGradient>
 			<ContactSectionWrapper>
 				<Address>
-					<SectionTitle>{t("contact_section.title_1")}</SectionTitle>
+					<SectionTitle style={{ border: "none" }}>
+						{t("contact_section.title_1")}
+					</SectionTitle>
 					<AddressDescription>
 						{t("contact_section.description_1")}
 					</AddressDescription>

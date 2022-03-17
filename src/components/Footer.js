@@ -70,15 +70,19 @@ const Footer = () => {
 					<SmallText>Ph:</SmallText>
 					<div className="text-right pl-3 text-sm">
 						<p>
-							<Link href="#">Photographer 1</Link>
+							<Link href="https://www.facebook.com/joaodiz1">
+								Joao Filipe Dias
+							</Link>
 						</p>
-						<Link href="#">Photographer 2</Link>
+						<Link href="https://www.facebook.com/bsousafoto">
+							Bruno de Sousa
+						</Link>
 					</div>
 				</SmallTextContainer>
 				<SmallText>
 					<Link href="#">Design by</Link>
 				</SmallText>
-				<Copyright>© {new Date().getFullYear()} LISBOA[EM]TANGO</Copyright>
+				<Copyright>© {new Date().getFullYear()} Lisboa em Tango</Copyright>
 			</BottomSection>
 		</FooterContainer>
 	);

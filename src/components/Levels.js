@@ -1,19 +1,18 @@
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import tw from "twin.macro";
-import styled from "styled-components";
 import { motion } from "framer-motion";
 import { BsChevronRight, BsArrowRightCircle } from "react-icons/bs";
 
 import { useMediaQuery } from "react-responsive";
 import { deviceSize } from "../components/responsive";
 
-import ws1 from "../assets/images/ws5.jpg";
+import ws1 from "../assets/images/ws10.jpg";
 import ws2 from "../assets/images/ws8.jpg";
-import ws4 from "../assets/images/ws4.jpg";
+import ws4 from "../assets/images/ws11.jpg";
 import social6 from "../assets/images/social7.jpg";
 import social3 from "../assets/images/social1.jpg";
-import social5 from "../assets/images/social5.jpg";
+import social5 from "../assets/images/ws9.jpg";
 
 const levels = [
 	{
@@ -49,19 +48,16 @@ const LevelsContainer = tw.div`
     flex
     flex-col
     w-[90%]
-	lg:w-[70%]
+	lg:w-[80%]
     font-text
     pb-4
+	items-center
 `;
 
-const LevelsWrapper = styled(motion.div)`
-	${tw`
-		flex
-		md:pb-5
-		md:h-[26rem]
-    `};
-	align-self: ${(props) => (props.left ? "start" : "self-end")};
-	flex-direction: ${(props) => (props.left ? "row" : "row-reverse")}; ;
+const LevelsWrapper = tw(motion.div)`
+	flex
+	md:pb-5
+	md:h-[26rem]
 `;
 
 const Level = tw(motion.div)`
@@ -71,7 +67,8 @@ const Level = tw(motion.div)`
     h-[12rem]
     w-[18rem]
     border-[1px]
-	md:min-w-[30rem]
+	md:min-w-[36rem]
+	lg:min-w-[30rem]
 	md:h-[25rem]
 	select-none
 	justify-center
@@ -79,18 +76,15 @@ const Level = tw(motion.div)`
 	overflow-hidden
 `;
 
-const Title = styled.div`
-	${tw`
+const Title = tw.div`
 	flex
-		text-4xl
-		p-3
-		pt-5
-		md:text-7xl
-		md:p-8
-		uppercase
-		items-center
-    `};
-	text-align: ${(props) => (props.left ? "start" : "end")};
+	text-4xl
+	p-3
+	pt-5
+	md:text-7xl
+	md:p-8
+	uppercase
+	items-center
 `;
 
 const TitleButton = tw(Title)`
@@ -100,26 +94,24 @@ const TitleButton = tw(Title)`
 	md:text-[4rem]
 `;
 
-const Description = styled.div`
-	${tw`
+const Description = tw.div`
 		text-base
 		px-4
 		pb-5
 		md:px-8
 		md:text-xl
-    `};
-	text-align: ${(props) => (props.left ? "start" : "end")};
+
 `;
 
 const DescriptionSm = tw(motion.div)`
-		p-3
-		absolute
-		h-[12rem]
-		w-[18rem]
-		border-[1px]
-		justify-center
-		bg-primary
-		align-middle
+	p-3
+	absolute
+	h-[12rem]
+	w-[18rem]
+	border-[1px]
+	justify-center
+	bg-primary
+	align-middle
 `;
 
 const Image = tw(motion.img)`
@@ -138,7 +130,8 @@ const Button = tw(motion.div)`
     w-[18rem]
     border
 	md:min-h-[20rem]
-	md:min-w-[30rem]
+	md:min-w-[36rem]
+	lg:min-w-[30rem]
 	justify-center
 	hover:text-[#001F33]
 	hover:border-[#001F33]

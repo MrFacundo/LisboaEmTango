@@ -3,7 +3,7 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				title: ["Rubik Mono One", "sans-serif"],
+				title: ["Barlow", "sans-serif"],
 				text: ["Hind Siliguri", "sans-serif"],
 				logo: ["East Sea Dokdo", "cursive"],
 			},

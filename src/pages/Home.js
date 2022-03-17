@@ -1,6 +1,4 @@
-import tw, { styled } from "twin.macro";
-import { motion } from "framer-motion";
-import BackgroundImage from "../assets/images/couple1.jpg";
+import tw from "twin.macro";
 
 import { ScrollToTop } from "../components/ScrollButton";
 
@@ -32,8 +30,8 @@ const Home = () => {
 			<HeroSection />
 			<LearnSection />
 			<ScheduleSection />
-			<TeamSection />
 			<StudioSection />
+			<TeamSection />
 			<ShowSection />
 			<ContactSection />
 			<Footer />
