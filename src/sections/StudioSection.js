@@ -4,48 +4,46 @@ import { Title } from "../globalStyles";
 import { Element } from "react-scroll";
 import Carousel from "react-responsive-carousel/lib/js/components/Carousel/index";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { useMediaQuery } from "react-responsive";
+import { deviceSize } from "../components/responsive";
 
-import studio1 from "../assets/images/studio1.jpg";
-import studio2 from "../assets/images/studio2.jpg";
-import studio3 from "../assets/images/studio3.jpg";
 import studio4 from "../assets/images/studio4.jpg";
 import studio5 from "../assets/images/studio5.jpg";
 import studio6 from "../assets/images/studio6.jpg";
 
 const studioImages = [
-	{ image: studio1 },
-	{ image: studio2 },
-	{ image: studio3 },
 	{ image: studio4 },
 	{ image: studio5 },
 	{ image: studio6 },
 ];
 
 const StudioSectionContainer = tw(Element)`
-        w-full
-        flex
-        flex-col
-        relative
-        pt-1
-        pb-1
-        xl:pt-2
-        xl:pb-2
-        items-center
-        bg-primary
+    w-full
+    flex
+    flex-col
+    relative
+    pt-1
+    pb-1
+    xl:pt-2
+    xl:pb-2
+    items-center
+    bg-primary
 `;
 
 const SectionInfo = tw.p`
     text-base
     font-text
-    2xl:text-lg
+	md:text-2xl
     text-white
     text-center
-    mt-8
+    md:mt-8
     2xl:mt-2
-    max-w-lg
+	max-w-[80%]
     xl:max-w-3xl
     pl-4
     pr-4
+    lg:pt-[10rem]
+    lg:pb-[2rem]
     lg:pl-2
     lg:pr-2
 `;
@@ -68,9 +66,23 @@ const StudioSectionWrapper = tw.div`
 const StudioSection = () => {
 	const { t } = useTranslation();
 
+	const isMobile = useMediaQuery({ maxWidth: deviceSize.laptop });
+
 	return (
 		<StudioSectionContainer name="Studio">
-			<Title>{t("studio_section.title")}</Title>
+			<Title style={{ paddingTop: "0rem" }}>{t("studio_section.title")}</Title>
+			{!isMobile && (
+				<iframe
+					src="https://www.youtube-nocookie.com/embed/FOwKY2sQZmg?playlist=goFHwoODao8&listType=playlist&autoplay=1&controls=0&loop=1&mute=1&cc_load_policy=0&iv_load_policy=3&disablekb=1&fs=0&modestbranding=1&playsinline=1&rel=0&hd=1"
+					frameBorder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					width={"1920"}
+					height={"1080"}
+					loading="lazy"
+					title="Tangomanso"
+				></iframe>
+			)}
+
 			<SectionInfo>{t("studio_section.description")}</SectionInfo>
 			<StudioSectionWrapper>
 				<Carousel

@@ -16,36 +16,38 @@ const HeroSectionContainer = styled.div`
 	${tw`
         w-full
         flex
+		flex-col
+		items-center
         h-[100vh]
         relative
+		justify-end
 		`};
 
-	@media only screen and (max-width: 768px) {
+	@media only screen and (max-width: 1024px) {
 		background-image: url(${bgMobile});
 		background-position: bottom 25% left 50%;
-		background-size: 140%;
 	}
 
 	background: url(${bg});
-	background-size: 120%;
+	background-size: cover;
 	background-position: 100% 0%;
 `;
 
 const LandingSection = tw(motion.div)`
-		mr-[2rem]
+		w-[80%]
 		mt-[4rem]
-		md:mr-[5rem]
 		md:mb-[0rem]
-		lg:mr-[7rem]
-		lg:mb-[5rem]
-        w-full
         flex
         flex-col
-		self-center
 		text-right
+		z-10
+		md:items-end
+		items-center
 `;
 
 const CTAButton = tw(motion.div)`
+		mb-[3rem]
+		mt-[2rem]
         rounded-full
         hover:bg-primary
         cursor-pointer
@@ -55,21 +57,15 @@ const CTAButton = tw(motion.div)`
         text-center
         justify-center
         place-items-center
-        absolute
-        bottom-20
-        md:bottom-14
-        left[33%]
-        md:left[58%]
-        lg:left[75%]
         text-[1rem]
-        md:text-[2rem]
+        md:text-[1.5rem]
         border-2
         pt-4
         md:pt-8
         h-[8rem]
         w-[8rem]
-        md:h-[15rem]
-        md:w-[15rem]
+        md:h-[12rem]
+        md:w-[12rem]
         hover:text-[#001F33]
         hover:border-[#001F33]
         duration-300
@@ -81,6 +77,7 @@ const BgGradient = styled.div`
 	absolute
 	w-full
 	h-full
+	z-0
          `};
 	background: linear-gradient(
 		110deg,
@@ -99,41 +96,41 @@ const HeroSection = () => {
 
 			<LandingSection>
 				<Banner />
+				<Link to="Learn" smooth={"easeInOutQuad"} duration={1000}>
+					<CTAButton
+						initial={{ scale: 0 }}
+						animate={{ scale: 1 }}
+						transition={{
+							ease: [0.6, 0.01, -0.05, 0.95],
+							duration: 0.6,
+							delay: 2,
+						}}
+					>
+						<motion.span
+							initial={{ opacity: 0 }}
+							animate={{ opacity: 1 }}
+							transition={{
+								ease: "easeInOut",
+								duration: 0.6,
+								delay: 2.2,
+							}}
+						>
+							{t("hero_section.CTA")}
+						</motion.span>
+						<motion.span
+							initial={{ opacity: 0 }}
+							animate={{ opacity: 1 }}
+							transition={{
+								ease: "easeInOut",
+								duration: 0.6,
+								delay: 2.2,
+							}}
+						>
+							<BsChevronDoubleDown className="text-[2rem] md:text-[3rem] md:mt-[0.3rem]" />
+						</motion.span>
+					</CTAButton>
+				</Link>
 			</LandingSection>
-			<Link to="Learn" smooth={"easeInOutQuad"} duration={1000}>
-				<CTAButton
-					initial={{ scale: 0 }}
-					animate={{ scale: 1 }}
-					transition={{
-						ease: [0.6, 0.01, -0.05, 0.95],
-						duration: 0.6,
-						delay: 2,
-					}}
-				>
-					<motion.span
-						initial={{ opacity: 0 }}
-						animate={{ opacity: 1 }}
-						transition={{
-							ease: "easeInOut",
-							duration: 0.6,
-							delay: 2.2,
-						}}
-					>
-						{t("hero_section.CTA")}
-					</motion.span>
-					<motion.span
-						initial={{ opacity: 0 }}
-						animate={{ opacity: 1 }}
-						transition={{
-							ease: "easeInOut",
-							duration: 0.6,
-							delay: 2.2,
-						}}
-					>
-						<BsChevronDoubleDown className="text-[2rem] md:text-[4rem] md:mt-[0.3rem]" />
-					</motion.span>
-				</CTAButton>
-			</Link>
 		</HeroSectionContainer>
 	);
 };

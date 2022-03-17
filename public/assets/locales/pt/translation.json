@@ -3,8 +3,8 @@
 		"learn": "Aprender e praticar",
 		"schedule": "Horário / Inscrição",
 		"instructors": "Professores",
-		"studio": "Our Studio",
-		"shows": "Shows",
+		"studio": "O nosso espaço",
+		"shows": "Espectáculos",
 		"contact": "Contactos"
 	},
 	"hero_section": {
@@ -32,11 +32,11 @@
 			"description": "As aulas privadas são um encontro íntimo entre o aluno/par e o professor. Onde os conteúdos e tempos de aprendizagem estão adequados às necessidades de cada aluno."
 		},
 		"praktica": {
-			"title": "La Práktica",
+			"title": "Práctica",
 			"description": "“La PraKtica” é um espaço de prática livre, que consideramos fundamental para o processo de aprendizagem do tango social. Este é um momento relaxado, casual e que fomenta o estudo e o convívio com os outros colegas."
 		},
 		"rave": {
-			"title": "Rave Tanguera",
+			"title": "Milongas",
 			"description": "“La Rave Tanguera” é um baile de tango, uma festa do tango. Ocorre todos os primeiros sábados de cada mês, o nosso espaço fica arranjado e transformado para poder recriar o ambiente noturno e boêmio das noite portenhas. Uma verdadeira experiência tanguera."
 		},
 		"button": "Reserve uma aula"
@@ -71,8 +71,12 @@
 	},
 	"shows_section": {
 		"title": "Shows",
-		"description": "Volver é um espetáculo multidisciplinar que expressa o sentir popular do género Tanguero. A potente música através de um quarteto tradicional combina-se com a sensualidade e expressão através da dança. O espetáculo nos leva a uma viagem desde as origens do Tango até atualidade. Entre velhos clássicos e originais composições misturam-se o tango e folklore argentino e o fado português",
-		"CTA": "Contratação"
+		"show_title_1": "Shows de tango",
+		"show_description_1": "",
+		"show_title_2": "TANGOMANSO & OTRAS YERBAS",
+		"show_description_2": "TANGOMANSO é uma formação de grandes artistas, músicos e bailarinos, com uma destacada trajetória internacional.",
+		"show_title_3": "VOLVER",
+		"show_description_3": "Volver é um espetáculo multidisciplinar que expressa o sentir popular do género Tanguero. O espetáculo nos leva a uma viagem desde as origens do Tango até atualidade. Entre velhos clássicos e composições originais misturam-se o tango, o folklore argentino e o fado português"
 	},
 	"contact_section": {
 		"title_1": "Onde estamos",

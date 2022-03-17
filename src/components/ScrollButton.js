@@ -6,7 +6,6 @@ const Button = tw.button`
     transition-opacity
     duration-500
     hover:opacity-100
-    z-50
 `;
 
 const classNames = (...classes) => {
@@ -40,11 +39,11 @@ export const ScrollToTop = () => {
 	}, []);
 
 	return (
-		<div className="fixed top-4 left-4">
+		<div className="fixed top-4 left-4 z-50">
 			<Button
 				type="button"
 				onClick={scrollToTop}
-				className={classNames(isVisible ? "opacity-80" : "opacity-0")}
+				className={classNames(isVisible ? "opacity-80" : "opacity-0 hidden")}
 			>
 				<img className="w-[3rem] md:w-[5rem]" src={logo} alt="" />
 			</Button>

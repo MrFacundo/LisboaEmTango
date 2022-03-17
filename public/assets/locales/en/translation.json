@@ -32,11 +32,11 @@
 			"description": "An intimate encounter between the student or dance couple and the teacher, where the contents and pace are adapted to the needs of the student."
 		},
 		"praktica": {
-			"title": "La Práktica",
+			"title": "Free practice",
 			"description": "La Práktica is a free practice space, key to learning social tango. It's a relaxed and casual moment where mistakes and repetition form part of the experience."
 		},
 		"rave": {
-			"title": "Rave Tanguera",
+			"title": "Milongas",
 			"description": "The Rave Tanguera is a tango party. Every first Saturday of the month our studio is transformed, bringing to Lisbon the bohemian vibe of the tango nights in Buenos Aires. A true tango experience."
 		},
 		"button": "Book a class"
@@ -71,8 +71,12 @@
 	},
 	"shows_section": {
 		"title": "Shows",
-		"description": "Volver is multidisciplinary show that embodies the roots of argentine tango. A unique show that blends music and movement and proposes a trip from the origins of tango to modern times. Old classics and original compositions cross ways with argentinian folk and portuguese fado.",
-		"CTA": "Contact us"
+		"show_title_1": "Tango shows",
+		"show_description_1": "",
+		"show_title_2": "TANGOMANSO & OTRAS YERBAS",
+		"show_description_2": "TANGOMANSO is a company of musicians and dancers with a long artistic career",
+		"show_title_3": "VOLVER",
+		"show_description_3": "Volver is multidisciplinary show that embodies the roots of argentine tango. It proposes a trip from the origins of tango to modern times, where old classics and original compositions cross ways with argentinian folk and portuguese fado."
 	},
 	"contact_section": {
 		"title_1": "Address",
