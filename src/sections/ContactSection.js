@@ -31,15 +31,18 @@ const ContactContainer = styled(Element)`
     justify-center
 	font-text
 	relative
-	
 	`};
 
 	@media only screen and (max-width: 768px) {
+		/* bg mobile non ios */
+
 		@supports not (-webkit-overflow-scrolling: touch) {
 			background-size: 100%;
 			background-repeat: no-repeat;
 			background: url(${bgMobile}) fixed;
 		}
+
+		/* bg mobile ios */
 
 		@supports (-webkit-overflow-scrolling: touch) {
 			background-color: #d4a573;
@@ -47,11 +50,15 @@ const ContactContainer = styled(Element)`
 	}
 
 	@media only screen and (min-width: 769px) {
+		/* bg desktop non ios */
+
 		@supports not (-webkit-overflow-scrolling: touch) {
 			background: url(${bgMobile}) fixed;
 			background-size: 100%;
 			background-position: 100% 25%;
 		}
+
+		/* bg desktop ios */
 
 		@supports (-webkit-overflow-scrolling: touch) {
 			background: url(${bgMobile});
@@ -198,6 +205,7 @@ const ContactSection = () => {
 								href="https://www.instagram.com/lisboaemtango/"
 								target={"_blank"}
 								rel="noopener noreferrer"
+								title="Instagram account"
 							>
 								<BsInstagram />
 							</Button>
@@ -205,6 +213,7 @@ const ContactSection = () => {
 								href="https://www.facebook.com/lisboaemtango"
 								target={"_blank"}
 								rel="noopener noreferrer"
+								title="Facebook account"
 							>
 								<BsFacebook />
 							</Button>
@@ -212,6 +221,7 @@ const ContactSection = () => {
 								href="https://www.youtube.com/channel/UCqxHTF_eaM3oP4-Gmlji-kw"
 								target={"_blank"}
 								rel="noopener noreferrer"
+								title="Youtube account"
 							>
 								<BsYoutube />
 							</Button>

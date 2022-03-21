@@ -7,14 +7,17 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { useMediaQuery } from "react-responsive";
 import { deviceSize } from "../components/responsive";
 
-import studio4 from "../assets/images/studio4.jpg";
-import studio5 from "../assets/images/studio5.jpg";
-import studio6 from "../assets/images/studio6.jpg";
+import studio1 from "../assets/images/studio6.jpg";
+import studio1Fallback from "../assets/images/studio6.jpg";
+import studio2 from "../assets/images/studio7.webp";
+import studio2Fallback from "../assets/images/studio7.jpg";
+import studio3 from "../assets/images/studio8.webp";
+import studio3Fallback from "../assets/images/studio8.jpg";
 
 const studioImages = [
-	{ image: studio4 },
-	{ image: studio5 },
-	{ image: studio6 },
+	{ src: studio1, fallback: studio1Fallback },
+	{ src: studio2, fallback: studio2Fallback },
+	{ src: studio3, fallback: studio3Fallback },
 ];
 
 const StudioSectionContainer = tw(Element)`
@@ -97,7 +100,13 @@ const StudioSection = () => {
 					{studioImages.map((image, index) => {
 						return (
 							<div key={index}>
-								<img src={image.image} alt="" />
+								<picture>
+									<source srcSet={image.src} type={"image/webp"} />
+									<img
+										src={image.fallback}
+										alt="Nosso espaço. Estudio no Clube Ferroviário de Portugal"
+									/>
+								</picture>
 							</div>
 						);
 					})}

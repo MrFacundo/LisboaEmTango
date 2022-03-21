@@ -6,18 +6,18 @@ import { deviceSize } from "../components/responsive";
 import { motion } from "framer-motion";
 
 import show1 from "../assets/images/show15.jpg";
+import show1Mobile from "../assets/images/show13.jpg";
 import show2 from "../assets/images/show8.jpg";
+import show2Mobile from "../assets/images/show16.jpg";
 import show3 from "../assets/images/show2.jpg";
-import show1M from "../assets/images/show13.jpg";
+import show3Mobile from "../assets/images/show3.jpg";
 
 // styles
 
 const ShowSectionContainer = styled(motion.div)`
 	${tw`
 	w-full
-	h-[62rem]
-	md:h-[110rem]
-	lg:h-[150rem]
+
 	flex
 	flex-col
 	relative
@@ -30,7 +30,8 @@ const ShowSectionContainer = styled(motion.div)`
 `;
 
 const SectionTitle = tw(Title)`
-	absolute
+	mb-5
+	lg:absolute
 	left-0
 	right-0
 	py-0
@@ -67,8 +68,13 @@ const ShowBackground = tw.img`
 	m-auto
 `;
 
+const ShowImageMobile = tw.img`
+		max-w-[80%]
+`;
+
 const ShowDescription = tw(motion.div)`
-		w-[90%]
+	pb-10
+	w-[90%]
 	text-base
 	md:text-2xl
 	items-center
@@ -77,17 +83,17 @@ const ShowDescription = tw(motion.div)`
 	text-center
 	flex
 	flex-col
-	md:w-[35rem]
+	md:w-[80%]
+	lg:w-[35rem]
 	justify-center
 	lg:mx-[14rem]
 	z-20
 	self-center
 	`;
 
-const ShowTitle = tw.div`
+const ShowTitle = tw.h2`
 	text-[1.3rem]
-	md:text-[3.5rem]
-	pb-[2rem]
+	md:text-[3rem]
 	md:pb-[4rem]
 	font-title
 	z-10
@@ -138,14 +144,6 @@ const ShowSection = () => {
 			<SectionTitle>{t("shows_section.title")}</SectionTitle>
 			{isMobile && (
 				<>
-					<ShowContainer name="ShowContainer">
-						<ShowBackground
-							name="SectionBackground"
-							src={isMobile ? show1M : show1}
-							alt=""
-							style={{ bottom: "30%" }}
-						/>
-					</ShowContainer>
 					<ShowDescription
 						initial={{ opacity: 0 }}
 						whileInView={{ opacity: 1 }}
@@ -156,18 +154,29 @@ const ShowSection = () => {
 						}}
 						viewport={{ once: true }}
 					>
-						<ShowTitle style={{ marginTop: "3rem" }}>
-							{t("shows_section.show_title_1")}
-						</ShowTitle>
+						<ShowTitle>{t("shows_section.show_title_1")}</ShowTitle>
+						<ShowImageMobile
+							src={show1Mobile}
+							alt={t("shows_section.show_title_1")}
+						/>
 						<Divider />
 						<ShowTitle>{t("shows_section.show_title_2")}</ShowTitle>
-						<p className="z-10">{t("shows_section.show_description_2")}</p>
+						<ShowImageMobile
+							src={show2Mobile}
+							alt={t("shows_section.show_title_2")}
+						/>
+						<p className="pt-4">{t("shows_section.show_description_2")}</p>
 						<Divider style={{ marginTop: "2rem" }} />
 
 						<ShowTitle>
 							<i>{t("shows_section.show_title_3")}</i>
 						</ShowTitle>
-						<p className="z-10">{t("shows_section.show_description_3")} </p>
+						<ShowImageMobile
+							src={show3Mobile}
+							alt={t("shows_section.show_title_3")}
+						/>
+
+						<p className="pt-4">{t("shows_section.show_description_3")}</p>
 					</ShowDescription>
 				</>
 			)}
@@ -196,7 +205,11 @@ const ShowSection = () => {
 								duration: 1,
 							}}
 						/>
-						<ShowBackground name="SectionBackground" src={show1} alt="" />
+						<ShowBackground
+							name="SectionBackground"
+							src={show1}
+							alt="Shows de Tango em Lisboa"
+						/>
 					</ShowContainer>
 					<ShowContainer
 						name="ShowContainer"
@@ -224,7 +237,11 @@ const ShowSection = () => {
 								duration: 1,
 							}}
 						/>
-						<ShowBackground name="SectionBackground" src={show2} alt="" />
+						<ShowBackground
+							name="SectionBackground"
+							src={show2}
+							alt="Orquesta de Tango Tangomanso"
+						/>
 					</ShowContainer>
 					<ShowContainer style={{ justifyContent: "space-between" }}>
 						<ShowDescription
@@ -272,7 +289,7 @@ const ShowSection = () => {
 								title="Tangomanso"
 							></iframe>
 						</YoutubeIframe>
-						<ShowBackground src={show3} alt="" />
+						<ShowBackground src={show3} alt="Show Volver" />
 					</ShowContainer>
 				</>
 			)}

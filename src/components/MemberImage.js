@@ -10,17 +10,12 @@ const ImageContainer = tw.div`
 	overflow-hidden
 `;
 
-export const MemberImage = ({
-	src,
-	fallback,
-	type = "image/webp",
-	...delegated
-}) => {
+export const MemberImage = ({ src, fallback, alt, type = "image/webp" }) => {
 	return (
 		<ImageContainer>
 			<picture>
-				<source srcSet={src} type={type} className="grayscale" />
-				<img src={fallback} {...delegated} alt="" className="grayscale" />
+				<source srcSet={src} type={type} />
+				<img src={fallback} alt={alt} />
 			</picture>
 		</ImageContainer>
 	);

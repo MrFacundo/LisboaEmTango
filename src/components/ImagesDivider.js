@@ -36,7 +36,7 @@ const ImagesDivider = () => {
 		<DividerContainer>
 			<Image1
 				src={isMobile ? social1 : social2}
-				alt=""
+				alt="casal de bailarinos de tango"
 				initial={{
 					opacity: 0,
 				}}

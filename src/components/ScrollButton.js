@@ -39,13 +39,17 @@ export const ScrollToTop = () => {
 	}, []);
 
 	return (
-		<div className="fixed top-4 left-4 z-50">
+		<div className="fixed top-4 left-4 z-40">
 			<Button
 				type="button"
 				onClick={scrollToTop}
 				className={classNames(isVisible ? "opacity-80" : "opacity-0 hidden")}
 			>
-				<img className="w-[3rem] md:w-[5rem]" src={logo} alt="" />
+				<img
+					className="w-[3rem] md:w-[5rem]"
+					src={logo}
+					alt="Lisboa em Tango Logo"
+				/>
 			</Button>
 		</div>
 	);

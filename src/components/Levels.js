@@ -76,7 +76,7 @@ const Level = tw(motion.div)`
 	overflow-hidden
 `;
 
-const Title = tw.div`
+const LevelTitle = tw.h2`
 	flex
 	text-4xl
 	p-3
@@ -87,7 +87,7 @@ const Title = tw.div`
 	items-center
 `;
 
-const TitleButton = tw(Title)`
+const TitleButton = tw(LevelTitle)`
 	text-center
 	p-0
 	text-5xl
@@ -224,17 +224,21 @@ const Levels = () => {
 									{t(level.description)}
 								</DescriptionSm>
 							)}
-							<Title left={+(index % 2 === 0)}>
+							<LevelTitle left={+(index % 2 === 0)}>
 								{t(level.title)}
 								{isMobile && <BsChevronRight className="text-[3rem]" />}
-							</Title>
+							</LevelTitle>
 							{!isMobile && (
 								<Description left={+(index % 2 === 0)}>
 									{t(level.description)}
 								</Description>
 							)}
 						</Level>
-						<Image variants={imageVariant} src={level.photo} alt="" />
+						<Image
+							variants={imageVariant}
+							src={level.photo}
+							alt="aulas e prácticas de tango"
+						/>
 					</LevelsWrapper>
 				);
 			})}
@@ -254,7 +258,11 @@ const Levels = () => {
 						<BsArrowRightCircle className="mt-[1rem] text-[3rem] md:text-[5rem] text-center" />
 					</a>
 				</Button>
-				<Image variants={imageVariant} src={ws4} alt="" />
+				<Image
+					variants={imageVariant}
+					src={ws4}
+					alt="aulas e prácticas de tango"
+				/>
 			</LevelsWrapper>
 		</LevelsContainer>
 	);

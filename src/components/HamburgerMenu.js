@@ -25,7 +25,7 @@ const MenuContainer = tw(motion.div)`
 	p-[1em 2.5em]
 	bg-secondary
 	select-none
-	z-40
+	z-50
 	transition[translateX(4em)]
 `;
 

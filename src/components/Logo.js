@@ -24,7 +24,9 @@ const Logo = () => {
 
 	return (
 		<LogoContainer to="Hero" smooth={"easeInOutQuad"} duration={500}>
-			{isMobile && <img className="max-w-[4rem]" src={logo} alt="" />}
+			{isMobile && (
+				<img className="max-w-[4rem]" src={logo} alt="Lisboa em Tango Logo" />
+			)}
 			{!isMobile && (
 				<span>
 					lisboa<span className="text-3xl"> em </span>tango

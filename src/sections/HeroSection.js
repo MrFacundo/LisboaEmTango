@@ -7,8 +7,8 @@ import { motion } from "framer-motion";
 import { BsChevronDoubleDown } from "react-icons/bs";
 import Banner from "../components/Banner";
 import LanguageDropdown from "../components/LanguageDropdown";
-import bg from "../assets/images/coupleBanner.jpg";
-import bgMobile from "../assets/images/c2.jpg";
+import bg from "../assets/images/coupleHero.jpg";
+import bgMobile from "../assets/images/c2Mobile.jpg";
 
 // styles
 

@@ -29,7 +29,7 @@ const GridContainer = tw.div`
 	font-text
 `;
 
-const Day = tw.div`
+const Day = tw.h2`
 	text-3xl
 	md:text-5xl
 	p-3
