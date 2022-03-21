@@ -113,7 +113,11 @@ const NavMenu = ({ isOpen, toggle }) => {
 							duration={800}
 							onClick={toggle}
 						>
-							<img className="max-w-[7rem]" src={logo} alt="" />
+							<img
+								className="max-w-[7rem]"
+								src={logo}
+								alt="Lisboa em Tango Logo"
+							/>
 						</NavLogo>
 
 						<NavList

@@ -69,7 +69,7 @@ export const MemberBio = ({ member }) => {
 	return (
 		<BioContainer>
 			<ViewMoreButton {...getToggleProps()}>
-				<p className="pl-4 uppercase md:leading-normal">{member.name}</p>
+				<h2 className="pl-4 uppercase md:leading-normal">{member.name}</h2>
 				{isExpanded ? (
 					<BsChevronUp className="mt-0.5 md:mt-3 ml-2 md:ml-6" />
 				) : (
