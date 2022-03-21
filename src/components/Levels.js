@@ -7,38 +7,50 @@ import { BsChevronRight, BsArrowRightCircle } from "react-icons/bs";
 import { useMediaQuery } from "react-responsive";
 import { deviceSize } from "../components/responsive";
 
-import ws1 from "../assets/images/ws10.jpg";
-import ws2 from "../assets/images/ws8.jpg";
-import ws4 from "../assets/images/ws11.jpg";
-import social6 from "../assets/images/social7.jpg";
-import social3 from "../assets/images/social1.jpg";
-import social5 from "../assets/images/ws9.jpg";
+import ws1 from "../assets/images/ws10.webp";
+import ws2 from "../assets/images/ws8.webp";
+import social5 from "../assets/images/ws9.webp";
+import social3 from "../assets/images/social1.webp";
+import social6 from "../assets/images/social7.webp";
+import ws4 from "../assets/images/ws11.webp";
+
+import ws1Fallback from "../assets/images/ws10.jpg";
+import ws2Fallback from "../assets/images/ws8.jpg";
+import social5Fallback from "../assets/images/ws9.jpg";
+import social3Fallback from "../assets/images/social1.jpg";
+import social6Fallback from "../assets/images/social7.jpg";
+import ws4Fallback from "../assets/images/ws11.jpg";
 
 const levels = [
 	{
 		title: "levels.group.title",
 		description: "levels.group.description",
 		photo: ws1,
+		photoFallback: ws1Fallback,
 	},
 	{
 		title: "levels.workshop.title",
 		description: "levels.workshop.description",
 		photo: ws2,
+		photoFallback: ws2Fallback,
 	},
 	{
 		title: "levels.private.title",
 		description: "levels.private.description",
 		photo: social5,
+		photoFallback: social5Fallback,
 	},
 	{
 		title: "levels.praktica.title",
 		description: "levels.praktica.description",
 		photo: social3,
+		photoFallback: social3Fallback,
 	},
 	{
 		title: "levels.rave.title",
 		description: "levels.rave.description",
 		photo: social6,
+		photoFallback: social6Fallback,
 	},
 ];
 
@@ -66,23 +78,23 @@ const Level = tw(motion.div)`
     flex-col
     h-[12rem]
     w-[18rem]
+	sm:w-[80%]
     border-[1px]
-	md:min-w-[36rem]
-	lg:min-w-[30rem]
-	md:h-[25rem]
+	lg:w-[30rem]
+	sm:h-[25rem]
 	select-none
-	justify-center
+	sm:justify-center
 	md:justify-between
 	overflow-hidden
 `;
 
 const LevelTitle = tw.h2`
+	justify-between
 	flex
 	text-4xl
 	p-3
-	pt-5
-	md:text-7xl
-	md:p-8
+	sm:text-7xl
+	sm:p-8
 	uppercase
 	items-center
 `;
@@ -98,8 +110,8 @@ const Description = tw.div`
 		text-base
 		px-4
 		pb-5
-		md:px-8
-		md:text-xl
+		sm:px-8
+		sm:text-xl
 
 `;
 
@@ -114,13 +126,11 @@ const DescriptionSm = tw(motion.div)`
 	align-middle
 `;
 
-const Image = tw(motion.img)`
-	hidden
-	lg:flex
-	w-[40rem]
-	px-16
-	object-cover
-	object-top
+const ImageContainer = tw(motion.div)`
+	h-[25rem]
+	md:w-[30%]
+	lg:w-[30rem]
+	lg:mx-16
 `;
 
 const Button = tw(motion.div)`
@@ -129,9 +139,9 @@ const Button = tw(motion.div)`
     min-h-[14rem]
     w-[18rem]
     border
-	md:min-h-[20rem]
-	md:min-w-[36rem]
-	lg:min-w-[30rem]
+	sm:min-h-[20rem]
+	sm:w-[80%]
+	lg:w-[30rem]
 	justify-center
 	hover:text-[#001F33]
 	hover:border-[#001F33]
@@ -159,7 +169,7 @@ const imageVariant = {
 	show: {
 		opacity: 1,
 		transition: {
-			delay: 1,
+			delay: 0.5,
 			ease: "easeInOut",
 			duration: 1,
 		},
@@ -199,23 +209,23 @@ const Levels = () => {
 	};
 
 	const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile });
+	const isLaptop = useMediaQuery({ minWidth: deviceSize.tablet });
 
 	return (
 		<LevelsContainer>
-			{levels.map((level, index) => {
-				return (
-					<LevelsWrapper
-						key={index}
-						left={+(index % 2 === 0)}
-						initial="hidden"
-						whileInView="show"
-						viewport={{ once: true, amount: 0.8, margin: "100px" }}
-					>
-						<Level
-							onClick={() => toggleDescription(index)}
-							variants={levelVariant}
+			{isMobile &&
+				levels.map((level, index) => {
+					return (
+						<LevelsWrapper
+							key={index}
+							initial="hidden"
+							whileInView="show"
+							viewport={{ once: true, amount: 0.8, margin: "100px" }}
 						>
-							{isMobile && (
+							<Level
+								onClick={() => toggleDescription(index)}
+								variants={levelVariant}
+							>
 								<DescriptionSm
 									animate={isOpen[index] ? "open" : "closed"}
 									variants={descriptionVariants}
@@ -223,29 +233,46 @@ const Levels = () => {
 								>
 									{t(level.description)}
 								</DescriptionSm>
+								<LevelTitle>
+									{t(level.title)}
+									<BsChevronRight className="" />
+								</LevelTitle>
+							</Level>
+						</LevelsWrapper>
+					);
+				})}
+			{!isMobile &&
+				levels.map((level, index) => {
+					return (
+						<LevelsWrapper
+							key={index}
+							initial="hidden"
+							whileInView="show"
+							viewport={{ once: true, margin: "100px" }}
+						>
+							<Level variants={levelVariant}>
+								<LevelTitle>{t(level.title)}</LevelTitle>
+								<Description>{t(level.description)}</Description>
+							</Level>
+							{isLaptop && (
+								<ImageContainer variants={imageVariant}>
+									<picture>
+										<source srcSet={level.photo} type={"image/webp"} />
+										<img
+											className="w-full h-full object-cover"
+											src={level.photoFallback}
+											alt="aulas e prácticas de tango"
+										/>
+									</picture>
+								</ImageContainer>
 							)}
-							<LevelTitle left={+(index % 2 === 0)}>
-								{t(level.title)}
-								{isMobile && <BsChevronRight className="text-[3rem]" />}
-							</LevelTitle>
-							{!isMobile && (
-								<Description left={+(index % 2 === 0)}>
-									{t(level.description)}
-								</Description>
-							)}
-						</Level>
-						<Image
-							variants={imageVariant}
-							src={level.photo}
-							alt="aulas e prácticas de tango"
-						/>
-					</LevelsWrapper>
-				);
-			})}
+						</LevelsWrapper>
+					);
+				})}
 			<LevelsWrapper
 				initial="hidden"
 				whileInView="show"
-				viewport={{ once: true, amount: 0.8, margin: "100px" }}
+				viewport={{ once: true, margin: "100px" }}
 			>
 				<Button variants={levelVariant}>
 					<a
@@ -258,11 +285,18 @@ const Levels = () => {
 						<BsArrowRightCircle className="mt-[1rem] text-[3rem] md:text-[5rem] text-center" />
 					</a>
 				</Button>
-				<Image
-					variants={imageVariant}
-					src={ws4}
-					alt="aulas e prácticas de tango"
-				/>
+				{isLaptop && (
+					<ImageContainer variants={imageVariant}>
+						<picture>
+							<source srcSet={ws4} type={"image/webp"} />
+							<img
+								className="w-full h-full object-cover"
+								src={ws4Fallback}
+								alt="aulas e prácticas de tango"
+							/>
+						</picture>
+					</ImageContainer>
+				)}
 			</LevelsWrapper>
 		</LevelsContainer>
 	);
