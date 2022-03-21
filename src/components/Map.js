@@ -7,8 +7,9 @@ import tw from "twin.macro";
 const MapContainer = tw.div`
 	m-auto
 	lg:m-0
-    w-[80%]
-    height[25rem]
+    md:w-[80%]
+	height[20rem]
+    md:height[25rem]
     rounded
     overflow-hidden
     `;
