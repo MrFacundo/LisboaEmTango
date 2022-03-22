@@ -180,15 +180,17 @@ const descriptionVariants = {
 	open: {
 		transform: "translateX(0%)",
 		opacity: 1,
+		transition: {
+			duration: 0.8,
+		},
 	},
 	closed: {
 		transform: "translateX(100%)",
 		opacity: 0,
+		transition: {
+			duration: 0.8,
+		},
 	},
-};
-
-const descriptionTransition = {
-	duration: 0.8,
 };
 
 const Levels = () => {
@@ -229,7 +231,6 @@ const Levels = () => {
 								<DescriptionSm
 									animate={isOpen[index] ? "open" : "closed"}
 									variants={descriptionVariants}
-									transition={descriptionTransition}
 								>
 									{t(level.description)}
 								</DescriptionSm>

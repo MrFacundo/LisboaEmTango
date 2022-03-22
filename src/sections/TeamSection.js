@@ -79,6 +79,8 @@ const Team = tw(motion.div)`
 	py-[5rem]
 	w-[80%]
 	md:w-[70%]
+	lg:w-[70%]
+	xl:w-[60%]
 	flex
 	flex-col
 `;
