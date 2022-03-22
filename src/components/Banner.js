@@ -48,7 +48,7 @@ const BannerRowContainer = tw(motion.div)`
 	font-title
 	uppercase
     text-white
-    text-[1.8rem]
+    text-[1.5rem]
 	sm:text-[2.5rem]
 	md:text-[3rem]
     lg:text-[4rem]

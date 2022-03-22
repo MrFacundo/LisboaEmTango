@@ -6,7 +6,8 @@ import { Title } from "../globalStyles";
 import Map from "../components/Map";
 import ContactForm from "../components/ContactForm";
 import NewsletterForm from "../components/NewsletterForm";
-import bgMobile from "../assets/images/c3.jpg";
+import bg from "../assets/images/coupleContacts.jpg";
+import bgMobile from "../assets/images/coupleContactsMobile.jpg";
 
 import {
 	BsFacebook,
@@ -53,15 +54,15 @@ const ContactContainer = styled(Element)`
 		/* bg desktop non ios */
 
 		@supports not (-webkit-overflow-scrolling: touch) {
-			background: url(${bgMobile}) fixed;
+			background: url(${bg}) fixed no-repeat;
+			background-position: 20% 100%;
 			background-size: 100%;
-			background-position: 100% 25%;
 		}
 
 		/* bg desktop ios */
 
 		@supports (-webkit-overflow-scrolling: touch) {
-			background: url(${bgMobile});
+			background: url(${bg});
 			background-position: 100% 25%;
 		}
 	}

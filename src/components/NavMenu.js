@@ -114,7 +114,7 @@ const NavMenu = ({ isOpen, toggle }) => {
 							onClick={toggle}
 						>
 							<img
-								className="max-w-[7rem]"
+								className="max-w-[6rem]"
 								src={logo}
 								alt="Lisboa em Tango Logo"
 							/>

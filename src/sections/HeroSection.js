@@ -67,6 +67,7 @@ const CTAButton = tw(motion.div)`
         text-[1rem]
         md:text-[1.5rem]
         border-2
+		md:border-4
         pt-4
         md:pt-8
         h-[8rem]
@@ -78,6 +79,7 @@ const CTAButton = tw(motion.div)`
         hover:border-[#001F33]
         duration-300
 		font-text
+		font-semibold
 `;
 
 const BgGradient = styled.div`

@@ -33,8 +33,7 @@ const ViewMoreButton = tw.div`
 	text-2xl
 	md:text-4xl
     lg:text-6xl
-	md:px-8
-	lg:px-12
+	md:pl-10
 	md:pt-12
 	-webkit-appearance[none]
 `;
@@ -71,7 +70,7 @@ export const MemberBio = ({ member }) => {
 	return (
 		<BioContainer>
 			<ViewMoreButton {...getToggleProps()}>
-				<h2 className="pl-4 uppercase md:leading-normal">{member.name}</h2>
+				<h2 className="uppercase md:leading-normal w-[70%]">{member.name}</h2>
 				{isExpanded ? (
 					<BsChevronUp className="mt-0.5 md:mt-3 ml-2 md:ml-6" />
 				) : (
