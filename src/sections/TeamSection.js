@@ -9,7 +9,8 @@ import { Title } from "../globalStyles";
 import { MemberBio } from "../components/Memberbio";
 import { MemberImage } from "../components/MemberImage";
 
-import BackgroundImage from "../assets/images/c1.jpg";
+import bg from "../assets/images/c1.jpg";
+import bgMobile from "../assets/images/c1Mobile.jpg";
 
 const TeamSectionContainer = tw(motion.div)`
 		w-full
@@ -50,10 +51,10 @@ const BackgroundImageDiv = styled(motion.div)`
     `};
 
 	@media only screen and (max-width: 1024px) {
-		background-size: contain;
+		background: url(${bgMobile}) top center no-repeat;
 	}
 
-	background: url(${BackgroundImage});
+	background: url(${bg});
 	background-repeat: no-repeat;
 	background-size: contain;
 	width: 80%;
@@ -89,7 +90,7 @@ const TeamMemberCardContainer = tw.div`
 	flex-col
 	justify-center
 	items-center
-	md:items-start
+	lg:items-start
 	z-10
 `;
 

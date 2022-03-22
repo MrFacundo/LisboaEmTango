@@ -83,7 +83,7 @@ const Level = tw(motion.div)`
 	lg:w-[30rem]
 	sm:h-[25rem]
 	select-none
-	sm:justify-center
+	justify-center
 	md:justify-between
 	overflow-hidden
 `;

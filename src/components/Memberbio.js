@@ -11,15 +11,16 @@ import {
 // styles
 
 const BioContainer = tw.div`
+    w-full
 	md:min-h-[10rem]
-    lg:min-h-[30rem]
-	md:min-w-[20rem]
-	lg:w-[30rem]
+	md:w-[80%]
+    lg:h-[100%]
+	lg:w-[50%]
     bg-secondary
     border-b
 	text-white
 	font-text
-	self-stretch
+	lg:self-stretch
 `;
 
 const ViewMoreButton = tw.div`
@@ -42,6 +43,7 @@ const BioText = tw.div`
 	text-justify 
 	p-6
 	text-base
+	md:text-lg
 `;
 
 const ContactInfo = tw.div`

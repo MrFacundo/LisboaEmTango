@@ -8,7 +8,7 @@ import { BsChevronDoubleDown } from "react-icons/bs";
 import Banner from "../components/Banner";
 import LanguageDropdown from "../components/LanguageDropdown";
 import bg from "../assets/images/coupleHero.jpg";
-import bgMobile from "../assets/images/c2Mobile.jpg";
+import bgMobile from "../assets/images/coupleHeroMobile.jpg";
 
 // styles
 
@@ -28,26 +28,33 @@ const HeroSectionContainer = styled.div`
 		background-position: bottom 25% left 50%;
 	}
 
+	@media only screen and (min-width: 1024px) and (max-width: 1536px) {
+		background: url(${bg});
+		background-size: cover;
+		background-position: bottom 25% left 50%;
+	}
+
 	background: url(${bg});
 	background-size: cover;
-	background-position: 100% 0%;
 `;
 
 const LandingSection = tw(motion.div)`
-		w-[80%]
-		mt-[4rem]
-		md:mb-[0rem]
-        flex
-        flex-col
-		text-right
-		z-10
-		md:items-end
-		items-center
+	w-[80%]
+	md:w-[80%]
+	lg:w-[90%]
+	h-[65%]
+	md:h-[70%]
+	flex
+	flex-col
+	z-10
+	md:items-start
+	justify-between
 `;
 
 const CTAButton = tw(motion.div)`
-		mb-[3rem]
+		mb-[6rem]
 		mt-[2rem]
+		md:mr-10
         rounded-full
         hover:bg-primary
         cursor-pointer
@@ -66,6 +73,7 @@ const CTAButton = tw(motion.div)`
         w-[8rem]
         md:h-[12rem]
         md:w-[12rem]
+		md:self-end
         hover:text-[#001F33]
         hover:border-[#001F33]
         duration-300
@@ -80,9 +88,9 @@ const BgGradient = styled.div`
 	z-0
          `};
 	background: linear-gradient(
-		110deg,
-		rgba(222, 186, 147, 0.2) 20%,
-		rgba(26, 37, 75, 0.5) 100%
+		90deg,
+		rgba(26, 37, 75, 0.4) 0%,
+		rgba(26, 37, 75, 0.2) 100%
 	);
 `;
 
@@ -96,7 +104,12 @@ const HeroSection = () => {
 
 			<LandingSection>
 				<Banner />
-				<Link to="Learn" smooth={"easeInOutQuad"} duration={1000}>
+				<Link
+					to="Learn"
+					smooth={"easeInOutQuad"}
+					duration={1000}
+					className="self-end"
+				>
 					<CTAButton
 						initial={{ scale: 0 }}
 						animate={{ scale: 1 }}
