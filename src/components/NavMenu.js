@@ -2,7 +2,9 @@ import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-scroll";
 import tw from "twin.macro";
+
 import { LogoContainer } from "./Logo";
+import LanguageDropdown from "../components/LanguageDropdown";
 
 import logo from "../assets/images/logo5.png";
 
@@ -87,7 +89,7 @@ const item = {
 		x: 0,
 		transition: {
 			ease: [0.6, 0.01, -0.05, 0.95],
-			duration: 0.3,
+			duration: 0.5,
 		},
 	},
 	exit: {
@@ -107,6 +109,8 @@ const NavMenu = ({ isOpen, toggle }) => {
 			<AnimatePresence>
 				{isOpen && (
 					<>
+						<LanguageDropdown navMenu={true} />
+
 						<NavLogo
 							to={"Hero"}
 							smooth={"easeInOut"}

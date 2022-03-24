@@ -56,7 +56,7 @@ const Social = tw.div`
 const SocialItem = tw.p`
 	pt-1
 	pr-3
-	hover:text-gray-300
+	hover:text-primary
 	duration-300
 `;
 
@@ -83,8 +83,7 @@ export const MemberBio = ({ member }) => {
 						<div>
 							<a
 								href={"mailto: " + member.email}
-								className="underline hover:text-gray-300 duration-300
-								"
+								className="underline hover:text-primary duration-300"
 							>
 								Email {member.shortName}
 							</a>

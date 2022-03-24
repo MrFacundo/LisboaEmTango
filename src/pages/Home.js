@@ -1,7 +1,7 @@
 import tw from "twin.macro";
+import { motion } from "framer-motion";
 
-import { ScrollToTop } from "../components/ScrollButton";
-
+import ScrollToTop from "../components/ScrollButton";
 import Logo from "../components/Logo";
 import HeroSection from "../sections/HeroSection";
 import LearnSection from "../sections/LearnSection";
@@ -25,17 +25,23 @@ const HomeContainer = tw.div`
 const Home = () => {
 	return (
 		<HomeContainer>
-			<Logo />
-			<HamburgerMenu />
-			<HeroSection />
-			<LearnSection />
-			<ScheduleSection />
-			<StudioSection />
-			<TeamSection />
-			<ShowSection />
-			<ContactSection />
-			<Footer />
-			<ScrollToTop />
+			<motion.div
+				initial={{ opacity: 0 }}
+				whileInView={{ opacity: 1 }}
+				transition={{ duration: 1 }}
+			>
+				<Logo />
+				<HamburgerMenu />
+				<HeroSection />
+				<LearnSection />
+				<ScheduleSection />
+				<StudioSection />
+				<TeamSection />
+				<ShowSection />
+				<ContactSection />
+				<Footer />
+				<ScrollToTop />
+			</motion.div>
 		</HomeContainer>
 	);
 };

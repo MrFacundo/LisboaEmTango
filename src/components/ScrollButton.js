@@ -12,14 +12,20 @@ const classNames = (...classes) => {
 	return classes.filter(Boolean).join(" ");
 };
 
-export const ScrollToTop = () => {
-	const [isVisible, setIsVisible] = useState(false);
+const ScrollToTop = () => {
+	const [opacity, setOpacity] = useState(false);
+	const [isHidden, setHidden] = useState(true);
 
 	const toggleVisibility = () => {
-		if (window.pageYOffset > 700) {
-			setIsVisible(true);
+		if (window.pageYOffset > 200) {
+			setHidden(false);
 		} else {
-			setIsVisible(false);
+			setHidden(true);
+		}
+		if (window.pageYOffset > 700) {
+			setOpacity(true);
+		} else {
+			setOpacity(false);
 		}
 	};
 
@@ -43,7 +49,10 @@ export const ScrollToTop = () => {
 			<Button
 				type="button"
 				onClick={scrollToTop}
-				className={classNames(isVisible ? "opacity-80" : "opacity-0 hidden")}
+				className={[
+					classNames(opacity ? "opacity-80" : "opacity-0"),
+					classNames(isHidden ? "hidden" : ""),
+				].join(" ")}
 			>
 				<img
 					className="w-[3rem] md:w-[5rem]"
@@ -54,3 +63,5 @@ export const ScrollToTop = () => {
 		</div>
 	);
 };
+
+export default ScrollToTop;
