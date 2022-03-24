@@ -5,8 +5,10 @@ import tw from "twin.macro";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 import { BsChevronDoubleDown } from "react-icons/bs";
+
 import Banner from "../components/Banner";
 import LanguageDropdown from "../components/LanguageDropdown";
+
 import bg from "../assets/images/coupleHero.jpg";
 import bgMobile from "../assets/images/coupleHeroMobile.jpg";
 
@@ -75,8 +77,8 @@ const CTAButton = tw(motion.div)`
         md:h-[12rem]
         md:w-[12rem]
 		md:self-end
-        hover:text-[#001F33]
-        hover:border-[#001F33]
+        hover:text-secondary
+        hover:border-secondary
         duration-300
 		font-text
 		font-semibold
@@ -103,7 +105,6 @@ const HeroSection = () => {
 		<HeroSectionContainer name="Hero">
 			<BgGradient />
 			<LanguageDropdown />
-
 			<LandingSection>
 				<Banner />
 				<Link

@@ -80,7 +80,9 @@ const Footer = () => {
 					</div>
 				</SmallTextContainer>
 				<SmallText>
-					<Link href="#">Design by</Link>
+					<Link href="https://mrfacundo.github.io/portfolio/">
+						Design by Facundo Troitero
+					</Link>
 				</SmallText>
 				<Copyright>© {new Date().getFullYear()} Lisboa em Tango</Copyright>
 			</BottomSection>
