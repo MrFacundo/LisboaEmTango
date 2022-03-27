@@ -7,12 +7,16 @@ import { BsChevronRight, BsArrowRightCircle } from "react-icons/bs";
 import { useMediaQuery } from "react-responsive";
 import { deviceSize } from "../components/responsive";
 
+// images
+
 import ws1 from "../assets/images/ws10.webp";
 import ws2 from "../assets/images/ws8.webp";
 import social5 from "../assets/images/ws9.webp";
 import social3 from "../assets/images/social1.webp";
 import social6 from "../assets/images/social7.webp";
 import ws4 from "../assets/images/ws11.webp";
+
+// images fallback
 
 import ws1Fallback from "../assets/images/ws10.jpg";
 import ws2Fallback from "../assets/images/ws8.jpg";

@@ -192,7 +192,12 @@ const ContactSection = () => {
 							<BsTelephone className="mr-3 text-3xl" />
 							(+351) 916 192 919 || 935 478 559
 						</p>
-						<p>lisboaemtango@gmail.com</p>
+						<a
+							href={"mailto:lisboaemtango@gmail.com"}
+							className="hover:text-primary duration-300"
+						>
+							lisboaemtango@gmail.com
+						</a>
 					</Contacts>
 				</Registration>
 				<Newsletter>
