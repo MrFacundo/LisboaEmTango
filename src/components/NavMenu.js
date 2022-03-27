@@ -6,7 +6,7 @@ import tw from "twin.macro";
 import { LogoContainer } from "./Logo";
 import LanguageDropdown from "../components/LanguageDropdown";
 
-import logo from "../assets/images/logo5.png";
+import logo from "../assets/images/logoNavMenu.png";
 
 const sections = [
 	{

@@ -2,7 +2,7 @@ import tw from "twin.macro";
 import { Link } from "react-scroll";
 import { useMediaQuery } from "react-responsive";
 import { deviceSize } from "../components/responsive";
-import logo from "../assets/images/logo6.png";
+import logo from "../assets/images/logoNavbar.png";
 
 export const LogoContainer = tw(Link)`
     top-[1rem]

@@ -1,31 +1,27 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import tw from "twin.macro";
 
 // styles
 
 const FooterContainer = tw.div`
     w-full
-    lg:h-16
-    bg-[#001f34]
+    bg-secondary
     flex
-    pl-2
-    pr-2
-    lg:pr-16
-    lg:pl-16
+    px-2
+    lg:px-16
     text-white
     items-center
-    flex-col
     justify-center
 `;
 
 const BottomSection = tw.div`
-    w-[89%]
+    w-[90%]
+    lg:w-[70%]
     flex
-    flex-wrap
+    flex-col
+    md:flex-row
     items-center
     justify-between
-    pl-4
-    pr-4
+    md:px-4
     border-t-gray-300
     border-opacity-50
     py-3
@@ -44,9 +40,10 @@ const Copyright = tw.span`
 `;
 
 const SmallText = tw.span`
-    text-base
+    flex
+    flex-row
+    text-sm
     text-gray-300
-    md:max-w-[12rem]
 `;
 
 const SmallTextContainer = tw.div`
@@ -54,12 +51,14 @@ const SmallTextContainer = tw.div`
     flex-row
     text-base
     text-gray-300
-    md:max-w-[12rem]
+    w-full
     items-center
+    justify-between
+    md:max-w-[60%]
 `;
 
 const Link = tw.a`
-    hover:text-[#deb992]
+    hover:text-primary
 `;
 
 const Footer = () => {
@@ -67,23 +66,39 @@ const Footer = () => {
 		<FooterContainer>
 			<BottomSection>
 				<SmallTextContainer>
-					<SmallText>Ph:</SmallText>
-					<div className="text-right pl-3 text-sm">
-						<p>
-							<Link href="https://www.facebook.com/joaodiz1">
-								Joao Filipe Dias
+					<SmallText>
+						<p className="self-center">Ph:</p>
+
+						<div className="text-right pl-2">
+							<p>
+								<Link
+									target={"_blank"}
+									rel="noopener noreferrer"
+									href="https://www.facebook.com/joaodiz1"
+								>
+									Joao Filipe Dias
+								</Link>
+							</p>
+							<Link
+								target={"_blank"}
+								rel="noopener noreferrer"
+								href="https://www.facebook.com/bsousafoto"
+							>
+								Bruno de Sousa
 							</Link>
-						</p>
-						<Link href="https://www.facebook.com/bsousafoto">
-							Bruno de Sousa
+						</div>
+					</SmallText>
+					<SmallText>
+						<Link
+							className="text-right"
+							target={"_blank"}
+							rel="noopener noreferrer"
+							href="https://mrfacundo.github.io/portfolio/"
+						>
+							Design by Facundo Troitero
 						</Link>
-					</div>
+					</SmallText>
 				</SmallTextContainer>
-				<SmallText>
-					<Link href="https://mrfacundo.github.io/portfolio/">
-						Design by Facundo Troitero
-					</Link>
-				</SmallText>
 				<Copyright>© {new Date().getFullYear()} Lisboa em Tango</Copyright>
 			</BottomSection>
 		</FooterContainer>

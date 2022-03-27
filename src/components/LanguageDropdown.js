@@ -66,6 +66,7 @@ const LanguageDropdown = ({ navMenu }) => {
 	const currentLanguageCode = cookies.get("i18next") || "pt";
 	const currentLanguage = languages.find((l) => l.code === currentLanguageCode);
 	const { i18n } = useTranslation();
+
 	return (
 		<Dropdown className="dropdown" style={navMenu ? { color: "#999999" } : {}}>
 			<DropdownButton>
@@ -79,7 +80,7 @@ const LanguageDropdown = ({ navMenu }) => {
 				{languages
 					.filter((language) => language.code !== currentLanguage.code)
 
-					.map(({ code, name, country_code }) => (
+					.map(({ code, country_code }) => (
 						<li key={country_code}>
 							<Button
 								onClick={() => {

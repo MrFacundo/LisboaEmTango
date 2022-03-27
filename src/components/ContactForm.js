@@ -4,7 +4,7 @@ import { useFormspark } from "@formspark/use-formspark";
 import tw from "twin.macro";
 import { FormContainer, Input, Label, SubmitButton } from "../globalStyles";
 
-const FORMSPARK_FORM_ID = "fUGCECB4";
+const formsparkFormId = process.env.REACT_APP_FORMSPARK_FORM_ID;
 
 // styles
 
@@ -20,7 +20,7 @@ const ContactForm = () => {
 	const { t } = useTranslation();
 
 	const [submit, submitting] = useFormspark({
-		formId: FORMSPARK_FORM_ID,
+		formId: formsparkFormId,
 	});
 
 	const initialFormState = {

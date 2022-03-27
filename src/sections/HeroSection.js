@@ -44,7 +44,7 @@ const LandingSection = tw(motion.div)`
 	w-[80%]
 	md:w-[80%]
 	lg:w-[90%]
-	h-[65%]
+	h-[62%]
 	md:h-[70%]
 	flex
 	flex-col

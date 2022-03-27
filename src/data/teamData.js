@@ -1,7 +1,7 @@
 import JuanCaptiottiBio from "../assets/images/JuanCaptiottiBio.webp";
 import GracianaRomeoBio from "../assets/images/GracianaRomeoBio.webp";
-import JuanCaptiottiBioF from "../assets/images/JuanCaptiottiBio.jpg";
-import GracianaRomeoBioF from "../assets/images/GracianaRomeoBio.jpg";
+import JuanCaptiottiBioFallback from "../assets/images/JuanCaptiottiBio.jpg";
+import GracianaRomeoBioFallback from "../assets/images/GracianaRomeoBio.jpg";
 
 const teamData = [
 	{
@@ -14,7 +14,7 @@ const teamData = [
 			instagram: "https://www.instagram.com/juancapriotti",
 		},
 		image: JuanCaptiottiBio,
-		imageFallback: JuanCaptiottiBioF,
+		imageFallback: JuanCaptiottiBioFallback,
 		bio: `team_section.bio_1`,
 	},
 	{
@@ -27,7 +27,7 @@ const teamData = [
 			instagram: "https://www.instagram.com/gracianaromeo",
 		},
 		image: GracianaRomeoBio,
-		imageFallback: GracianaRomeoBioF,
+		imageFallback: GracianaRomeoBioFallback,
 		bio: `team_section.bio_2`,
 	},
 ];

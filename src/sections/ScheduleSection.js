@@ -50,7 +50,7 @@ const Separator = tw.div`
 	border-white
 `;
 
-const Button = tw(motion.button)`
+const CTA = tw(motion.button)`
 	items-center
 	font-text
 	rounded-full
@@ -70,8 +70,8 @@ const Button = tw(motion.button)`
 	w-[13rem]
 	md:h-[15rem]
 	md:w-[15rem]
-	hover:text-[#001F33]
-	hover:border-[#001F33]
+	hover:text-secondary
+	hover:border-secondary
 	duration-300
 `;
 
@@ -107,10 +107,9 @@ const ScheduleSection = () => {
 				</Class>
 				<Separator />
 			</GridContainer>
-			<Button
+			<CTA
 				initial={{ scale: 0 }}
 				whileInView={{ scale: 1 }}
-				// viewport={{ margin: "-200px" }}
 				transition={{
 					ease: "easeInOut",
 					duration: 0.3,
@@ -145,7 +144,7 @@ const ScheduleSection = () => {
 						<BsArrowRightCircle className="text-[3rem] mt-4" />
 					</motion.span>
 				</a>
-			</Button>
+			</CTA>
 		</ScheduleSectionContainer>
 	);
 };

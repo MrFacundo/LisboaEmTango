@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import logo from "../assets/images/logo6.png";
+import logo from "../assets/images/logoScroll.png";
 import tw from "twin.macro";
 
 const Button = tw.button`

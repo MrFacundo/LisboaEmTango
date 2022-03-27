@@ -35,11 +35,10 @@ const MenuShadowSection = tw(motion.div)`
 	w-full
 	h-full
 	fixed
-	bg-gray-700 opacity-50
-	user-select[none]
-	z-40
+	bg-gray-700 
+	opacity-50
+	z-50
 	transition[translateX(4em)]
-	box-shadow[inset 2px 0 2px rgba(15, 15, 15, 0.3)]
 `;
 
 const menuVariants = {
