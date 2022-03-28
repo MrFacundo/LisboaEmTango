@@ -134,7 +134,7 @@ const ImageContainer = tw(motion.div)`
 	h-[25rem]
 	md:w-[30%]
 	lg:w-[30rem]
-	lg:mx-16
+	xl:mx-16
 `;
 
 const Button = tw(motion.div)`

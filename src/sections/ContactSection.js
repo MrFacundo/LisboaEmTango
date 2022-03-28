@@ -73,7 +73,7 @@ const BgGradient = styled.div`
 	absolute
 	w-[100%]
 	h-full
-	bg-[rgba(107, 40, 169, 0.3)]
+	bg-[rgba(107, 40, 169, 0.4)]
          `};
 	@media only screen and (max-width: 768px) {
 		@supports (-webkit-overflow-scrolling: touch) {
@@ -83,7 +83,9 @@ const BgGradient = styled.div`
 `;
 
 const ContactSectionWrapper = tw.div`
-    max-w-[90%]
+	max-w-[90%]
+	lg:max-w-[95%]
+	xl:max-w-[90%]
     height[90%]
     flex
 	flex-col
@@ -100,6 +102,9 @@ const SectionTitle = tw(Title)`
 	text-align[left]
 	md:text-align[center]
 	md:text-5xl
+	lg:text-4xl
+	xl:text-5xl
+	2xl:text-6xl
 	mx-auto
 	border-t-2 
 	lg:border-t-0
@@ -107,7 +112,10 @@ const SectionTitle = tw(Title)`
 
 const Description = tw.div`
 	w-[80%]
-	min-h-[8rem]
+	lg:w-[90%]
+	xl:w-[80%]
+	min-h-[5rem]
+	md:min-h-[8rem]
 	text-[1rem]
 	md:text-[1.5rem]
 	lg:text-[1.2rem]
@@ -147,7 +155,7 @@ const Contacts = tw.div`
 `;
 
 const SocialIcons = tw.div`
-	pt-5
+	xl:pt-[3rem]
 	max-w-[25rem]
 	flex
 	margin[auto]
@@ -204,7 +212,7 @@ const ContactSection = () => {
 					<SectionTitle>{t("contact_section.title_3")}</SectionTitle>
 					<Description>{t("contact_section.description_3")} </Description>
 					<NewsletterForm />
-					<div className="py-[3rem]">
+					<div className="pb-[3rem] lg:pb-[0rem] xl:py-[3rem]">
 						<SectionTitle>{t("contact_section.title_4")}</SectionTitle>
 						<SocialIcons>
 							<Button

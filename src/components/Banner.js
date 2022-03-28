@@ -50,12 +50,15 @@ const BannerRowContainer = tw(motion.div)`
     text-white
     text-[1.5rem]
 	sm:text-[2.5rem]
-	md:text-[3rem]
-    lg:text-[4rem]
+	lg:text-[2.5rem]
+	xl:text-[3.5rem]
+    2xl:text-[4rem]
 	font-bold
     overflow-hidden
     whitespace-pre-wrap
-	lg:line-height[5rem]
+	lg:line-height[3rem]
+	xl:line-height[4rem]
+	2xl:line-height[5rem]
 `;
 
 const LetterContainer = tw(motion.span)`

@@ -32,7 +32,8 @@ const ViewMoreButton = tw.div`
     py-3
 	text-2xl
 	md:text-4xl
-    lg:text-6xl
+	lg:text-5xl
+    xl:text-6xl
 	md:pl-10
 	md:pt-12
 	-webkit-appearance[none]
