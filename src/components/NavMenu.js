@@ -39,7 +39,9 @@ const SidebarLink = tw(Link)`
     items-center 
     content-center
 	text-[1.3rem]
-    md:text-[1.8rem]
+	md:text-[1.5rem]
+    xl:text-[1.7rem]
+	2xl:text-[1.9rem]
     text-decoration[none]
     text-white
     cursor-pointer
@@ -65,8 +67,9 @@ const NavList = tw(motion.ul)`
 `;
 
 const NavItem = tw(motion.li)`
-	py-5
-	md:py-6
+	py-4
+	xl:py-5
+	2xl:py-6
 `;
 
 const NavLogo = tw(LogoContainer)`

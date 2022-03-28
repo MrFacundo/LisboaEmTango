@@ -68,7 +68,10 @@ const LanguageDropdown = ({ navMenu }) => {
 	const { i18n } = useTranslation();
 
 	return (
-		<Dropdown className="dropdown" style={navMenu ? { color: "#999999" } : {}}>
+		<Dropdown
+			className="dropdown"
+			style={navMenu ? { color: "#999999", right: "5rem" } : {}}
+		>
 			<DropdownButton>
 				<span
 					className={`flag-icon flag-icon-${currentLanguage.country_code} mx-2 text-xl md:text-2xl`}

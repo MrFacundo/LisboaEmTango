@@ -18,10 +18,12 @@ export const Title = tw.h1`
 export const FormContainer = tw.div`
 	w-[90%]
 	md:w-[70%]
-	lg:w-2/3
+	lg:w-[80%]
+	xl:w-[70%]
 	m-auto
 	flex
 	flex-col
+	pb-[2rem]
 `;
 
 export const Input = tw.input`

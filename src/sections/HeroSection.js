@@ -33,7 +33,7 @@ const HeroSectionContainer = styled.div`
 	@media only screen and (min-width: 1024px) and (max-width: 1536px) {
 		background: url(${bg});
 		background-size: cover;
-		background-position: bottom 25% left 50%;
+		background-position: bottom 25% left 10%;
 	}
 
 	background: url(${bg});
@@ -53,14 +53,17 @@ const LandingSection = tw(motion.div)`
 	justify-between
 `;
 
+const CTALink = tw(Link)`
+	self-center
+	cursor-pointer
+	md:self-end
+	pb-[4rem]
+`;
+
 const CTAButton = tw(motion.div)`
-		mb-[6rem]
-		mt-[2rem]
-		md:mr-10
         rounded-full
         hover:bg-primary
-        cursor-pointer
-        text-[#F5F6F4]
+        text-white	
         flex
         flex-col
         text-center
@@ -68,20 +71,23 @@ const CTAButton = tw(motion.div)`
         place-items-center
         text-[1rem]
         md:text-[1.5rem]
+		2xl:text-[1.8rem]
         border-2
 		md:border-4
-        pt-4
-        md:pt-8
         h-[8rem]
         w-[8rem]
-        md:h-[12rem]
-        md:w-[12rem]
-		md:self-end
+        md:h-[11rem]
+        md:w-[11rem]
+		xl:h-[12rem]
+        xl:w-[12rem]
+		2xl:h-[13rem]
+        2xl:w-[13rem]
         hover:text-secondary
         hover:border-secondary
         duration-300
 		font-text
 		font-semibold
+		pt-[1rem]
 `;
 
 const BgGradient = styled.div`
@@ -107,12 +113,7 @@ const HeroSection = () => {
 			<LanguageDropdown />
 			<LandingSection>
 				<Banner />
-				<Link
-					to="Learn"
-					smooth={"easeInOutQuad"}
-					duration={1000}
-					className="self-end"
-				>
+				<CTALink to="Learn" smooth={"easeInOutQuad"} duration={1000}>
 					<CTAButton
 						initial={{ scale: 0 }}
 						animate={{ scale: 1 }}
@@ -142,10 +143,10 @@ const HeroSection = () => {
 								delay: 2.2,
 							}}
 						>
-							<BsChevronDoubleDown className="text-[2rem] md:text-[3rem] md:mt-[0.3rem]" />
+							<BsChevronDoubleDown className="text-[2rem] md:text-[2.5rem] md:mt-[0.3rem]" />
 						</motion.span>
 					</CTAButton>
-				</Link>
+				</CTALink>
 			</LandingSection>
 		</HeroSectionContainer>
 	);
