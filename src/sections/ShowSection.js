@@ -138,9 +138,9 @@ const DescriptionBg3 = styled(DescriptionBg)`
 	background: rgba(0, 0, 0, 0.6);
 `;
 
-const YoutubeIframe = tw(motion.div)`
+const YoutubeContainer = tw(motion.div)`
 		z-20
-		mr-[3rem]
+		lg:mr-[3rem]
 	`;
 
 // animations
@@ -151,8 +151,8 @@ const descriptionVariants = {
 		opacity: 1,
 		transition: {
 			ease: "easeInOut",
-			delay: 0.5,
-			duration: 1,
+			delay: 0.2,
+			duration: 0.8,
 		},
 		viewport: { once: true },
 	},
@@ -173,13 +173,27 @@ const gradientVariants = {
 const ShowSection = () => {
 	const { t } = useTranslation();
 
-	const isMobile = useMediaQuery({ maxWidth: deviceSize.laptop });
+	const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile });
+	const isLaptop = useMediaQuery({ maxWidth: deviceSize.laptop });
 	const isWidescreen = useMediaQuery({ minWidth: deviceSize.widescreen });
+
+	const videoResolution = { width: 0, height: 0 };
+
+	if (isMobile) {
+		videoResolution.width = 320;
+		videoResolution.height = 160;
+	} else if (!isMobile && !isWidescreen) {
+		videoResolution.width = 500;
+		videoResolution.height = 272;
+	} else {
+		videoResolution.width = 960;
+		videoResolution.height = 480;
+	}
 
 	return (
 		<ShowSectionContainer name="Shows">
 			<SectionTitle>{t("shows_section.title")}</SectionTitle>
-			{isMobile && (
+			{isLaptop && (
 				<>
 					<ShowDescription
 						variants={descriptionVariants}
@@ -205,7 +219,6 @@ const ShowSection = () => {
 						</ShowImageMobileWrapper>
 						<p className="pt-4">{t("shows_section.show_description_2")}</p>
 						<Divider style={{ marginTop: "2rem" }} />
-
 						<ShowTitle>
 							<i>{t("shows_section.show_title_3")}</i>
 						</ShowTitle>
@@ -217,11 +230,17 @@ const ShowSection = () => {
 							/>
 						</ShowImageMobileWrapper>
 
-						<p className="pt-4">{t("shows_section.show_description_3")}</p>
+						<p className="pt-4 mb-10">
+							{t("shows_section.show_description_3")}
+						</p>
+						<Video
+							height={videoResolution.height}
+							width={videoResolution.width}
+						/>
 					</ShowDescription>
 				</>
 			)}
-			{!isMobile && (
+			{!isLaptop && (
 				<>
 					<ShowContainer name="ShowContainer">
 						<ShowDescription
@@ -294,21 +313,10 @@ const ShowSection = () => {
 							</ShowTitle>
 							<p className="z-10">{t("shows_section.show_description_3")} </p>
 						</ShowDescription>
-						<YoutubeIframe
-							variants={descriptionVariants}
-							initial="hidden"
-							whileInView="show"
-						>
-							<iframe
-								src="https://www.youtube-nocookie.com/embed/FOwKY2sQZmg?playlist=FOwKY2sQZmg&listType=playlist&autoplay=1&controls=1&loop=1&mute=1&cc_load_policy=0&iv_load_policy=3&disablekb=1&fs=0&modestbranding=1&playsinline=1&rel=0"
-								frameBorder="0"
-								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-								width={isWidescreen ? "960" : "500"}
-								height={isWidescreen ? "480" : "272"}
-								loading="lazy"
-								title="Tangomanso"
-							></iframe>
-						</YoutubeIframe>
+						<Video
+							height={videoResolution.height}
+							width={videoResolution.width}
+						/>
 						<ShowImageWrapper>
 							<ShowImage
 								image={show3}
@@ -331,6 +339,26 @@ const ShowImage = ({ image, imageFallback, alt }) => {
 				<img className="w-full h-auto" src={imageFallback} alt={alt} />
 			</picture>
 		</div>
+	);
+};
+
+const Video = ({ height, width }) => {
+	return (
+		<YoutubeContainer
+			variants={descriptionVariants}
+			initial="hidden"
+			whileInView="show"
+		>
+			<iframe
+				src="https://www.youtube-nocookie.com/embed/FOwKY2sQZmg?playlist=FOwKY2sQZmg&listType=playlist&autoplay=1&controls=1&loop=1&mute=1&cc_load_policy=0&iv_load_policy=3&disablekb=1&fs=0&modestbranding=1&playsinline=1&rel=0"
+				frameBorder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+				width={width}
+				height={height}
+				loading="lazy"
+				title="Tangomanso"
+			></iframe>
+		</YoutubeContainer>
 	);
 };
 
