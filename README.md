@@ -31,5 +31,5 @@ npm run test
 👤 **@MrFacundo**
 
 - Website: https://mrfacundo.github.io/portfolio/
-- Github: [@MeFacundo](https://github.com/MeFacundo)
+- Github: [@MrFacundo](https://github.com/MeFacundo)
 - LinkedIn: [@https:\/\/www.linkedin.com\/in\/facundo-t\/](https://linkedin.com/in/https://www.linkedin.com/in/facundo-t/)
