@@ -18,7 +18,7 @@
 			"sizes": "310x310"
 		}
 	],
-	"start_url": "http://lisboaemtango.herokuapp.com/",
+	"start_url": "http://lisboaemtango.pt/",
 	"display": "standalone",
 	"theme_color": "#000000",
 	"background_color": "#ffffff"
