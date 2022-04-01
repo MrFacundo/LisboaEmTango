@@ -208,6 +208,7 @@ const ShowSection = () => {
 								alt={t("shows_section.show_title_1")}
 							/>
 						</ShowImageMobileWrapper>
+						<p className="py-10">{t("shows_section.show_description_1")}</p>
 						<Divider />
 						<ShowTitle>{t("shows_section.show_title_2")}</ShowTitle>
 						<ShowImageMobileWrapper>
@@ -250,6 +251,7 @@ const ShowSection = () => {
 							style={{ marginRight: "10rem" }}
 						>
 							<ShowTitle>{t("shows_section.show_title_1")}</ShowTitle>
+							<p className="z-10">{t("shows_section.show_description_1")}</p>
 						</ShowDescription>
 						<DescriptionBg
 							variants={gradientVariants}

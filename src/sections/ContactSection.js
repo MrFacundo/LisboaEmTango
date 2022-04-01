@@ -14,6 +14,7 @@ import {
 	BsInstagram,
 	BsTelephone,
 	BsYoutube,
+	BsFillEnvelopeFill,
 } from "react-icons/bs";
 
 const location = {
@@ -197,14 +198,17 @@ const ContactSection = () => {
 					<ContactForm />
 					<Contacts>
 						<p className="flex flex-row pb-3">
-							<BsTelephone className="mr-3 text-3xl" />
+							<BsTelephone className="mr-3 text-2xl" />
 							(+351) 916 192 919 || 935 478 559
 						</p>
 						<a
 							href={"mailto:lisboaemtango@gmail.com"}
 							className="hover:text-primary duration-300"
 						>
-							lisboaemtango@gmail.com
+							<p className="flex flex-row pb-3">
+								<BsFillEnvelopeFill className="mr-3 text-2xl" />
+								lisboaemtango@gmail.com
+							</p>
 						</a>
 					</Contacts>
 				</Registration>
