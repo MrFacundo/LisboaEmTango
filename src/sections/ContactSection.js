@@ -208,7 +208,7 @@ const ContactSection = () => {
 						</a>
 					</Contacts>
 				</Registration>
-				<Newsletter>
+				<Newsletter name="Newsletter">
 					<SectionTitle>{t("contact_section.title_3")}</SectionTitle>
 					<Description>{t("contact_section.description_3")} </Description>
 					<NewsletterForm />
