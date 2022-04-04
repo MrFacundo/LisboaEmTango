@@ -5,7 +5,8 @@
 		"instructors": "Professores",
 		"studio": "O nosso espaço",
 		"shows": "Espectáculos",
-		"contact": "Contactos"
+		"contact": "Contactos",
+		"newsletter": "Newsletter"
 	},
 	"hero_section": {
 		"CTA": "AULAS / WORKSHOPS",
@@ -43,7 +44,8 @@
 	},
 	"schedule_section": {
 		"title": "Horário",
-		"registration_button": "INSCRIÇÃO",
+		"CTA_description": "Receba todas as informações de aulas, workshops e milongas!",
+		"CTA_button": "NEWSLETTER",
 		"day1": {
 			"name": "Segunda",
 			"class1": "Aula de técnica de tango (todos os níveis)",

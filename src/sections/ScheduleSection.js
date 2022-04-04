@@ -4,7 +4,8 @@ import tw from "twin.macro";
 import { motion } from "framer-motion";
 import { Element } from "react-scroll";
 import { Title } from "../globalStyles";
-import { BsArrowRightCircle } from "react-icons/bs";
+import { BsArrowDown } from "react-icons/bs";
+import { Link } from "react-scroll";
 
 const ScheduleSectionContainer = tw(Element)`
         w-full
@@ -51,11 +52,12 @@ const Separator = tw.div`
 `;
 
 const CTA = tw(motion.button)`
+	bg-secondary
+	text-white
 	items-center
 	font-text
 	rounded-full
 	cursor-pointer
-	text-white
 	flex
 	flex-col
 	text-center
@@ -63,16 +65,46 @@ const CTA = tw(motion.button)`
 	text-[1.6rem]
 	md:text-[2rem]
 	border-2
+	border-primary
 	pt-4
-	my-[4rem]
+	mt-[2rem]
+	mb-[4rem]
 	md:pt-[3rem]
 	h-[13rem]
 	w-[13rem]
 	md:h-[15rem]
 	md:w-[15rem]
-	hover:text-secondary
+	hover:text-primary
 	hover:border-secondary
 	duration-300
+`;
+
+const CTAContainer = tw.div`
+	w-[60%]
+	text-align[-webkit-center]
+	flex
+	flex-col
+	md:flex-row
+	place-content-evenly
+	mt-[5rem]
+	items-center
+`;
+
+const CTALink = tw(Link)`
+	text-center
+	text-align[-webkit-center]
+	justify-center
+	
+`;
+
+const SectionInfo = tw.p`
+	text-white
+    text-xl
+	font-text
+	md:text-2xl
+    text-center
+	md:max-w-[40%]
+    2xl:mt-2
 `;
 
 const ScheduleSection = () => {
@@ -107,44 +139,42 @@ const ScheduleSection = () => {
 				</Class>
 				<Separator />
 			</GridContainer>
-			<CTA
-				initial={{ scale: 0 }}
-				whileInView={{ scale: 1 }}
-				transition={{
-					ease: "easeInOut",
-					duration: 0.3,
-				}}
-			>
-				<a
-					className="flex flex-col items-center"
-					target={"_blank"}
-					rel="noopener noreferrer"
-					href="https://forms.gle/CA64NQdcKqfajRfn8"
+			<CTAContainer>
+				<SectionInfo>{t("schedule_section.CTA_description")}</SectionInfo>
+				<CTA
+					initial={{ scale: 0 }}
+					whileInView={{ scale: 1 }}
+					transition={{
+						ease: "easeInOut",
+						duration: 0.3,
+					}}
 				>
-					<motion.span
-						initial={{ opacity: 0 }}
-						whileInView={{ opacity: 1 }}
-						transition={{
-							ease: "easeInOut",
-							delay: 0.5,
-							duration: 0.3,
-						}}
-					>
-						{t("schedule_section.registration_button")}
-					</motion.span>
-					<motion.span
-						initial={{ opacity: 0 }}
-						whileInView={{ opacity: 1 }}
-						transition={{
-							ease: "easeInOut",
-							delay: 0.5,
-							duration: 0.3,
-						}}
-					>
-						<BsArrowRightCircle className="text-[3rem] mt-4" />
-					</motion.span>
-				</a>
-			</CTA>
+					<CTALink to="Newsletter" smooth={"easeInOutQuad"} duration={1500}>
+						<motion.span
+							initial={{ opacity: 0 }}
+							whileInView={{ opacity: 1 }}
+							transition={{
+								ease: "easeInOut",
+								delay: 0.5,
+								duration: 0.3,
+							}}
+						>
+							{t("schedule_section.CTA_button")}
+						</motion.span>
+						<motion.span
+							initial={{ opacity: 0 }}
+							whileInView={{ opacity: 1 }}
+							transition={{
+								ease: "easeInOut",
+								delay: 0.5,
+								duration: 0.3,
+							}}
+						>
+							<BsArrowDown className="text-[2rem] mt-4" />
+						</motion.span>
+					</CTALink>
+				</CTA>
+			</CTAContainer>
 		</ScheduleSectionContainer>
 	);
 };

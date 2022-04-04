@@ -5,7 +5,8 @@
 		"instructors": "Instructors",
 		"studio": "Our Studio",
 		"shows": "Shows",
-		"contact": "Address / Contact Us"
+		"contact": "Address / Contact Us",
+		"newsletter": "Newsletter"
 	},
 	"hero_section": {
 		"CTA": "CLASSES / WORKSHOPS",
@@ -43,7 +44,8 @@
 	},
 	"schedule_section": {
 		"title": "Schedule",
-		"registration_button": "REGISTRATION",
+		"CTA_description": "Receive info about our workshops, classes and milongas",
+		"CTA_button": "NEWSLETTER",
 		"day1": {
 			"name": "Monday",
 			"class1": "Tango technique (all levels)",
