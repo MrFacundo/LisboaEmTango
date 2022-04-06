@@ -43,7 +43,7 @@ const SidebarLink = tw(Link)`
     items-center 
     content-center
 	text-[1.3rem]
-	md:text-[1.5rem]
+	md:text-[1.4rem]
     xl:text-[1.7rem]
 	2xl:text-[1.9rem]
     text-decoration[none]
@@ -58,8 +58,7 @@ const NavMenuContainer = tw(motion.div)`
 	w-full
 	flex
 	flex-col
-	pt-[7rem]
-	md:pt-[10rem]
+	self-center
 `;
 
 const NavList = tw(motion.ul)`
@@ -71,14 +70,13 @@ const NavList = tw(motion.ul)`
 `;
 
 const NavItem = tw(motion.li)`
-	py-4
-	xl:py-5
-	2xl:py-6
+	py-3
+	2xl:py-5
 `;
 
 const NavLogo = tw(LogoContainer)`
-	ml-[-1rem]
-	mt-[-1rem]
+	md:ml-[-1rem]
+	md:mt-[-1rem]
 `;
 
 const container = {

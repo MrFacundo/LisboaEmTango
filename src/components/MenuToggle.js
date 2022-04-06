@@ -7,7 +7,7 @@ const Button = tw(motion.div)`
 	md:top-[3rem]
 	md:right-[3rem]
 	fixed
-	z-50
+	z-[60]
 	cursor-pointer
 	w-[2.5rem]
 	md:w-[4rem]
