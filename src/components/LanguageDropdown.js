@@ -70,7 +70,7 @@ const LanguageDropdown = ({ navMenu }) => {
 	return (
 		<Dropdown
 			className="dropdown"
-			style={navMenu ? { color: "#999999", right: "5rem" } : {}}
+			style={navMenu ? { color: "#999999", right: "8rem" } : {}}
 		>
 			<DropdownButton>
 				<span

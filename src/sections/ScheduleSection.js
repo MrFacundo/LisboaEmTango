@@ -66,17 +66,19 @@ const CTA = tw(motion.button)`
 	md:text-[2rem]
 	border-2
 	border-primary
-	pt-4
+	// pt-4
 	mt-[2rem]
 	mb-[4rem]
-	md:pt-[3rem]
-	h-[13rem]
-	w-[13rem]
+	// md:pt-[3rem]
+	h-[12rem]
+	w-[12rem]
 	md:h-[15rem]
 	md:w-[15rem]
+	lg:mt-[3rem]
 	hover:text-primary
 	hover:border-secondary
 	duration-300
+	uppercase
 `;
 
 const CTAContainer = tw.div`
@@ -84,9 +86,10 @@ const CTAContainer = tw.div`
 	text-align[-webkit-center]
 	flex
 	flex-col
-	md:flex-row
+	// md:flex-row
 	place-content-evenly
 	mt-[5rem]
+	xl:mt-[10rem]
 	items-center
 `;
 
@@ -102,8 +105,9 @@ const SectionInfo = tw.p`
     text-xl
 	font-text
 	md:text-2xl
+	lg:text-4xl
     text-center
-	md:max-w-[40%]
+	xl:max-w-[40%]
     2xl:mt-2
 `;
 
@@ -170,7 +174,7 @@ const ScheduleSection = () => {
 								duration: 0.3,
 							}}
 						>
-							<BsArrowDown className="text-[2rem] mt-4" />
+							{/* <BsArrowDown className="text-[2rem] mt-4" /> */}
 						</motion.span>
 					</CTALink>
 				</CTA>

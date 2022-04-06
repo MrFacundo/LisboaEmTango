@@ -1,7 +1,7 @@
 {
 	"nav_menu": {
 		"learn": "Aprender e praticar",
-		"schedule": "Horário / Inscrição",
+		"schedule": "Horário",
 		"instructors": "Professores",
 		"studio": "O nosso espaço",
 		"shows": "Espectáculos",
@@ -45,7 +45,7 @@
 	"schedule_section": {
 		"title": "Horário",
 		"CTA_description": "Receba todas as informações de aulas, workshops e milongas!",
-		"CTA_button": "NEWSLETTER",
+		"CTA_button": "Newsletter",
 		"day1": {
 			"name": "Segunda",
 			"class1": "Aula de técnica de tango (todos os níveis)",

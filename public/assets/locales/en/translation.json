@@ -1,7 +1,7 @@
 {
 	"nav_menu": {
 		"learn": "Learn and practice",
-		"schedule": "Schedule / Registration",
+		"schedule": "Schedule",
 		"instructors": "Instructors",
 		"studio": "Our Studio",
 		"shows": "Shows",
@@ -44,8 +44,8 @@
 	},
 	"schedule_section": {
 		"title": "Schedule",
-		"CTA_description": "Receive info about our workshops, classes and milongas",
-		"CTA_button": "NEWSLETTER",
+		"CTA_description": "Receive info about our workshops, classes and milongas!",
+		"CTA_button": "Newsletter",
 		"day1": {
 			"name": "Monday",
 			"class1": "Tango technique (all levels)",
