@@ -5,7 +5,7 @@
 
 > Lisboa em Tango is a single page landing page
 
-### 🏠 [Homepage](https://lisboaemtango.pt/)
+##  [🚀️ Visit the site](https://lisboaemtango.pt/)
 
 ## Install
 
