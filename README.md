@@ -1,4 +1,5 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/083afe47-9e8c-4b28-a406-81b53d95f773/deploy-status)](https://app.netlify.com/sites/lisboaemtango/deploys)
+
+<h1 align="center">Lisboa em Tango</h1>
 
 <br /> 
 <p align="center">
@@ -6,11 +7,10 @@
 	<img alt="Number of lines of code" src="https://img.shields.io/tokei/lines/github/MrFacundo/42_get_next_line?color=critical" />
 	<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/MrFacundo/42_get_next_line?color=blue" />
 	<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/MrFacundo/42_get_next_line?color=green" />
+	[![Netlify Status](https://api.netlify.com/api/v1/badges/083afe47-9e8c-4b28-a406-81b53d95f773/deploy-status)](https://app.netlify.com/sites/lisboaemtango/deploys)
 </p>
 
-<h1 align="center">Lisboa em Tango</h1>
-
-> Lisboa em Tango is a single page landing page built with React
+## Lisboa em Tango is a single page landing page built with React
 
 ##  [🚀️ Visit the site](https://lisboaemtango.pt/)
 
