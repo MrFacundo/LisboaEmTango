@@ -5,7 +5,7 @@ import { Element } from "react-scroll";
 import { Title } from "../globalStyles";
 import Map from "../components/Map";
 import ContactForm from "../components/ContactForm";
-import NewsletterForm from "../components/NewsletterForm";
+import ZOHOSignupForm from "../components/ZOHOSignupForm";
 import bg from "../assets/images/coupleContacts.jpg";
 import bgMobile from "../assets/images/coupleContactsMobile.jpg";
 
@@ -215,7 +215,7 @@ const ContactSection = () => {
 				<Newsletter name="Newsletter">
 					<SectionTitle>{t("contact_section.title_3")}</SectionTitle>
 					<Description>{t("contact_section.description_3")} </Description>
-					<NewsletterForm />
+					<ZOHOSignupForm />
 					<div className="pb-[3rem] lg:pb-[0rem] xl:py-[3rem]">
 						<SectionTitle>{t("contact_section.title_4")}</SectionTitle>
 						<SocialIcons>
