@@ -97,6 +97,7 @@
 		"submit": "Enviar",
 		"submitting": "Enviando...",
 		"subscribe": "Inscrever-se",
-		"subscribing": "Enviando..."
+		"subscribing": "Enviando...",
+		"required": "Por favor, corrija os campos marcados abaixo."
 	}
 }

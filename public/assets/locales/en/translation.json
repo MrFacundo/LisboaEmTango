@@ -97,6 +97,7 @@
 		"submit": "Submit",
 		"submitting": "Submitting...",
 		"subscribe": "Subscribe",
-		"subscribing": "Subscribing..."
+		"subscribing": "Subscribing...",
+		"required": "Please correct the marked field(s) below."
 	}
 }

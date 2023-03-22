@@ -1,25 +1,99 @@
 import { useTranslation } from "react-i18next";
 import { FormContainer, Input, Label, SubmitButton } from "../globalStyles";
+import React, { useState } from "react";
 
-const ZOHOSignupForm = () => {
+// styles
+
+const ZOHOSignupForm = ({ status, message, onValidated }) => {
 	const { t } = useTranslation();
+
+	const handleSubmit = (e) => {
+		e.preventDefault();
+	};
 
 	return (
 		<FormContainer>
 			<div
-				id="sf3z6827e0895c7b6d3b0dbe631c666620648d20a9d25d3bbca547aeb585ef5ae116"
+				id="sf3z6827e0895c7b6d3b0dbe631c66662064fb5422e7a478233b5e561a4c46667856"
 				data-type="signupform"
 				style={{ opacity: 1 }}
 			>
 				<div id="customForm">
-					<div className="quick_form_26_css" name="SIGNUP_BODY">
-						<div>
+					<div className="quick_form_18_css" name="SIGNUP_BODY">
+						<div style={{ textAlign: "center" }}>
+							<div style={{ position: "relative" }}>
+								<div
+									id="Zc_SignupSuccess"
+									style={{
+										display: "none",
+										position: "absolute",
+										marginLeft: "4%",
+										width: "90%",
+										backgroundColor: "white",
+										padding: 3,
+										border: "3px solid rgb(194, 225, 154)",
+										marginTop: 10,
+										marginBottom: 10,
+										wordBreak: "break-all",
+									}}
+								>
+									<table
+										width="100%"
+										cellPadding={0}
+										cellSpacing={0}
+										border={0}
+									>
+										<tbody>
+											<tr>
+												<td width="10%">
+													<img
+														className="successicon"
+														src="https://zcv4-zcmp.maillist-manage.eu/images/challangeiconenable.jpg"
+														align="absmiddle"
+													/>
+												</td>
+												<td>
+													<span
+														id="signupSuccessMsg"
+														style={{
+															color: "rgb(73, 140, 132)",
+															fontFamily:
+																"sans-serif",
+															fontSize: 14,
+															wordBreak:
+																"break-word",
+														}}
+													>
+														&nbsp;&nbsp;Thank you
+														for Signing Up
+													</span>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
 							<form
 								method="POST"
 								id="zcampaignOptinForm"
 								action="https://zcv4-zcmp.maillist-manage.eu/weboptin.zc"
 								target="_zcSignup"
 							>
+								<div
+									style={{
+										backgroundColor: "rgb(255, 235, 232)",
+										padding: 10,
+										color: "rgb(210, 0, 0)",
+										fontSize: 11,
+										margin: "20px 10px 0px",
+										border: "1px solid rgb(255, 217, 211)",
+										opacity: 1,
+										display: "none",
+									}}
+									id="errorMsgDiv"
+								>
+									Please correct the marked field(s) below.
+								</div>
 								<div className="text-left pb-10">
 									<Label htmlFor="CONTACT_EMAIL">
 										{t("form.email")}
@@ -29,7 +103,6 @@ const ZOHOSignupForm = () => {
 										changeitem="SIGNUP_FORM_FIELD"
 										name="CONTACT_EMAIL"
 										id="EMBED_FORM_EMAIL_LABEL"
-										required
 									/>
 								</div>
 								<div className="text-left pb-10">
@@ -39,9 +112,8 @@ const ZOHOSignupForm = () => {
 									<Input
 										type="text"
 										changeitem="SIGNUP_FORM_FIELD"
-										name="FIRSTNAME"
-										id="FIRSTNAME"
-										required
+										name="LASTNAME"
+										id="EMBED_FORM_NAME_LABEL"
 									/>
 								</div>
 								<div>
@@ -49,6 +121,7 @@ const ZOHOSignupForm = () => {
 										type="button"
 										name="SIGNUP_SUBMIT_BUTTON"
 										id="zcWebOptin"
+										defaultValue="Join Now"
 									>
 										{t("form.subscribe")}
 									</SubmitButton>
@@ -103,7 +176,7 @@ const ZOHOSignupForm = () => {
 									type="hidden"
 									id="zcld"
 									name="zcld"
-									defaultValue="11f03c66a4f04d91"
+									defaultValue="11f03c66a4f04a33"
 								/>
 								<input
 									type="hidden"
@@ -141,7 +214,7 @@ const ZOHOSignupForm = () => {
 									type="hidden"
 									id="zc_formIx"
 									name="zc_formIx"
-									defaultValue="3z6827e0895c7b6d3b0dbe631c666620648d20a9d25d3bbca547aeb585ef5ae116"
+									defaultValue="3z6827e0895c7b6d3b0dbe631c66662064fb5422e7a478233b5e561a4c46667856"
 								/>
 								<input
 									type="hidden"
@@ -185,9 +258,36 @@ const ZOHOSignupForm = () => {
 			<div
 				id="zcOptinOverLay"
 				oncontextmenu="return false"
+				style={{
+					display: "none",
+					textAlign: "center",
+					backgroundColor: "rgb(0, 0, 0)",
+					opacity: "0.5",
+					zIndex: 100,
+					position: "fixed",
+					width: "100%",
+					top: 0,
+					left: 0,
+					height: 988,
+				}}
 			/>
 			<div
 				id="zcOptinSuccessPopup"
+				style={{
+					display: "none",
+					zIndex: 9999,
+					width: 800,
+					height: "40%",
+					top: 84,
+					position: "fixed",
+					left: "26%",
+					backgroundColor: "#FFFFFF",
+					borderColor: "#E6E6E6",
+					borderStyle: "solid",
+					borderWidth: 1,
+					boxShadow: "0 1px 10px #424242",
+					padding: 35,
+				}}
 			>
 				<span
 					style={{
