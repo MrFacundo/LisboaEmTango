@@ -1,4 +1,5 @@
 import tw from "twin.macro";
+import { motion } from "framer-motion";
 
 // styles
 
@@ -28,7 +29,7 @@ const BottomSection = tw.div`
     font-text
 `;
 
-const Copyright = tw.span`
+const Copyright = tw(motion.span)`
     text-xs
     md:text-sm
     text-gray-300
@@ -46,7 +47,7 @@ const SmallText = tw.span`
     text-gray-300
 `;
 
-const SmallTextContainer = tw.div`
+const SmallTextContainer = tw(motion.div)`
     flex
     flex-row
     text-base
@@ -61,11 +62,27 @@ const Link = tw.a`
     hover:text-primary
 `;
 
+const textVariants = {
+	hidden: { translateY: 10 },
+	show: {
+		translateY: 0,
+		transition: {
+			ease: "easeInOut",
+			duration: 0.8,
+		},
+		viewport: { once: true },
+	},
+};
+
 const Footer = () => {
 	return (
 		<FooterContainer>
 			<BottomSection>
-				<SmallTextContainer>
+				<SmallTextContainer
+					variants={textVariants}
+					initial="hidden"
+					whileInView="show"
+				>
 					<SmallText>
 						<p className="self-center">Ph:</p>
 
@@ -99,7 +116,13 @@ const Footer = () => {
 						</Link>
 					</SmallText>
 				</SmallTextContainer>
-				<Copyright>© {new Date().getFullYear()} Lisboa em Tango</Copyright>
+				<Copyright
+					variants={textVariants}
+					initial="hidden"
+					whileInView="show"
+				>
+					© {new Date().getFullYear()} Lisboa em Tango
+				</Copyright>
 			</BottomSection>
 		</FooterContainer>
 	);

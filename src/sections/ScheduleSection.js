@@ -4,7 +4,6 @@ import tw from "twin.macro";
 import { motion } from "framer-motion";
 import { Element } from "react-scroll";
 import { Title } from "../globalStyles";
-import { BsArrowDown } from "react-icons/bs";
 import { Link } from "react-scroll";
 
 const ScheduleSectionContainer = tw(Element)`
@@ -17,8 +16,6 @@ const ScheduleSectionContainer = tw(Element)`
         xl:pt-2
         xl:pb-2
         items-center
-        // bg-primary
-		// bg-[#001829]
         bg-[#D4A573]
 
 `;
@@ -33,22 +30,28 @@ const GridContainer = tw.div`
 const Day = tw.h2`
 	text-3xl
 	md:text-5xl
-	p-3
 	pt-6
+	pb-4
 	font-thin
 	uppercase`;
 
 const Class = tw.div`
-	text-base
-	md:text-lg
-	px-4
-	pb-1
+	text-lg
+	px-5
+	py-2
+	md:py-4
+	md:text-2xl
+`;
+
+const Hour = tw.span`
+	font-bold
 `;
 
 const Separator = tw.div`
 	h-5
 	border-b-[1px]
 	border-white
+	my-4
 `;
 
 const CTA = tw(motion.button)`
@@ -66,10 +69,8 @@ const CTA = tw(motion.button)`
 	md:text-[2rem]
 	border-2
 	border-primary
-	// pt-4
 	mt-[2rem]
 	mb-[4rem]
-	// md:pt-[3rem]
 	h-[12rem]
 	w-[12rem]
 	md:h-[15rem]
@@ -120,28 +121,22 @@ const ScheduleSection = () => {
 			<GridContainer>
 				<Day>{t("schedule_section.day1.name")}</Day>
 				<Class>
-					<strong>20:00</strong> - {t("schedule_section.day1.class1")}
+					<Hour>19:00</Hour> - {t("schedule_section.day1.class1")}
 				</Class>
 				<Class>
-					<strong>21:00</strong> - {t("schedule_section.day1.class2")}
+					<Hour>20:00</Hour> - {t("schedule_section.day1.class2")}
+				</Class>
+				<Class>
+					<Hour>21:00</Hour> - {t("schedule_section.day1.class3")}
 				</Class>
 				<Separator />
 				<Day>{t("schedule_section.day2.name")}</Day>
 				<Class>
-					<strong>20:00</strong> - {t("schedule_section.day2.class1")}
+					<Hour>20:00</Hour> - {t("schedule_section.day2.class1")}
 				</Class>
 				<Class>
-					<strong>21:00</strong> - {t("schedule_section.day2.class2")}
+					<Hour>21:00</Hour> - {t("schedule_section.day2.class2")}
 				</Class>
-				<Separator />
-				<Day>{t("schedule_section.day3.name")}</Day>
-				<Class>
-					<strong>18:00</strong> - {t("schedule_section.day3.class1")}
-				</Class>
-				<Class>
-					<strong>19:00</strong> - {t("schedule_section.day3.class2")}
-				</Class>
-				<Separator />
 			</GridContainer>
 			<CTAContainer>
 				<SectionInfo>{t("schedule_section.CTA_description")}</SectionInfo>
@@ -174,7 +169,6 @@ const ScheduleSection = () => {
 								duration: 0.3,
 							}}
 						>
-							{/* <BsArrowDown className="text-[2rem] mt-4" /> */}
 						</motion.span>
 					</CTALink>
 				</CTA>

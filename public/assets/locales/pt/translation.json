@@ -48,13 +48,14 @@
 		"CTA_button": "Newsletter",
 		"day1": {
 			"name": "Segunda",
-			"class1": "Aula de técnica de tango (todos os níveis)",
-			"class2": "Aula de iniciação"
+			"class1": "Aula de iniciação",
+			"class2": "Aula de técnica de tango (todos os níveis)",
+			"class3": "Aula de nível intermédio"
 		},
 		"day2": {
-			"name": "Quarta",
-			"class1": "Aula de nível avançado",
-			"class2": "Aula de nível intermédio"
+			"name": "1º Sábado de cada mês",
+			"class1": "Workshop de Iniciação ao Tango",
+			"class2": "Milonga com DJ"
 		},
 		"day3": {
 			"name": "Domingo",
