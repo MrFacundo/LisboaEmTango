@@ -48,13 +48,14 @@
 		"CTA_button": "Newsletter",
 		"day1": {
 			"name": "Monday",
-			"class1": "Tango technique (all levels)",
-			"class2": "Beginners class"
+			"class1": "Beginners class",
+			"class2": "Tango technique (all levels)",
+			"class3": "Intermmediate class"
 		},
 		"day2": {
-			"name": "Wednesday",
-			"class1": "Advanced class",
-			"class2": "Intermmediate class"
+			"name": "1st Saturday of every month",
+			"class1": "Beginners Workshop",
+			"class2": "Milonga with DJ"
 		},
 		"day3": {
 			"name": "Sunday",

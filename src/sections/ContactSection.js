@@ -3,9 +3,11 @@ import tw from "twin.macro";
 import styled from "styled-components";
 import { Element } from "react-scroll";
 import { Title } from "../globalStyles";
+
 import Map from "../components/Map";
 import ContactForm from "../components/ContactForm";
 import ZOHOSignupForm from "../components/ZOHOSignupForm";
+
 import bg from "../assets/images/coupleContacts.jpg";
 import bgMobile from "../assets/images/coupleContactsMobile.jpg";
 
@@ -113,13 +115,13 @@ const SectionTitle = tw(Title)`
 
 const Description = tw.div`
 	w-[80%]
-	lg:w-[90%]
-	xl:w-[80%]
+	pb-6
+	
 	min-h-[5rem]
 	md:min-h-[8rem]
-	text-[1rem]
-	md:text-[1.5rem]
-	lg:text-[1.2rem]
+	lg:w-[90%]
+	xl:w-[80%]
+	text-lg
 	m-auto
 `;
 
@@ -197,16 +199,16 @@ const ContactSection = () => {
 					</ContactDescription>
 					<ContactForm />
 					<Contacts>
-						<p className="flex flex-row pb-3">
-							<BsTelephone className="mr-3 text-2xl" />
+						<p className="flex flex-row pb-3 text-lg">
+							<BsTelephone className="mr-3 text-xl" />
 							(+351) 916 192 919 || 935 478 559
 						</p>
 						<a
 							href={"mailto:lisboaemtango@gmail.com"}
 							className="hover:text-primary duration-300"
 						>
-							<p className="flex flex-row pb-3">
-								<BsFillEnvelopeFill className="mr-3 text-2xl" />
+							<p className="flex flex-row pb-3" text-lg>
+								<BsFillEnvelopeFill className="mr-3 text-xl" />
 								lisboaemtango@gmail.com
 							</p>
 						</a>

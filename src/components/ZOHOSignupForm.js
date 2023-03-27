@@ -170,12 +170,6 @@ const ZOHOSignupForm = () => {
 						</div>
 					</div>
 				</div>
-				<img
-					src="https://zcv4-zcmp.maillist-manage.eu/images/spacer.gif"
-					id="refImage"
-					onload="referenceSetter(this)"
-					style={{ display: "none" }}
-				/>
 			</div>
 			<input
 				type="hidden"
@@ -184,7 +178,7 @@ const ZOHOSignupForm = () => {
 			/>
 			<div
 				id="zcOptinOverLay"
-				oncontextmenu="return false"
+				onContextMenu="return false"
 			/>
 			<div
 				id="zcOptinSuccessPopup"
