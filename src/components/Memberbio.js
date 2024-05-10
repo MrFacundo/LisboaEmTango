@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import tw from "twin.macro";
-import useCollapse from "react-collapsed";
+import { useCollapse } from 'react-collapsed'
 import {
 	BsFacebook,
 	BsInstagram,

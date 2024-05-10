@@ -176,13 +176,8 @@ const ZOHOSignupForm = () => {
 				id="signupFormType"
 				defaultValue="QuickForm_Vertical"
 			/>
-			<div
-				id="zcOptinOverLay"
-				onContextMenu="return false"
-			/>
-			<div
-				id="zcOptinSuccessPopup"
-			>
+			<div id="zcOptinOverLay" onContextMenu={() => false} />
+			<div id="zcOptinSuccessPopup">
 				<span
 					style={{
 						position: "absolute",
@@ -193,7 +188,10 @@ const ZOHOSignupForm = () => {
 					}}
 					id="closeSuccess"
 				>
-					<img src="https://zcv4-zcmp.maillist-manage.eu/images/videoclose.png" />
+					<img
+						alt="close"
+						src="https://zcv4-zcmp.maillist-manage.eu/images/videoclose.png"
+					/>
 				</span>
 				<div id="zcOptinSuccessPanel" />
 			</div>
