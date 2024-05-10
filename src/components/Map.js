@@ -9,8 +9,8 @@ const MapContainer = tw.div`
 	lg:m-0
     w-[90%]
 	xl:w-[80%]
-	height[20rem]
-    md:height[25rem]
+	[height: 20rem]
+	md:[height: 25rem]
     rounded
     overflow-hidden
     `;
@@ -25,7 +25,9 @@ const LocationPin = ({ text }) => (
 const Map = ({ location, zoomLevel }) => (
 	<MapContainer>
 		<GoogleMapReact
-			bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_MAPS_API_KEY }}
+			bootstrapURLKeys={{
+				key: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
+			}}
 			defaultCenter={location}
 			defaultZoom={zoomLevel}
 		>

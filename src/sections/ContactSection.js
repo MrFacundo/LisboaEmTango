@@ -207,7 +207,7 @@ const ContactSection = () => {
 							href={"mailto:lisboaemtango@gmail.com"}
 							className="hover:text-primary duration-300"
 						>
-							<p className="flex flex-row pb-3" text-lg>
+							<p className="flex flex-row pb-3 text-lg" >
 								<BsFillEnvelopeFill className="mr-3 text-xl" />
 								lisboaemtango@gmail.com
 							</p>
