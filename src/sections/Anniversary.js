@@ -243,7 +243,7 @@ const Anniversary = () => {
 						<Info>
 							Estamos a preparar um programa especial para
 							celebrar estes 20 anos de Tango em Lisboa, com
-							atividades para todos os níveis e gostos, desde
+							atividades para todos os níveis, desde
 							aulas, workshops, prácticas, festas e eventos
 							especiais.
 						</Info>
