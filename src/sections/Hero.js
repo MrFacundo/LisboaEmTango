@@ -14,7 +14,7 @@ import bgMobile from "../assets/images/coupleHeroMobile.jpg";
 
 // styles
 
-const HeroSectionContainer = styled.div`
+const HeroContainer = styled.div`
 	${tw`
         w-full
         flex
@@ -40,7 +40,7 @@ const HeroSectionContainer = styled.div`
 	background-size: cover;
 `;
 
-const LandingSection = tw(motion.div)`
+const Landing = tw(motion.div)`
 	w-[80%]
 	md:w-[80%]
 	lg:w-[90%]
@@ -82,12 +82,33 @@ const CTAButton = tw(motion.div)`
         xl:w-[12rem]
 		2xl:h-[13rem]
         2xl:w-[13rem]
-        hover:text-secondary
-        hover:border-secondary
+        hover:text-white
+        hover:border-white
         duration-300
 		font-text
 		font-semibold
 		pt-[1rem]
+`;
+
+const BannerContainer = tw.div`
+	relative
+`;
+
+const AnniversaryStamp = tw(motion.div)`
+	text-amber-300
+	font-logo
+    text-6xl
+    md:text-9xl
+	text-center
+	content-center
+    h-[5rem]
+    w-[15rem]
+    md:w-[30rem]
+	-rotate-12
+	-my-8
+	ml-20
+	md:ml-5
+	md:my-8
 `;
 
 const BgGradient = styled.div`
@@ -104,23 +125,41 @@ const BgGradient = styled.div`
 	);
 `;
 
-const HeroSection = () => {
+const Hero = () => {
 	const { t } = useTranslation();
 
 	return (
-		<HeroSectionContainer name="Hero">
+		<HeroContainer name="Hero">
 			<BgGradient />
 			<LanguageDropdown />
-			<LandingSection>
-				<Banner />
-				<CTALink to="Learn" smooth={"easeInOutQuad"} duration={1000}>
-					<CTAButton
-						initial={{ scale: 0 }}
-						animate={{ scale: 1 }}
+			<Landing>
+				<BannerContainer>
+					<Banner />
+					<AnniversaryStamp
+						initial={{ scale: 0, rotate: -12 }} 
+						animate={{ scale: 1, rotate: -12 }}
 						transition={{
 							ease: [0.6, 0.01, -0.05, 0.95],
+							duration: 1,
+							delay: 2.2,
+						}}
+						tw="absolute bottom-0"
+					>
+						20 ANOS
+					</AnniversaryStamp>
+				</BannerContainer>
+				<CTALink
+					to="Anniversary"
+					smooth={"easeInOutQuad"}
+					duration={1000}
+				>
+					<CTAButton
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						transition={{
+							ease: "easeInOut",
 							duration: 0.6,
-							delay: 2,
+							delay: 3,
 						}}
 					>
 						<motion.span
@@ -129,10 +168,10 @@ const HeroSection = () => {
 							transition={{
 								ease: "easeInOut",
 								duration: 0.6,
-								delay: 2.2,
+								delay: 3,
 							}}
 						>
-							{t("hero_section.CTA")}
+							{t("hero.CTA")}
 						</motion.span>
 						<motion.span
 							initial={{ opacity: 0 }}
@@ -147,9 +186,9 @@ const HeroSection = () => {
 						</motion.span>
 					</CTAButton>
 				</CTALink>
-			</LandingSection>
-		</HeroSectionContainer>
+			</Landing>
+		</HeroContainer>
 	);
 };
 
-export default HeroSection;
+export default Hero;

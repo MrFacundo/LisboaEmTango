@@ -85,7 +85,7 @@ const BgGradient = styled.div`
 	}
 `;
 
-const ContactSectionWrapper = tw.div`
+const ContactWrapper = tw.div`
 	max-w-[90%]
 	lg:max-w-[95%]
 	xl:max-w-[90%]
@@ -176,26 +176,26 @@ const Button = tw.a`
 const Newsletter = tw.div`
 	flex-1
 `;
-const ContactSection = () => {
+const Contact = () => {
 	const { t } = useTranslation();
 
 	return (
 		<ContactContainer className="border-t-2 lg:border-t-0" name="Contact">
 			<BgGradient></BgGradient>
-			<ContactSectionWrapper>
+			<ContactWrapper>
 				<Address>
 					<SectionTitle style={{ border: "none" }}>
-						{t("contact_section.title_1")}
+						{t("contact.title_1")}
 					</SectionTitle>
 					<AddressDescription>
-						{t("contact_section.description_1")}
+						{t("contact.description_1")}
 					</AddressDescription>
 					<Map location={location} zoomLevel={14} />
 				</Address>
 				<Registration>
-					<SectionTitle>{t("contact_section.title_2")}</SectionTitle>
+					<SectionTitle>{t("contact.title_2")}</SectionTitle>
 					<ContactDescription>
-						{t("contact_section.description_2")}
+						{t("contact.description_2")}
 					</ContactDescription>
 					<ContactForm />
 					<Contacts>
@@ -215,11 +215,11 @@ const ContactSection = () => {
 					</Contacts>
 				</Registration>
 				<Newsletter name="Newsletter">
-					<SectionTitle>{t("contact_section.title_3")}</SectionTitle>
-					<Description>{t("contact_section.description_3")} </Description>
+					<SectionTitle>{t("contact.title_3")}</SectionTitle>
+					<Description>{t("contact.description_3")} </Description>
 					<ZOHOSignupForm />
 					<div className="pb-[3rem] lg:pb-[0rem] xl:py-[3rem]">
-						<SectionTitle>{t("contact_section.title_4")}</SectionTitle>
+						<SectionTitle>{t("contact.title_4")}</SectionTitle>
 						<SocialIcons>
 							<Button
 								href="https://www.instagram.com/lisboaemtango/"
@@ -248,9 +248,9 @@ const ContactSection = () => {
 						</SocialIcons>
 					</div>
 				</Newsletter>
-			</ContactSectionWrapper>
+			</ContactWrapper>
 		</ContactContainer>
 	);
 };
 
-export default ContactSection;
+export default Contact;

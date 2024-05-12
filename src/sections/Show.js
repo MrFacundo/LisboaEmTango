@@ -25,7 +25,7 @@ import show3MobileFallback from "../assets/images/show3Mobile.jpg";
 
 // styles
 
-const ShowSectionContainer = styled(motion.div)`
+const Container = styled(motion.div)`
 	${tw`
 	w-full
 	flex
@@ -170,7 +170,7 @@ const gradientVariants = {
 	},
 };
 
-const ShowSection = () => {
+const Show = () => {
 	const { t } = useTranslation();
 
 	const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile });
@@ -191,8 +191,8 @@ const ShowSection = () => {
 	}
 
 	return (
-		<ShowSectionContainer name="Shows">
-			<SectionTitle>{t("shows_section.title")}</SectionTitle>
+		<Container name="Shows">
+			<SectionTitle>{t("shows_.title")}</SectionTitle>
 			{isLaptop && (
 				<>
 					<ShowDescription
@@ -200,39 +200,39 @@ const ShowSection = () => {
 						initial="hidden"
 						whileInView="show"
 					>
-						<ShowTitle>{t("shows_section.show_title_1")}</ShowTitle>
+						<ShowTitle>{t("shows_.show_title_1")}</ShowTitle>
 						<ShowImageMobileWrapper>
 							<ShowImage
 								image={show1Mobile}
 								imageFallback={show1MobileFallback}
-								alt={t("shows_section.show_title_1")}
+								alt={t("shows_.show_title_1")}
 							/>
 						</ShowImageMobileWrapper>
-						<p className="py-10">{t("shows_section.show_description_1")}</p>
+						<p className="py-10">{t("shows_.show_description_1")}</p>
 						<Divider />
-						<ShowTitle>{t("shows_section.show_title_2")}</ShowTitle>
+						<ShowTitle>{t("shows_.show_title_2")}</ShowTitle>
 						<ShowImageMobileWrapper>
 							<ShowImage
 								image={show2Mobile}
 								imageFallback={show2MobileFallback}
-								alt={t("shows_section.show_title_2")}
+								alt={t("shows_.show_title_2")}
 							/>
 						</ShowImageMobileWrapper>
-						<p className="pt-4">{t("shows_section.show_description_2")}</p>
+						<p className="pt-4">{t("shows_.show_description_2")}</p>
 						<Divider style={{ marginTop: "2rem" }} />
 						<ShowTitle>
-							<i>{t("shows_section.show_title_3")}</i>
+							<i>{t("shows_.show_title_3")}</i>
 						</ShowTitle>
 						<ShowImageMobileWrapper>
 							<ShowImage
 								image={show3Mobile}
 								imageFallback={show3MobileFallback}
-								alt={t("shows_section.show_title_3")}
+								alt={t("shows_.show_title_3")}
 							/>
 						</ShowImageMobileWrapper>
 
 						<p className="pt-4 mb-10">
-							{t("shows_section.show_description_3")}
+							{t("shows_.show_description_3")}
 						</p>
 						<Video
 							height={videoResolution.height}
@@ -250,8 +250,8 @@ const ShowSection = () => {
 							whileInView="show"
 							style={{ marginRight: "10rem" }}
 						>
-							<ShowTitle>{t("shows_section.show_title_1")}</ShowTitle>
-							<p className="z-10">{t("shows_section.show_description_1")}</p>
+							<ShowTitle>{t("shows_.show_title_1")}</ShowTitle>
+							<p className="z-10">{t("shows_.show_description_1")}</p>
 						</ShowDescription>
 						<DescriptionBg
 							variants={gradientVariants}
@@ -262,7 +262,7 @@ const ShowSection = () => {
 							<ShowImage
 								image={show1}
 								imageFallback={show1Fallback}
-								alt={t("shows_section.show_title_1")}
+								alt={t("shows_.show_title_1")}
 							/>
 						</ShowImageWrapper>
 					</ShowContainer>
@@ -282,8 +282,8 @@ const ShowSection = () => {
 							initial="hidden"
 							whileInView="show"
 						>
-							<ShowTitle>{t("shows_section.show_title_2")}</ShowTitle>
-							<p className="z-10">{t("shows_section.show_description_2")}</p>
+							<ShowTitle>{t("shows_.show_title_2")}</ShowTitle>
+							<p className="z-10">{t("shows_.show_description_2")}</p>
 						</ShowDescription>
 						<DescriptionBg2
 							variants={gradientVariants}
@@ -294,7 +294,7 @@ const ShowSection = () => {
 							<ShowImage
 								image={show2}
 								imageFallback={show2Fallback}
-								alt={t("shows_section.show_title_2")}
+								alt={t("shows_.show_title_2")}
 							/>
 						</ShowImageWrapper>
 					</ShowContainer>
@@ -311,9 +311,9 @@ const ShowSection = () => {
 								whileInView="show"
 							/>
 							<ShowTitle>
-								<i>{t("shows_section.show_title_3")}</i>
+								<i>{t("shows_.show_title_3")}</i>
 							</ShowTitle>
-							<p className="z-10">{t("shows_section.show_description_3")} </p>
+							<p className="z-10">{t("shows_.show_description_3")} </p>
 						</ShowDescription>
 						<Video
 							height={videoResolution.height}
@@ -323,13 +323,13 @@ const ShowSection = () => {
 							<ShowImage
 								image={show3}
 								imageFallback={show3Fallback}
-								alt={t("shows_section.show_title_3")}
+								alt={t("shows_.show_title_3")}
 							/>
 						</ShowImageWrapper>
 					</ShowContainer>
 				</>
 			)}
-		</ShowSectionContainer>
+		</Container>
 	);
 };
 
@@ -353,7 +353,6 @@ const Video = ({ height, width }) => {
 		>
 			<iframe
 				src="https://www.youtube-nocookie.com/embed/FOwKY2sQZmg?playlist=FOwKY2sQZmg&listType=playlist&autoplay=1&controls=1&loop=1&mute=1&cc_load_policy=0&iv_load_policy=3&disablekb=1&fs=0&modestbranding=1&playsinline=1&rel=0"
-				frameBorder="0"
 				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 				width={width}
 				height={height}
@@ -364,4 +363,4 @@ const Video = ({ height, width }) => {
 	);
 };
 
-export default ShowSection;
+export default Show;

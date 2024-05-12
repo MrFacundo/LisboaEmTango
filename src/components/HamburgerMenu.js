@@ -7,7 +7,6 @@ import NavMenu from "./NavMenu";
 // styles
 
 const HamburgerMenuContainer = tw.div`
-	w-full
 	relative
 	flex
 `;
@@ -15,7 +14,6 @@ const HamburgerMenuContainer = tw.div`
 const MenuContainer = tw(motion.div)`
 	flex
 	min-w-[300px]
-	w-full
 	md:max-w-[60%]
 	lg:max-w-[40%]
 	h-full

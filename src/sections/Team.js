@@ -12,7 +12,7 @@ import { MemberImage } from "../components/MemberImage";
 import bg from "../assets/images/c1.jpg";
 import bgMobile from "../assets/images/c1Mobile.jpg";
 
-const TeamSectionContainer = tw(motion.div)`
+const TeamContainer = tw(motion.div)`
 		w-full
 		min-h-[180vh]
 		lg:min-h-[300vh]
@@ -75,7 +75,7 @@ const BackgroundShadow = styled(motion.div)`
 );
 `;
 
-const Team = tw(motion.div)`
+const TeamWrapper = tw(motion.div)`
 	py-[5rem]
 	w-[80%]
 	md:w-[70%]
@@ -96,7 +96,7 @@ const TeamMemberCardContainer = tw.div`
 	z-10
 `;
 
-const TeamSection = () => {
+const Team = () => {
 	const { t } = useTranslation();
 	return (
 		<BackgroundGradient>
@@ -113,9 +113,9 @@ const TeamSection = () => {
 					duration: 1,
 				}}
 			/>
-			<TeamSectionContainer name="Team">
-				<Title>{t("team_section.title")}</Title>
-				<Team
+			<TeamContainer name="Team">
+				<Title>{t("team.title")}</Title>
+				<TeamWrapper
 					initial={{ opacity: 0 }}
 					whileInView={{ opacity: 1 }}
 					viewport={{ once: true, margin: "0px 0px -300px 0px" }}
@@ -140,8 +140,8 @@ const TeamSection = () => {
 						/>
 						<MemberBio member={teamData[1]} />
 					</TeamMemberCardContainer>
-				</Team>
-			</TeamSectionContainer>
+				</TeamWrapper>
+			</TeamContainer>
 			<BackgroundShadow
 				initial={{
 					opacity: 0,
@@ -160,4 +160,4 @@ const TeamSection = () => {
 	);
 };
 
-export default TeamSection;
+export default Team;
