@@ -14,7 +14,7 @@ import bgMobile from "../assets/images/coupleHeroMobile.jpg";
 
 // styles
 
-const HeroSectionContainer = styled.div`
+const HeroContainer = styled.div`
 	${tw`
         w-full
         flex
@@ -40,7 +40,7 @@ const HeroSectionContainer = styled.div`
 	background-size: cover;
 `;
 
-const LandingSection = tw(motion.div)`
+const Landing = tw(motion.div)`
 	w-[80%]
 	md:w-[80%]
 	lg:w-[90%]
@@ -58,6 +58,7 @@ const CTALink = tw(Link)`
 	cursor-pointer
 	md:self-end
 	pb-[4rem]
+	xl:mt-[-4rem]
 `;
 
 const CTAButton = tw(motion.div)`
@@ -82,12 +83,35 @@ const CTAButton = tw(motion.div)`
         xl:w-[12rem]
 		2xl:h-[13rem]
         2xl:w-[13rem]
-        hover:text-secondary
-        hover:border-secondary
+        hover:text-white
+        hover:border-white
         duration-300
 		font-text
 		font-semibold
 		pt-[1rem]
+`;
+
+const BannerContainer = tw.div`
+	relative
+`;
+
+const AnniversaryStamp = tw(motion.div)`
+	text-yellow-300
+	font-logo
+    text-6xl
+    lg:text-7xl
+	xl:text-8xl
+	text-center
+	content-center
+    h-[3rem]
+    w-[15rem]
+    xl:w-[20rem]
+	-rotate-12
+	-my-8
+	ml-0
+	mt-0
+	md:ml-5
+	md:my-8
 `;
 
 const BgGradient = styled.div`
@@ -104,23 +128,41 @@ const BgGradient = styled.div`
 	);
 `;
 
-const HeroSection = () => {
+const Hero = () => {
 	const { t } = useTranslation();
 
 	return (
-		<HeroSectionContainer name="Hero">
+		<HeroContainer name="Hero">
 			<BgGradient />
 			<LanguageDropdown />
-			<LandingSection>
-				<Banner />
-				<CTALink to="Learn" smooth={"easeInOutQuad"} duration={1000}>
-					<CTAButton
-						initial={{ scale: 0 }}
-						animate={{ scale: 1 }}
+			<Landing>
+				<BannerContainer>
+					<Banner />
+					<AnniversaryStamp
+						initial={{ scale: 0, rotate: -12 }} 
+						animate={{ scale: 1, rotate: -12 }}
 						transition={{
 							ease: [0.6, 0.01, -0.05, 0.95],
+							duration: 1,
+							delay: 2.2,
+						}}
+						tw="absolute bottom-0"
+					>
+						{t("hero.anniversary")}
+					</AnniversaryStamp>
+				</BannerContainer>
+				<CTALink
+					to="Anniversary"
+					smooth={"easeInOutQuad"}
+					duration={1000}
+				>
+					<CTAButton
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						transition={{
+							ease: "easeInOut",
 							duration: 0.6,
-							delay: 2,
+							delay: 3,
 						}}
 					>
 						<motion.span
@@ -129,10 +171,10 @@ const HeroSection = () => {
 							transition={{
 								ease: "easeInOut",
 								duration: 0.6,
-								delay: 2.2,
+								delay: 3,
 							}}
 						>
-							{t("hero_section.CTA")}
+							{t("hero.CTA")}
 						</motion.span>
 						<motion.span
 							initial={{ opacity: 0 }}
@@ -147,9 +189,9 @@ const HeroSection = () => {
 						</motion.span>
 					</CTAButton>
 				</CTALink>
-			</LandingSection>
-		</HeroSectionContainer>
+			</Landing>
+		</HeroContainer>
 	);
 };
 
-export default HeroSection;
+export default Hero;

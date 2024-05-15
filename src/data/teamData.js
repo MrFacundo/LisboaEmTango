@@ -15,7 +15,7 @@ const teamData = [
 		},
 		image: JuanCaptiottiBio,
 		imageFallback: JuanCaptiottiBioFallback,
-		bio: `team_section.bio_1`,
+		bio: `team.bio_1`,
 	},
 	{
 		name: "Graciana Romeo",
@@ -28,7 +28,7 @@ const teamData = [
 		},
 		image: GracianaRomeoBio,
 		imageFallback: GracianaRomeoBioFallback,
-		bio: `team_section.bio_2`,
+		bio: `team.bio_2`,
 	},
 ];
 

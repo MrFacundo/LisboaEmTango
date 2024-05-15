@@ -8,14 +8,22 @@
 		"contact": "Contactos",
 		"newsletter": "Newsletter"
 	},
-	"hero_section": {
+	"hero": {
 		"CTA": "AULAS / WORKSHOPS",
 		"banner_row_1": "Tango argentino",
 		"banner_row_2": "no coração",
 		"banner_row_3": "de Lisboa",
-		"banner_mobile": "Tango Argentino no coração de Lisboa"
+		"banner_mobile": "Tango Argentino no coração de Lisboa",
+		"anniversary": "20 ANOS"
 	},
-	"learn_section": {
+	"anniversary": {
+		"title": "20 anos de Tango em Lisboa!",
+		"p1": "Durante o 2024 cumprimos 20 años de intenso trabalho em Lisboa, com a música e a dança que tanto amamos… “EL TANGO”… e queremos festejar com vocês!",
+		"p2": "Estamos a preparar um programa especial para celebrar estes 20 anos de Tango em Lisboa, com atividades para todos os níveis, desde aulas, workshops, prácticas, festas e eventos especiais.",
+		"p3": "Vamos festejar com vocês estes 20 anos abraçando e partilhando o Tango.",
+		"p4": "Juan & Graciana"
+	},
+	"learn_": {
 		"title": "Aprender e praticar",
 		"description": "O nosso objetivo é criar um espaço onde se possa aprender as ferramentas fundamentais do Tango-Dança e que nos permita desfrutar do tango como dança social, independentemente do nível e/ou experiência de cada um."
 	},
@@ -42,7 +50,7 @@
 		},
 		"button": "Reserve uma aula"
 	},
-	"schedule_section": {
+	"schedule_": {
 		"title": "Horário",
 		"CTA_description": "Receba todas as informações de aulas, workshops e milongas!",
 		"CTA_button": "Newsletter",
@@ -63,16 +71,16 @@
 			"class2": "La Práktica"
 		}
 	},
-	"team_section": {
+	"team": {
 		"title": "Professores",
 		"bio_1": "Diretor de Lisboa em Tango. Nasceu em 1970 em San Nicolás, Buenos Aires, Argentina. Na sua juventude, através do estudo da guitarra, descobre a sua paixão pela música e aos 28 anos, através do contacto-improvisação, descobre a sua paixão pela dança . Paralelamente inicia-se na dança Tangueira, deixando tudo para se tornar bailarino, maestro e coreógrafo de tango Argentino. Desde o ano 2000 que o tango se converte na sua paixão e se torna a única fonte de inspiração. Em 2002 é convocado para participar numa turnê na Tailândia e desempenha até 2005, uma intensa atividade na cidade de Rosario, Argentina. Com a sua companheira Graciana Romeo, convertem-se num dos pares de referência da cidade. Participam no 1º Mundial de Tango na cidade de Buenos Aires, em que são finalistas na categoria de Tango Cenário. A partir desse momento, iniciam várias turnês pela Europa e na cidade de Lisboa, fundam a escola Argentina de tango L.E.TANGO. A partir de 2010 começa os estudos de bandoneón e de canto. Em 2012 cria e dirige Tangomanso & Otras Yerbas e, com Graciana Romeo, cria o espectáculo multidisciplinar de música e dança e teatro “Volver”. Em 2015 começa a explorar o desenho e a pintura. Atualmente dedica-se ao ensino da \"Dança do Abraço\" em Rosário e em Lisboa.",
 		"bio_2": "Diretora de Lisboa em Tango. Nasceu em 1975, em Rosário, Argentina. Começa a dedicar-se desde muito cedo ao estudo da dança clássica, contemporânea e contacto-improvisação. No ano 2000, descobre o tango argentino e este converte-se na sua única paixão e fonte de inspiração, dedicando-se ao estudo do género, especificamente ao desenvolvimento da dança tangueira. Com seu companheiro Juan Capriotti desenvolve em Rosário, Argentina, uma intensa atividade profissional e os dois convertem-se num dos pares de referência da cidade. Participam no 1º Mundial de Tango na cidade de Buenos Aires, em que são finalistas na categoria Tango Cenário. Em 2005, depois de algumas turnês pela Europa, os dois fundam a escola Argentina de tango L.E.TANGO. A par com técnicas como o pilates e o ioga, continua e aprofunda os seus estudos sobre o corpo e o seu funcionamento. Com um vasto leque de conhecimentos e experiências, dedica-se a explorar, dançar e ensinar o tango desde um ponto de vista mais orgânico, confortável e possível para todos, proporcionando uma aprendizagem focada nas vertentes social e cultural próprias do tango."
 	},
-	"studio_section": {
+	"studio_": {
 		"title": "O nosso espaÇo",
 		"description": "O nosso espaço funciona nas instalações do Clube Ferroviário de Portugal. Um espaço mítico, boêmio e com mais de 20 anos de história de tango na cidade de Lisboa."
 	},
-	"shows_section": {
+	"shows_": {
 		"title": "Espectáculos",
 		"show_title_1": "Shows de tango argentino",
 		"show_description_1": "Performances de música e dança em eventos privados, teatros e auditorios.",
@@ -81,7 +89,7 @@
 		"show_title_3": "VOLVER",
 		"show_description_3": "Volver é um espetáculo multidisciplinar que nos leva a uma viagem desde as origens do Tango até à atualidade. Entre velhos clássicos e composições originais misturam-se o tango, o folclore argentino e o fado português."
 	},
-	"contact_section": {
+	"contact_": {
 		"title_1": "Onde estamos",
 		"description_1": "Clube Ferroviário de Portugal Rua de Santa Apolónia 59, 1100-468 Lisboa",
 		"title_2": "Contacte-nos",

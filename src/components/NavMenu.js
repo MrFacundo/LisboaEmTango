@@ -93,7 +93,7 @@ const item = {
 		opacity: 1,
 		x: 0,
 		transition: {
-			ease: [0.6, 0.01, -0.05, 0.95],
+			ease: "easeInOut",
 			duration: 0.5,
 		},
 	},

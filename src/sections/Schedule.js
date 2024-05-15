@@ -6,7 +6,7 @@ import { Element } from "react-scroll";
 import { Title } from "../globalStyles";
 import { Link } from "react-scroll";
 
-const ScheduleSectionContainer = tw(Element)`
+const ScheduleContainer = tw(Element)`
         w-full
         flex
         flex-col
@@ -101,7 +101,7 @@ const CTALink = tw(Link)`
 	
 `;
 
-const SectionInfo = tw.p`
+const Info = tw.p`
 	text-white
     text-xl
 	font-text
@@ -112,34 +112,34 @@ const SectionInfo = tw.p`
     2xl:mt-2
 `;
 
-const ScheduleSection = () => {
+const Schedule = () => {
 	const { t } = useTranslation();
 
 	return (
-		<ScheduleSectionContainer name="Schedule">
-			<Title>{t("schedule_section.title")}</Title>
+		<ScheduleContainer name="Schedule">
+			<Title>{t("schedule_.title")}</Title>
 			<GridContainer>
-				<Day>{t("schedule_section.day1.name")}</Day>
+				<Day>{t("schedule_.day1.name")}</Day>
 				<Class>
-					<Hour>19:00</Hour> - {t("schedule_section.day1.class1")}
+					<Hour>19:00</Hour> - {t("schedule_.day1.class1")}
 				</Class>
 				<Class>
-					<Hour>20:00</Hour> - {t("schedule_section.day1.class2")}
+					<Hour>20:00</Hour> - {t("schedule_.day1.class2")}
 				</Class>
 				<Class>
-					<Hour>21:00</Hour> - {t("schedule_section.day1.class3")}
+					<Hour>21:00</Hour> - {t("schedule_.day1.class3")}
 				</Class>
 				<Separator />
-				<Day>{t("schedule_section.day2.name")}</Day>
+				<Day>{t("schedule_.day2.name")}</Day>
 				<Class>
-					<Hour>20:00</Hour> - {t("schedule_section.day2.class1")}
+					<Hour>20:00</Hour> - {t("schedule_.day2.class1")}
 				</Class>
 				<Class>
-					<Hour>21:00</Hour> - {t("schedule_section.day2.class2")}
+					<Hour>21:00</Hour> - {t("schedule_.day2.class2")}
 				</Class>
 			</GridContainer>
 			<CTAContainer>
-				<SectionInfo>{t("schedule_section.CTA_description")}</SectionInfo>
+				<Info>{t("schedule_.CTA_description")}</Info>
 				<CTA
 					initial={{ scale: 0 }}
 					whileInView={{ scale: 1 }}
@@ -158,7 +158,7 @@ const ScheduleSection = () => {
 								duration: 0.3,
 							}}
 						>
-							{t("schedule_section.CTA_button")}
+							{t("schedule_.CTA_button")}
 						</motion.span>
 						<motion.span
 							initial={{ opacity: 0 }}
@@ -173,8 +173,8 @@ const ScheduleSection = () => {
 					</CTALink>
 				</CTA>
 			</CTAContainer>
-		</ScheduleSectionContainer>
+		</ScheduleContainer>
 	);
 };
 
-export default ScheduleSection;
+export default Schedule;

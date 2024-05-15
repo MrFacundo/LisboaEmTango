@@ -3,15 +3,16 @@ import { motion } from "framer-motion";
 
 import ScrollToTop from "../components/ScrollButton";
 import Logo from "../components/Logo";
-import HeroSection from "../sections/HeroSection";
-import LearnSection from "../sections/LearnSection";
-import ScheduleSection from "../sections/ScheduleSection";
-import TeamSection from "../sections/TeamSection";
-import StudioSection from "../sections/StudioSection";
-import ContactSection from "../sections/ContactSection";
-import ShowSection from "../sections/ShowSection";
+import Hero from "../sections/Hero";
+import Learn from "../sections/Learn";
+import Schedule from "../sections/Schedule";
+import Team from "../sections/Team";
+import Studio from "../sections/Studio";
+import Contact from "../sections/Contact";
+import Show from "../sections/Show";
 import Footer from "../components/Footer";
 import HamburgerMenu from "../components/HamburgerMenu";
+import Anniversary from "../sections/Anniversary";
 
 const HomeContainer = tw.div`
 		flex
@@ -32,13 +33,14 @@ const Home = () => {
 			>
 				<Logo />
 				<HamburgerMenu />
-				<HeroSection />
-				<LearnSection />
-				<ScheduleSection />
-				<StudioSection />
-				<TeamSection />
-				<ShowSection />
-				<ContactSection />
+				<Hero />
+				<Anniversary />
+				<Learn />
+				<Schedule />
+				<Studio />
+				<Team />
+				<Show />
+				<Contact />
 				<Footer />
 				<ScrollToTop />
 			</motion.div>

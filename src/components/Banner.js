@@ -72,13 +72,13 @@ const Banner = () => {
 	return (
 		<motion.div variants={container} initial="hidden" animate="show">
 			<BannerRowContainer variants={row}>
-				<AnimatedLetters title={t("hero_section.banner_row_1")} />
+				<AnimatedLetters title={t("hero.banner_row_1")} />
 			</BannerRowContainer>
 			<BannerRowContainer variants={row}>
-				<AnimatedLetters title={t("hero_section.banner_row_2")} />
+				<AnimatedLetters title={t("hero.banner_row_2")} />
 			</BannerRowContainer>
 			<BannerRowContainer variants={row}>
-				<AnimatedLetters title={t("hero_section.banner_row_3")} />
+				<AnimatedLetters title={t("hero.banner_row_3")} />
 			</BannerRowContainer>
 		</motion.div>
 	);

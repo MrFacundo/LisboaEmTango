@@ -5,7 +5,7 @@ import { Element } from "react-scroll";
 import Levels from "../components/Levels";
 import ImagesDivider from "../components/ImagesDivider";
 
-const LearnSectionContainer = tw(Element)`
+const LearnContainer = tw(Element)`
     text-white
     w-full
     min-h-screen
@@ -20,7 +20,7 @@ const LearnSectionContainer = tw(Element)`
     bg-primary
 `;
 
-const SectionInfo = tw.p`
+const Info = tw.p`
     text-base
 	font-text
 	md:text-2xl
@@ -38,17 +38,17 @@ const SectionInfo = tw.p`
     lg:pr-2
 `;
 
-const LearnSection = () => {
+const Learn = () => {
 	const { t } = useTranslation();
 
 	return (
-		<LearnSectionContainer name="Learn">
-			<Title>{t("learn_section.title")}</Title>
-			<SectionInfo>{t("learn_section.description")}</SectionInfo>
+		<LearnContainer name="Learn">
+			<Title>{t("learn_.title")}</Title>
+			<Info>{t("learn_.description")}</Info>
 			<Levels />
 			<ImagesDivider />
-		</LearnSectionContainer>
+		</LearnContainer>
 	);
 };
 
-export default LearnSection;
+export default Learn;

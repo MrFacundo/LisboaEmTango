@@ -8,14 +8,22 @@
 		"contact": "Address / Contact Us",
 		"newsletter": "Newsletter"
 	},
-	"hero_section": {
+	"hero": {
 		"CTA": "CLASSES / WORKSHOPS",
 		"banner_row_1": "Argentine tango",
 		"banner_row_2": "in the heart",
 		"banner_row_3": "of Lisbon",
-		"banner_mobile": "Argentine Tango in the heart of of Lisbon"
+		"banner_mobile": "Argentine Tango in the heart of of Lisbon",
+		"anniversary": "20 YEARS"
 	},
-	"learn_section": {
+	"anniversary": {
+		"title": "20 years of Tango in Lisbon!",
+		"p1": "During 2024 we celebrate 20 years of intense work in Lisbon, with the music and dance that we love so much... “EL TANGO”.. and we want to celebrate with you!",
+		"p2": "We are preparing a special program to celebrate these 20 years of Tango in Lisbon, with activities for all levels, including classes, workshops, practices, parties, and special events.",
+		"p3": "Let's celebrate these 20 years together, embracing and sharing Tango.",
+		"p4": "Juan & Graciana"
+	},
+	"learn": {
 		"title": "Learn and Practice",
 		"description": "Our goal is to create environment where you can develop skills, steps and technique that allow you to enjoy tango as a social dance, independently of your level of experience."
 	},
@@ -42,7 +50,7 @@
 		},
 		"button": "Book a class"
 	},
-	"schedule_section": {
+	"schedule": {
 		"title": "Schedule",
 		"CTA_description": "Receive info about our workshops, classes and milongas!",
 		"CTA_button": "Newsletter",
@@ -63,16 +71,16 @@
 			"class2": "La Práktica"
 		}
 	},
-	"team_section": {
+	"team": {
 		"title": "Instructors",
 		"bio_1": "Director of Lisboa em Tango. Born in 1970 in San Nicolás, Buenos Aires, Argentina. In his youth, he discovered his passion for music and at age 28 he started studying argentine tango. In 2002 he joined an extensive tour in Thailand. He paired with Graciana Romeo in Rosario and after becoming scene leaders of their city, they participated in the 1st World Tango Dance Tournament (2003) and were awarded as finalists of Tango Escenario. After touring Europe several times, they opened the School of Argentine Tango L.E.Tango in Lisbon. Since 2010 he also developed as a bandoneon player and singer and formed several musical projects. In 2012 he formed and directed Orquesta TangoManso & Otras Yerbas. Along with Graciana Romero he created the music, dance and theatre show “Volver”. In 2015 he ventured into drawing and painting. At the present he devotes himself to the teaching of “the dance of the embrace” in Rosario and Lisboa",
 		"bio_2": "Director of Lisboa em Tango. Born in 1975 in Rosario, Argentina. At a very young age, she started dancing ballet, contemporary dance and contact improvisation. In 2000 she discovered argentine tango and since then she devoted herself to the study and development of the genre. Tango became her only passion and source of inspiration. In 2005 she opened with her partner Juan Capriotti the School of Argentine Tango L.E.Tango in Lisbon. She continued her training on tango alongside other techniques of movement such as pilates and yoga. At the present she uses her various skills and experience to explore, dance and teach argentine tango, with the goal of making it comfortable and available to everyone, without losing focus on its social and cultural roots."
 	},
-	"studio_section": {
+	"studio": {
 		"title": "Our Studio",
 		"description": "Our studio is located inside the Club Ferroviário de Portugal. A mithical, bohemian space that has been the home of tango in Lisbon for more than 20 years"
 	},
-	"shows_section": {
+	"shows": {
 		"title": "Shows",
 		"show_title_1": "Tango shows",
 		"show_description_1": "Music and dance performances at private events and theaters",
@@ -81,7 +89,7 @@
 		"show_title_3": "VOLVER",
 		"show_description_3": "Volver is multidisciplinary show that proposes a trip from the origins of tango to modern times, where old classics and original compositions cross ways with argentinian folk and portuguese fado."
 	},
-	"contact_section": {
+	"contact": {
 		"title_1": "Address",
 		"description_1": "Clube Ferroviário de Portugal Rua de Santa Apolónia 59, 1100-468 Lisboa",
 		"title_2": "Contact us",

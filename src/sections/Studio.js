@@ -20,7 +20,7 @@ const studioImages = [
 	{ src: studio3, fallback: studio3Fallback },
 ];
 
-const StudioSectionContainer = tw(Element)`
+const StudioContainer = tw(Element)`
     w-full
     flex
     flex-col
@@ -33,7 +33,7 @@ const StudioSectionContainer = tw(Element)`
     bg-primary
 `;
 
-const SectionInfo = tw.p`
+const Info = tw.p`
     text-base
     font-text
 	md:text-2xl
@@ -51,7 +51,7 @@ const SectionInfo = tw.p`
     lg:pr-2
 `;
 
-const StudioSectionWrapper = tw.div`
+const StudioWrapper = tw.div`
     w-[90%]
     md:w-[80%]
     h-full
@@ -66,14 +66,19 @@ const StudioSectionWrapper = tw.div`
     pb-[3rem]
 `;
 
-const StudioSection = () => {
+const StyledCarousel = tw(Carousel)`
+	border
+`
+
+
+const Studio = () => {
 	const { t } = useTranslation();
 
 	const isMobile = useMediaQuery({ maxWidth: deviceSize.laptop });
 
 	return (
-		<StudioSectionContainer name="Studio">
-			<Title style={{ paddingTop: "0rem" }}>{t("studio_section.title")}</Title>
+		<StudioContainer name="Studio">
+			<Title style={{ paddingTop: "0rem" }}>{t("studio_.title")}</Title>
 			{!isMobile && (
 				<iframe
 					src="https://www.youtube-nocookie.com/embed/FOwKY2sQZmg?playlist=goFHwoODao8&listType=playlist&autoplay=1&controls=0&loop=1&mute=1&cc_load_policy=0&iv_load_policy=3&disablekb=1&fs=0&modestbranding=1&playsinline=1&rel=0&hd=1"
@@ -86,9 +91,9 @@ const StudioSection = () => {
 				></iframe>
 			)}
 
-			<SectionInfo>{t("studio_section.description")}</SectionInfo>
-			<StudioSectionWrapper>
-				<Carousel
+			<Info>{t("studio_.description")}</Info>
+			<StudioWrapper>
+				<StyledCarousel
 					dynamicHeight={false}
 					autoPlay
 					showStatus={false}
@@ -96,6 +101,7 @@ const StudioSection = () => {
 					showThumbs={false}
 					transitionTime={1000}
 					infiniteLoop={true}
+					
 				>
 					{studioImages.map((image, index) => {
 						return (
@@ -110,10 +116,10 @@ const StudioSection = () => {
 							</div>
 						);
 					})}
-				</Carousel>
-			</StudioSectionWrapper>
-		</StudioSectionContainer>
+				</StyledCarousel>
+			</StudioWrapper>
+		</StudioContainer>
 	);
 };
 
-export default StudioSection;
+export default Studio;
