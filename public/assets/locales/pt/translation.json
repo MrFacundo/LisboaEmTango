@@ -13,7 +13,15 @@
 		"banner_row_1": "Tango argentino",
 		"banner_row_2": "no coração",
 		"banner_row_3": "de Lisboa",
-		"banner_mobile": "Tango Argentino no coração de Lisboa"
+		"banner_mobile": "Tango Argentino no coração de Lisboa",
+		"anniversary": "20 ANOS"
+	},
+	"anniversary": {
+		"title": "20 anos de Tango em Lisboa!",
+		"p1": "Durante o 2024 cumprimos 20 años de intenso trabalho em Lisboa, com a música e a dança que tanto amamos… “EL TANGO”… e queremos festejar com vocês!",
+		"p2": "Estamos a preparar um programa especial para celebrar estes 20 anos de Tango em Lisboa, com atividades para todos os níveis, desde aulas, workshops, prácticas, festas e eventos especiais.",
+		"p3": "Vamos festejar com vocês estes 20 anos abraçando e partilhando o Tango.",
+		"p4": "Juan & Graciana"
 	},
 	"learn_": {
 		"title": "Aprender e praticar",

@@ -58,6 +58,7 @@ const CTALink = tw(Link)`
 	cursor-pointer
 	md:self-end
 	pb-[4rem]
+	xl:mt-[-4rem]
 `;
 
 const CTAButton = tw(motion.div)`
@@ -95,18 +96,20 @@ const BannerContainer = tw.div`
 `;
 
 const AnniversaryStamp = tw(motion.div)`
-	text-amber-300
+	text-yellow-300
 	font-logo
     text-6xl
-    md:text-9xl
+    lg:text-7xl
+	xl:text-8xl
 	text-center
 	content-center
-    h-[5rem]
+    h-[3rem]
     w-[15rem]
-    md:w-[30rem]
+    xl:w-[20rem]
 	-rotate-12
 	-my-8
-	ml-20
+	ml-0
+	mt-0
 	md:ml-5
 	md:my-8
 `;
@@ -145,7 +148,7 @@ const Hero = () => {
 						}}
 						tw="absolute bottom-0"
 					>
-						20 ANOS
+						{t("hero.anniversary")}
 					</AnniversaryStamp>
 				</BannerContainer>
 				<CTALink

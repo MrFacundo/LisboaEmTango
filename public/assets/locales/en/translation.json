@@ -13,7 +13,15 @@
 		"banner_row_1": "Argentine tango",
 		"banner_row_2": "in the heart",
 		"banner_row_3": "of Lisbon",
-		"banner_mobile": "Argentine Tango in the heart of of Lisbon"
+		"banner_mobile": "Argentine Tango in the heart of of Lisbon",
+		"anniversary": "20 YEARS"
+	},
+	"anniversary": {
+		"title": "20 years of Tango in Lisbon!",
+		"p1": "During 2024 we celebrate 20 years of intense work in Lisbon, with the music and dance that we love so much... “EL TANGO”.. and we want to celebrate with you!",
+		"p2": "We are preparing a special program to celebrate these 20 years of Tango in Lisbon, with activities for all levels, including classes, workshops, practices, parties, and special events.",
+		"p3": "Let's celebrate these 20 years together, embracing and sharing Tango.",
+		"p4": "Juan & Graciana"
 	},
 	"learn": {
 		"title": "Learn and Practice",
