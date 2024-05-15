@@ -67,6 +67,7 @@ const SectionTitle = tw.h1`
     md:py-9
     lg:py-12
     text-center
+	text-3xl
     md:text-6xl
     xl:text-3xl
 	2xl:text-6xl
@@ -105,7 +106,7 @@ const Pennant = tw.div`
 
 const Info = tw.p`
 	font-text
-    text-xl
+    text-lg
     text-justify
 	md:text-xl
     mr-[5%]
