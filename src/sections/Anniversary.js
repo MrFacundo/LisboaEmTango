@@ -2,56 +2,50 @@ import { useTranslation } from "react-i18next";
 import tw from "twin.macro";
 import { Element } from "react-scroll";
 import { motion } from "framer-motion";
+
+import Carousel from "react-responsive-carousel/lib/js/components/Carousel/index";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import Gallery from "../components/Gallery";
+import CTALink from "../components/CTALink";
+import Pennant from "../components/Pennant";
 
-import anniversary1 from "../assets/images/anniversary1.webp";
-import anniversary1fb from "../assets/images/anniversary1.jpg";
-import anniversary2 from "../assets/images/anniversary2.webp";
-import anniversary2fb from "../assets/images/anniversary2.jpg";
-import anniversary3 from "../assets/images/anniversary3.webp";
-import anniversary3fb from "../assets/images/anniversary3.jpg";
-import pennantL from "../assets/images/pennantL.png";
-import pennantR from "../assets/images/pennantR.png";
+import img from "./images";
 
-const images = [
-	{
-		title: "levels.group.title",
-		description: "levels.group.description",
-		src: anniversary1,
-		srcFallback: anniversary1fb,
-	},
-	{
-		title: "levels.workshop.title",
-		description: "levels.workshop.description",
-		src: anniversary2,
-		srcFallback: anniversary2fb,
-	},
-	{
-		title: "levels.private.title",
-		description: "levels.private.description",
-		src: anniversary3,
-		srcFallback: anniversary3fb,
-	},
+import { createImage } from "../utils";
+
+const anImages = [
+	createImage("anniversary.title", "anniversary.title", img.anniversary1, img.anniversary1fb),
+	createImage("anniversary.title", "anniversary.title", img.anniversary2, img.anniversary2fb),
+	createImage("anniversary.title", "anniversary.flyer1description", img.anniversary3, img.anniversary3fb),
+];
+
+const flImages = [
+	createImage("Portugal Em Tango", "Portugal Em Tango", img.flyer1, img.flyer1fb),
+];
+
+const pennantImages = [
+	createImage("anniversary.title", "anniversary.title", img.pennantL, img.pennantLfb),
+	createImage("anniversary.title", "anniversary.title", img.pennantR, img.pennantRfb),
+	createImage("anniversary.title", "anniversary.title", img.pennantLD, img.pennantLDfb),
+	createImage("anniversary.title", "anniversary.title", img.pennantRD, img.pennantRDfb),
 ];
 
 const Container = tw(Element)`
     text-white
     w-full
-    h-[65rem]
-    md:h-[60rem]
-    min-h-screen
     flex
+	flex-col
     items-center
     justify-center
     bg-primary
     relative
+	py-10
 `;
 
 const Section = tw.div`
     w-[90%]
-    h-[95%]
+    h-[62rem]
     md:w-4/5
     md:h-5/6
 	border-yellow-300
@@ -97,13 +91,6 @@ const RightSection = tw.div`
     pt-10
 `;
 
-const Pennant = tw.div`
-    absolute
-    w-[25%]
-    top-0
-	max-w-[250px]
-`;
-
 const Info = tw.p`
 	font-text
     text-lg
@@ -122,31 +109,42 @@ const Info = tw.p`
     lg:pr-2
 `;
 
+
+const getConfigurableProps = () => ({
+	showArrows: true,
+	showStatus: false,
+	showIndicators: true,
+	infiniteLoop: true,
+	showThumbs: false,
+	useKeyboardArrows: true,
+	autoPlay: false,
+	stopOnHover: true,
+	swipeable: true,
+	dynamicHeight: true,
+	emulateTouch: true,
+	autoFocus: false,
+	thumbWidth: 100,
+	selectedItem: 0,
+	interval: 2000,
+	transitionTime: 1000,
+	swipeScrollTolerance: 5
+});
+
+const StyledCarousel = tw(Carousel)`
+	w-[60%]
+	md:w-1/2
+	py-7
+	max-w-[500px]
+	max-h-[850px]
+`;
+
 const Anniversary = () => {
 	const { t } = useTranslation();
 
 	return (
 		<Container name="Anniversary">
-			<Pennant style={{ left: 0 }}>
-				<picture>
-					<source srcSet={pennantL} type={"image/webp"} />
-					<img
-						className="w-full h-full object-cover"
-						src={pennantL}
-						alt="aulas e prácticas de tango"
-					/>
-				</picture>
-			</Pennant>
-			<Pennant style={{ right: 0 }}>
-				<picture>
-					<source srcSet={pennantR} type={"image/webp"} />
-					<img
-						className="w-full h-full object-cover"
-						src={pennantR}
-						alt="aulas e prácticas de tango"
-					/>
-				</picture>
-			</Pennant>
+			<Pennant style={{ left: 0, top: 0 }} image={pennantImages[0]} />
+			<Pennant style={{ right: 0, top: 0 }} image={pennantImages[1]} />
 			<Section>
 				<SectionTitle> {t("anniversary.title")}</SectionTitle>
 				<Wrapper>
@@ -155,7 +153,7 @@ const Anniversary = () => {
 						whileInView="show"
 						viewport={{ once: true, margin: "100px" }}
 					>
-						<Gallery images={images} />
+						<Gallery images={anImages} />
 					</LeftSection>
 					<RightSection >
 						<Info>{t("anniversary.p1")}</Info>
@@ -165,6 +163,18 @@ const Anniversary = () => {
 					</RightSection>
 				</Wrapper>
 			</Section>
+			<StyledCarousel {...getConfigurableProps()}>
+				{flImages.map((image, index) => (
+					<div key={index} className="flex">
+						<img src={image.src} alt={image.title} />
+					</div>
+				))}
+			</StyledCarousel>
+			<CTALink
+				text={t("anniversary.flyer")}
+			/>
+			<Pennant style={{ left: 0, bottom: 0 }} image={pennantImages[2]} />
+			<Pennant style={{ right: 0, bottom: 0 }} image={pennantImages[3]} />
 		</Container>
 	);
 };

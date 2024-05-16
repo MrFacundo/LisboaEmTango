@@ -24,3 +24,19 @@ body {
 .dropdown:hover .dropdown-menu {
 	display: block;
 }
+
+p.legend2 {
+	transition: initial;
+	position: static;
+	bottom: auto;
+	left: auto;
+	margin-left: 0;
+	width: auto;
+	border-radius: 0;
+	background: initial;
+	color: initial;
+	padding: 0;
+	font-size: medium;
+	text-align: initial;
+	opacity: 1;
+}

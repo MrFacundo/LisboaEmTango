@@ -192,7 +192,7 @@ const Show = () => {
 
 	return (
 		<Container name="Shows">
-			<SectionTitle>{t("shows_.title")}</SectionTitle>
+			<SectionTitle>{t("shows.title")}</SectionTitle>
 			{isLaptop && (
 				<>
 					<ShowDescription
@@ -200,39 +200,39 @@ const Show = () => {
 						initial="hidden"
 						whileInView="show"
 					>
-						<ShowTitle>{t("shows_.show_title_1")}</ShowTitle>
+						<ShowTitle>{t("shows.show_title_1")}</ShowTitle>
 						<ShowImageMobileWrapper>
 							<ShowImage
 								image={show1Mobile}
 								imageFallback={show1MobileFallback}
-								alt={t("shows_.show_title_1")}
+								alt={t("shows.show_title_1")}
 							/>
 						</ShowImageMobileWrapper>
-						<p className="py-10">{t("shows_.show_description_1")}</p>
+						<p className="py-10">{t("shows.show_description_1")}</p>
 						<Divider />
-						<ShowTitle>{t("shows_.show_title_2")}</ShowTitle>
+						<ShowTitle>{t("shows.show_title_2")}</ShowTitle>
 						<ShowImageMobileWrapper>
 							<ShowImage
 								image={show2Mobile}
 								imageFallback={show2MobileFallback}
-								alt={t("shows_.show_title_2")}
+								alt={t("shows.show_title_2")}
 							/>
 						</ShowImageMobileWrapper>
-						<p className="pt-4">{t("shows_.show_description_2")}</p>
+						<p className="pt-4">{t("shows.show_description_2")}</p>
 						<Divider style={{ marginTop: "2rem" }} />
 						<ShowTitle>
-							<i>{t("shows_.show_title_3")}</i>
+							<i>{t("shows.show_title_3")}</i>
 						</ShowTitle>
 						<ShowImageMobileWrapper>
 							<ShowImage
 								image={show3Mobile}
 								imageFallback={show3MobileFallback}
-								alt={t("shows_.show_title_3")}
+								alt={t("shows.show_title_3")}
 							/>
 						</ShowImageMobileWrapper>
 
 						<p className="pt-4 mb-10">
-							{t("shows_.show_description_3")}
+							{t("shows.show_description_3")}
 						</p>
 						<Video
 							height={videoResolution.height}
@@ -250,8 +250,8 @@ const Show = () => {
 							whileInView="show"
 							style={{ marginRight: "10rem" }}
 						>
-							<ShowTitle>{t("shows_.show_title_1")}</ShowTitle>
-							<p className="z-10">{t("shows_.show_description_1")}</p>
+							<ShowTitle>{t("shows.show_title_1")}</ShowTitle>
+							<p className="z-10">{t("shows.show_description_1")}</p>
 						</ShowDescription>
 						<DescriptionBg
 							variants={gradientVariants}
@@ -262,7 +262,7 @@ const Show = () => {
 							<ShowImage
 								image={show1}
 								imageFallback={show1Fallback}
-								alt={t("shows_.show_title_1")}
+								alt={t("shows.show_title_1")}
 							/>
 						</ShowImageWrapper>
 					</ShowContainer>
@@ -282,8 +282,8 @@ const Show = () => {
 							initial="hidden"
 							whileInView="show"
 						>
-							<ShowTitle>{t("shows_.show_title_2")}</ShowTitle>
-							<p className="z-10">{t("shows_.show_description_2")}</p>
+							<ShowTitle>{t("shows.show_title_2")}</ShowTitle>
+							<p className="z-10">{t("shows.show_description_2")}</p>
 						</ShowDescription>
 						<DescriptionBg2
 							variants={gradientVariants}
@@ -294,7 +294,7 @@ const Show = () => {
 							<ShowImage
 								image={show2}
 								imageFallback={show2Fallback}
-								alt={t("shows_.show_title_2")}
+								alt={t("shows.show_title_2")}
 							/>
 						</ShowImageWrapper>
 					</ShowContainer>
@@ -311,9 +311,9 @@ const Show = () => {
 								whileInView="show"
 							/>
 							<ShowTitle>
-								<i>{t("shows_.show_title_3")}</i>
+								<i>{t("shows.show_title_3")}</i>
 							</ShowTitle>
-							<p className="z-10">{t("shows_.show_description_3")} </p>
+							<p className="z-10">{t("shows.show_description_3")} </p>
 						</ShowDescription>
 						<Video
 							height={videoResolution.height}
@@ -323,7 +323,7 @@ const Show = () => {
 							<ShowImage
 								image={show3}
 								imageFallback={show3Fallback}
-								alt={t("shows_.show_title_3")}
+								alt={t("shows.show_title_3")}
 							/>
 						</ShowImageWrapper>
 					</ShowContainer>

@@ -1,19 +1,17 @@
-/* eslint-disable no-unused-vars */
 import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 import tw from "twin.macro";
-import { Link } from "react-scroll";
 import { motion } from "framer-motion";
-import { BsChevronDoubleDown } from "react-icons/bs";
 
 import Banner from "../components/Banner";
 import LanguageDropdown from "../components/LanguageDropdown";
+import CTALink from "../components/CTALink";
+
 
 import bg from "../assets/images/coupleHero.jpg";
 import bgMobile from "../assets/images/coupleHeroMobile.jpg";
 
 // styles
-
 const HeroContainer = styled.div`
 	${tw`
         w-full
@@ -53,43 +51,6 @@ const Landing = tw(motion.div)`
 	justify-between
 `;
 
-const CTALink = tw(Link)`
-	self-center
-	cursor-pointer
-	md:self-end
-	pb-[4rem]
-	xl:mt-[-4rem]
-`;
-
-const CTAButton = tw(motion.div)`
-        rounded-full
-        hover:bg-primary
-        text-white	
-        flex
-        flex-col
-        text-center
-        justify-center
-        place-items-center
-        text-[1rem]
-        md:text-[1.5rem]
-		2xl:text-[1.8rem]
-        border-2
-		md:border-4
-        h-[8rem]
-        w-[8rem]
-        md:h-[11rem]
-        md:w-[11rem]
-		xl:h-[12rem]
-        xl:w-[12rem]
-		2xl:h-[13rem]
-        2xl:w-[13rem]
-        hover:text-white
-        hover:border-white
-        duration-300
-		font-text
-		font-semibold
-		pt-[1rem]
-`;
 
 const BannerContainer = tw.div`
 	relative
@@ -139,7 +100,7 @@ const Hero = () => {
 				<BannerContainer>
 					<Banner />
 					<AnniversaryStamp
-						initial={{ scale: 0, rotate: -12 }} 
+						initial={{ scale: 0, rotate: -12 }}
 						animate={{ scale: 1, rotate: -12 }}
 						transition={{
 							ease: [0.6, 0.01, -0.05, 0.95],
@@ -153,42 +114,11 @@ const Hero = () => {
 				</BannerContainer>
 				<CTALink
 					to="Anniversary"
-					smooth={"easeInOutQuad"}
-					duration={1000}
-				>
-					<CTAButton
-						initial={{ opacity: 0 }}
-						animate={{ opacity: 1 }}
-						transition={{
-							ease: "easeInOut",
-							duration: 0.6,
-							delay: 3,
-						}}
-					>
-						<motion.span
-							initial={{ opacity: 0 }}
-							animate={{ opacity: 1 }}
-							transition={{
-								ease: "easeInOut",
-								duration: 0.6,
-								delay: 3,
-							}}
-						>
-							{t("hero.CTA")}
-						</motion.span>
-						<motion.span
-							initial={{ opacity: 0 }}
-							animate={{ opacity: 1 }}
-							transition={{
-								ease: "easeInOut",
-								duration: 0.6,
-								delay: 2.2,
-							}}
-						>
-							<BsChevronDoubleDown className="text-[2rem] md:text-[2.5rem] md:mt-[0.3rem]" />
-						</motion.span>
-					</CTAButton>
-				</CTALink>
+					text={t("hero.CTA")}
+					icon="chevron_double_down"
+					selfEnd
+					pointer
+				/>
 			</Landing>
 		</HeroContainer>
 	);

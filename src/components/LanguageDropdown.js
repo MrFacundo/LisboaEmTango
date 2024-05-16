@@ -23,9 +23,7 @@ const Dropdown = tw.div`
     top-[2rem]
     right-[4rem]
 	md:top-[2rem]
-    md:right-[8rem]
 	lg:top-[3rem]
-    lg:right-[12rem]
     inline-block
 	text-gray-700
 `;
@@ -70,7 +68,7 @@ const LanguageDropdown = ({ navMenu }) => {
 	return (
 		<Dropdown
 			className="dropdown"
-			style={navMenu ? { color: "#999999", right: "8rem" } : {}}
+			style={navMenu ? { color: "#999999", right: "6rem" } : {}}
 		>
 			<DropdownButton>
 				<span
