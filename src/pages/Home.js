@@ -13,7 +13,22 @@ import Show from "../sections/Show";
 import Footer from "../components/Footer";
 import HamburgerMenu from "../components/HamburgerMenu";
 import Anniversary from "../sections/Anniversary";
-import ImagesDivider from "../components/ImagesDivider";
+import Separator from "../components/Separator";
+
+import img from "../images";
+import { createImage } from "../utils";
+import { useMediaQuery } from "react-responsive";
+import { deviceSize } from "../components/responsive";
+
+const separatorImagesMobile = [
+	createImage("social1", "social1", img.social1, img.social1fb),
+	createImage("social2", "social2", img.social2, img.social2fb),
+];
+
+const separatorImages = [
+	createImage("social3", "social3", img.social3, img.social3fb),
+	createImage("social4", "social4", img.social4, img.social4fb),
+];
 
 
 const HomeContainer = tw.div`
@@ -26,6 +41,8 @@ const HomeContainer = tw.div`
 `;
 
 const Home = () => {
+	const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile });
+
 	return (
 		<HomeContainer>
 			<motion.div
@@ -37,9 +54,9 @@ const Home = () => {
 				<HamburgerMenu />
 				<Hero />
 				<Anniversary />
-				<ImagesDivider />
-
+				<Separator image={isMobile ? separatorImagesMobile[0] : separatorImages[0]} />
 				<Learn />
+				<Separator image={isMobile ? separatorImagesMobile[1] : separatorImages[1]} />
 				<Schedule />
 				<Studio />
 				<Team />

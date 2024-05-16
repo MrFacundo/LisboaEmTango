@@ -3,7 +3,6 @@ import tw from "twin.macro";
 import { Title } from "../globalStyles";
 import { Element } from "react-scroll";
 import Levels from "../components/Levels";
-import ImagesDivider from "../components/ImagesDivider";
 
 const LearnContainer = tw(Element)`
     text-white
@@ -46,7 +45,6 @@ const Learn = () => {
 			<Title>{t("learn.title")}</Title>
 			<Info>{t("learn.description")}</Info>
 			<Levels />
-			<ImagesDivider />
 		</LearnContainer>
 	);
 };

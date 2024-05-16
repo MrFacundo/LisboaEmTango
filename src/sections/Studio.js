@@ -7,17 +7,13 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { useMediaQuery } from "react-responsive";
 import { deviceSize } from "../components/responsive";
 
-import studio1 from "../assets/images/studio6.jpg";
-import studio1Fallback from "../assets/images/studio6.jpg";
-import studio2 from "../assets/images/studio7.webp";
-import studio2Fallback from "../assets/images/studio7.jpg";
-import studio3 from "../assets/images/studio8.webp";
-import studio3Fallback from "../assets/images/studio8.jpg";
+import img from "../images";
+import { createImage } from "../utils";
 
 const studioImages = [
-	{ src: studio1, fallback: studio1Fallback },
-	{ src: studio2, fallback: studio2Fallback },
-	{ src: studio3, fallback: studio3Fallback },
+	createImage("studio1", "studio1", img.studio1, img.studio1fb),
+	createImage("studio2", "studio2", img.studio2, img.studio2fb),
+	createImage("studio3", "studio3", img.studio3, img.studio3fb),
 ];
 
 const StudioContainer = tw(Element)`
@@ -73,7 +69,6 @@ const StyledCarousel = tw(Carousel)`
 
 const Studio = () => {
 	const { t } = useTranslation();
-
 	const isMobile = useMediaQuery({ maxWidth: deviceSize.laptop });
 
 	return (
@@ -82,7 +77,6 @@ const Studio = () => {
 			{!isMobile && (
 				<iframe
 					src="https://www.youtube-nocookie.com/embed/FOwKY2sQZmg?playlist=goFHwoODao8&listType=playlist&autoplay=1&controls=0&loop=1&mute=1&cc_load_policy=0&iv_load_policy=3&disablekb=1&fs=0&modestbranding=1&playsinline=1&rel=0&hd=1"
-					frameBorder="0"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 					width={"1920"}
 					height={"1080"}
@@ -101,7 +95,7 @@ const Studio = () => {
 					showThumbs={false}
 					transitionTime={1000}
 					infiniteLoop={true}
-					
+
 				>
 					{studioImages.map((image, index) => {
 						return (
@@ -109,8 +103,8 @@ const Studio = () => {
 								<picture>
 									<source srcSet={image.src} type={"image/webp"} />
 									<img
-										src={image.fallback}
-										alt="Nosso espaço. Estudio no Clube Ferroviário de Portugal"
+										src={image.srcFallback}
+										alt={image.description}
 									/>
 								</picture>
 							</div>
