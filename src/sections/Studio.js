@@ -78,7 +78,7 @@ const Studio = () => {
 
 	return (
 		<StudioContainer name="Studio">
-			<Title style={{ paddingTop: "0rem" }}>{t("studio_.title")}</Title>
+			<Title style={{ paddingTop: "0rem" }}>{t("studio.title")}</Title>
 			{!isMobile && (
 				<iframe
 					src="https://www.youtube-nocookie.com/embed/FOwKY2sQZmg?playlist=goFHwoODao8&listType=playlist&autoplay=1&controls=0&loop=1&mute=1&cc_load_policy=0&iv_load_policy=3&disablekb=1&fs=0&modestbranding=1&playsinline=1&rel=0&hd=1"
@@ -91,7 +91,7 @@ const Studio = () => {
 				></iframe>
 			)}
 
-			<Info>{t("studio_.description")}</Info>
+			<Info>{t("studio.description")}</Info>
 			<StudioWrapper>
 				<StyledCarousel
 					dynamicHeight={false}

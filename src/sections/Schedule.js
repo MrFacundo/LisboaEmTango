@@ -117,29 +117,29 @@ const Schedule = () => {
 
 	return (
 		<ScheduleContainer name="Schedule">
-			<Title>{t("schedule_.title")}</Title>
+			<Title>{t("schedule.title")}</Title>
 			<GridContainer>
-				<Day>{t("schedule_.day1.name")}</Day>
+				<Day>{t("schedule.day1.name")}</Day>
 				<Class>
-					<Hour>19:00</Hour> - {t("schedule_.day1.class1")}
+					<Hour>19:00</Hour> - {t("schedule.day1.class1")}
 				</Class>
 				<Class>
-					<Hour>20:00</Hour> - {t("schedule_.day1.class2")}
+					<Hour>20:00</Hour> - {t("schedule.day1.class2")}
 				</Class>
 				<Class>
-					<Hour>21:00</Hour> - {t("schedule_.day1.class3")}
+					<Hour>21:00</Hour> - {t("schedule.day1.class3")}
 				</Class>
 				<Separator />
-				<Day>{t("schedule_.day2.name")}</Day>
+				<Day>{t("schedule.day2.name")}</Day>
 				<Class>
-					<Hour>20:00</Hour> - {t("schedule_.day2.class1")}
+					<Hour>20:00</Hour> - {t("schedule.day2.class1")}
 				</Class>
 				<Class>
-					<Hour>21:00</Hour> - {t("schedule_.day2.class2")}
+					<Hour>21:00</Hour> - {t("schedule.day2.class2")}
 				</Class>
 			</GridContainer>
 			<CTAContainer>
-				<Info>{t("schedule_.CTA_description")}</Info>
+				<Info>{t("schedule.CTA_description")}</Info>
 				<CTA
 					initial={{ scale: 0 }}
 					whileInView={{ scale: 1 }}
@@ -158,7 +158,7 @@ const Schedule = () => {
 								duration: 0.3,
 							}}
 						>
-							{t("schedule_.CTA_button")}
+							{t("schedule.CTA_button")}
 						</motion.span>
 						<motion.span
 							initial={{ opacity: 0 }}

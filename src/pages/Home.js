@@ -13,6 +13,8 @@ import Show from "../sections/Show";
 import Footer from "../components/Footer";
 import HamburgerMenu from "../components/HamburgerMenu";
 import Anniversary from "../sections/Anniversary";
+import ImagesDivider from "../components/ImagesDivider";
+
 
 const HomeContainer = tw.div`
 		flex
@@ -35,6 +37,8 @@ const Home = () => {
 				<HamburgerMenu />
 				<Hero />
 				<Anniversary />
+				<ImagesDivider />
+
 				<Learn />
 				<Schedule />
 				<Studio />

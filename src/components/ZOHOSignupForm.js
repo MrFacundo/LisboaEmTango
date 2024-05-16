@@ -188,10 +188,6 @@ const ZOHOSignupForm = () => {
 					}}
 					id="closeSuccess"
 				>
-					<img
-						alt="close"
-						src="https://zcv4-zcmp.maillist-manage.eu/images/videoclose.png"
-					/>
 				</span>
 				<div id="zcOptinSuccessPanel" />
 			</div>

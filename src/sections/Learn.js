@@ -43,8 +43,8 @@ const Learn = () => {
 
 	return (
 		<LearnContainer name="Learn">
-			<Title>{t("learn_.title")}</Title>
-			<Info>{t("learn_.description")}</Info>
+			<Title>{t("learn.title")}</Title>
+			<Info>{t("learn.description")}</Info>
 			<Levels />
 			<ImagesDivider />
 		</LearnContainer>
