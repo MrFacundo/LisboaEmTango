@@ -10,7 +10,7 @@ import Gallery from "../components/Gallery";
 import CTALink from "../components/CTALink";
 import Pennant from "../components/Pennant";
 
-import img from "./images";
+import img from "../images";
 
 import { createImage } from "../utils";
 

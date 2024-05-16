@@ -33,10 +33,6 @@ const sections = [
 		name: "Contact",
 		title: "nav_menu.contact",
 	},
-	{
-		name: "Newsletter",
-		title: "nav_menu.newsletter",
-	},
 ];
 
 const SidebarLink = tw(Link)`

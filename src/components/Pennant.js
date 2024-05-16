@@ -10,7 +10,7 @@ const Pennant = ({ style, image }) => {
 	return (
 		<PennantContainer style={style}>
 			<picture>
-				<source srcSet={image.srcWebp} type={"image/webp"} />
+				<source srcSet={image.src} type={"image/webp"} />
 				<img src={image.srcFallback} alt={image.alt} />
 			</picture>
 		</PennantContainer>

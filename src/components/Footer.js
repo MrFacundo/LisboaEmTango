@@ -107,12 +107,14 @@ const Footer = () => {
 					</SmallText>
 					<SmallText>
 						<Link
-							className="text-right"
+							className="text-center"
 							target={"_blank"}
 							rel="noopener noreferrer"
-							href="https://mrfacundo.github.io/portfolio/"
+							href="https://mrfacundo.github.io/"
 						>
-							Design by Facundo Troitero
+							Developed and designed by <br />
+							<strong>Facundo Troitero</strong>
+
 						</Link>
 					</SmallText>
 				</SmallTextContainer>

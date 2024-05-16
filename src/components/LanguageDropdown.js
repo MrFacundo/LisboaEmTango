@@ -22,6 +22,7 @@ const Dropdown = tw.div`
     absolute
     top-[2rem]
     right-[4rem]
+    md:right-[8rem]
 	md:top-[2rem]
 	lg:top-[3rem]
     inline-block
