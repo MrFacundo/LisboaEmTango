@@ -7,20 +7,32 @@
 html,
 body,
 #root {
-	min-width: 100%;
+    min-width: 100%;
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera */
-body::-webkit-scrollbar {
-	display: none;
+::-webkit-scrollbar {
+    width: 12px;
+    background: transparent;
 }
 
-/* Hide scrollbar for IE, Edge and Firefox */
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
 body {
-	-ms-overflow-style: none; /* IE and Edge */
-	scrollbar-width: none; /* Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: #888 transparent;
+}
+
+body:hover {
+    scrollbar-color: #555 transparent;
 }
 
 .dropdown:hover .dropdown-menu {
-	display: block;
+    display: block;
 }

@@ -5,11 +5,13 @@ import tw from "twin.macro";
 import styled from "styled-components";
 
 
-const StyledLink = styled(Link)(({ selfEnd, pointer }) => [
-	tw`self-center`,
-	selfEnd && tw`md:self-end pb-[4rem] xl:mt-[-4rem]`,
-	pointer && tw`cursor-pointer`,
-]);
+const StyledLink = styled(({ selfEnd, pointer, ...rest }) => <Link {...rest} />)`
+	${tw`self-center`}
+	${({ selfEnd }) => selfEnd && tw`md:self-end md:text-right pb-[4rem] xl:mt-[-4rem]`}
+	${({ pointer }) => pointer && tw`cursor-pointer`}
+`;
+
+
 
 const CTAButton = tw(motion.div)`
 	rounded-full
@@ -42,12 +44,12 @@ const CTAButton = tw(motion.div)`
 	2xl:h-[13rem]
 	2xl:w-[13rem]
 
-	pt-[1rem]
+	pt-0
 
 	duration-300
 `;
 
-const CTALink = ({ to, text, icon, selfEnd, pointer }) => {
+const CTALink = ({ to, text, icon, selfEnd, pointer, onClick }) => {
 	return (
 		<StyledLink
 			to={to}
@@ -55,6 +57,7 @@ const CTALink = ({ to, text, icon, selfEnd, pointer }) => {
 			duration={1000}
 			selfEnd={selfEnd}
 			pointer={pointer}
+			onClick={onClick}
 		>
 			<CTAButton
 				initial={{ opacity: 0 }}
