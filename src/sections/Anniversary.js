@@ -105,7 +105,8 @@ const Info = tw.p`
 `;
 
 const Flyer = tw.div`
-    p-20
+    p-12
+    md:p-20
     cursor-pointer
 `;
 

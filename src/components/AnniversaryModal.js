@@ -61,28 +61,31 @@ const Subtitle = tw.h2`
     font-semibold
     mt-4
     mb-2
-    text-gray-200
+    text-center
 `;
 
 const Paragraph = tw.p`
     mb-4
     text-base
     md:text-lg
-    
 `;
 
-const Day = tw(Paragraph)`
+const InfoHeading = tw(Paragraph)`
     font-bold
 `;
 
 const List = tw.div`
     text-center
     mb-4
+    flex
+    flex-wrap
+    justify-center
 `;
 
 const ListItem = tw.span`
     mb-2
     text-lg
+    whitespace-nowrap
 `;
 
 const Schedule = tw.ul`
@@ -98,11 +101,12 @@ const ScheduleItem = tw.li`
 
 const Info = tw.div`
     text-center
-`
+    whitespace-nowrap
+`;
 
 const Intro = tw.div`
     text-justify
-`
+`;
 
 const Modal = ({ isOpen, onClose }) => {
     if (!isOpen) return null;
@@ -118,86 +122,88 @@ const Modal = ({ isOpen, onClose }) => {
                         <Subtitle className="text-center mt-0 mb-5">6 – 8 Dezembro</Subtitle>
                         <br />
                         <Intro>
-                            <Paragraph>Depois de alguns anos de pausa, vamos retomar este grande evento com uma "Especial Edition" !!</Paragraph>
-                            <Paragraph>Durante mais de 10 edições Portugal[em]Tango abriu as portas a centenas de artistas, de todas as áreas do Tango, sempre foi uma verdadeira FESTA, vivido num ambiente amigável, de convívio e partilha entre os que trabalhamos do Tango de Portugal…e não esperamos menos desta próxima edição.</Paragraph>
+                            <Paragraph>Depois de alguns anos de pausa, vamos retomar este grande evento com uma "Especial Edition"!!</Paragraph>
+                            <Paragraph>Durante mais de 10 edições Portugal[em]Tango abriu as portas a centenas de artistas, de todas as áreas do Tango, sempre foi uma verdadeira FESTA, vivido num ambiente amigável, de convívio e partilha entre os que trabalhamos do Tango de Portugal... e não esperamos menos desta próxima edição.</Paragraph>
                             <Paragraph>Este ano, o evento será realizado dentro do âmbito das celebrações dos 20 anos em que Graciana Romeo & Juan Capriotti trabalham juntos em Portugal.</Paragraph>
                         </Intro>
                         <Subtitle>- Artistas Confirmados -</Subtitle>
-                        <Paragraph>Professores e Bailarinos:</Paragraph>
-                        <List>
-                            <ListItem>Alexandra Baldaque & Fernando Jorge · </ListItem>
-                            <ListItem>Sonia Aires & Paulo Bernardo · </ListItem>
-                            <ListItem>Miriam Nielly · </ListItem>
-                            <ListItem>Samatha Garcia e Patricio Rodriguez · </ListItem>
-                            <ListItem>Rui Barroso · </ListItem>
-                            <ListItem>Janice Iandristky · </ListItem>
-                            <ListItem>Solange Galvão · </ListItem>
-                            <ListItem>Marc Hussner · </ListItem>
-                            <ListItem>Flor Razzari · </ListItem>
-                            <ListItem>Florencia Gil Bilbao · </ListItem>
-                            <ListItem>Graciana Romeo & Juan Capriotti · </ListItem>
-                            <ListItem>Amaia Otamendi · </ListItem>
-                            <ListItem>Maria Eugenia Brandulo · </ListItem>
-                            <ListItem>Inés Gomes</ListItem>
-                        </List>
-                        <Paragraph>DJs:</Paragraph>
-                        <List>
-                            <ListItem>Bruno de Sousa · </ListItem>
-                            <ListItem>Paulo Matos · </ListItem>
-                            <ListItem>Fernando Teixeira · </ListItem>
-                            <ListItem>Maria Beu · </ListItem>
-                            <ListItem>Dani Benson · </ListItem>
-                            <ListItem>Lino Silva</ListItem>
-                        </List>
-                        <Paragraph>Fotógrafos:</Paragraph>
-                        <List>
-                            <ListItem>Manuel Silva · </ListItem>
-                            <ListItem>Joâo Filipe Diaz</ListItem>
-                        </List>
-                        <Paragraph>Acessórios:</Paragraph>
-                        <List>
-                            <ListItem>C.F. TANGO Cristina Ferreira · </ListItem>
-                            <ListItem>Ana Francisco · </ListItem>
-                            <ListItem>Claire Zhang</ListItem>
-                        </List>
-                        <Subtitle>- Programação -</Subtitle>
-                        <Day>Sexta-feira:</Day>
-                        <Schedule>
-                            <ScheduleItem>18h: RITMO DE BASE, EXERCÍCIOS DE PERCUSSÃO BÁSICOS E APLICAÇÕES NA DANÇA com Amaia</ScheduleItem>
-                            <ScheduleItem>19h: FERRAMENTAS DA DANÇA, MOVIMENTO TERAPIA APLICADAS AO TANGO com Marc Hussner</ScheduleItem>
-                            <ScheduleItem>20h: Samantha & Patricio</ScheduleItem>
-                            <ScheduleItem>Das 21h às 2.00h: Milonga de Apertura: DJ Fernando Teixeira e Dani Benson | Show: Janice Iandristky & Rui Barroso, Samantha & Patricio</ScheduleItem>
-                        </Schedule>
-                        <Day>Sábado:</Day>
-                        <Schedule>
-                            <ScheduleItem>14h: ESCUTA ATIVA, CONEXÃO, SOCIABILIDADE E EXPRESSÃO com M. Eugenia Brandulo</ScheduleItem>
-                            <ScheduleItem>15h: BOLEOS PARA LA PISTA com Solange Galvão</ScheduleItem>
-                            <ScheduleItem>16h: CAMINHADAS, PAUSAS E SILÊNCIOS com Alexandra Baldaque & Fernando Jorge</ScheduleItem>
-                            <ScheduleItem>17h: MILONGA com Miriam Nielli</ScheduleItem>
-                            <ScheduleItem>18h: LA MAGIA DEL ABRAZO com L.E.TANGO Flor Razzari, Graciana Romeo e Juan Capriotti</ScheduleItem>
-                            <ScheduleItem>Das 21h às 2.00h: Milonga de Gala: DJs Paulo Matos, Bruno de Sousa | Show: Sonia Aires & Paulo Bernardo, Alexandra Baldaque & Fernando Jorge</ScheduleItem>
-                        </Schedule>
-                        <Day>Domingo:</Day>
-                        <Schedule>
-                            <ScheduleItem>14h: DIÁLOGO E COMUNICAÇÃO NA DANÇA com Inês Gomes</ScheduleItem>
-                            <ScheduleItem>15h: BARRIDAS Y MORDIDAS EN GIRO Y CAMINATA com Florencia Gil Bilbao</ScheduleItem>
-                            <ScheduleItem>16h: Rui Barroso</ScheduleItem>
-                            <ScheduleItem>17h: ESTRUCTURAS DE VALS com Janice Iandristky</ScheduleItem>
-                            <ScheduleItem>18h: A MILONGA NÃO É UM TANGO RÁPIDO. PASSOS CLÁSSICOS E VARIAÇÕES CRIATIVAS com Sonia Aires & Paulo Bernardo</ScheduleItem>
-                            <ScheduleItem>19h: AULA MAGISTRAL com jantar convívio</ScheduleItem>
-                            <ScheduleItem>Das 20h às 24h: Praktica milonguera: DJs Maria Beu e Lino Silva | Show: L.E.TANGO com Flor Razzari, Graciana Romeo & Juan Capriotti</ScheduleItem>
-                        </Schedule>
-                        <Paragraph>Passe Livre:</Paragraph>
-                        <Paragraph>PROMOCÃO ESPECIAL até 17 de Novembro €60</Paragraph>
-                        <Paragraph>A partir desta data o preço vai ser €80</Paragraph>
                         <Info>
+                            <InfoHeading>Professores e Bailarinos:</InfoHeading>
+                            <List>
+                                <ListItem>Alexandra Baldaque & Fernando Jorge&nbsp;·&nbsp;</ListItem>
+                                <ListItem>Sonia Aires & Paulo Bernardo&nbsp;·&nbsp;</ListItem>
+                                <ListItem>Miriam Nielly&nbsp;·&nbsp;</ListItem>
+                                <ListItem>Samatha Garcia e Patricio Rodriguez&nbsp;·&nbsp;</ListItem>
+                                <ListItem>Rui Barroso&nbsp;·&nbsp;</ListItem>
+                                <ListItem>Janice Iandristky&nbsp;·&nbsp;</ListItem>
+                                <ListItem>Solange Galvão&nbsp;·&nbsp;</ListItem>
+                                <ListItem>Marc Hussner&nbsp;·&nbsp;</ListItem>
+                                <ListItem>Flor Razzari&nbsp;·&nbsp;</ListItem>
+                                <ListItem>Florencia Gil Bilbao&nbsp;·&nbsp;</ListItem>
+                                <ListItem>Graciana Romeo & Juan Capriotti&nbsp;·&nbsp;</ListItem>
+                                <ListItem>Amaia Otamendi&nbsp;·&nbsp;</ListItem>
+                                <ListItem>Maria Eugenia Brandulo&nbsp;·&nbsp;</ListItem>
+                                <ListItem>Inés Gomes</ListItem>
+                            </List>
+                            <InfoHeading>DJs:</InfoHeading>
+                            <List>
+                                <ListItem>Bruno de Sousa&nbsp;·&nbsp;</ListItem>
+                                <ListItem>Paulo Matos&nbsp;·&nbsp;</ListItem>
+                                <ListItem>Fernando Teixeira&nbsp;·&nbsp;</ListItem>
+                                <ListItem>Maria Beu&nbsp;·&nbsp;</ListItem>
+                                <ListItem>Dani Benson&nbsp;·&nbsp;</ListItem>
+                                <ListItem>Lino Silva</ListItem>
+                            </List>
+                            <InfoHeading>Fotógrafos:</InfoHeading>
+                            <List>
+                                <ListItem>Manuel Silva&nbsp;·&nbsp;</ListItem>
+                                <ListItem>Joâo Filipe Diaz</ListItem>
+                            </List>
+                            <InfoHeading>Acessórios:</InfoHeading>
+                            <List>
+                                <ListItem>C.F. TANGO Cristina Ferreira&nbsp;·&nbsp;</ListItem>
+                                <ListItem>Ana Francisco&nbsp;·&nbsp;</ListItem>
+                                <ListItem>Claire Zhang</ListItem>
+                            </List>
+                        </Info>
+                        <Subtitle>- Programação -</Subtitle>
+                        <InfoHeading>Sexta-feira:</InfoHeading>
+                        <Schedule>
+                            <ScheduleItem>18h: <i>Ritmo de base, exercícios de percussão básicos e aplicações na dança</i> com Amaia</ScheduleItem>
+                            <ScheduleItem>19h: <i>Ferramentas da dança, movimento terapia aplicadas ao tango</i> com Marc Hussner</ScheduleItem>
+                            <ScheduleItem>20h: Samantha & Patricio</ScheduleItem>
+                            <ScheduleItem>Das 21h às 2.00h: <i>Milonga de apertura</i>: DJ Fernando Teixeira e Dani Benson | Show: Janice Iandristky & Rui Barroso, Samantha & Patricio</ScheduleItem>
+                        </Schedule>
+                        <InfoHeading>Sábado:</InfoHeading>
+                        <Schedule>
+                            <ScheduleItem>14h: <i>Escuta ativa, conexão, sociabilidade e expressão</i> com M. Eugenia Brandulo</ScheduleItem>
+                            <ScheduleItem>15h: <i>Boleos para la pista</i> com Solange Galvão</ScheduleItem>
+                            <ScheduleItem>16h: <i>Caminhadas, pausas e silêncios</i> com Alexandra Baldaque & Fernando Jorge</ScheduleItem>
+                            <ScheduleItem>17h: <i>Milonga</i> com Miriam Nielli</ScheduleItem>
+                            <ScheduleItem>18h: <i>La magia del abrazo</i> com L.E.TANGO Flor Razzari, Graciana Romeo e Juan Capriotti</ScheduleItem>
+                            <ScheduleItem>Das 21h às 2.00h: <i>Milonga de gala</i>: DJs Paulo Matos, Bruno de Sousa | Show: Sonia Aires & Paulo Bernardo, Alexandra Baldaque & Fernando Jorge</ScheduleItem>
+                        </Schedule>
+                        <InfoHeading>Domingo:</InfoHeading>
+                        <Schedule>
+                            <ScheduleItem>14h: <i>Diálogo e comunicação na dança</i> com Inês Gomes</ScheduleItem>
+                            <ScheduleItem>15h: <i>Barridas y mordidas en giro y caminata</i> com Florencia Gil Bilbao</ScheduleItem>
+                            <ScheduleItem>16h: Rui Barroso</ScheduleItem>
+                            <ScheduleItem>17h: <i>Estruturas de vals</i> com Janice Iandristky</ScheduleItem>
+                            <ScheduleItem>18h: <i>A milonga não é um tango rápido. Passos clássicos e variações criativas</i> com Sonia Aires & Paulo Bernardo</ScheduleItem>
+                            <ScheduleItem>19h: <i>Aula magistral</i> com jantar convívio</ScheduleItem>
+                            <ScheduleItem>Das 20h às 24h: <i>Praktica milonguera</i>: DJs Maria Beu e Lino Silva | Show: L.E.TANGO com Flor Razzari, Graciana Romeo & Juan Capriotti</ScheduleItem>
+                        </Schedule>
+                        <Info>
+                            <Paragraph>Passe Livre:</Paragraph>
+                            <Paragraph>Promoção especial até 17 de novembro: €60</Paragraph>
+                            <Paragraph>A partir desta data:  €80</Paragraph>
                             <Subtitle>Info e inscrições:</Subtitle>
                             <Paragraph>
-                            <a
-                                href={"mailto:lisboaemtango@gmail.com"}
-                                className="hover:text-secondary duration-300">
-                                lisboaemtango@gmail.com
-                            </a>
+                                <a
+                                    href={"mailto:lisboaemtango@gmail.com"}
+                                    className="hover:text-secondary duration-300">
+                                    lisboaemtango@gmail.com
+                                </a>
                             </Paragraph>
                             <Paragraph>Tel. 916192919</Paragraph>
                             <Paragraph>Tel. 935478559</Paragraph>
