@@ -116,7 +116,7 @@ const Hero = () => {
 					to="Anniversary"
 					text={t("hero.CTA")}
 					icon="chevron_double_down"
-					selfEnd
+					selfEnd = {true}
 					pointer
 				/>
 			</Landing>

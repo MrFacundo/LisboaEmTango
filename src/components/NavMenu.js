@@ -4,7 +4,6 @@ import { Link } from "react-scroll";
 import tw from "twin.macro";
 
 import { LogoContainer } from "./Logo";
-import LanguageDropdown from "../components/LanguageDropdown";
 
 import logo from "../assets/images/logoNavMenu.png";
 
@@ -110,8 +109,6 @@ const NavMenu = ({ isOpen, toggle }) => {
 			<AnimatePresence>
 				{isOpen && (
 					<>
-						<LanguageDropdown navMenu={true} />
-
 						<NavLogo
 							to={"Hero"}
 							smooth={"easeInOut"}
