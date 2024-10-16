@@ -32,9 +32,20 @@ export const jsonLdData = {
 			"@context": "https://schema.org",
 			"@type": "DanceEvent",
 			"name": "Portugal em Tango",
-			"startDate": "2024-12-06T18:00",
-			"endDate": "2024-12-08T24:00",
+			"startDate": "2024-12-06T18:00:00",
+			"endDate": "2024-12-09T00:00:00",
 			"eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+			"eventStatus": "https://schema.org/EventScheduled",
+			"organizer": {
+				"@type": "Organization",
+				"name": "Lisboa em Tango",
+				"url": "https://lisboaemtango.pt/"
+			},
+			"performer": {
+				"@type": "PerformingGroup",
+				"name": "The best tango teachers and DJ's in Lisbon"
+			},
+			"description": "Join us for Portugal em Tango, a 3-day event filled with workshops, performances, and milongas.",
 			"location": {
 				"@type": "Place",
 				"name": "Clube Ferroviário",
@@ -53,7 +64,7 @@ export const jsonLdData = {
 				"price": "60",
 				"priceCurrency": "EUR",
 				"availability": "https://schema.org/InStock",
-				"validFrom": "2024-10-01T00:00"
+				"validFrom": "2024-10-01T00:00:00"
 			},
 			"duration": "P3D"
 		}
@@ -91,9 +102,20 @@ export const jsonLdData = {
 			"@context": "https://schema.org",
 			"@type": "DanceEvent",
 			"name": "Portugal em Tango",
-			"startDate": "2024-12-06T18:00",
-			"endDate": "2024-12-08T24:00",
+			"startDate": "2024-12-06T18:00:00",
+			"endDate": "2024-12-09T00:00:00",
 			"eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+			"eventStatus": "https://schema.org/EventScheduled",
+			"organizer": {
+				"@type": "Organization",
+				"name": "Lisboa em Tango",
+				"url": "https://lisboaemtango.pt/"
+			},
+			"performer": {
+				"@type": "PerformingGroup",
+				"name": "Os melhores professores e DJ's de Lisboa"
+			},
+			"description": "Junte-se a nós para o Portugal em Tango, um evento de 3 dias repleto de workshops, performances e milongas.",
 			"location": {
 				"@type": "Place",
 				"name": "Clube Ferroviário",
@@ -112,7 +134,7 @@ export const jsonLdData = {
 				"price": "60",
 				"priceCurrency": "EUR",
 				"availability": "https://schema.org/InStock",
-				"validFrom": "2024-10-01T00:00"
+				"validFrom": "2024-10-01T00:00:00"
 			},
 			"duration": "P3D"
 		}
