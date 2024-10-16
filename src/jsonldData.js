@@ -27,15 +27,36 @@ export const jsonLdData = {
 			"https://www.youtube.com/channel/UCqxHTF_eaM3oP4-Gmlji-kw"
 		],
 		"foundingDate": "2004-10-01",
-		"offers": {
-			"@type": "Offer",
-			"itemOffered": {
-				"@type": "Service",
-				"name": "Classes, workshops, milongas, and tango shows in Lisbon",
-				"description": "Classes, workshops, milongas, and tango shows in Lisbon"
-			}
-		},
-		"keywords": "Tango Lessons, Workshops, Milonga, Argentinian Tango, Lisbon"
+		"keywords": "Tango Lessons, Workshops, Milonga, Argentinian Tango, Lisbon",
+		"event": {
+			"@context": "https://schema.org",
+			"@type": "DanceEvent",
+			"name": "Portugal em Tango",
+			"startDate": "2024-12-06T18:00",
+			"endDate": "2024-12-08T24:00",
+			"eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+			"location": {
+				"@type": "Place",
+				"name": "Clube Ferroviário",
+				"address": {
+					"@type": "PostalAddress",
+					"streetAddress": "Rua de Santa Apolónia 59",
+					"addressLocality": "Lisboa",
+					"postalCode": "1100-468",
+					"addressCountry": "PT"
+				}
+			},
+			"image": "https://lisboaemtango.pt/static/media/flyer1.ad4b0701eddb0524ed2c.webp",
+			"offers": {
+				"@type": "Offer",
+				"url": "mailto:lisboaemtango@gmail.com",
+				"price": "60",
+				"priceCurrency": "EUR",
+				"availability": "https://schema.org/InStock",
+				"validFrom": "2024-10-01T00:00"
+			},
+			"duration": "P3D"
+		}
 	},
 	pt: {
 		"@context": "https://schema.org",
@@ -65,14 +86,35 @@ export const jsonLdData = {
 			"https://www.youtube.com/channel/UCqxHTF_eaM3oP4-Gmlji-kw"
 		],
 		"foundingDate": "2004-10-01",
-		"offers": {
-			"@type": "Offer",
-			"itemOffered": {
-				"@type": "Service",
-				"name": "Aulas, workshops, milongas e shows de tango argentino em Lisboa",
-				"description": "Aulas, workshops, milongas e shows de tango argentino em Lisboa"
-			}
-		},
-		"keywords": "Aulas de Tango, Workshops, Milonga, Tango Argentino, Lisboa"
+		"keywords": "Aulas de Tango, Workshops, Milonga, Tango Argentino, Lisboa",
+		"event": {
+			"@context": "https://schema.org",
+			"@type": "DanceEvent",
+			"name": "Portugal em Tango",
+			"startDate": "2024-12-06T18:00",
+			"endDate": "2024-12-08T24:00",
+			"eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+			"location": {
+				"@type": "Place",
+				"name": "Clube Ferroviário",
+				"address": {
+					"@type": "PostalAddress",
+					"streetAddress": "Rua de Santa Apolónia 59",
+					"addressLocality": "Lisboa",
+					"postalCode": "1100-468",
+					"addressCountry": "PT"
+				}
+			},
+			"image": "https://lisboaemtango.pt/static/media/flyer1.ad4b0701eddb0524ed2c.webp",
+			"offers": {
+				"@type": "Offer",
+				"url": "mailto:lisboaemtango@gmail.com",
+				"price": "60",
+				"priceCurrency": "EUR",
+				"availability": "https://schema.org/InStock",
+				"validFrom": "2024-10-01T00:00"
+			},
+			"duration": "P3D"
+		}
 	}
 };
