@@ -1,4 +1,5 @@
-import tw from "twin.macro";
+import React, { useEffect, useRef, useState } from "react";
+import tw, { styled } from "twin.macro";
 
 const ModalContainer = tw.div`
     display[flex]
@@ -82,10 +83,22 @@ const List = tw.div`
     justify-center
 `;
 
-const ListItem = tw.span`
-    mb-2
-    text-lg
-    whitespace-nowrap
+const ListItem = styled.span`
+    ${tw`
+        mb-2
+        text-lg
+        whitespace-nowrap
+        relative
+    `}
+    &::after {
+        content: '·';
+        margin: 0 0.5em;
+        display: inline-block;
+    }
+    &:last-child::after,
+    &[data-last-in-line="true"]::after {
+        content: none;
+    }
 `;
 
 const Schedule = tw.ul`
@@ -108,6 +121,91 @@ const Intro = tw.div`
     text-justify
 `;
 
+const artists = [
+    "Alexandra Baldaque & Fernando Jorge",
+    "Sonia Aires & Paulo Bernardo",
+    "Miriam Nielly",
+    "Samatha Garcia e Patricio Rodriguez",
+    "Rui Barroso",
+    "Janice Iandristky",
+    "Solange Galvão",
+    "Marc Hussner",
+    "Flor Razzari",
+    "Florencia Gil Bilbao",
+    "Graciana Romeo & Juan Capriotti",
+    "Amaia Otamendi",
+    "Maria Eugenia Brandulo",
+    "Inés Gomes"
+];
+
+const DJs = [
+    "Bruno de Sousa",
+    "Paulo Matos",
+    "Fernando Teixeira",
+    "Maria Beu",
+    "Dani Benson",
+    "Lino Silva"
+];
+
+const photographers = [
+    "Manuel Silva",
+    "João Filipe Diaz"
+]
+
+const accessories = [
+    "C.F. TANGO Cristina Ferreira",
+    "Ana Francisco",
+    "Claire Zhang"
+];
+
+const DynamicList = ({ items }) => {
+    const listRef = useRef(null);
+    const [lastInLineItems, setLastInLineItems] = useState(new Set());
+
+    useEffect(() => {
+        const updateLastInLineItems = () => {
+            if (!listRef.current) return;
+
+            const newLastInLineItems = new Set();
+            let lastBottom = -1;
+            const children = Array.from(listRef.current.children);
+
+            children.forEach((child, index) => {
+                const rect = child.getBoundingClientRect();
+                if (rect.bottom > lastBottom) {
+                    if (index > 0) {
+                        newLastInLineItems.add(index - 1);
+                    }
+                    lastBottom = rect.bottom;
+                }
+            });
+
+            newLastInLineItems.add(children.length - 1);
+            setLastInLineItems(newLastInLineItems);
+        };
+
+        updateLastInLineItems();
+        window.addEventListener('resize', updateLastInLineItems);
+
+        return () => {
+            window.removeEventListener('resize', updateLastInLineItems);
+        };
+    }, [items]);
+
+    return (
+        <List ref={listRef}>
+            {items.map((item, index) => (
+                <ListItem
+                    key={index}
+                    data-last-in-line={lastInLineItems.has(index)}
+                >
+                    {item}
+                </ListItem>
+            ))}
+        </List>
+    );
+};
+
 const Modal = ({ isOpen, onClose }) => {
     if (!isOpen) return null;
 
@@ -129,48 +227,19 @@ const Modal = ({ isOpen, onClose }) => {
                         <Subtitle>- Artistas Confirmados -</Subtitle>
                         <Info>
                             <InfoHeading>Professores e Bailarinos:</InfoHeading>
-                            <List>
-                                <ListItem>Alexandra Baldaque & Fernando Jorge&nbsp;·&nbsp;</ListItem>
-                                <ListItem>Sonia Aires & Paulo Bernardo&nbsp;·&nbsp;</ListItem>
-                                <ListItem>Miriam Nielly&nbsp;·&nbsp;</ListItem>
-                                <ListItem>Samatha Garcia e Patricio Rodriguez&nbsp;·&nbsp;</ListItem>
-                                <ListItem>Rui Barroso&nbsp;·&nbsp;</ListItem>
-                                <ListItem>Janice Iandristky&nbsp;·&nbsp;</ListItem>
-                                <ListItem>Solange Galvão&nbsp;·&nbsp;</ListItem>
-                                <ListItem>Marc Hussner&nbsp;·&nbsp;</ListItem>
-                                <ListItem>Flor Razzari&nbsp;·&nbsp;</ListItem>
-                                <ListItem>Florencia Gil Bilbao&nbsp;·&nbsp;</ListItem>
-                                <ListItem>Graciana Romeo & Juan Capriotti&nbsp;·&nbsp;</ListItem>
-                                <ListItem>Amaia Otamendi&nbsp;·&nbsp;</ListItem>
-                                <ListItem>Maria Eugenia Brandulo&nbsp;·&nbsp;</ListItem>
-                                <ListItem>Inés Gomes</ListItem>
-                            </List>
+                            <DynamicList items={artists} />
                             <InfoHeading>DJs:</InfoHeading>
-                            <List>
-                                <ListItem>Bruno de Sousa&nbsp;·&nbsp;</ListItem>
-                                <ListItem>Paulo Matos&nbsp;·&nbsp;</ListItem>
-                                <ListItem>Fernando Teixeira&nbsp;·&nbsp;</ListItem>
-                                <ListItem>Maria Beu&nbsp;·&nbsp;</ListItem>
-                                <ListItem>Dani Benson&nbsp;·&nbsp;</ListItem>
-                                <ListItem>Lino Silva</ListItem>
-                            </List>
+                            <DynamicList items={DJs} />
                             <InfoHeading>Fotógrafos:</InfoHeading>
-                            <List>
-                                <ListItem>Manuel Silva&nbsp;·&nbsp;</ListItem>
-                                <ListItem>Joâo Filipe Diaz</ListItem>
-                            </List>
+                            <DynamicList items={photographers} />
                             <InfoHeading>Acessórios:</InfoHeading>
-                            <List>
-                                <ListItem>C.F. TANGO Cristina Ferreira&nbsp;·&nbsp;</ListItem>
-                                <ListItem>Ana Francisco&nbsp;·&nbsp;</ListItem>
-                                <ListItem>Claire Zhang</ListItem>
-                            </List>
+                            <DynamicList items={accessories} />
                         </Info>
                         <Subtitle>- Programação -</Subtitle>
                         <InfoHeading>Sexta-feira:</InfoHeading>
                         <Schedule>
                             <ScheduleItem>18h: <i>Ritmo de base, exercícios de percussão básicos e aplicações na dança</i> com Amaia</ScheduleItem>
-                            <ScheduleItem>19h: <i>Ferramentas da dança, movimento terapia aplicadas ao tango</i> com Marc Hussner</ScheduleItem>
+                            <ScheduleItem>19h: <i>Ferramentas da dança, movimento terapia aplicadas ao tango</i></ScheduleItem>
                             <ScheduleItem>20h: Samantha & Patricio</ScheduleItem>
                             <ScheduleItem>Das 21h às 2.00h: <i>Milonga de apertura</i>: DJ Fernando Teixeira e Dani Benson | Show: Janice Iandristky & Rui Barroso, Samantha & Patricio</ScheduleItem>
                         </Schedule>

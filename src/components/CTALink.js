@@ -24,9 +24,7 @@ const CTAButton = tw(motion.div)`
 	font-semibold
 
 	text-white	
-	hover:bg-primary
-	hover:text-white
-	hover:border-white
+    hover:scale-110
 
 	text-[1rem]
 	md:text-[1.5rem]

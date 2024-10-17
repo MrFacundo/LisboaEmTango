@@ -41,7 +41,7 @@ const Container = tw(Element)`
 
 const Section = tw.div`
     w-[90%]
-    h-[62rem]
+    h-[60rem]
     md:w-4/5
     md:h-5/6
     border-yellow-300
@@ -55,7 +55,6 @@ const SectionTitle = tw.h1`
     px-10
     pt-12
     md:py-9
-    lg:py-12
     text-center
     text-3xl
     md:text-6xl
@@ -83,7 +82,7 @@ const RightSection = tw.div`
     flex
     flex-col
     items-center
-    pt-10
+    pt-5
 `;
 
 const Info = tw.p`
@@ -93,9 +92,9 @@ const Info = tw.p`
     md:text-xl
     mr-[5%]
     mt-2
-    mb-[2rem]
-    md:mt-[2rem]
-    xl:mb-[4rem]
+    mb-[1rem]
+    md:mt-[1rem]
+    xl:mb-[2rem]
     2xl:mt-2
     xl:max-w-3xl
     pl-4
@@ -108,6 +107,14 @@ const Flyer = tw.div`
     p-12
     md:p-20
     cursor-pointer
+    hover:scale-105
+    duration-300
+`;
+
+const FlyerImg = tw.img`
+    cursor-pointer
+    shadow-xl
+    shadow-neutral-500
 `;
 
 const Anniversary = () => {
@@ -159,12 +166,12 @@ const Anniversary = () => {
                         <Info>{t("anniversary.p1")}</Info>
                         <Info>{t("anniversary.p2")}</Info>
                         <Info>{t("anniversary.p3")}</Info>
-                        <Info className="self-end">{t("anniversary.p4")}</Info>
+                        <Info className="self-end font-bold">{t("anniversary.p4")}</Info>
                     </RightSection>
                 </Wrapper>
             </Section>
             <Flyer onClick={handleOpenModal}>
-                <img src={flyerImage.src} alt={flyerImage.title} width="450" tw="cursor-pointer" />
+                <FlyerImg src={flyerImage.src} alt={flyerImage.title} width="450" />
             </Flyer>
             <CTALink
                 to="#"
