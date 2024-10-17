@@ -55,6 +55,7 @@ const SectionTitle = tw.h1`
     px-10
     pt-12
     md:py-9
+    md:pb-16
     text-center
     text-3xl
     md:text-6xl
@@ -75,6 +76,7 @@ const LeftSection = tw(motion.div)`
     md:w-1/2
     md:mt-[-30rem]
     md:px-8
+    lg:px-20
 `;
 
 const RightSection = tw.div`
