@@ -4,8 +4,6 @@ import tw from "twin.macro";
 import { MenuToggle } from "./MenuToggle";
 import NavMenu from "./NavMenu";
 
-// styles
-
 const HamburgerMenuContainer = tw.div`
 	relative
 	flex

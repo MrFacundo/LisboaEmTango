@@ -58,8 +58,6 @@ const levels = [
 	},
 ];
 
-// styles
-
 const LevelsContainer = tw.div`
     flex
     flex-col

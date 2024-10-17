@@ -2,7 +2,6 @@
 import { motion } from "framer-motion";
 import tw from "twin.macro";
 
-// styles
 const Container = tw(motion.div)`
 	w-full
 	max-h-[400px]

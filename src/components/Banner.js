@@ -40,8 +40,6 @@ const letterAni = {
 	},
 };
 
-// styles
-
 const BannerRowContainer = tw(motion.div)`
     items-center
 	content-center

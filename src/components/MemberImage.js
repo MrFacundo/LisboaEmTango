@@ -1,7 +1,5 @@
 import tw from "twin.macro";
 
-// styles
-
 const ImageContainer = tw.div`
 	w-full
 	md:min-h-[20rem]

@@ -8,8 +8,6 @@ import {
 	BsChevronUp,
 } from "react-icons/bs";
 
-// styles
-
 const BioContainer = tw.div`
     w-full
 	md:min-h-[10rem]

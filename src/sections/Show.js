@@ -23,8 +23,6 @@ import show2MobileFallback from "../assets/images/show2Mobile.jpg";
 import show3Fallback from "../assets/images/show3.jpg";
 import show3MobileFallback from "../assets/images/show3Mobile.jpg";
 
-// styles
-
 const Container = styled(motion.div)`
 	${tw`
 	w-full
@@ -142,8 +140,6 @@ const YoutubeContainer = tw(motion.div)`
 		z-20
 		lg:mr-[3rem]
 	`;
-
-// animations
 
 const descriptionVariants = {
 	hidden: { opacity: 0 },

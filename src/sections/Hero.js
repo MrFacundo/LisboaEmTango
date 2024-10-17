@@ -7,11 +7,9 @@ import Banner from "../components/Banner";
 import LanguageDropdown from "../components/LanguageDropdown";
 import CTALink from "../components/CTALink";
 
-
 import bg from "../assets/images/coupleHero.jpg";
 import bgMobile from "../assets/images/coupleHeroMobile.jpg";
 
-// styles
 const HeroContainer = styled.div`
 	${tw`
         w-full
@@ -21,7 +19,7 @@ const HeroContainer = styled.div`
         h-[100vh]
         relative
 		justify-end
-		`};
+	`};
 
 	@media only screen and (max-width: 1024px) {
 		background-image: url(${bgMobile});

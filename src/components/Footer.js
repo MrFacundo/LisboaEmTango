@@ -1,8 +1,6 @@
 import tw from "twin.macro";
 import { motion } from "framer-motion";
 
-// styles
-
 const FooterContainer = tw.div`
     w-full
     bg-secondary

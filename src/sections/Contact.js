@@ -1,6 +1,5 @@
 import { useTranslation } from "react-i18next";
-import tw from "twin.macro";
-import styled from "styled-components";
+import tw, { styled } from "twin.macro";
 import { Element } from "react-scroll";
 import { Title } from "../globalStyles";
 
@@ -24,8 +23,6 @@ const location = {
 	lat: 38.71915288600478,
 	lng: -9.118489015809267,
 };
-
-// styles
 
 const ContactContainer = styled(Element)`
 	${tw`

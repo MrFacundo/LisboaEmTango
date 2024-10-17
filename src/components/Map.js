@@ -2,8 +2,6 @@ import GoogleMapReact from "google-map-react";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import tw from "twin.macro";
 
-// styles
-
 const MapContainer = tw.div`
 	m-auto
 	lg:m-0

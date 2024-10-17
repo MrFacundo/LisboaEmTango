@@ -6,8 +6,6 @@ import { FormContainer, Input, Label, SubmitButton } from "../globalStyles";
 
 const formsparkFormId = process.env.REACT_APP_FORMSPARK_FORM_ID;
 
-// styles
-
 const TextArea = tw.textarea`
 	rounded-sm
 	p-2

@@ -16,8 +16,6 @@ const languages = [
 	},
 ];
 
-// styles
-
 const Dropdown = tw.div`
     absolute
     top-[2rem]
