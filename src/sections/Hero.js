@@ -111,7 +111,7 @@ const Hero = () => {
 					</AnniversaryStamp>
 				</BannerContainer>
 				<CTALink
-					to="Anniversary"
+					to="Learn"
 					text={t("hero.CTA")}
 					icon="chevron_double_down"
 					selfEnd = {true}

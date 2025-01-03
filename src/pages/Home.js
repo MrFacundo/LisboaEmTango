@@ -53,10 +53,8 @@ const Home = () => {
 				<Logo />
 				<HamburgerMenu />
 				<Hero />
-				<Anniversary />
-				<Separator image={isMobile ? separatorImagesMobile[0] : separatorImages[0]} />
 				<Learn />
-				<Separator image={isMobile ? separatorImagesMobile[1] : separatorImages[1]} />
+				<Separator image={isMobile ? separatorImagesMobile[0] : separatorImages[0]} />
 				<Schedule />
 				<Studio />
 				<Team />
