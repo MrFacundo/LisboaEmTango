@@ -63,14 +63,13 @@
 			"class3": "Intermmediate II tango class"
 		},
 		"day2": {
+			"name": "Tuesday",
+			"class1": "Beginner tango class"
+		},
+		"day3": {
 			"name": "1st Saturday of every month",
 			"class1": "Beginners Workshop",
 			"class2": "Milonga with DJ"
-		},
-		"day3": {
-			"name": "Sunday",
-			"class1": "Thematic workshop",
-			"class2": "La Práktica"
 		}
 	},
 	"team": {
