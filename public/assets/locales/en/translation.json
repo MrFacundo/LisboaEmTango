@@ -69,7 +69,12 @@
 		"day3": {
 			"name": "1st Saturday of every month",
 			"class1": "Beginners Workshop",
-			"class2": "Milonga with DJ"
+			"class2": "RAVE TANGUERA (Milonga with DJ)"
+		},
+		"day4": {
+			"name": "3rd Sunday of every month",
+			"class1": "Thematic Workshop",
+			"class2": "PraKtica"
 		}
 	},
 	"team": {

@@ -69,7 +69,12 @@
 		"day3": {
 			"name": "1º Sábado de cada mês",
 			"class1": "Workshop de Iniciação ao Tango",
-			"class2": "Milonga com DJ"
+			"class2": "RAVE TANGUERA (Milonga com DJ)"
+		},
+		"day4": {
+			"name": "3º Domingo de cada mês",
+			"class1": "Workshop temático",
+			"class2": "PraKtica"
 		}
 	},
 	"team": {

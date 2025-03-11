@@ -34,6 +34,7 @@ const HeroContainer = styled.div`
 
 	background: url(${bg});
 	background-size: cover;
+	background-position: center;
 `;
 
 const Landing = tw(motion.div)`
