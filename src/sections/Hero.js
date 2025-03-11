@@ -29,7 +29,6 @@ const HeroContainer = styled.div`
 	@media only screen and (min-width: 1024px) and (max-width: 1536px) {
 		background: url(${bg});
 		background-size: cover;
-		background-position: bottom 25% left 10%;
 	}
 
 	background: url(${bg});
