@@ -29,14 +29,17 @@ const Container = tw(Element)`
 
 const Section = tw.div`
     w-[90%]
-    h-[55rem]
     md:w-4/5
     md:h-5/6
     border-yellow-300
     border-4
     border-solid
     rounded-2xl
-    place-items-center
+    flex
+    flex-col
+    justify-center
+    items-center
+    p-4
 `;
 
 const SectionTitle = tw.h1`
@@ -99,7 +102,7 @@ const SpecialEvent = () => {
                 <Flyer>
                     <FlyerImg src={flyerImage.src} alt={flyerImage.title} width="450" />
                 </Flyer>
-                <div>
+                <div style={{ textAlign: "center" }}>
                     <SectionExternalLink> {t("specialEvent.p2")}</SectionExternalLink>
                     <a href="http://www.portugalemtango.pt" target="_blank" rel="noreferrer">
                         <SectionExternalLink className="underline">{t("specialEvent.p3")}</SectionExternalLink>
