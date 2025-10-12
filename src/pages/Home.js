@@ -12,7 +12,7 @@ import Contact from "../sections/Contact";
 import Show from "../sections/Show";
 import Footer from "../components/Footer";
 import HamburgerMenu from "../components/HamburgerMenu";
-import Anniversary from "../sections/Anniversary";
+import SpecialEvent from "../sections/SpecialEvent";
 import Separator from "../components/Separator";
 
 import img from "../images";
@@ -53,6 +53,7 @@ const Home = () => {
 				<Logo />
 				<HamburgerMenu />
 				<Hero />
+				<SpecialEvent />
 				<Learn />
 				<Separator image={isMobile ? separatorImagesMobile[0] : separatorImages[0]} />
 				<Schedule />

@@ -134,6 +134,9 @@ const Schedule = () => {
 				<Class>
 					<Hour>19:00</Hour> - {t("schedule.day2.class1")}
 				</Class>
+				<Class>
+					<Hour>20:00</Hour> - {t("schedule.day2.class2")}
+				</Class>
 				<Separator />
 				<Day>{t("schedule.day3.name")}</Day>
 				<Class>

@@ -14,6 +14,7 @@ const images = {
     pennantLDfb: require("./assets/images/pennantLD.png"),
     pennantRDfb: require("./assets/images/pennantRD.png"),
     flyer1: require("./assets/images/flyer1.webp"),
+    specialEvent: require("./assets/images/specialEvent.jpg"),
     flyer1fb: require("./assets/images/flyer1.jpg"),
     social1: require("./assets/images/social5.webp"),
     social1fb: require("./assets/images/social5.jpg"),

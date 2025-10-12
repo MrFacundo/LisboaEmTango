@@ -25,6 +25,13 @@
 		"flyer": "Info e inscrições",
 		"flyer1description": "Portugal Em Tango"
 	},
+	"specialEvent": {
+		"title": "próximo evento : Portugal[em]Tango 2025",
+		"title2": "“El Encuentro”",
+		"p1": "11/12/13 e 14 de Dezembro 2025",
+		"p2": "Mais info: ",
+		"p3": "www.portugalemtango.pt"
+	},
 	"learn": {
 		"title": "Aprender e praticar",
 		"description": "O nosso objetivo é criar um espaço onde se possa aprender as ferramentas fundamentais do Tango-Dança e que nos permita desfrutar do tango como dança social, independentemente do nível e/ou experiência de cada um."
@@ -64,7 +71,8 @@
 		},
 		"day2": {
 			"name": "Terças-feiras",
-			"class1": "Aula de iniciação ao Tango"
+			"class1": "Aula de iniciação ao Tango",
+			"class2": "Aula técnica"
 		},
 		"day3": {
 			"name": "1º Sábado de cada mês",

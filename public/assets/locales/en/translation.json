@@ -25,6 +25,13 @@
 		"flyer": "Info & Registrations",
 		"flyer1description": "Portugal Em Tango"
 	},
+	"specialEvent": {
+		"title": "Next Event: Portugal[em]Tango 2025",
+		"title2": "“El Encuentro”",
+		"p1": "11/12/13 and 14 December 2025",
+		"p2": "More info: ",
+		"p3": "www.portugalemtango.pt"
+	},
 	"learn": {
 		"title": "Learn and Practice",
 		"description": "Our goal is to create environment where you can develop skills, steps and technique that allow you to enjoy tango as a social dance, independently of your level of experience."
@@ -64,7 +71,8 @@
 		},
 		"day2": {
 			"name": "Tuesday",
-			"class1": "Beginner tango class"
+			"class1": "Beginner tango class",
+			"class2": "Tango technique"
 		},
 		"day3": {
 			"name": "1st Saturday of every month",

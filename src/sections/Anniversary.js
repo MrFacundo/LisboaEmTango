@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import Gallery from "../components/Gallery";
 import CTALink from "../components/CTALink";
 import Pennant from "../components/Pennant";
-import Modal from "../components/AnniversaryModal";
+import Modal from "../components/Modal";
 
 import img from "../images";
 
