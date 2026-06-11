@@ -121,6 +121,7 @@
 		"submitting": "Submitting...",
 		"subscribe": "Subscribe",
 		"subscribing": "Subscribing...",
-		"required": "Please correct the marked field(s) below."
+		"required": "Please correct the marked field(s) below.",
+        "success": "Thanks, someone will be in touch shortly."
 	}
 }

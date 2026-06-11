@@ -121,6 +121,7 @@
 		"submitting": "Enviando...",
 		"subscribe": "Inscrever-se",
 		"subscribing": "Enviando...",
-		"required": "Por favor, corrija os campos marcados abaixo."
+		"required": "Por favor, corrija os campos marcados abaixo.",
+        "success": "Obrigado, alguém entrará em contato em breve."
 	}
 }

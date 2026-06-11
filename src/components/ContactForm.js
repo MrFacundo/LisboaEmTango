@@ -27,8 +27,6 @@ const ContactForm = () => {
     const onSubmit = (e) => {
         e.preventDefault();
 
-        const form = e.target;
-
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -40,7 +38,7 @@ const ContactForm = () => {
             .then(() => {
                 setFormData(initialFormState);
                 setNotification({
-                    text: "Thanks, someone will be in touch shortly.",
+                    text: t("form.success"),
                 });
             })
             .catch(console.error);
@@ -57,6 +55,8 @@ const ContactForm = () => {
             >
                 <input type="hidden" name="form-name" value="contact" />
                 <input type="hidden" name="bot-field" />
+                <input type="hidden" name="subject"
+                    value={`solicitud de información de ${formData.name} desde Lisboa em Tango`} />
 
                 <div className="flex flex-col">
                     <Label htmlFor="name">{t("form.name")}</Label>
@@ -84,7 +84,6 @@ const ContactForm = () => {
                         id="email"
                         type="email"
                         required
-                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
                     />
                 </div>
 
