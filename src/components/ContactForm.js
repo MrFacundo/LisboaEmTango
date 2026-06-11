@@ -32,6 +32,7 @@ const ContactForm = () => {
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: new URLSearchParams({
                 "form-name": "contact",
+                subject: `solicitud de información de ${formData.name} desde Lisboa em Tango`,
                 ...formData,
             }).toString(),
         })
