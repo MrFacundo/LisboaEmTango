@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 
 import Gallery from "../components/Gallery";
 import CTALink from "../components/CTALink";
-import Pennant from "../components/Pennant";
 import Modal from "../components/Modal";
 
 import img from "../images";
@@ -152,8 +151,6 @@ const Anniversary = () => {
 
     return (
         <Container name="Anniversary">
-            <Pennant style={{ left: 0, top: 0 }} image={pennantImages[0]} />
-            <Pennant style={{ right: 0, top: 0 }} image={pennantImages[1]} />
             <Section>
                 <SectionTitle> {t("anniversary.title")}</SectionTitle>
                 <Wrapper>
@@ -181,9 +178,6 @@ const Anniversary = () => {
                 text={t("anniversary.flyer")}
                 pointer={true}
             />
-            <Pennant style={{ left: 0, bottom: 0 }} image={pennantImages[2]} />
-            <Pennant style={{ right: 0, bottom: 0 }} image={pennantImages[3]} />
-
             {isModalOpen && (
                 <motion.div
                     initial={{ opacity: 0 }}
