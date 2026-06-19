@@ -2,19 +2,12 @@ import { useTranslation } from "react-i18next";
 import tw from "twin.macro";
 import { Element } from "react-scroll";
 
-import Pennant from "../components/Pennant";
 
 import img from "../images";
 
 import { createImage } from "../utils";
 
 const flyerImage = createImage("Portugal Em Tango", "Portugal Em Tango", img.specialEvent, img.specialEvent);
-const pennantImages = [
-    createImage("anniversary.title", "anniversary.title", img.pennantL, img.pennantLfb),
-    createImage("anniversary.title", "anniversary.title", img.pennantR, img.pennantRfb),
-    createImage("anniversary.title", "anniversary.title", img.pennantLD, img.pennantLDfb),
-    createImage("anniversary.title", "anniversary.title", img.pennantRD, img.pennantRDfb),
-];
 
 const Container = tw(Element)`
     text-white
@@ -94,8 +87,6 @@ const SpecialEvent = () => {
 
     return (
         <Container name="SpecialEvent">
-            <Pennant style={{ left: 0, top: 0 }} image={pennantImages[0]} />
-            <Pennant style={{ right: 0, top: 0 }} image={pennantImages[1]} />
             <Section>
                 <SectionTitle> {t("specialEvent.title")}</SectionTitle>
                 <SectionTitle> {t("specialEvent.title2")}</SectionTitle>
@@ -109,8 +100,6 @@ const SpecialEvent = () => {
                     </a>
                 </div>
             </Section>
-            <Pennant style={{ left: 0, bottom: 0 }} image={pennantImages[2]} />
-            <Pennant style={{ right: 0, bottom: 0 }} image={pennantImages[3]} />
         </Container>
     );
 };
